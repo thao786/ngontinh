@@ -1,3 +1,4 @@
-# ngontinh
+ngontinh
+========
 
 thuy's stupid site
