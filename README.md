@@ -1,4 +1,4 @@
 ngontinh
 ========
 
-thuy's stupid site
+doc truyen
