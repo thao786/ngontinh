@@ -1,0 +1,2 @@
+1. create map from 2 list: key list - value list
+2. a more flexible reduce: call reduce/map on multiple collections (with a f taking multiple arguments)
