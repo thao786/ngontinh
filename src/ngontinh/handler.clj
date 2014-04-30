@@ -14,6 +14,7 @@
             [ngontinh.view.core :as view]
             [ngontinh.ngontinh.defdata :as defndata]))
 ;(:require [my.lib :refer :all])
+;lein ring uberwar
 
 
 (defroutes app-routes
