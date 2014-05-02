@@ -5,8 +5,18 @@
 (import 'java.io.File)
 (import 'java.util.Scanner)
 
-(require 'framework.handler)
 (require '[clojure.string :as string])
+(require 'ngontinh.handler)
+(require '[ngontinh.ngontinh.defdata :as defndata])
+
+
+
+
+(ns framework.view.core	 (:require 	[java.io.File :as io]))
+
+[(do (defn lala [a b] (/ a b)) (def x 8) nil) (lala 8 7)]
+[(do (import 'java.io.File) (def f (File. "gfd")) (.canRead f)) f]
+[(ns nt) (import 'java.io.File) (File. "gtfrds")]
 
 
 
@@ -61,3 +71,11 @@
 
 
 
+(doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
+	(doseq [file (.listFiles folder)]
+		(if (.matches (.getName file) ".*.txt")
+			(let [oldName 	(.getName file)
+					dot 	(.indexOf (.getName file) ".")
+					newName	(.substring oldName 0 dot)
+					newPath (str (.getPath folder) "/" newName)]
+				(.renameTo file 	(File. newPath))))))

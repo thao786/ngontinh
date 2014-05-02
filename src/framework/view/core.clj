@@ -1,4 +1,3 @@
-
 (ns framework.view.core
 	(:use 		compojure.core)
 	(:require 	[clojure.java.io :as io]))

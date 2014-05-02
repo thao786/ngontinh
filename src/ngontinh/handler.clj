@@ -1,9 +1,4 @@
 (ns ngontinh.handler
-  (:use compojure.core)
-  (:require [compojure.handler :as handler]
-            [compojure.route :as route]))
-
-(ns ngontinh.handler
 	(:use 	compojure.core
 			ring.middleware.cookies
           	ring.util.response
