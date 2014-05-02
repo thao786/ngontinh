@@ -70,12 +70,22 @@
 
 
 
-
+;remove chapter line
 (doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
 	(doseq [file (.listFiles folder)]
-		(if (.matches (.getName file) ".*.txt")
-			(let [oldName 	(.getName file)
-					dot 	(.indexOf (.getName file) ".")
-					newName	(.substring oldName 0 dot)
-					newPath (str (.getPath folder) "/" newName)]
-				(.renameTo file 	(File. newPath))))))
+		(if (.matches (.getName file) "[0-9]*.txt")
+			(let [oldContent 	(slurp file)
+				firstNewLine	(+ 1 (.indexOf oldContent "\n"))
+					newContent 	(.substring oldContent firstNewLine 
+								(.length oldContent))]
+				(spit (.getPath file) newContent)))))
+
+
+
+
+
+
+
+
+
+
