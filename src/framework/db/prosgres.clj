@@ -64,17 +64,6 @@
 
 
 
-(let [query 	"select * from truyen order by view USING > limit 5"
-	 	stmt 	(.createStatement connection)
-	 	rs 		(.executeQuery stmt query)]
-	(while (.next rs)
-		(do 
-			(def title (.getString rs))
-			(def view (.getInt rs))
-			(prn title view))))
-
-
-
 
 
 (let [query 	"select * from truyen order by view USING > limit 5"
@@ -83,7 +72,6 @@
 	(vec (resultset-seq rs)))
 
 
-doctruyen/tentruyen
 
 {:linkanh (lib/lib-path :linkanh) 
 	:linktruyen "That" 
@@ -107,6 +95,6 @@ doctruyen/tentruyen
 
 
 (doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
-	(let [image 	(File. (str (.getPath folder) "/cover.jpg"))]
-		()
-		))
+	(let [image 	(File. (str (.getPath folder) "/cover.jpg"))
+		smallImage	(Files/copy )]
+		()))

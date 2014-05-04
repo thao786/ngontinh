@@ -7,18 +7,22 @@
 
 ;(def ^:private some-var :value)
 
-(def sidebar1 
+(def ^:private sidebar1 
 	(let 	[mostRead 	(let [query 	"select * from truyen order by view USING > limit 5"
 							 	stmt 	(.createStatement connection)
 							 	rs 		(.executeQuery stmt query)]
-							(vec (resultset-seq rs)))]
-		mostRead
-	))
+							(vec (resultset-seq rs)))
+			addLink		(for [truyen mostRead]
+							(let 	[name 		(truyen :path)
+									linkanh 	(str lib/hostPath "image/" name)
+									linktruyen 	(str lib/hostPath "doctruyen/" name)] 
+								(assoc truyen :linkanh linkanh :linktruyen linktruyen)))]
+		addLink))
 
 (def Homepagedata 
 {	:lib-path lib/lib-path 
 	:tim "http"
-	:sidebar1 sidebar1
+	:sidebar1 (vec sidebar1)
 	;5 truyen co so view nhieu nhat
 	:sidebar2 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :genre "Co Dai"}
 			   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "That" :author "Ngoc" :genre "Co Dai"}	
