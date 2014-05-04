@@ -11,39 +11,48 @@
 							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Tu" :author "That" :genre "Co Dai"}
 							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Dan" :author "Cong" :genre "Hien Dai"}
 							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Duong" :author "That" :genre "Co Dai"}]
+					;5 truyen co so view nhieu nhat
 					:sidebar2 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :genre "Co Dai"}
 							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "That" :author "Ngoc" :genre "Co Dai"}	
 							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Tu" :author "That" :genre "Co Dai"}
 							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Dan" :author "Cong" :genre "Hien Dai"}
 							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Duong" :author "That" :genre "Co Dai"}]
+					; 5 truyen co ngay up gan nhat
 					:updatechap [{:linktruyen "That" :titletruyen "Hoa" :linkchap "Chu" :chapnumber "34" :titlechap "abcjf wfwnj" :ngayup "23/5/2014"}
 							   	 {:linktruyen "That" :titletruyen "Hoa" :linkchap "Chu" :chapnumber "34" :titlechap "abcjf wfwnj" :ngayup "23/5/2014"}
 							   	 {:linktruyen "That" :titletruyen "Hoa" :linkchap "Chu" :chapnumber "34" :titlechap "abcjf wfwnj" :ngayup "23/5/2014"}
 							   	 {:linktruyen "That" :titletruyen "Hoa" :linkchap "Chu" :chapnumber "34" :titlechap "abcjf wfwnj" :ngayup "23/5/2014"}
 							   	 {:linktruyen "That" :titletruyen "Hoa" :linkchap "Chu" :chapnumber "34" :titlechap "abcjf wfwnj" :ngayup "23/5/2014"}]
+					;10 truyen co ngay update chuong moi nhat
 					:doctruyen1 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hohf knefj fe"}
 							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hohf knefj fe"}
 							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hohf knefj fe"}
 							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hohf knefj fe"}]	 
+					;4 truyen generate randomly
 					:doctruyen2 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Iin egb je"}
 							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Iin egb je"}
 							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Iin egb je"}
 							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Iin egb je"}]
+					;4 truyen generate randomly
 					:engnovel	[{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "The Exorcist"}
 							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "One Piece"}
 							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Naruto"}
 							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Iin egb je"}]	
+					;4 truyen tieng anh random
 				})
 
 (def Listtruyendata {:lib-path lib/lib-path 
 					 :theloai {:cungdau "http" :dammy "http" :huyenhuyen "http" :nguoc "http" :sac "http" :vongdu "http" :trongsinh "http" :xuyenkhong "http"}
+					 ; truyen voi the loai tuong ung
 					 :tim "http"
 					 :sapxep {:theotitle "http" :theoauthor "http" :theogenre "http" :theoview "http" :theostate "http"}					 
+					 ; sap xep list theo thu tu duoc click
 					 :listtruyen [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :searchauthor "http" :genre "Co Dai, Huyen Huyen, HE" :searchgenre "http" :view "5000" :shortoverview "ge ge we ge" :sochap "35" :state "Full" :alternate "gr"}
 							   	  {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :searchauthor "http" :genre "Co Dai" :searchgenre "http" :sochap "35" :shortoverview "ge ge we ge" :view "5000" :state "Full" :alternate "gr"}
 							   	  {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :searchauthor "http" :genre "Co Dai" :searchgenre "http" :sochap "35" :shortoverview "ge ge we ge" :view "5000" :state "Full" :alternate "gr"}
 							   	  {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :searchauthor "http" :genre "Co Dai" :searchgenre "http" :sochap "35" :shortoverview "ge ge we ge" :view "5000" :state "Full" :alternate "gr"}
 							   	  {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :searchauthor "http" :genre "Co Dai" :searchgenre "http" :sochap "35" :shortoverview "ge ge we ge" :view "5000" :state "Full" :alternate "gr"}]
+					; tat ca truyen
 					})
 
 (def Advancedsearchdata {:lib-path lib/lib-path 
@@ -52,6 +61,7 @@
 							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Tu" :author "That" :genre "Co Dai"}
 							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Dan" :author "Cong" :genre "Hien Dai"}
 							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Duong" :author "That" :genre "Co Dai"}]
+						 ;5 truyen ngau nhien
 						 :tim {:timthuong "http" :timnangcao "http"}
 					})
 
@@ -62,6 +72,7 @@
 							  {:theogenre "http" :genre "Dam My" :sotruyen "1000"}
 							  {:theogenre "http" :genre "Trong Sinh" :sotruyen "1000"}
 							  {:theogenre "http" :genre "Xuyen Khong" :sotruyen "1000"}]
+					;
 					:sidebar2 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :genre "Co Dai"}
 							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "That" :author "Ngoc" :genre "Co Dai"}	
 							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Tu" :author "That" :genre "Co Dai"}
@@ -166,7 +177,7 @@
 							{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Dan" :author "Cong" :genre "Hien Dai"}
 							{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Duong" :author "That" :genre "Co Dai"}]
 				 :tim "http"
-				 :titlepage {:titletruyen "Hoa Tu Dan" :author "Duong That Cong Tu"}
+				 :titlepage {:titletruyen "Hoa Tu Dan" :state "Full" :author "Duong That Cong Tu"}
 				 :chuongmoi [{:linkchap "http" :chapnumber "45" :titlechap "Slh feu kfej fe"}
 							 {:linkchap "http" :chapnumber "45" :titlechap "Slh feu kfej fe"}
 							 {:linkchap "http" :chapnumber "45" :titlechap "Slh feu kfej fe"}
