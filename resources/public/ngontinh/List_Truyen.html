@@ -223,7 +223,7 @@
               </thead>
               <tbody>
 
-                [[(defn listtruyen [linktruyen linkanh titletruyen author genre sochap shortoverview view state alternate searchauthor searchgenre]
+                [[(defn listtruyen [linktruyen linkanh title author genre chap shortoverview view state alternate searchauthor searchgenre]
                      (str "<tr class=''>
                   <td><span class='dropdown hidden-xs'>
                           <button class='dropdown-toggle btn btn-sm' data-toggle='dropdown'>Giới Thiệu <b class='caret'></b></button>
@@ -233,11 +233,11 @@
                                      <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail img-responsive imgFloat' width='140' height='190'></a>
                                   </div>
                                   <div class='span9'> 
-                                        <a href='" linktruyen "'><h3 class='green'><b>" titletruyen "</b></h3></a>
+                                        <a href='" linktruyen "'><h3 class='green'><b>" title "</b></h3></a>
                                         <p><i>Tên Khác:</i> " alternate "
                                         <span style='visibility:hidden'>aaaaa</span><i>Tác Giả:</i> <a href='" searchauthor "'>" author "</a></p>                                     
                                         <p><i>Thể loại:</i> <a href='" searchgenre "'>" genre "</a>
-                                        <span style='visibility:hidden'>aaaaa</span><i>Số Chương:</i> " sochap "
+                                        <span style='visibility:hidden'>aaaaa</span><i>Số Chương:</i> " chap "
                                         </p>
                                         <hr>
                                         <p>" shortoverview "</p>        
@@ -246,7 +246,7 @@
                               </div>
                       </span>
                   </td>
-                  <td><a href='" linktruyen "'>" titletruyen "</a></td>
+                  <td><a href='" linktruyen "'>" title "</a></td>
                   <td><a href='" searchauthor "'>" author "</a></td>
                   <td><a href='" searchgenre "'>" genre "</a></td>
                   <td>" view "</td>
@@ -254,7 +254,7 @@
                 </tr>"))
 
                         (apply str (for [x (data :listtruyen)] 
-                            (listtruyen (x :linktruyen) (x :linkanh) (x :titletruyen) (x :author) (x :genre) (x :sochap) (x :shortoverview) (x :view) (x :state) (x :alternate) (x :searchauthor) (x :searchgenre))))
+                            (listtruyen (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :chap) (x :shortoverview) (x :view) (x :state) (x :alternate) (x :searchauthor) (x :searchgenre))))
                         ]]             
      
             

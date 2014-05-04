@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>[[((data :titlepage) :titletruyen)]] - [[((data :titlepage) :state)]] - [[((data :titlepage) :author)]] | Trang Ngôn Tình</title>  
+    <title>[[((data :titlepage) :title)]] - [[((data :titlepage) :state)]] - [[((data :titlepage) :author)]] | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="[[((data :lib-path) :icon)]]" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  
@@ -141,12 +141,12 @@
             <div class="row-fluid sideBar"><!--Side Bar-->                       
                   <div class="list-group">
 
-                    [[(defn sidebar1 [linktruyen linkanh titletruyen author genre]
+                    [[(defn sidebar1 [linktruyen linkanh title author genre]
                      (str "<a href='" linktruyen "' class='list-group-item'>
                           <div class='row-fluid'>
                             <div class='span5'><img src='" linkanh "' class='thumbnail img-responsive imgFloatsidebar list-group-item-text' width='90' height='120'></div>
                             <div class='span7'>
-                              <h4 class='list-group-item-heading'>" titletruyen "</h4>               
+                              <h4 class='list-group-item-heading'>" title "</h4>               
                               <p class='blue small'>Tác Giả: " author "<br>
                                                     Thể Loại: " genre "</p>
                             </div>
@@ -154,7 +154,7 @@
                         </a>"))
 
                         (apply str (for [x (data :sidebar1)] 
-                              (sidebar1 (x :linktruyen) (x :linkanh) (x :titletruyen) (x :author) (x :genre))))
+                              (sidebar1 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))
                     ]]
 
 
@@ -170,12 +170,12 @@
             <div class="row-fluid sideBar"><!--Side Bar-->                       
                   <div class="list-group">
 
-                    [[(defn sidebar2 [linktruyen linkanh titletruyen author genre]
+                    [[(defn sidebar2 [linktruyen linkanh title author genre]
                      (str "<a href='" linktruyen "' class='list-group-item'>
                           <div class='row-fluid'>
                             <div class='span5'><img src='" linkanh "' class='thumbnail img-responsive imgFloatsidebar list-group-item-text' width='90' height='120'></div>
                             <div class='span7'>
-                              <h4 class='list-group-item-heading'>" titletruyen "</h4>               
+                              <h4 class='list-group-item-heading'>" title "</h4>               
                               <p class='blue small'>Tác Giả: " author "<br>
                                                     Thể Loại: " genre "</p>
                             </div>
@@ -183,7 +183,7 @@
                         </a>"))
 
                         (apply str (for [x (data :sidebar2)] 
-                              (sidebar2 (x :linktruyen) (x :linkanh) (x :titletruyen) (x :author) (x :genre))))
+                              (sidebar2 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))
                     ]]
 
                 </div><!--list group-->
@@ -200,7 +200,7 @@
                   <ol class="breadcrumb">
                       <li><a href="trangngontinh.com">Home</a></li>
                       <li><a href="trangngontinh.com/doctruyen">Đọc Truyện</a></li>
-                      <li class="active">[[((data :titlepage) :titletruyen)]]</li>
+                      <li class="active">[[((data :titlepage) :title)]]</li>
                     </ol>
                 </div><br>                
                 
@@ -210,7 +210,7 @@
                 <img src="[[((data :truyeninfo) :linkanh)]]" class="thumbnail img-responsive" width="300" height="425">
               </div>
               <div class="span6">
-                <a href="[[((data :truyeninfo) :linktruyen)]]"><h2 class="green"><b>[[((data :truyeninfo) :titletruyen)]]</b></h2></a>
+                <a href="[[((data :truyeninfo) :linktruyen)]]"><h2 class="green"><b>[[((data :truyeninfo) :title)]]</b></h2></a>
                 <br>
                 <p><i>Tên Khác</i>:  [[((data :truyeninfo) :alternate)]]</p>
                 <p><i>Tác Giả</i>:  <a href="[[((data :truyeninfo) :searchauthor)]]">[[((data :truyeninfo) :author)]]</a></p>
@@ -219,7 +219,7 @@
                 <div class="minor-info">Nguồn: [[((data :truyeninfo) :source)]]<br>
                                         Editor/Translator: [[((data :truyeninfo) :person)]]<br>
                                         Lượt Xem: [[((data :truyeninfo) :view)]]<br>
-                                        Ngày Cập Nhập: [[((data :truyeninfo) :ngayup)]]</div>
+                                        Ngày Cập Nhập: [[((data :truyeninfo) :date_added)]]</div>
               </div>
             </div>                             
 
@@ -246,7 +246,7 @@
             <br>
 
               <!--<h4 class="white highlight">Giới Thiệu</h4>-->
-              <h4 class="orange"><b>Giới Thiệu truyện </b><i class="green">[[((data :titlepage) :titletruyen)]]</i></h4>
+              <h4 class="orange"><b>Giới Thiệu truyện </b><i class="green">[[((data :titlepage) :title)]]</i></h4>
                 <div class="well">
                   <p>[[((data :gioithieu) :shortoverview)]]</p>
                   <div id="hiddenBlock" class="anHien">
@@ -260,7 +260,7 @@
 
             
                 <!--<h4 class="white highlight">Mục Lục</h4>-->
-                <h4 class="orange"><b>Mục Lục truyện </b><i class="green">[[((data :titlepage) :titletruyen)]]</i></h4>
+                <h4 class="orange"><b>Mục Lục truyện </b><i class="green">[[((data :titlepage) :title)]]</i></h4>
                 
                 <div class="table-responsive">
                   <table class="table table-striped table-hover ">
@@ -273,15 +273,15 @@
                     </thead>
                     <tbody>
 
-                      [[(defn mucluc [chapnumber linkchap titlechap ngayup]
+                      [[(defn mucluc [chapnumber linkchap titlechap date_added]
                          (str "<tr class=''>                  
                                   <td>" chapnumber "</td>
                                   <td><a href='" linkchap "'>" titlechap "</a></td>
-                                  <td>" ngayup "</td>
+                                  <td>" date_added "</td>
                                </tr>"))
 
                             (apply str (for [x (data :mucluc)] 
-                                (mucluc (x :chapnumber) (x :linkchap) (x :titlechap) (x :ngayup))))
+                                (mucluc (x :chapnumber) (x :linkchap) (x :titlechap) (x :date_added))))
                       ]]                               
                   
                     </tbody>
@@ -449,3 +449,10 @@
 
   </body>
 </html>
+
+
+(doseq [folder (.listFiles (File. "/resources/public/Truyen"))]
+(let [image (File. (str (.getPath folder) "/cover.jpg"))]
+(let [smimage (Files.copy(image, (str (.getPath folder) "/smcover.jpg")))]
+)
+))
