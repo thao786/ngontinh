@@ -23,7 +23,7 @@
 	{:lib-path lib/lib-path 
 
 	;cac the loai va so truyen; http = xem truyen cung genre
-	:sidebar1 [{:theogenre "http" :genre "Co Dai" :sotruyen "1000"}
+	:sidebar1 [{:theogenre "http" :genre "Co Dai" :sotruyen (getGenreCount "HE")}
 			  {:theogenre "http" :genre "Hien Dai" :sotruyen "1000"}
 			  {:theogenre "http" :genre "Huyen Huyen" :sotruyen "1000"}
 			  {:theogenre "http" :genre "Dam My" :sotruyen "1000"}
