@@ -17,7 +17,7 @@
 										linkanh 	(str lib/hostPath "image/" name)
 										linktruyen 	(str lib/hostPath "doctruyen/" name)] 
 									(assoc truyen :linkanh linkanh :linktruyen linktruyen)))]
-		addLink)))
+			addLink)))
 
 
 (def Homepagedata 
@@ -26,8 +26,8 @@
 
 	;5 truyen co so view nhieu nhat
 	:sidebar1 	(getTruyen "select * from truyen order by view USING > limit 5")
-	
-	;5 truyen co so view nhieu nhat
+
+	;5 random
 	:sidebar2 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :genre "Co Dai"}
 			   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "That" :author "Ngoc" :genre "Co Dai"}	
 			   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Tu" :author "That" :genre "Co Dai"}
