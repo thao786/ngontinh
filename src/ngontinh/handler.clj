@@ -53,7 +53,8 @@
 		(io/resource (str "public/Truyen/" name "/cover.jpg")))
 
 
-	(GET "/" [] (str (view/render "ngontinh/HomePage.html" ngontinh.ngontinh.homepage/Homepagedata)))
+	(GET "/" [] 
+		(str (view/render "ngontinh/HomePage.html" ngontinh.ngontinh.homepage/Homepagedata)))
 	(GET "/doctruyen/:title" [title] 
 		(str (view/render "ngontinh/Doc_Truyen.html" ngontinh.ngontinh.doctruyen/Truyendata)))
 	(GET "/doctruyen" [] 
@@ -67,7 +68,6 @@
 	(GET "/englishnovel" [] (str (view/render "ngontinh/EnglishNovel.html" defndata/Englishdata)))
 	(GET "/rrh" [] (str (view/render "ngontinh/RedRidingHood.html" defndata/Storydata)))
 	(GET "/chap1" [] (str (view/render "ngontinh/RRHChapter1.html" defndata/Engchapdata)))
-
 
 	(route/resources "/")
 	(route/not-found "Not Found"))

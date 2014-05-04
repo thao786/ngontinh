@@ -17,7 +17,7 @@
 										linkanh 	(str lib/hostPath "image/" name)
 										linktruyen 	(str lib/hostPath "doctruyen/" name)] 
 									(assoc truyen :linkanh linkanh :linktruyen linktruyen)))]
-		addLink)))
+			addLink)))
 
 
 (def Homepagedata 
@@ -29,6 +29,7 @@
 	
 	;5 truyen co so view nhieu nhat
 	:sidebar2 	(getTruyen "SELECT * FROM truyen ORDER BY RANDOM() LIMIT 5")
+
 	; 5 truyen co ngay up gan nhat
 	:updatechap [{:linktruyen "That" :titletruyen "Hoa" :linkchap "Chu" :chapnumber "34" :titlechap "abcjf wfwnj" :ngayup "23/5/2014"}
 			   	 {:linktruyen "That" :titletruyen "Hoa" :linkchap "Chu" :chapnumber "34" :titlechap "abcjf wfwnj" :ngayup "23/5/2014"}
