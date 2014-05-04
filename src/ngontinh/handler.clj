@@ -11,6 +11,7 @@
             ngontinh.ngontinh.homepage))
 ;(:require [my.lib :refer :all])
 ;lein ring uberwar
+;(def ^:private some-var :value)
 
 
 (defroutes app-routes
@@ -46,6 +47,7 @@
 	(GET "/glyphicons-halflings-regular.woff" [] (io/resource "public/ngontinh/fonts/glyphicons-halflings-regular.woff"))
 	(GET "/glyphicons-halflings-regular.ttf" [] (io/resource "public/ngontinh/fonts/glyphicons-halflings-regular.ttf"))
 	(GET "/glyphicons-halflings-regular.svg" [] (io/resource "public/ngontinh/fonts/glyphicons-halflings-regular.svg"))
+	(GET "/image/:name" request (str request))
 
 
 	(GET "/" [] (str (view/render "ngontinh/HomePage.html" ngontinh.ngontinh.homepage/Homepagedata)))

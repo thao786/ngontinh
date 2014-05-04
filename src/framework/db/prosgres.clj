@@ -62,10 +62,6 @@
 
 
 
-(while (pos? @a) 
-	(do 
-		(println @a) 
-		(swap! a dec)))
 
 
 (let [query 	"select * from truyen order by view USING > limit 5"
@@ -106,3 +102,11 @@ doctruyen/tentruyen
 :translator "Lục Phong", 
 :date_added #inst "2014-05-04T01:18:27.608000000-00:00", 
 :view 2978}
+
+
+
+
+(doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
+	(let [image 	(File. (str (.getPath folder) "/cover.jpg"))]
+		()
+		))

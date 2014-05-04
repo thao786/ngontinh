@@ -5,15 +5,15 @@
 
 (def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" "postgres" "fall2010"))
 
-(;def ^:private some-var :value)
+;(def ^:private some-var :value)
 
 (def sidebar1 
 	(let 	[mostRead 	(let [query 	"select * from truyen order by view USING > limit 5"
-					 	stmt 	(.createStatement connection)
-					 	rs 		(.executeQuery stmt query)]
-					(vec (resultset-seq rs)))]
+							 	stmt 	(.createStatement connection)
+							 	rs 		(.executeQuery stmt query)]
+							(vec (resultset-seq rs)))]
 		mostRead
-	)
+	))
 
 (def Homepagedata 
 {	:lib-path lib/lib-path 
