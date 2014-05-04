@@ -7,7 +7,7 @@
 	
 
     (defn getGenreCount [genre]
-            (let    [resVec         (let    [connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh"
+            (let    [resVec (let    [connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh"
                                                                                                                                                     "postgres"
                                                                                                                                                     "fall2010")
                                                                     query           (str "select count(*) from truyen where genre like '%" genre "%'")
@@ -25,7 +25,7 @@
 	{:lib-path lib/lib-path 
 
 	;cac the loai va so truyen; http = xem truyen cung genre
-	:sidebar1 [{:theogenre (str lib/hostPath "listtruyen/co_dai") 		:genre "Cổ Đại" 	 :sotruyen "1000"}
+	:sidebar1 [{:theogenre (str lib/hostPath "listtruyen/co_dai") 		:genre "Cổ Đại" 	 :sotruyen (getGenreCount "Cổ Đại")}
 			   {:theogenre (str lib/hostPath "listtruyen/hien_dai") 	:genre "Hiện Đại" 	 :sotruyen "1000"}
 			   {:theogenre (str lib/hostPath "listtruyen/cung_dau") 	:genre "Cung Đấu"    :sotruyen "1000"}
 			   {:theogenre (str lib/hostPath "listtruyen/hai") 			:genre "Hài" 		 :sotruyen "1000"}
