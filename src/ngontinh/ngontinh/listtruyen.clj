@@ -75,3 +75,6 @@
 		  {:chapnumber "56" :linkchap "http" :titlechap "gegweg 4g4 g4wg" :ngayup "32/5/2014"}]
 	})	
 
+(def Theloaidata 0)
+
+(def Listtruyendata 0)

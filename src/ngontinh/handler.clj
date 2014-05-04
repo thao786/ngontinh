@@ -62,9 +62,9 @@
                 (str (view/render "ngontinh/DeDoPhu.html" ngontinh.ngontinh.gridtruyen/Truyendata)))
  
         (GET "/doctruyen" []
-                (str (view/render "ngontinh/Doc_Truyen.html" ngontinh.ngontinh.gridtruyen/Doctruyendata)))
+                (str (view/render "ngontinh/gridtruyen.html" ngontinh.ngontinh.gridtruyen/Doctruyendata)))
  
-        ;       (str (ngontinh.ngontinh.doctruyen/Doctruyendata :sidebar1)))
+               ;(str (ngontinh.ngontinh.doctruyen/Doctruyendata))
         (GET "/listtruyen/:genre" [genre]
                 (str (view/render "ngontinh/theloai.html" ngontinh.ngontinh.listtruyen/Theloaidata)))
  
