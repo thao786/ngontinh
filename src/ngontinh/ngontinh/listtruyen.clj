@@ -1,4 +1,4 @@
-(ns ngontinh.ngontinh.doctruyen
+(ns ngontinh.ngontinh.listtruyen
 	(:require 	[ngontinh.ngontinh.libpath :as lib]
 				[ngontinh.ngontinh.homepage :as hp]))
 
