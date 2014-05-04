@@ -159,12 +159,12 @@
             <div class="row-fluid sideBar"><!--Side Bar-->                       
                   <div class="list-group">
 
-                    [[(defn sidebar2 [linktruyen linkanh titletruyen author genre]
+                    [[(defn sidebar2 [linktruyen linkanh title author genre]
                      (str "<a href='" linktruyen "' class='list-group-item'>
                           <div class='row-fluid'>
                             <div class='span5'><img src='" linkanh "' class='thumbnail img-responsive imgFloatsidebar list-group-item-text' width='90' height='120'></div>
                             <div class='span7'>
-                              <h4 class='list-group-item-heading'>" titletruyen "</h4>               
+                              <h4 class='list-group-item-heading'>" title "</h4>               
                               <p class='blue small'>Tác Giả: " author "<br>
                                                     Thể Loại: " genre "</p>
                             </div>
@@ -172,7 +172,7 @@
                         </a>"))
 
                         (apply str (for [x (data :sidebar2)] 
-                                  (sidebar2 (x :linktruyen) (x :linkanh) (x :titletruyen) (x :author) (x :genre))))
+                                  (sidebar2 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))
                         ]]
 
 
@@ -188,12 +188,12 @@
             <div class="row-fluid sideBar"><!--Side Bar-->                       
                   <div class="list-group">
 
-                    [[(defn sidebar3 [linktruyen linkanh titletruyen author genre]
+                    [[(defn sidebar3 [linktruyen linkanh title author genre]
                      (str "<a href='" linktruyen "' class='list-group-item'>
                           <div class='row-fluid'>
                             <div class='span5'><img src='" linkanh "' class='thumbnail img-responsive imgFloatsidebar list-group-item-text' width='90' height='120'></div>
                             <div class='span7'>
-                              <h4 class='list-group-item-heading'>" titletruyen "</h4>               
+                              <h4 class='list-group-item-heading'>" title "</h4>               
                               <p class='blue small'>Tác Giả: " author "<br>
                                                     Thể Loại: " genre "</p>
                             </div>
@@ -201,7 +201,7 @@
                         </a>"))
 
                         (apply str (for [x (data :sidebar3)] 
-                                  (sidebar3 (x :linktruyen) (x :linkanh) (x :titletruyen) (x :author) (x :genre))))
+                                  (sidebar3 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))
                         ]]
 
 
@@ -225,10 +225,10 @@
 
                 <div class="row-fluid"> 
 
-                    [[(defn truyen1 [linktruyen linkanh titletruyen author genre state view]
+                    [[(defn truyen1 [linktruyen linkanh title author genre state view]
                      (str "<div class='span3 doctruyen'>
                         <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail' width='140' height='190'></a>
-                        <a href='" linktruyen "'><h4><b>" titletruyen "</b></h4></a>
+                        <a href='" linktruyen "'><h4><b>" title "</b></h4></a>
                         <p class='text-muted'><span class='small'>Tác Giả:</span> " author "<br>
                                               <span class='small'>Thể Loại:</span> " genre "<br>
                                               <span class='small'>Tình Trạng:</span> " state "<br>     
@@ -236,7 +236,7 @@
                            </div>"))
 
                         (apply str (for [x (data :truyen1)] 
-                                  (truyen1 (x :linktruyen) (x :linkanh) (x :titletruyen) (x :author) (x :genre) (x :state) (x :view))))
+                                  (truyen1 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view))))
                         ]]
                          
                 </div><!--a Row-->
@@ -246,10 +246,10 @@
 
                 <div class="row-fluid"> 
 
-                  [[(defn truyen2 [linktruyen linkanh titletruyen author genre state view]
+                  [[(defn truyen2 [linktruyen linkanh title author genre state view]
                      (str "<div class='span3 doctruyen'>
                         <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail' width='140' height='190'></a>
-                        <a href='" linktruyen "'><h4><b>" titletruyen "</b></h4></a>
+                        <a href='" linktruyen "'><h4><b>" title "</b></h4></a>
                         <p class='text-muted'><span class='small'>Tác Giả:</span> " author "<br>
                                               <span class='small'>Thể Loại:</span> " genre "<br>
                                               <span class='small'>Tình Trạng:</span> " state "<br>     
@@ -257,7 +257,7 @@
                            </div>"))
 
                         (apply str (for [x (data :truyen2)] 
-                                  (truyen2 (x :linktruyen) (x :linkanh) (x :titletruyen) (x :author) (x :genre) (x :state) (x :view))))
+                                  (truyen2 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view))))
                   ]]
                     
                 </div><!--a Row-->
@@ -267,10 +267,10 @@
 
                 <div class="row-fluid"> 
 
-                  [[(defn truyen3 [linktruyen linkanh titletruyen author genre state view]
+                  [[(defn truyen3 [linktruyen linkanh title author genre state view]
                      (str "<div class='span3 doctruyen'>
                         <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail' width='140' height='190'></a>
-                        <a href='" linktruyen "'><h4><b>" titletruyen "</b></h4></a>
+                        <a href='" linktruyen "'><h4><b>" title "</b></h4></a>
                         <p class='text-muted'><span class='small'>Tác Giả:</span> " author "<br>
                                               <span class='small'>Thể Loại:</span> " genre "<br>
                                               <span class='small'>Tình Trạng:</span> " state "<br>     
@@ -278,7 +278,7 @@
                            </div>"))
 
                         (apply str (for [x (data :truyen3)] 
-                                  (truyen3 (x :linktruyen) (x :linkanh) (x :titletruyen) (x :author) (x :genre) (x :state) (x :view))))
+                                  (truyen3 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view))))
                   ]]
                     
                 </div><!--a Row-->
@@ -288,10 +288,10 @@
 
                 <div class="row-fluid"> 
 
-                  [[(defn truyen4 [linktruyen linkanh titletruyen author genre state view]
+                  [[(defn truyen4 [linktruyen linkanh title author genre state view]
                      (str "<div class='span3 doctruyen'>
                         <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail' width='140' height='190'></a>
-                        <a href='" linktruyen "'><h4><b>" titletruyen "</b></h4></a>
+                        <a href='" linktruyen "'><h4><b>" title "</b></h4></a>
                         <p class='text-muted'><span class='small'>Tác Giả:</span> " author "<br>
                                               <span class='small'>Thể Loại:</span> " genre "<br>
                                               <span class='small'>Tình Trạng:</span> " state "<br>     
@@ -299,7 +299,7 @@
                            </div>"))
 
                         (apply str (for [x (data :truyen4)] 
-                                  (truyen4 (x :linktruyen) (x :linkanh) (x :titletruyen) (x :author) (x :genre) (x :state) (x :view))))
+                                  (truyen4 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view))))
                   ]]
                     
                 </div><!--a Row-->
@@ -309,10 +309,10 @@
 
                 <div class="row-fluid"> 
 
-                  [[(defn truyen5 [linktruyen linkanh titletruyen author genre state view]
+                  [[(defn truyen5 [linktruyen linkanh title author genre state view]
                      (str "<div class='span3 doctruyen'>
                         <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail' width='140' height='190'></a>
-                        <a href='" linktruyen "'><h4><b>" titletruyen "</b></h4></a>
+                        <a href='" linktruyen "'><h4><b>" title "</b></h4></a>
                         <p class='text-muted'><span class='small'>Tác Giả:</span> " author "<br>
                                               <span class='small'>Thể Loại:</span> " genre "<br>
                                               <span class='small'>Tình Trạng:</span> " state "<br>     
@@ -320,7 +320,7 @@
                            </div>"))
 
                         (apply str (for [x (data :truyen5)] 
-                                  (truyen5 (x :linktruyen) (x :linkanh) (x :titletruyen) (x :author) (x :genre) (x :state) (x :view))))
+                                  (truyen5 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view))))
                   ]]
                     
                 </div><!--a Row-->

@@ -144,12 +144,12 @@
             <div class="row-fluid sideBar"><!--Side Bar-->                       
                   <div class="list-group">
 
-                    [[(defn sidebar [linktruyen linkanh titletruyen author genre]
+                    [[(defn sidebar [linktruyen linkanh title author genre]
                      (str "<a href='" linktruyen "' class='list-group-item'>
                           <div class='row-fluid'>
                             <div class='span5'><img src='" linkanh "' class='thumbnail img-responsive imgFloatsidebar list-group-item-text' width='90' height='120'></div>
                             <div class='span7'>
-                              <h4 class='list-group-item-heading'>" titletruyen "</h4>               
+                              <h4 class='list-group-item-heading'>" title "</h4>               
                               <p class='blue small'>Tác Giả: " author "<br>
                                                     Thể Loại: " genre "</p>
                             </div>
@@ -157,7 +157,7 @@
                         </a>"))
 
                         (apply str (for [x (data :sidebar)] 
-                                  (sidebar (x :linktruyen) (x :linkanh) (x :titletruyen) (x :author) (x :genre))))
+                                  (sidebar (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))
                         ]]
 
 
@@ -215,7 +215,7 @@
                         </thead>
                         <tbody>           
                             
-                [[(defn listtruyen [linktruyen linkanh titletruyen alternate author genre shortoverview sochap view state searchauthor searchgenre]
+                [[(defn listtruyen [linktruyen linkanh title alternate author genre shortoverview chap view state searchauthor searchgenre]
                      (str "<tr class=''>
                   <td><span class='dropdown hidden-xs'>
                           <button class='dropdown-toggle btn btn-xs' data-toggle='dropdown'>Giới Thiệu<b class='caret'></b></button>
@@ -225,7 +225,7 @@
                                      <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail img-responsive imgFloat' width='140' height='190'></a>
                                   </div>
                                   <div class='span9'> 
-                                        <a href='" linktruyen "'><h3 class='green'><b>" titletruyen "</b></h3></a>
+                                        <a href='" linktruyen "'><h3 class='green'><b>" title "</b></h3></a>
                                         <p><i>Tên Khác:</i> " alternate "
                                         <span style='visibility:hidden'>aaaaa</span><i>Tác Giả:</i> <a href='" searchauthor "'>" author "</a></p>                                        
                                         <p><i>Thể Loại:</i> <a href='" searchgenre "'>" genre "</a>
@@ -239,14 +239,14 @@
                               </div>
                       </span>
                   </td>
-                  <td><a href='" linktruyen "'>" titletruyen "</a></td>
-                  <td>" sochap "</td>
+                  <td><a href='" linktruyen "'>" title "</a></td>
+                  <td>" chap "</td>
                   <td><a href='" searchgenre "'>" genre "</a></td>
                   <td>" view "</td>
                 </tr>"))
 
                         (apply str (for [x (data :listtruyen)] 
-                            (listtruyen (x :linktruyen) (x :linkanh) (x :titletruyen) (x :alternate) (x :author) (x :genre) (x :shortoverview) (x :sochap) (x :view) (x :state) (x :searchauthor) (x :searchgenre))))
+                            (listtruyen (x :linktruyen) (x :linkanh) (x :title) (x :alternate) (x :author) (x :genre) (x :shortoverview) (x :chap) (x :view) (x :state) (x :searchauthor) (x :searchgenre))))
                         ]] 
 
                              
