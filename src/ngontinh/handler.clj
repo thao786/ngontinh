@@ -8,7 +8,8 @@
             [clojure.java.io :as io]
             [ngontinh.view.core :as view]
             [ngontinh.ngontinh.defdata :as defndata]
-            ngontinh.ngontinh.homepage))
+            ngontinh.ngontinh.homepage
+            ngontinh.ngontinh.doctruyen))
 ;(:require [my.lib :refer :all])
 ;lein ring uberwar
 ;(def ^:private some-var :value)
@@ -53,12 +54,15 @@
 
 
 	(GET "/" [] (str (view/render "ngontinh/HomePage.html" ngontinh.ngontinh.homepage/Homepagedata)))
+	(GET "/doctruyen/:title" [title] 
+		(str (view/render "ngontinh/Doc_Truyen.html" ngontinh.ngontinh.doctruyen/Truyendata)))
+	(GET "/doctruyen" [] 
+		(str (view/render "ngontinh/List_Truyen.html" ngontinh.ngontinh.doctruyen/Doctruyendata)))
+
 	(GET "/danhsachtruyen" [] (str (view/render "ngontinh/List_Truyen.html" defndata/Listtruyendata)))
 	(GET "/advancedsearch" [] (str (view/render "ngontinh/Tim_nang_cao.html" defndata/Advancedsearchdata)))
-	(GET "/doctruyen" [] (str (view/render "ngontinh/Doc_Truyen.html" defndata/Doctruyendata)))
 	(GET "/ketquatimkiem" [] (str (view/render "ngontinh/KetQuaTimKiem.html" defndata/TimKiemdata)))
 	(GET "/huyenhuyen" [] (str (view/render "ngontinh/Huyen_huyen.html" defndata/Theloaidata)))
-	(GET "/hoatudan" [] (str (view/render "ngontinh/DeDoPhu.html" defndata/Truyendata)))
 	(GET "/chuong1" [] (str (view/render "ngontinh/DeDoPhuChuong1.html" defndata/Chapterdata)))
 	(GET "/englishnovel" [] (str (view/render "ngontinh/EnglishNovel.html" defndata/Englishdata)))
 	(GET "/rrh" [] (str (view/render "ngontinh/RedRidingHood.html" defndata/Storydata)))
