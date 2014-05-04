@@ -8,7 +8,7 @@
 (require '[clojure.string :as string])
 (require 'ngontinh.handler)
 (require '[ngontinh.ngontinh.defdata :as defndata])
-
+(import 'java.sql.Timestamp)
 
 
 
@@ -22,7 +22,7 @@
 
 (def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" "postgres" "fall2010"))
 
-(def sqlString "INSERT INTO truyen (name, alternateName, author, uploadComplete, genre, source, editor,translator ) VALUES ('tgrf', 'haha', 'haha', 543 , 'haha', 'haha', 'haha', 'haha')")
+(def sqlString "INSERT INTO truyen (name, alternateName, author, uploadComplete, genre, source, editor, translator) VALUES ('tgrf', 'haha', 'haha', 543 , 'haha', 'haha', 'haha', 'haha')")
 
 (def statement (.prepareStatement connection sqlString))
 
@@ -33,7 +33,6 @@
 ;inject in database
 (doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
 (prn (let 	[path 		(str (.getPath folder) "/Info.txt")
-	;	do (prn path)
 		oldContent 	(slurp path)
 		content 	(clojure.string/replace oldContent #"\r" "")
 		infoArray 	(.split content "\n")		
@@ -47,7 +46,9 @@
 					"translator" (try (nth infoArray 7) (catch Exception e ""))}
 		sqlStr  	(.prepareStatement connection (str 
 						"INSERT INTO truyen (title, alternate, path, author, state, 
-							genre, source, editor, translator, numberofchap) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"))
+							genre, source, editor, translator, chap, date_Added, view) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"))
+		stamp 		(Timestamp. (.getTime (java.util.Date.)))
+		view		(* 50 (rand-int 60))
 		statement 	(doto sqlStr 
 						(.setString 1 (colMap "title"))
 						(.setString 2 (colMap "alternate")) 
@@ -58,11 +59,11 @@
 						(.setString 7 (colMap "source")) 
 						(.setString 8 (colMap "editor"))
 						(.setString 9 (colMap "translator"))
-						(.setInt 10 (- (count (.listFiles folder)) 3)))]
+						(.setInt 10 (- (count (.listFiles folder)) 3))
+						(.setTimestamp 11 stamp)
+						(.setInt 12 view))]
 	(try (.execute statement) 
-		(catch Exception e (prn path)))
-	)))
-
+		(catch Exception e (prn path))))))
 
 
 
@@ -75,15 +76,13 @@
 
 
 
-;remove chapter line
+;rename pictures
 (doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
 	(doseq [file (.listFiles folder)]
-		(if (.matches (.getName file) "[0-9]*.txt")
-			(let [oldContent 	(slurp file)
-				firstNewLine	(+ 1 (.indexOf oldContent "\n"))
-					newContent 	(.substring oldContent firstNewLine 
-								(.length oldContent))]
-				(spit (.getPath file) newContent)))))
+		(if (.matches (.getName file) "[a-zA-Z]*.jpg")
+			(let [oldName 	(.getPath file)
+				newName 	(str (.getPath folder) "/cover.jpg")]
+				(.renameTo file (File. newName))))))
 
 
 
