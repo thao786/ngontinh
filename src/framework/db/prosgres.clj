@@ -62,13 +62,47 @@
 
 
 
+(while (pos? @a) 
+	(do 
+		(println @a) 
+		(swap! a dec)))
 
 
-(let [query 	"select * from truyen order by view USING > limit 5"]
-	)
+(let [query 	"select * from truyen order by view USING > limit 5"
+	 	stmt 	(.createStatement connection)
+	 	rs 		(.executeQuery stmt query)]
+	(while (.next rs)
+		(do 
+			(def title (.getString rs))
+			(def view (.getInt rs))
+			(prn title view))))
 
 
 
 
 
+(let [query 	"select * from truyen order by view USING > limit 5"
+	 	stmt 	(.createStatement connection)
+	 	rs 		(.executeQuery stmt query)]
+	(vec (resultset-seq rs)))
 
+
+
+
+{:linkanh (lib/lib-path :linkanh) 
+	:linktruyen "That" 
+	:titletruyen "Hoa" 
+	:author "Chu" 
+	:genre "Co Dai"}
+				
+
+{:title "Mê Thần Ký", 
+:alternate "", 
+:path "Me_Than_Ky", 
+:author "Thi Định Nhu", 
+:state 1, :chap 26, 
+:genre "Cổ Đại, Giang Hồ, HE", 
+:source "", :editor "", 
+:translator "Lục Phong", 
+:date_added #inst "2014-05-04T01:18:27.608000000-00:00", 
+:view 2978}

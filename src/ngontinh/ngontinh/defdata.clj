@@ -1,45 +1,7 @@
 
 (ns ngontinh.ngontinh.defdata
 	(:use 		compojure.core)
-	(:require 	[clojure.java.io :as io]
-				[ngontinh.ngontinh.libpath :as lib]))
-
-(def Homepagedata {	:lib-path lib/lib-path 
-					:tim "http"
-					:sidebar1 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :genre "Co Dai"}
-							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "That" :author "Ngoc" :genre "Co Dai"}	
-							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Tu" :author "That" :genre "Co Dai"}
-							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Dan" :author "Cong" :genre "Hien Dai"}
-							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Duong" :author "That" :genre "Co Dai"}]
-					;5 truyen co so view nhieu nhat
-					:sidebar2 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :genre "Co Dai"}
-							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "That" :author "Ngoc" :genre "Co Dai"}	
-							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Tu" :author "That" :genre "Co Dai"}
-							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Dan" :author "Cong" :genre "Hien Dai"}
-							   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Duong" :author "That" :genre "Co Dai"}]
-					; 5 truyen co ngay up gan nhat
-					:updatechap [{:linktruyen "That" :titletruyen "Hoa" :linkchap "Chu" :chapnumber "34" :titlechap "abcjf wfwnj" :ngayup "23/5/2014"}
-							   	 {:linktruyen "That" :titletruyen "Hoa" :linkchap "Chu" :chapnumber "34" :titlechap "abcjf wfwnj" :ngayup "23/5/2014"}
-							   	 {:linktruyen "That" :titletruyen "Hoa" :linkchap "Chu" :chapnumber "34" :titlechap "abcjf wfwnj" :ngayup "23/5/2014"}
-							   	 {:linktruyen "That" :titletruyen "Hoa" :linkchap "Chu" :chapnumber "34" :titlechap "abcjf wfwnj" :ngayup "23/5/2014"}
-							   	 {:linktruyen "That" :titletruyen "Hoa" :linkchap "Chu" :chapnumber "34" :titlechap "abcjf wfwnj" :ngayup "23/5/2014"}]
-					;10 truyen co ngay update chuong moi nhat
-					:doctruyen1 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hohf knefj fe"}
-							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hohf knefj fe"}
-							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hohf knefj fe"}
-							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hohf knefj fe"}]	 
-					;4 truyen generate randomly
-					:doctruyen2 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Iin egb je"}
-							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Iin egb je"}
-							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Iin egb je"}
-							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Iin egb je"}]
-					;4 truyen generate randomly
-					:engnovel	[{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "The Exorcist"}
-							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "One Piece"}
-							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Naruto"}
-							  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Iin egb je"}]	
-					;4 truyen tieng anh random
-				})
+	(:require 	[ngontinh.ngontinh.libpath :as lib]))
 
 (def Listtruyendata {:lib-path lib/lib-path 
 					 :theloai {:cungdau "http" :dammy "http" :huyenhuyen "http" :nguoc "http" :sac "http" :vongdu "http" :trongsinh "http" :xuyenkhong "http"}

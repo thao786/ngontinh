@@ -7,7 +7,8 @@
             [compojure.route :as route]
             [clojure.java.io :as io]
             [ngontinh.view.core :as view]
-            [ngontinh.ngontinh.defdata :as defndata]))
+            [ngontinh.ngontinh.defdata :as defndata]
+            ngontinh.ngontinh.homepage))
 ;(:require [my.lib :refer :all])
 ;lein ring uberwar
 
@@ -47,7 +48,7 @@
 	(GET "/glyphicons-halflings-regular.svg" [] (io/resource "public/ngontinh/fonts/glyphicons-halflings-regular.svg"))
 
 
-	(GET "/" [] (str (view/render "ngontinh/HomePage.html" defndata/Homepagedata)))
+	(GET "/" [] (str (view/render "ngontinh/HomePage.html" ngontinh.ngontinh.homepage/Homepagedata)))
 	(GET "/danhsachtruyen" [] (str (view/render "ngontinh/List_Truyen.html" defndata/Listtruyendata)))
 	(GET "/advancedsearch" [] (str (view/render "ngontinh/Tim_nang_cao.html" defndata/Advancedsearchdata)))
 	(GET "/doctruyen" [] (str (view/render "ngontinh/Doc_Truyen.html" defndata/Doctruyendata)))
