@@ -4,17 +4,33 @@
 
 (import 'java.sql.DriverManager)
 
+	
+
+    (defn getGenreCount [genre]
+            (let    [resVec         (let    [connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh"
+                                                                                                                                                    "postgres"
+                                                                                                                                                    "fall2010")
+                                                                    query           (str "select count(*) from truyen where genre like '%" genre "%'")
+                                                                    res             (let [  stmt    (.createStatement connection)
+                                                                                                            rs              (.executeQuery stmt query)]
+                                                                                                    (vec (resultset-seq rs)))
+                                                                    ddd             (.close connection)]
+                                                                    res)
+                            row             (nth resVec 0)]
+                    (row :count)))
+
+
 
 (def Doctruyendata 
 	{:lib-path lib/lib-path 
 
 	;cac the loai va so truyen; http = xem truyen cung genre
-	:sidebar1 [{:theogenre (str lib/hostPath "listtruyen/" co_dai) :genre "Co Dai" :sotruyen "1000"}
-			  {:theogenre (str lib/hostPath "listtruyen/" hien_dai) :genre "Hien Dai" :sotruyen "1000"}
-			  {:theogenre "http" :genre "Huyen Huyen" :sotruyen "1000"}
-			  {:theogenre "http" :genre "Dam My" :sotruyen "1000"}
-			  {:theogenre "http" :genre "Trong Sinh" :sotruyen "1000"}
-			  {:theogenre "http" :genre "Xuyen Khong" :sotruyen "1000"}]
+	:sidebar1 [{:theogenre (str lib/hostPath "listtruyen/co_dai") 		:genre "Cổ Đại" 	 :sotruyen "1000"}
+			   {:theogenre (str lib/hostPath "listtruyen/hien_dai") 	:genre "Hiện Đại" 	 :sotruyen "1000"}
+			   {:theogenre (str lib/hostPath "listtruyen/cung_dau") 	:genre "Cung Đấu"    :sotruyen "1000"}
+			   {:theogenre (str lib/hostPath "listtruyen/hai") 			:genre "Hài" 		 :sotruyen "1000"}
+			   {:theogenre (str lib/hostPath "listtruyen/huyen_huyen") 	:genre "Huyền Huyễn" :sotruyen "1000"}   
+			   {:theogenre (str lib/hostPath "listtruyen/xuyen_khong") 	:genre "Xuyên Không" :sotruyen "1000"}]
 	
 	;truyen so view nhieu nhat
 	:sidebar2 	(hp/getTruyen "select * from truyen order by view USING > limit 5")
