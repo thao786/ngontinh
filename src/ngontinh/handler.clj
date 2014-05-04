@@ -56,9 +56,10 @@
 	(GET "/" [] 
 		(str (view/render "ngontinh/HomePage.html" ngontinh.ngontinh.homepage/Homepagedata)))
 	(GET "/doctruyen/:title" [title] 
-		(str (view/render "ngontinh/Doc_Truyen.html" ngontinh.ngontinh.doctruyen/Truyendata)))
+		(str (view/render "ngontinh/DeDoPhu.html" ngontinh.ngontinh.doctruyen/Truyendata)))
 	(GET "/doctruyen" [] 
-		(str (view/render "ngontinh/List_Truyen.html" ngontinh.ngontinh.doctruyen/Doctruyendata)))
+		(str (view/render "ngontinh/Doc_Truyen.html" ngontinh.ngontinh.doctruyen/Doctruyendata)))
+	;	(str (ngontinh.ngontinh.doctruyen/Doctruyendata :sidebar1)))
 
 	(GET "/danhsachtruyen" [] (str (view/render "ngontinh/List_Truyen.html" defndata/Listtruyendata)))
 	(GET "/advancedsearch" [] (str (view/render "ngontinh/Tim_nang_cao.html" defndata/Advancedsearchdata)))
