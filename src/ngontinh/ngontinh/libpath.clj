@@ -3,7 +3,9 @@
 	(:use 		compojure.core)
 	(:require 	[clojure.java.io :as io]))
 
-(def lib-path {:bootcss "http://localhost:3000/bootstrap.css"
+(def hostPath "http://localhost:3000/")
+
+(def lib-path {:bootcss (str hostPath "bootstrap.css")
 			   :bootcollapsejs "http://localhost:3000/bootstrap-collapse.js"
 			   :jquery "http://localhost:3000/jquery.js"
 			   :bootstheme "http://localhost:3000/bootstrap-theme.css"
