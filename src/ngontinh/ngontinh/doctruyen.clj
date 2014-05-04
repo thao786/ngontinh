@@ -2,9 +2,7 @@
 	(:require 	[ngontinh.ngontinh.libpath :as lib]
 				[ngontinh.ngontinh.homepage :as hp]))
 
-(import 'java.sql.DriverManager)
-
-(def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" "postgres" "fall2010"))
+;(import 'java.sql.DriverManager)
 
 
 (def Doctruyendata 
@@ -19,19 +17,11 @@
 			  {:theogenre "http" :genre "Xuyen Khong" :sotruyen "1000"}]
 	
 	;truyen so view nhieu nhat
-	:sidebar2 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :genre "Co Dai"}
-			   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "That" :author "Ngoc" :genre "Co Dai"}	
-			   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Tu" :author "That" :genre "Co Dai"}
-			   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Dan" :author "Cong" :genre "Hien Dai"}
-			   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Duong" :author "That" :genre "Co Dai"}]
-	
+	:sidebar2 	(hp/getTruyen "select * from truyen order by view USING > limit 5")
+
 	;truyen ngau nhien
-	:sidebar3 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :genre "Co Dai"}
-			   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "That" :author "Ngoc" :genre "Co Dai"}	
-			   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Tu" :author "That" :genre "Co Dai"}
-			   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Dan" :author "Cong" :genre "Hien Dai"}
-			   {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Duong" :author "That" :genre "Co Dai"}]
-	
+	:sidebar3 	(hp/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() LIMIT 5")
+
 	;display cac truyen
 	:truyen1 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :genre "Co Dai" :state "Full" :view "5000"}
 			  {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :genre "Co Dai" :state "Full" :view "5000"}
@@ -53,7 +43,8 @@
 			  {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :genre "Co Dai" :state "Full" :view "5000"}
 			  {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :genre "Co Dai" :state "Full" :view "5000"}
 			  {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hoa" :author "Chu" :genre "Co Dai" :state "Full" :view "5000"}]
-	:tim "http"})
+	:tim "http"
+})
 
 
 (def Truyendata {:lib-path lib/lib-path 
