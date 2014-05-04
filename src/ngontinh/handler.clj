@@ -56,15 +56,18 @@
 	(GET "/" [] 
 		(str (view/render "ngontinh/HomePage.html" ngontinh.ngontinh.homepage/Homepagedata)))
 	(GET "/doctruyen/:title" [title] 
-		(str (view/render "ngontinh/DeDoPhu.html" ngontinh.ngontinh.doctruyen/Truyendata)))
+		(str (view/render "ngontinh/DeDoPhu.html" ngontinh.ngontinh.gridtruyen/Truyendata)))
 	(GET "/doctruyen" [] 
-		(str (view/render "ngontinh/Doc_Truyen.html" ngontinh.ngontinh.doctruyen/Doctruyendata)))
+		(str (view/render "ngontinh/Doc_Truyen.html" ngontinh.ngontinh.gridtruyen/Doctruyendata)))
 	;	(str (ngontinh.ngontinh.doctruyen/Doctruyendata :sidebar1)))
+	(GET "/listtruyen/:genre" [genre] 
+		(str (view/render "ngontinh/theloai.html" ngontinh.ngontinh.listtruyen/Theloaidata)))
+	(GET "/listtruyen" [] 
+		(str (view/render "ngontinh/List_Truyen.html" ngontinh.ngontinh.listtruyen/Listtruyendata)))
 
-	(GET "/danhsachtruyen" [] (str (view/render "ngontinh/List_Truyen.html" defndata/Listtruyendata)))
 	(GET "/advancedsearch" [] (str (view/render "ngontinh/Tim_nang_cao.html" defndata/Advancedsearchdata)))
 	(GET "/ketquatimkiem" [] (str (view/render "ngontinh/KetQuaTimKiem.html" defndata/TimKiemdata)))
-	(GET "/huyenhuyen" [] (str (view/render "ngontinh/Huyen_huyen.html" defndata/Theloaidata)))
+	
 	(GET "/chuong1" [] (str (view/render "ngontinh/DeDoPhuChuong1.html" defndata/Chapterdata)))
 	(GET "/englishnovel" [] (str (view/render "ngontinh/EnglishNovel.html" defndata/Englishdata)))
 	(GET "/rrh" [] (str (view/render "ngontinh/RedRidingHood.html" defndata/Storydata)))

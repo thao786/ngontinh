@@ -9,8 +9,8 @@
 	{:lib-path lib/lib-path 
 
 	;cac the loai va so truyen; http = xem truyen cung genre
-	:sidebar1 [{:theogenre "http" :genre "Co Dai" :sotruyen "1000"}
-			  {:theogenre "http" :genre "Hien Dai" :sotruyen "1000"}
+	:sidebar1 [{:theogenre (str lib/hostPath "listtruyen/" co_dai) :genre "Co Dai" :sotruyen "1000"}
+			  {:theogenre (str lib/hostPath "listtruyen/" hien_dai) :genre "Hien Dai" :sotruyen "1000"}
 			  {:theogenre "http" :genre "Huyen Huyen" :sotruyen "1000"}
 			  {:theogenre "http" :genre "Dam My" :sotruyen "1000"}
 			  {:theogenre "http" :genre "Trong Sinh" :sotruyen "1000"}
