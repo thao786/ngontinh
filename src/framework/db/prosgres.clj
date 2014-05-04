@@ -87,7 +87,7 @@
 	(vec (resultset-seq rs)))
 
 
-
+doctruyen/tentruyen
 
 {:linkanh (lib/lib-path :linkanh) 
 	:linktruyen "That" 

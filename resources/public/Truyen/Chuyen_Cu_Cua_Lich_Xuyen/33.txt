@@ -1,0 +1,454 @@
+Chương 33
+Lên mạng tùy tiện tra một cái, chiếc laptop của tôi giá hơn 1 một vạn. Đó là dòng mới nhất năm nay, giá hàng xài rồi cũng không thấp. Số tiền tôi đau khổ tiết kiệm được nhờ phiên dịch trong hai tháng vừa rồi, lập tức đi tong. Điều tôi lo lắng nhất không phải cái này. Dữ liệu tôi lưu trong máy, 90% là dữ liệu của công ty, bản vẽ, thư xin dự thầu và tất cả các bản dịch của tôi. Hướng dẫn tra cứu do chính tay tôi soạn, văn sưu tầm, tiểu thuyết trên mạng tôi thích, phần mềm khó lắm mới down từ trên mạng xuống được v..v và v..v
+
+Buổi trưa lúc ăn cơm, tôi gặp được Lịch Xuyên ở cửa nhà ăn, không ngờ anh lại hỏi : “Máy tính sao rồi? Còn dùng được không?”
+
+“Không được, hư hoàn toàn rồi.”
+
+“Vậy em tính sao?”
+
+“Tính mua một chiếc xài rồi. Chỉ có điều không biết dữ liệu trong đó làm sao bây giờ.”
+
+“Em đi mua một cái sandwich cho anh đi, anh lấy dữ liệu ra giúp em.”
+
+Tôi nửa đi nửa chạy về văn phòng, đưa chiếc laptop còn nhỏ nước của mình cho anh : “Làm ơn.”
+
+Tôi mua một hộp salad, một chiếc sandwich cá, hai chai nước khoáng. Gõ cửa vào phòng Lịch Xuyên.
+
+Đây là lần đầu tiên tôi vào văn phòng Lịch Xuyên kể từ khi về lại Bắc Kinh. Gian phòng đầu sau cửa là chỗ của thư ký của Lịch Xuyên Đường Tiểu Vi. Đường Tiểu Vi vốn là thư ký của Giang tổng, lệnh điều Lịch Xuyên về của tổng bộ vừa được đưa ra, ngay hôm đó Giang Hạo Thiên liền điều thư kí của mình xuống. Đường Tiểu Vi vốn là thư ký riêng của phòng hành chính ở Bắc Kinh, vẻ ngoài vô cùng đáng yêu, làm việc rất lưu loát, tính tình lại im lặng. Cơm trưa nhiều chuyện của tổ phiên dịch chúng tôi, Đường Tiểu Vi chưa bao giờ tham gia. Để tránh chúng tôi, mỗi lần ăn cơm đều cố ý xuống trễ nửa tiếng.
+
+“Xin chào, Tiểu Thu!”
+
+“Em tìm Vương tiên sinh. Máy tính của em hư rồi, nhờ anh ấy lấy dữ liệu ra.”
+
+“Vào đi, anh ấy đang tháo máy ra. Chị vừa mới mang vào cho anh ấy mấy cái tua vít.”
+
+“Phiền chị.”
+
+“Đừng khách sáo.”
+
+Tôi vào phòng trong. Văn phòng của Lịch Xuyên giống y như Emma miêu tả. Rất rộng mở, ở giữa đặt một chiếc sô pha màu trắng, đặt trên một tấm thảm dệt máy hình thoi. Ở trong còn có mấy gian phòng, là phòng nghỉ dành riêng cho anh, phòng tắm và toilet.
+
+Chiếc Sony của tôi đã bị anh tháo tung ra, linh kiện được phân loại đặt trên bàn làm việc. Lịch Xuyên đang dùng tua vít vặn một bộ phận nào đó.
+
+Thấy tôi, anh bỏ dụng cụ xuống, đứng dậy, lấy sandwich trong tay tôi, nói cảm ơn. Sau đó chỉ vào sô pha nói : “Mời ngồi.”
+
+Tiếp theo, anh ấn một chiếc nút trên điện thoại bàn, nói : “Tiểu Vi, tôi còn cần một chiếc tua vít Ferri cỡ T6. Nếu không có T6 thì lấy PH000, loại ba số không. Chỗ Tiểu Đinh ở phòng vẽ chắc chắn có. Đi mượn giúp tôi một chút được không?”
+
+Tôi ngây ra nhìn anh, không nhớ ra Lịch Xuyên còn biết sửa máy tính.
+
+“Dữ liệu khôi phục lại được không?”
+
+“Đều lưu ở phần cứng, anh lấy phần cứng ra, ráp vào một chiếc laptop khác là được.”
+
+Nghe qua rất đơn giản.
+
+Tôi nuốt nuốt nước miếng, hơi sốt ruột : “Cần một chiếc laptop khác à? Em còn chưa mua. Có một bản thảo dịch được hơn một nửa, hôm nay phải nộp.”
+
+“Máy em có cài phần mềm gì đặc biệt không thông thường không?”
+
+“Phần lớn em dùng Endnotes, bản 8.0 cũ.”
+
+“OK, bây giờ anh sẽ nói cho em anh tính làm như thế nào.”
+
+Tôi trừng to mắt nhìn anh.
+
+–“Thứ nhất, anh tháo phần cứng của em ra.”
+
+–“Thứ hai, anh tháo phần cứng của chính mình ra.”
+
+–“Thứ ba, anh ráp phần cứng của em vào máy anh, ráp phần cứng của anh vào một dụng cụ đọc phần cứng.”
+
+–“Thứ tư, bật laptop của anh lên, dùng Linx khởi động, đọc dữ liệu trong phần cứng của em.”
+
+–“Thứ năm, anh đưa một dữ liệu bất kì vào máy của em để thử. Nếu tất cả đều thuận lợi, anh rút phần cứng của anh ra khởi động máy lại, như vậy em có thể dùng laptop của anh để đọc dữ liệu của em.”
+
+Tôi cắn một miếng cải bó xôi, nói : “Em không biết dùng Linx.”
+
+“Phần cứng chỉ có thể khởi động bằng Linx. Đợi tới khi em sử dụng, nó đã thành Windows rồi.”
+
+“Nhưng mà, nếu em dùng máy của anh, anh xài cái gì?”
+
+“Anh mua cái mới. Order trên mạng rồi. Mai gửi tới.” xem hiệu suất của người ta kìa.
+
+Anh cắn hai ba miếng liền ăn xong sandwich, Tiểu Vi đưa tua vít tới. Anh tháo ổ cứng ra ráp vào máy anh, tốn hơn một giờ, khởi động chiếc Fujitsu của anh một lần nữa, màn hình xanh lè.”
+
+“Oops,” anh nói “Còn phải xử lý một ít trình tự.”
+
+Tôi im lặng ăn salad của mình, chỉ ngồi một bên, nhìn anh tập trung tinh thần làm hơn hai giờ, rốt cuộc nhìn thấy toàn bộ dữ liệu của tôi trên màn hình. Hơn nữa cái nào cũng mở ra được.
+
+“Bây giờ dùng được rồi.” anh đóng máy lại, đưa cho tôi.
+
+Laptop của Lịch Xuyên là loại chức năng rất mạnh, hơi nặng.
+
+“Quá tốt! Cảm ơn nha!” tôi cầm laptop tính đi.
+
+“Đợi chút.” Anh ngăn tôi lại “Trả Mia lại cho anh.”
+
+Vẫn còn nhớ rõ còn mèo kia!
+
+“Anh thích Mia như vậy tại sao còn tặng nó chó René nữa?”
+
+“Ai nói anh tặng cho cậu ấy? Chỉ gửi nuôi tạm thời mà thôi!”
+
+“OK, cho anh thăm Mia một tiếng.”
+
+“Một tiếng, em giỡn hả? Anh sửa máy tính cho em hơn ba tiếng đồng hồ. Một tiếng không được, ít nhất một tuần.”
+
+“Hai tiếng.”
+
+“Ba tiếng.”
+
+“Deal. Cuối tuần anh tới đi. Mia ở nhà em.”
+
+Anh chần chờ một chút, nói : “Em mang tới cho anh không được à?”
+
+“Không được, cho mượn anh không trả.”
+
+“…được rồi.”
+
+Tôi cho anh địa chỉ của tôi : “Chín giờ anh tới đi.”
+
+Lúc tan tầm Manh Manh tới tìm tôi. Đưa cho tôi ba tấm thiệp màu hồng.
+
+“Cuối tuần rảnh thì đi.”
+
+“Sáng không rảnh.”
+
+“Không phải buổi sáng, 4 giờ chiều, cho em gặp ba người. Hai người đầu tiên là chị giới thiệu, nam, người cuối cùng là Minh Minh giới thiệu, nữ. Em gặp thử đi. Điều kiện cũng khá tốt.”
+
+Tôi mở thiệp ra :
+
+Tấm thứ nhất :
+
+Họ tên : Trần Cửu Châu.
+
+Tuổi : 32.
+
+Nghề nghiệp : Tổng giám đốc xí nghiệp Phi Tinh.
+
+Bằng cấp : Thạc sĩ.
+
+Tấm thứ hai :
+
+Họ tên : Ngả Tùng.
+
+Tuổi : 29.
+
+Nghề nghiệp : Phó nghiên cứu viên Viện nghiên cứu Trung khoa X.
+
+Bằng cấp : Tiến sĩ du học ở Đức.
+
+Tấm thứ ba :
+
+Họ tên : Tô Hân.
+
+Tuổi : 24.
+
+Nghề nghiệp : soạn diễn văn.
+
+Bằng cấp : Đại học chính quy.
+
+Manh Manh luôn nói muốn “quan tâm” tôi. Làm chị lớn, Emma cho rằng việc giới thiệu đối tượng cho tôi trở thành trách nhiệm đương nhiên của chị. Tuy rằng Emma đã đề cập với tôi vài lần, tôi cũng không xem là thật. Tôi liếc mấy tấm thiệp vừa đọc, ngửi được một mùi đùa dai.
+
+“Sao lại có nữ trong đây?”
+
+“Một người tốt như vậy, lại không yêu đương gì, Celia nghi ngờ em có vấn đề về giới tính. Nói để em thử cái này. Cái này là nó kêu chị đưa cho em nha. Bản thân nó date vài lần, cảm giác khá tốt, rất thú vị. Quen qua mạng. Hai người còn lại, một người là người quen của chị, một người là em trai chị. Nhân phẩm tốt không phản đối. Thế nào, Emma đối xử với em tốt không.”
+
+“Để lần sau tính đi.”
+
+“Ai ai, đây là lần sau thứ bao nhiêu rồi? Tốt xấu gì cũng cho chị chút mặt mũi chứ. Chỉ xin em tập trung trọng điểm lên em trai chị. Nhớ đó, 2 giờ chiều thứ bảy. Mỗi người nửa tiếng, dù sao em cũng đi bar, toàn làm người đi tìm người nói chuyện phiếm, em thấy mệt không. Starbuck trên phố K em biết không, gặp ở đó đó. Chị nói với bọn họ, trên đầu em có gài một chiếc đũa màu đỏ.”
+
+“Trâm gài tóc.”
+
+“Whatever. Đừng cho người ta leo cây là được!”
+
+Tôi gật đầu, nhét mấy tấm thiệp vào túi xách. Nói với chính mình, move on, move on. Sau đó, điện thoại của tôi reo lên.
+
+Nhìn theo Emma vào thang máy, tôi mở điện thoại ra xem, là Tiêu Quan.
+
+“Hi.”
+
+“Hi.”
+
+“Lâu rồi không nghe tin tức gì về em. Em được không?”
+
+“Không phải tôi vừa gửi email cho anh à?”
+
+“Em chỉ bốn chữ “Đã nhận được tiền” kia à?”
+
+“Tìm tôi có việc?”
+
+“Thứ bảy rảnh không? Tôi mời em ăn cơm.”
+
+“Không rảnh.”
+
+“Phố M có một tiệm cơm Vân Nam, bún qua cầu ở đó rất ngon, tôi ăn vài lần rồi.”
+
+“Thật xin lỗi, giờ tôi đổi sang ăn chay rồi. Chỉ ăn đồ chay.”
+
+“Không thành vấn đề, cạnh đó chính là Linh Bảo Tự, ở đó có Đại sư Khổ Qua nấu đồ chay khá ngon.”
+
+“Nhưng mà…”
+
+“Sáu giờ tối. Cổng chùa Linh Bảo, không gặp không về.”
+
+Tôi còn muốn nói thêm vài câu, điện thoại đã bị ngắt.
+
+–đúng là phong cách của Tiêu Quan. Anh ta sắp xếp tất cả, chưa bao giờ nghe người khác nói gì.
+
+Tôi nhìn nhìn đồng hồ, với ai tôi cũng nói thứ bảy, hình như còn vài ngày nữa mới tới thứ bảy.
+
+Hôm nay chính là thứ sáu.
+
+***
+
+Tôi hủy tất cả hoạt động tối thứ sáu, bao gồm Yoga và liên hoan của Câu lạc bộ Những người tinh khiết.
+
+Tìm ra được phiếu làm đẹp của Emma cho tôi, tôi đi spa đắp mặt. Nhân viên spa sửa lông mày cho tôi. Tôi đi tiệm làm tóc hấp dầu, tốn hơn hai giờ, cuối cùng cũng làm mái tóc tôi trở nên vừa đen vừa bóng, phẩm chất gần bằng trong quảng cáo. Về nhà, tôi thắp vài ngọn nến thơm, chà toilet trắng bóng, lau chùi nhà cửa không nhiễm một hạt bụi. Không muốn bị đen mắt, tôi đi ngủ sớm. Sau đó, tôi lại dậy sớm. Tắm xong rồi, ngoài cửa sổ vẫn tối đen. Nhìn nhìn đồng hồ, vừa qua 5 giờ.
+
+Tôi ngồi trên giường luyện Yoga, 6 giờ, ăn sáng, ăn sáng xong, không có việc gì, tôi tắm cho Mia, lại dùng máy sấy sấy cho nó. 7 giờ tôi ôm Mia ra ngoài đi dạo một vòng. Thật là, chưa bao giờ cảm thấy sáng sớm dài như vậy.
+
+Sáu năm, đây là lần đầu tiên tôi ngắm bình minh. Ánh sáng hồng nhạt lúc bình minh, tràn ngập phía chân trời, mặt trời đỏ bay bổng giữa những tầng mây, ánh mặt trời chiếu vào khí lạnh mùa đông, thành phố chìm trong những luồng sương trắng.
+
+Từ trước tới giờ Lịch Xuyên đều rất đúng giờ.
+
+Lúc mở cửa anh tặng cho tôi một hộp chocolate. Sau đó, thấy tôi chỉ mang tất, anh cởi áo khoác, cúi người cởi giầy. Vừa cúi người xuống, thì cả người cũng sụp xuống, tôi vội vàng giữ chặt lại : “Sao vậy?”
+
+Anh đứng dậy, một tay chống tường, cúi đầu thở dốc : “Hơi chóng mặt.”
+
+“Thiếu máu à?”
+
+Anh gật gật đầu.
+
+“Đừng cởi giày, đừng nhúc nhích, em đi tìm ghế dựa cho anh.”
+
+Tôi chạy tới phòng khách tìm ghế dựa cho anh, anh ngồi xuống : “Anh không sao. Bên ngoài tuyết vừa tan, trên mặt đất hơi nhiều bùn.” Lại muốn xoay người.
+
+Tôi đè anh lại : “Để em.”
+
+“Không cần.” anh nhẹ nhàng đẩy tay tôi ra, tự mình cởi giầy.
+
+Bậc cửa rất ngắn, phòng khách cũng rất nhỏ.
+
+“Hi Mia!”
+
+Mia rất tinh, nghe tiếng liền chạy tới, cong người lên, cọ cọ chân anh, bộ dạng vô cùng thân thiết.
+
+Tôi ôm Mia lên đưa cho Lịch Xuyên. Anh giơ hai chân của nó lên, chọc nó, vuốt ve nó, vừa vui vẻ vừa thân thiết, tôi đứng cạnh nhìn, có chút ghen tị.
+
+“Em có để ý anh nói tiếng Pháp với nó không?”
+
+“Để ý.”
+
+“Được rồi. Dù sao thì chỉ sợ nó không hiểu tiếng Trung.” Anh cười vô cùng trong sáng, thật sự, kể từ khi về từ Ôn Châu anh chưa cười với tôi như vậy lần nào.
+
+“Em xem, gãi nó như vậy nè, nó thích nhất.” anh dùng ngón tay gãi gãi trán con mèo, Mia hưởng thụ ngửa đầu ra sau, nhân cơ hội ngáp một cái.
+
+“Cái ngáp dài nhất của nó là 57 giây!”
+
+“..”
+
+“Nó còn có thể lộn nhào. Lần nhiều nhất có thể làm tới 24 cái, giống như vầy nè. Mia, lộn cho Tiểu Thu xem đi!” anh huýt sáo một cái, Mia thật sự lộn vài vòng tại chỗ. Tôi vừa tức giận vừa buồn cười.
+
+“Ừm…Mia lười quá, nhất định là Tiểu Thu cho mày ăn nhiều quá rồi, sao lộn có nhiêu đó thôi vậy?” anh ngồi trên sô pha, cau mày trách Mia.
+
+“Anh muốn uống gì không?” tôi nhân cơ hội hỏi.
+
+“Nước lọc là được rồi. Cảm ơn.”
+
+Tôi vô cùng buồn bực, có vẻ lần này Lịch Xuyên tới, mục đích rất rõ ràng. Chỉ muốn thăm Mia, chỉ muốn nói chuyện với Mia. Bên cạnh đứng một người sống sờ sờ như tôi, mày lá liễu, mắt hạnh nhân, tóc dài qua vai, có vẻ như tiên trên trời, mà anh lại căm bản không phát hiện.
+
+Đưa nước cho anh, tôi nói : “Đại Kiến trúc sư, nhìn xem phòng của em bố trí như thế nào?”
+
+Thật ra nhà trọ của tôi rất đơn sơ, đáng giá nhất có lẽ là chiếc sô pha Lịch Xuyên ngồi. Da thật, màu xanh lá, hơi cứng, lại hơi cao, là loại Lịch Xuyên thích.
+
+Anh đứng dậy, đi tới cạnh cửa, nhìn qua từ một góc độ, gật đầu : “Ừ, khá đẹp. Để anh đoán thử, là phong cách Bohemieng, đúng không?”
+
+–Lịch Xuyên có một thói quen. Anh rất ít khi bắt lỗi tôi, trừ phi tôi yêu cầu anh. Ví dụ như bản dịch của tôi, mỗi lần giao cho anh, anh đều nhận, rất ít khi sửa, cũng không gửi lại. Ví dụ như, trước đây tôi nói tiếng Anh với anh, không ít từ phát âm không đúng, anh cũng không sửa. Nhưng nếu như nói ở trường hợp khác, tôi đều bị đàn anh mắng không thương tiếc. Tôi nhớ có một lần, tôi phát âm sai trọng âm một từ, anh cũng chỉ lén nói riêng với tôi : “Từ này trọng âm phải ở tiếng thứ hai. Nhưng mà không sao, em đọc như vậy, anh cũng hiểu.”—đó là lời phê bình nghiêm khắc nhất của anh. Cho nên nói chuyện với anh có vẻ thoải mái.
+
+“Anh nhìn ra à?”
+
+“Anh làm nghề này mà.”
+
+“Không phải anh thiết kế ngoại thất sao?”
+
+“Anh cũng thiết kế nội thất, không nhiều lắm, không nổi tiếng bằng anh trai anh.”
+
+“Cho em vài lời khuyên được không? Em muốn sắp xếp đẹp hơn một chút.”
+
+“Thật sự muốn nghe à?”
+
+“Đúng vậy!”
+
+“Sô pha xoay 90 độ, dựa vào bên này. Cái bàn này, dời qua bên phải, dựa vào tường. Bình hoa đặt lên bàn. Chiếc đèn này đặt dưới đất, có thể để ở trong này. Giá sách có nhiều sách như vậy, sô pha một người phải đặt cạnh giá sách, lúc nào em cũng có thể lấy sách đọc, tiện hơn một chút đúng không? Còn nữa, bốn chiếc đèn lồng trên trần, cách nhau quá xa, không chiếu ứng lẫn nhau. Không bằng ghép hai cái lại, ánh sáng tập trung, cũng không hỗn độn.”
+
+Tôi dùng dây thun cột tóc lên, nói với anh : “Anh vào phòng ngủ ngồi với Mia đi, em chuyển đồ.”
+
+Anh hoảng sợ : “Em, bây giờ chuyển luôn à?”
+
+Tôi gật đầu : “Đúng vậy.”
+
+“Sao gấp dữ vậy?”
+
+“Không gấp. Dù gì anh cũng không nói chuyện với em, hơn nữa, cũng không có bao nhiêu đồ.” Tôi nhìn anh chằm chằm, nói móc vô cùng rõ ràng.
+
+Anh hiểu được ý tôi, hơi ngượng ngùng : “Em chuyển đi, anh giúp em.”
+
+“Không cần anh giúp.” Người cúi người xuống là xỉu, tôi làm gì dám để anh chuyển đồ.
+
+Tuy nhiên, không có người giúp đúng là chậm. Ngoài cửa lại có rất nhiều người làm thuê, ngồi bên đường chờ việc. Tôi ngượng không dám đi thuê người ta. Miễn cho Lịch Xuyên trách tôi chê anh sức khỏe không tốt. Khẽ cắn môi, kéo sô pha, kéo bàn, vén dây điện, đèn lồng treo tường, Lịch Xuyên ngồi trên ghế, rốt cuộc cũng không nhìn Mia nữa, nhìn tôi thật khẩn trương.
+
+“Tiểu Thu, em đóng cầu dao đi được không?”
+
+“Có cần đóng không?”
+
+“Đóng có vẻ an toàn hơn.”
+
+“Đóng thì nhà tối lắm.”
+
+“Bây giờ là ban ngày.”
+
+“Đây là tầng 1.”
+
+Không đóng, là không đóng. Để cho điện giật em chết luôn đi, xem xem anh có thèm nhìn em không, Vương Lịch Xuyên!
+
+“Sao em phải ở tầng 1?” bỗng nhiên anh hỏi “Trước đây em nói em không thích tầng 1 nhất mà, ở càng cao càng tốt.”
+
+“Tòa nhà này không có thang máy, lên lầu không tiện.”
+
+“Em cũng không phải người tàn tật.”
+
+Không nói gì…tôi thừa nhận, tôi xem phim Hollywood quá liều, luôn nằm mơ có một ngày Lịch Xuyên sẽ cầm một bó hoa tươi gõ cửa nhà tôi, sau đó quỳ xuống trước mặt tôi, nói với tôi đầy thâm tình : “Tiểu Thu, gả cho anh!” đương nhiên tôi không thể để anh chống gậy leo mấy tầng lầu, đi nhiều quá sẽ té xỉu, anh còn phải quỳ xuống nữa mà.
+
+Một mình tôi ở trong phòng khách nhích tới nhích lui mấy tiếng đồng hồ, rốt cuộc cũng sắp xếp lại phòng khách theo ý anh. Sau đó, ngồi xuống thưởng thức thành quả lao động của chính mình. Ừm, đẹp đó. Đúng là cao thủ. Tùy tiện chỉ đạo một chút, phòng khách bây giờ chú trọng tới sở thích của con gái hơn, màu sắc hài hòa, hoàn toàn đổi mới.
+
+“Ai, Lịch Xuyên, đây là phong cách gì vậy, rất Đông Phương nha. Không giống bohemieng.”
+
+“Bohemieng có rất nhiều loại, có Dandy, có Nouveau, có Gypsy, có Beat, của em chính là Zen. Lấy mấy chuỗi hạt ở đầu giường em treo lên đèn lồng thì càng giống.”
+
+Mấy chuỗi hạt kia đúng là vật kỷ niệm của quán bar “Bohemieng”. Ngày lễ phát mấy chuỗi tặng khách quen. Tôi nhận được đầy một hộp.
+
+Tôi treo chuỗi hạt kia lên đèn lồng, chuỗi hạt làm bằng gốm, người đi ở phía dưới, đi nhanh, gió thổi qua, rung rinh kêu lanh canh.
+
+Anh lại chỉ vào một chiếc bình hoa cổ dài ở góc tường, hỏi tôi : “Chiếc bình này rất đẹp, em không kiếm gì bỏ vào à?”
+
+Chiếc bình đó do một người bạn tặng. Cao hơn nửa người, quá to quá sâu, tôi thật sự nghĩ không ra hoa gì khi bỏ vào mà còn có thể lộ đầu ra. Cho nên tôi vẫn bỏ trống.
+
+“Không có.”
+
+“Có thể ra ngoài kiếm một ít nhánh cây khô, lột vỏ, sửa một chút, cắm vào trông đẹp lắm.”
+
+“Có thật không?”
+
+“Thật.”
+
+Đằng sau khu tôi ở chính là một rừng cây, tôi mặc áo khoác ra ngoài, nhặt về một bó cành cây khô, Lịch Xuyên chọn giúp tôi mấy nhánh, vào bếp tìm một con dao nhỏ tính tước vỏ cây giúp tôi, tôi sợ anh bị thương, không để anh làm. Tự mình dùng dao cạo sạch vỏ cây, lại dùng kéo cắt mấy nhánh thừa, cắm vào bình hoa. Quả nhiên, rất có hương vị rừng già cây khô.
+
+Chuyển đồ xong, mặt tôi toàn tro; sửa mấy nhánh cây xong, móng tay đen thui. Công sức chăm sóc tỉ mỉ tối qua đi tong. Tôi đang tính đi rửa mặt, phát hiện Lịch Xuyên đã đứng dậy, anh sờ sờ con mèo, nhìn nhìn đồng hồ, nói : “Hết ba tiếng rồi, anh phải về đây. Cảm ơn em cho anh thăm Mia.”
+
+Ba tiếng? Ba tiếng trôi qua nhanh như vậy à? Sao tôi không có cảm giác gì hết vậy? Ngẫm lại, cũng đúng thôi. Dọn dẹp phòng tốn hơn 2 tiếng, lột vỏ hết nửa tiếng, tôi đúng là đồ đầu heo, tính tổng cộng, không phải ba tiếng là gì?
+
+Nhưng mà, Lịch Xuyên đã thả Mia xuống, đi về phía cửa. Một bộ dạng không dám quấy rầy tôi.
+
+Tôi đột nhiên quát to một tiếng : “Đợi chút!”
+
+Tôi không ngờ giọng mình lại to như vậy, chuỗi hạt trên đầu bị giọng tôi làm rung kêu loạn lên.
+
+Anh quay đầu lại nhìn tôi.
+
+Mặt tôi đỏ bừng, tôi nói : “Anh…anh…”
+
+–tôi muốn nói, anh có thăm Mia nữa không? Không thể ngồi lại với em lâu thêm một chút à? Nhưng mà nói quanh co nửa ngày, tôi cũng nói không lên lời.
+
+Tôi nghe thấy chính mình hung tợn mắng anh :
+
+“You kill everything in me! How could you do that?” (Anh hủy diệt tất cả mọi thứ trong em! Tại sao anh có thể làm như vậy?)
+
+Anh đứng lại, tầm mắt dừng ở mắt tôi, muốn nói lại thôi, sau đó, anh đi về phía tôi, đang muốn mở miệng, lại bị tôi hùng hổ ngắt lời :
+
+“Ngay bây giờ! Anh không được nói chuyện! Vương Lịch Xuyên, em muốn anh hôn em ngay lập tức!”
+
+Anh nhìn tôi, vẻ mặt vô cùng khiếp sợ.
+
+Tôi chỉ nghe thấy tiếng hít thở dồn dập của chính mình.
+
+“Thật xin lỗi, Tiểu Thu.” Anh dang hai tay ra, ôm tôi thật chặt, nói thì thào bên tai tôi “Là anh có lỗi với em.”
+
+“Không cần anh xin lỗi, giữa chúng ta không có lỗi. Hôn em! Ngay lập tức!”
+
+Nhưng mà, anh chỉ nhẹ nhàng hôn lên mí mắt tôi một chút, dịu dàng, tựa như, an ủi. Tình yêu của anh từng khẳng khái như vậy. Tim tôi lại vỡ ra từng mảnh.
+
+“You must move on.”
+
+“No!”
+
+“Nhớ kỹ lời thề của em.”
+
+“No!” tôi lớn tiếng nói “Anh đi đi! Anh về Thụy Sĩ đi! Đừng bao giờ trở lại nữa! Em vĩnh viễn không cần gặp lại anh nữa!”
+
+“Chính em muốn anh về!”
+
+“Đúng vậy, em muốn anh về, em muốn con người của anh, một con người rõ ràng, không phải u linh của anh!”
+
+Mỗi lần bị tổn thương, anh đều trầm mặc. Tôi thấy một tia sáng, hiện lên từ sâu trong mắt anh, lại nhanh chóng biến mất.
+
+Ánh mắt anh rất sâu, sâu như hồ nước dưới chân thác, sâu không thấy đáy, ngay cả linh hồn anh cũng chôn vào thật sâu.
+
+Mà bóng dáng tôi lại hiện lên trong mắt anh như u linh. Mang theo vài phần điên cuồng, vài phần thù hận.
+
+Giờ này khắc này, thật sự, tôi rất muốn bóp chết anh, lại muốn bóp chết bản thân tôi.
+
+“Nếu ngày mai em chết, hôm nay, hôm nay anh vẫn có thể đối xử với em như vậy sao?”
+
+Anh không nói gì. Chỉ kéo tay tôi qua, đặt lên phía bên phải cơ thể anh.
+
+Tôi giãn năm ngón tay ra, bám chặt vào chỗ vốn là chân anh, bây giờ, lại là một chiếc chân giả lạnh lẽo, cứng ngắc.
+
+“Anh không hề rõ ràng. Từ trước tới giờ cũng chưa hề. Tiểu Thu, tình yêu của em sâu đậm như vậy à? Sáu năm cũng không đủ để em quên đi sao?”
+
+“Không đủ, một ngàn năm cũng không đủ! Em không quên được, tại sao em phải quên!”
+
+“Em lớn lên một chút được không? Khi em còn sống, có vài thứ phải ra đi, nhất định phải biến mất, let it go!”
+
+“Em không muốn mất anh.”
+
+“Đúng vậy, em sợ mất anh, nhưng em đã mất rồi. Em phải đối diện với kết thúc này.” Anh nói “Khi em được đọc một quyển sách hay nhất, gặp được một người đàn ông đẹp nhất, hoặc là tới một thành phố xinh đẹp. Em sẽ nói với chính mình, em đã gặp được thứ tốt nhất trên đời, em khiến những thứ đó làm bạn với em trên đường đời. Nhưng không được bao lâu, lại có những điều mới xảy ra, em lại đọc được một quyển sách hay hơn, gặp được một người đàn ông đẹp hơn, đi tới một thành phố đẹp hơn. Một cuộc sống khác lại bắt đầu.”
+
+Anh tiếp tục nói, khóe miệng kèm theo ý cười tàn nhẫn : “Đừng sợ kết thúc. Kết thúc chỉ là một ảo ảnh mà thôi. Tất cả kết thúc, đều ý nghĩa cho một bắt đầu mới.”
+
+“Không! Đừng nói dối với em! Em và anh, chỉ có bắt đầu, không có kết thúc. Vĩnh viễn cũng không kết thúc. Nếu như phải có kết thúc, thì chỉ có một kết thúc, đó chính là chúng ta sống hạnh phúc bên nhau!”
+
+“You are so damaged!” anh nắm vai tôi, gầm nhẹ “Em là đồ ngốc! Tại sao không nghe lời khuyên của anh? Trong đầu em chứa cái gì? Nước à? Cỏ dại à? Stupid! Stupid! Stupid!”
+
+“Em chính là đồ ngốc, giờ anh mới biết thôi!”
+
+Anh luôn thở dốc, rất tức giận, mặt tức giận tới mức đỏ bừng.
+
+“OK,” anh buông tay ra : “Chỉ cần em đồng ý move on, kêu anh làm gì cũng được.”
+
+“Kiss me, make love with me! Now!”
+
+Anh hít một hơi thật sâu, lại thở ra một hơi thật dài.
+
+Chúng tôi nhìn nhau không nói gì, ánh mắt khẩn trương giằng co.
+
+“Tắt đèn đi. Stupid woman!”
+
+Chúng tôi im lặng ôm nhau trong bóng đêm. Cơ thể Lịch Xuyên vô cùng nhu nhược, mà tôi lại vì phẫn nộ mà trở nên thô bạo. Tôi liều chết nắm tay anh, không cho anh động đậy, chỉ cần anh phản kháng, tôi liền cào anh chảy máu đầm đìa. Anh dùng tiếng Pháp mắng tôi, tôi dùng tiếng Vân Nam mắng anh. Chúng tôi vật lộn trên giường như hai con thú dữ. Không phải tôi không thấy áy náy, đây là lần đầu tiên tôi ăn hiếp Lịch Xuyên, ỷ anh là người tàn tật. Cuối cùng, tôi nghe thấy Lịch Xuyên thở dài một tiếng trong bóng đêm, anh nắm tay tôi, ý đồ ngăn tôi lại.
+
+“Are you making love with me? Or are you killing me?”
+
+“Both!”
+
+“Stupid!”
+
+“You stupid!”
+
+Cuối cùng, chúng tôi sức cùng lực kiệt nằm trên giường, miệng đờ đẫn phát ra những lời vô nghĩa.
+
+Tất cả đều vỡ vụn. Tôi không biết mình giành được thắng lợi, hay là bị anh đập vỡ nát.. Tôi chỉ biết là, trên mặt tôi toàn là nước mắt, nước mắt và mồ hôi hòa làm một, rơi đầy trên người anh. Tôi vứt bỏ lòng tự trọng, không ngừng cầu xin anh,  cầu xin anh đừng buông tha tôi, đừng rời bỏ tôi. Tất cả sẽ tốt hơn. Anh xoay người lại, nhẹ nhàng vuốt ve mặt tôi, giống như nước vậy, hôn tôi dịu dàng mà triền miên. Kêu tên tôi một lần lại một lần, Tiểu Thu, Tiểu Thu, Tiểu Thu, Tiểu Thu…
+
+Sau đó, anh nói :
+
+“You must move on.”
