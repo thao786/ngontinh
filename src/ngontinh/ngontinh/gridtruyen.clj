@@ -10,14 +10,14 @@
     (let    [resVec (let    [connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh"
                                                                     "postgres"
                                                                     "fall2010")
-                            query           (str "select count(*) from truyen where genre like '%" genre "%'")
-                            res             (let [  stmt    (.createStatement connection)
-                                                                    rs              (.executeQuery stmt query)]
-                                                            (vec (resultset-seq rs)))
+                            query       (str "select count(*) from truyen where genre like '%" genre "%'")
+                        	res         (let [  stmt    (.createStatement connection)
+                                                rs              (.executeQuery stmt query)]
+                                                        (vec (resultset-seq rs)))
                             ddd             (.close connection)]
-                            res)
-                    row             (nth resVec 0)]
-            (row :count)))
+                            	res)
+            row     (nth resVec 0)]
+        (row :count)))
 
 
 
