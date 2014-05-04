@@ -9,7 +9,9 @@
             [ngontinh.view.core :as view]
             [ngontinh.ngontinh.defdata :as defndata]
             ngontinh.ngontinh.homepage
-            ngontinh.ngontinh.doctruyen))
+            ngontinh.ngontinh.doctruyen
+            ngontinh.ngontinh.gridtruyen
+            ngontinh.ngontinh.listruyen))
 ;(:require [my.lib :refer :all])
 ;lein ring uberwar
 ;(def ^:private some-var :value)
