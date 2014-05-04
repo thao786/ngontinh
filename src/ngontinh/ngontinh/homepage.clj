@@ -28,7 +28,7 @@
 	:sidebar1 	(getTruyen "select * from truyen order by view USING > limit 5")
 	
 	;5 truyen co so view nhieu nhat
-	:sidebar2 	(getTruyen "SELECT * FROM truyen ORDER BY RANDOM() LIMIT 5")
+	:sidebar2 	(getTruyen "select * from truyen order by date_added USING > limit 5")
 
 	; 5 truyen co ngay up gan nhat
 	:updatechap [{:linktruyen "That" :titletruyen "Hoa" :linkchap "Chu" :chapnumber "34" :titlechap "abcjf wfwnj" :ngayup "23/5/2014"}
@@ -37,15 +37,9 @@
 			   	 {:linktruyen "That" :titletruyen "Hoa" :linkchap "Chu" :chapnumber "34" :titlechap "abcjf wfwnj" :ngayup "23/5/2014"}
 			   	 {:linktruyen "That" :titletruyen "Hoa" :linkchap "Chu" :chapnumber "34" :titlechap "abcjf wfwnj" :ngayup "23/5/2014"}]
 	;10 truyen co ngay update chuong moi nhat
-	:doctruyen1 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hohf knefj fe"}
-			  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hohf knefj fe"}
-			  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hohf knefj fe"}
-			  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Hohf knefj fe"}]	 
+	:doctruyen1 (getTruyen "SELECT * FROM truyen ORDER BY RANDOM() LIMIT 4")	 
 	;4 truyen generate randomly
-	:doctruyen2 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Iin egb je"}
-			  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Iin egb je"}
-			  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Iin egb je"}
-			  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "Iin egb je"}]
+	:doctruyen2 (getTruyen "SELECT * FROM truyen ORDER BY RANDOM() LIMIT 4")
 	;4 truyen generate randomly
 	:engnovel	[{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "The Exorcist"}
 			  	 {:linkanh (lib/lib-path :linkanh) :linktruyen "That" :titletruyen "One Piece"}

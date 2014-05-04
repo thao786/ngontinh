@@ -5,6 +5,11 @@
 
 (def hostPath "http://localhost:3000/")
 
+(def genreList ["Chiến Trường" "Cổ Đại" "Công Sở" "Cung đấu" "Cung Đình" "Đam mỹ" "Đoản Văn" 
+				"Đồng nhân" "Điền văn" "Giang Hồ" "Hài" "Hắc bang" "Hiện Đại" "Hoán Thân" "Huyền huyễn" "Kiếm Hiệp"
+				"Ngược" "Nhân thú" "Nữ tôn" "Nữ phẫn nam trang" "NP" "Phúc Hắc Nam" "Quân nhân" "Sắc" "Sủng" "Sư đồ luyến"
+				"Học đường" "Tiên hiệp" "Trọng sinh" "Võng du" "Xuyên không" "HE" "SE" "OE"])
+
 (def lib-path {:bootcss (str hostPath "bootstrap.css")
 			   :bootcollapsejs (str hostPath "bootstrap-collapse.js")
 			   :jquery (str hostPath "jquery.js")
