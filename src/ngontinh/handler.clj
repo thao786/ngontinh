@@ -11,7 +11,7 @@
             ngontinh.ngontinh.homepage
             ngontinh.ngontinh.doctruyen
             ngontinh.ngontinh.gridtruyen
-            ngontinh.ngontinh.listruyen))
+            ngontinh.ngontinh.listtruyen))
 ;(:require [my.lib :refer :all])
 ;lein ring uberwar
 ;(def ^:private some-var :value)
