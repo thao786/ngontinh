@@ -66,12 +66,12 @@
 	(+ 1 (quot c 4))
 	(quot c 4))
 
-(for [x (range row)]
+(vec (for [x (range row)]
 	(try (subvec l 	(* 4 x) 
 					(* 4 (+ 1 x)))
 	(catch Exception e 
 		(subvec l 	(* 4 x) 
-					(- (count l) 1)))))
+					(- (count l) 1))))))
 
 
 
