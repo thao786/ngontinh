@@ -20,32 +20,34 @@
         (row :count)))
 
 
+;(try (nth infoArray 1) (catch Exception e ""))
+(defn Doctruyendata [page]
+	(let 	[page 		(try (read-string page)  (catch Exception e 1))
+			offset 		(* 20 (- page 1))]
+		{:lib-path lib/lib-path 
 
-(def Doctruyendata 
-	{:lib-path lib/lib-path 
+		;cac the loai va so truyen; http = xem truyen cung genre
+		:sidebar1 [{:theogenre (str lib/hostPath "listtruyen/co_dai") 		:genre "Cổ Đại" 	 :sotruyen (getGenreCount "Cổ Đại")}
+				   {:theogenre (str lib/hostPath "listtruyen/hien_dai") 	:genre "Hiện Đại" 	 :sotruyen (getGenreCount "Hiện Đại")}
+				   {:theogenre (str lib/hostPath "listtruyen/cung_dau") 	:genre "Cung Đấu"    :sotruyen (getGenreCount "Cung đấu")}
+				   {:theogenre (str lib/hostPath "listtruyen/hai") 			:genre "Hài" 		 :sotruyen (getGenreCount "Hài")}
+				   {:theogenre (str lib/hostPath "listtruyen/huyen_huyen") 	:genre "Huyền Huyễn" :sotruyen (getGenreCount "Huyền Huyễn")}   
+				   {:theogenre (str lib/hostPath "listtruyen/xuyen_khong") 	:genre "Xuyên Không" :sotruyen (getGenreCount "Xuyên không")}]
+		
+		;truyen so view nhieu nhat
+		:sidebar2 	(hp/getTruyen "select * from truyen order by view USING > limit 5")
 
-	;cac the loai va so truyen; http = xem truyen cung genre
-	:sidebar1 [{:theogenre (str lib/hostPath "listtruyen/co_dai") 		:genre "Cổ Đại" 	 :sotruyen (getGenreCount "Cổ Đại")}
-			   {:theogenre (str lib/hostPath "listtruyen/hien_dai") 	:genre "Hiện Đại" 	 :sotruyen (getGenreCount "Hiện Đại")}
-			   {:theogenre (str lib/hostPath "listtruyen/cung_dau") 	:genre "Cung Đấu"    :sotruyen (getGenreCount "Cung đấu")}
-			   {:theogenre (str lib/hostPath "listtruyen/hai") 			:genre "Hài" 		 :sotruyen (getGenreCount "Hài")}
-			   {:theogenre (str lib/hostPath "listtruyen/huyen_huyen") 	:genre "Huyền Huyễn" :sotruyen (getGenreCount "Huyền Huyễn")}   
-			   {:theogenre (str lib/hostPath "listtruyen/xuyen_khong") 	:genre "Xuyên Không" :sotruyen (getGenreCount "Xuyên không")}]
-	
-	;truyen so view nhieu nhat
-	:sidebar2 	(hp/getTruyen "select * from truyen order by view USING > limit 5")
+		;truyen ngau nhien
+		:sidebar3 	(hp/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() LIMIT 5")
 
-	;truyen ngau nhien
-	:sidebar3 	(hp/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() LIMIT 5")
-
-	;display cac truyen
-	:truyen1 	(hp/getTruyen "select * from truyen limit 4")
-	:truyen2 	(hp/getTruyen "select * from truyen limit 4 offset 4")
- 	:truyen3 	(hp/getTruyen "select * from truyen limit 4 offset 8")
-	:truyen4 	(hp/getTruyen "select * from truyen limit 4 offset 12")
-	:truyen5 	(hp/getTruyen "select * from truyen limit 4 offset 16")
-	:tim "http"
-})
+		;display cac truyen
+		:truyen1 	(hp/getTruyen (str "select * from truyen limit 4 offset " offset))
+		:truyen2 	(hp/getTruyen (str "select * from truyen limit 4 offset " (+ 4 offset)))
+	 	:truyen3 	(hp/getTruyen (str "select * from truyen limit 4 offset " (+ 8 offset)))
+		:truyen4 	(hp/getTruyen (str "select * from truyen limit 4 offset " (+ 12 offset)))
+		:truyen5 	(hp/getTruyen (str "select * from truyen limit 4 offset " (+ 16 offset)))
+		:tim "http"
+	}))
 
 
 (def Truyendata 

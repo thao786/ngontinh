@@ -61,10 +61,11 @@
         (GET "/doctruyen/:title" [title]
                 (str (view/render "ngontinh/DeDoPhu.html" ngontinh.ngontinh.gridtruyen/Truyendata)))
  
-        (GET "/doctruyen" []
-                (str (view/render "ngontinh/gridtruyen.html" ngontinh.ngontinh.gridtruyen/Doctruyendata)))
- 
-               ;(str (ngontinh.ngontinh.doctruyen/Doctruyendata))
+        (GET "/gridtruyen" []
+                (str (view/render "ngontinh/gridtruyen.html" (ngontinh.ngontinh.gridtruyen/Doctruyendata 1))))
+        (GET "/gridtruyen/:page" [page]
+                (str (view/render "ngontinh/gridtruyen.html" (ngontinh.ngontinh.gridtruyen/Doctruyendata page))))
+
         (GET "/listtruyen/:genre" [genre]
                 (str (view/render "ngontinh/theloai.html" ngontinh.ngontinh.listtruyen/Theloaidata)))
  
