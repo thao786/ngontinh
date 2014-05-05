@@ -59,7 +59,7 @@
                 (str (view/render "ngontinh/HomePage.html" ngontinh.ngontinh.homepage/Homepagedata)))
  
         (GET "/doctruyen/:title" [title]
-                (str (view/render "ngontinh/DeDoPhu.html" ngontinh.ngontinh.gridtruyen/Truyendata)))
+                (str (view/render "ngontinh/doctruyen.html" (ngontinh.ngontinh.gridtruyen/Truyendata title))))
  
         (GET "/gridtruyen" []
                 (str (view/render "ngontinh/gridtruyen.html" (ngontinh.ngontinh.gridtruyen/Doctruyendata 1))))
