@@ -62,35 +62,16 @@
 
 
 
+(if (> (rem c 4) 0)
+	(+ 1 (quot c 4))
+	(quot c 4))
 
-
-
-(let [query 	"select * from truyen order by view USING > limit 5"
-	 	stmt 	(.createStatement connection)
-	 	rs 		(.executeQuery stmt query)]
-	(vec (resultset-seq rs)))
-
-
-
-
-select * from truyen where genre like '%HE%'
-
-
-(defn getGenreCount [genre]
-	(let 	[resVec   	(let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
-																		"postgres" 
-																		"fall2010")
-								query 		(str "select count(*) from truyen where genre like '%" genre "%'")
-								res 	 	(let [	stmt 	(.createStatement connection)
-												 	rs 		(.executeQuery stmt query)]
-												(vec (resultset-seq rs)))
-								ddd 		(.close connection)]
-								res)
-			row 		(nth resVec 0)]
-		(row :count)))
-
-
-
+(for [x (range row)]
+	(try (subvec l 	(* 4 x) 
+					(* 4 (+ 1 x)))
+	(catch Exception e 
+		(subvec l 	(* 4 x) 
+					(- (count l) 1)))))
 
 
 
