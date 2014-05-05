@@ -26,11 +26,11 @@
 
 	;cac the loai va so truyen; http = xem truyen cung genre
 	:sidebar1 [{:theogenre (str lib/hostPath "listtruyen/co_dai") 		:genre "Cổ Đại" 	 :sotruyen (getGenreCount "Cổ Đại")}
-			   {:theogenre (str lib/hostPath "listtruyen/hien_dai") 	:genre "Hiện Đại" 	 :sotruyen "1000"}
-			   {:theogenre (str lib/hostPath "listtruyen/cung_dau") 	:genre "Cung Đấu"    :sotruyen "1000"}
-			   {:theogenre (str lib/hostPath "listtruyen/hai") 			:genre "Hài" 		 :sotruyen "1000"}
-			   {:theogenre (str lib/hostPath "listtruyen/huyen_huyen") 	:genre "Huyền Huyễn" :sotruyen "1000"}   
-			   {:theogenre (str lib/hostPath "listtruyen/xuyen_khong") 	:genre "Xuyên Không" :sotruyen "1000"}]
+			   {:theogenre (str lib/hostPath "listtruyen/hien_dai") 	:genre "Hiện Đại" 	 :sotruyen (getGenreCount "Hiện Đại")}
+			   {:theogenre (str lib/hostPath "listtruyen/cung_dau") 	:genre "Cung Đấu"    :sotruyen (getGenreCount "Cung đấu")}
+			   {:theogenre (str lib/hostPath "listtruyen/hai") 			:genre "Hài" 		 :sotruyen (getGenreCount "Hài")}
+			   {:theogenre (str lib/hostPath "listtruyen/huyen_huyen") 	:genre "Huyền Huyễn" :sotruyen (getGenreCount "Huyền Huyễn")}   
+			   {:theogenre (str lib/hostPath "listtruyen/xuyen_khong") 	:genre "Xuyên Không" :sotruyen (getGenreCount "Xuyên không")}]
 	
 	;truyen so view nhieu nhat
 	:sidebar2 	(hp/getTruyen "select * from truyen order by view USING > limit 5")
