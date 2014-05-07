@@ -1,22 +1,23 @@
 (ns ngontinh.handler
         (:use   compojure.core
-                        ring.middleware.cookies
-                ring.util.response
+                ring.middleware.cookies
                 ring.util.response)
         (:require [compojure.handler :as handler]
             [compojure.route :as route]
             [clojure.java.io :as io]
             [ngontinh.view.core :as view]
             [ngontinh.ngontinh.defdata :as defndata]
+            [clojure.core.cache :as cache]
             ngontinh.ngontinh.homepage
             ngontinh.ngontinh.doctruyen
             ngontinh.ngontinh.gridtruyen
-            ngontinh.ngontinh.listtruyen))
+            ngontinh.ngontinh.listtruyen
+            ngontinh.cache
+            ))
 ;(:require [my.lib :refer :all])
 ;lein ring uberwar
 ;(def ^:private some-var :value)
- 
- 
+
 (defroutes app-routes
         (HEAD "/" [] "")
         (GET "/bootstrap.css" [] (io/resource "public/ngontinh/bootstrap.css"))
@@ -78,6 +79,15 @@
         (GET "/englishnovel" [] (str (view/render "ngontinh/EnglishNovel.html" defndata/Englishdata)))
         (GET "/rrh" [] (str (view/render "ngontinh/RedRidingHood.html" defndata/Storydata)))
         (GET "/chap1" [] (str (view/render "ngontinh/RRHChapter1.html" defndata/Engchapdata)))
+
+
+
+
+        (GET "/test" []
+                (str 
+                    (cache/lookup (ngontinh.cache/lookup) :b)))
+
+
  
         (route/resources "/")
         (route/not-found "Not Found"))

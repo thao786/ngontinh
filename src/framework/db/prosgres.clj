@@ -62,17 +62,6 @@
 
 
 
-(if (> (rem c 4) 0)
-	(+ 1 (quot c 4))
-	(quot c 4))
-
-(vec (for [x (range row)]
-	(try (subvec l 	(* 4 x) 
-					(* 4 (+ 1 x)))
-	(catch Exception e 
-		(subvec l 	(* 4 x) 
-					(- (count l) 1))))))
-
 
 
 {:linkanh (lib/lib-path :linkanh) 
@@ -92,3 +81,7 @@
 :translator "Lục Phong", 
 :date_added #inst "2014-05-04T01:18:27.608000000-00:00", 
 :view 2978}
+
+
+
+
