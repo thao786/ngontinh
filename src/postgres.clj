@@ -69,7 +69,7 @@
 	:titletruyen "Hoa" 
 	:author "Chu" 
 	:genre "Co Dai"}
-				
+
 
 {:title "Mê Thần Ký", 
 :alternate "", 
@@ -81,7 +81,3 @@
 :translator "Lục Phong", 
 :date_added #inst "2014-05-04T01:18:27.608000000-00:00", 
 :view 2978}
-
-
-
-
