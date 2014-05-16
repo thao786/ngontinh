@@ -46,7 +46,7 @@
                 (io/resource (str "Truyen/" name "/cover.jpg")))
  
  
-;        (GET "/" [] (r/render "resources/HomePage.html"))
+        (GET "/" [] (r/render "resources/HomePage.html"))
  
         (route/resources "/")
         (route/not-found "Not Found"))

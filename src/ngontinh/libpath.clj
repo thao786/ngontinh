@@ -1,6 +1,5 @@
 
 (ns ngontinh.libpath
-	(:use 		compojure.core)
 	(:require 	[clojure.java.io :as io]))
 
 (def hostPath "http://localhost:3000/")
