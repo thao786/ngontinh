@@ -1,4 +1,6 @@
-%{}
+%{(require '[ngontinh.libpath :as l]
+           '[ngontinh.util.truyen :as truyen]
+)}
 
 <div class="hidden-xs">            
             <h3><span class="label label-custom">Truyện Ngẫu Nhiên</span></h3>
@@ -19,7 +21,9 @@
                          </div>                                   
                         </a>"))
 
-                        (apply str (for [x (data :sidebar)] 
+                        (def truyenrandom (truyen/gettruyen "SELECT * FROM truyen ORDER BY RANDOM() LIMIT 5"))
+
+                        (apply str (for [x truyenrandom] 
                                   (sidebar (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))
                     }
 

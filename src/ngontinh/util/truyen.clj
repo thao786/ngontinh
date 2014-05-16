@@ -1,5 +1,5 @@
 (ns ngontinh.util.truyen
-	(:require 	[ngontinh.ngontinh.libpath :as lib]))
+	(:require 	[ngontinh.libpath :as lib]))
 
 (import 'java.sql.DriverManager)
 
