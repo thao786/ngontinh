@@ -3,7 +3,7 @@
             <div class="row-fluid sideBar"><!--Side Bar-->                       
                   <div class="list-group">
 
-                    [[(defn sidebar [linktruyen linkanh title author genre]
+                    %{(defn sidebar [linktruyen linkanh title author genre]
                      (str "<a href='" linktruyen "' class='list-group-item'>
                           <div class='row-fluid'>
                             <div class='span5'><img src='" linkanh "' class='thumbnail img-responsive imgFloatsidebar list-group-item-text' width='90' height='120'></div>
@@ -17,7 +17,7 @@
 
                         (apply str (for [x (data :sidebar)] 
                                   (sidebar (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))
-                        ]]
+                    }
 
 
                 </div><!--list group-->

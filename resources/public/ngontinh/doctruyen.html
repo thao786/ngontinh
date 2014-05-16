@@ -6,7 +6,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>[[((data :titlepage) :title)]] - [[((data :titlepage) :state)]] - [[((data :titlepage) :author)]] | Trang Ngôn Tình</title>  
+    <title>%((param :titlepage) :title) - %((param :titlepage) :state) - %((param :titlepage) :author) | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  
@@ -43,7 +43,7 @@
   <div class="row-fluid">
       <div class="form-group form-inline col-xs-pull-2 bentrai2" style="float:right;">
           <input type="text" class="form-control" placeholder="Search ...">
-          <button href="[[(data :tim)]]" type="submit" class="btn btn-default">Tìm</button>
+          <button href="[[(param :tim)]]" type="submit" class="btn btn-default">Tìm</button>
           <button href="trangngontinh.com/advancedsearch" type="button" class="btn btn-success">Tìm kiếm nâng cao</button>
       </div>
   </div>    
@@ -56,7 +56,7 @@
             <div class="row-fluid sideBar"><!--Side Bar-->                       
                   <div class="list-group">
 
-                    [[(defn sidebar1 [linktruyen linkanh title author genre]
+                    %{(defn sidebar1 [linktruyen linkanh title author genre]
                      (str "<a href='" linktruyen "' class='list-group-item'>
                           <div class='row-fluid'>
                             <div class='span5'><img src='" linkanh "' class='thumbnail img-responsive imgFloatsidebar list-group-item-text' width='90' height='120'></div>
@@ -68,9 +68,9 @@
                          </div>                                   
                         </a>"))
 
-                        (apply str (for [x (data :sidebar1)] 
+                        (apply str (for [x (param :sidebar1)] 
                               (sidebar1 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))
-                    ]]
+                    }
 
 
                 </div><!--list group-->
@@ -85,7 +85,7 @@
             <div class="row-fluid sideBar"><!--Side Bar-->                       
                   <div class="list-group">
 
-                    [[(defn sidebar2 [linktruyen linkanh title author genre]
+                    %{(defn sidebar2 [linktruyen linkanh title author genre]
                      (str "<a href='" linktruyen "' class='list-group-item'>
                           <div class='row-fluid'>
                             <div class='span5'><img src='" linkanh "' class='thumbnail img-responsive imgFloatsidebar list-group-item-text' width='90' height='120'></div>
@@ -97,9 +97,9 @@
                          </div>                                   
                         </a>"))
 
-                        (apply str (for [x (data :sidebar2)] 
+                        (apply str (for [x (param :sidebar2)] 
                               (sidebar2 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))
-                    ]]
+                    }
 
                 </div><!--list group-->
             </div><!--sideBar-->
@@ -115,26 +115,26 @@
                   <ol class="breadcrumb">
                       <li><a href="trangngontinh.com">Home</a></li>
                       <li><a href="trangngontinh.com/doctruyen">Đọc Truyện</a></li>
-                      <li class="active">[[((data :titlepage) :title)]]</li>
+                      <li class="active">%((param :titlepage) :title)</li>
                     </ol>
                 </div><br>                
                 
 
             <div class="row-fluid">    
               <div class="span4">
-                <img src="[[((data :truyeninfo) :linkanh)]]" class="thumbnail img-responsive" width="300" height="425">
+                <img src="[[((param :truyeninfo) :linkanh)]]" class="thumbnail img-responsive" width="300" height="425">
               </div>
               <div class="span6">
-                <a href="[[((data :truyeninfo) :linktruyen)]]"><h2 class="green"><b>[[((data :truyeninfo) :title)]]</b></h2></a>
+                <a href="[[((param :truyeninfo) :linktruyen)]]"><h2 class="green"><b>%((param :truyeninfo) :title)</b></h2></a>
                 <br>
-                <p><i>Tên Khác</i>:  [[((data :truyeninfo) :alternate)]]</p>
-                <p><i>Tác Giả</i>:  <a href="[[((data :truyeninfo) :searchauthor)]]">[[((data :truyeninfo) :author)]]</a></p>
-                <p><i>Thể Loại</i>:  <a href="[[((data :truyeninfo) :searchgenre)]]">[[((data :truyeninfo) :genre)]]</a></p>
-                <p><i>Tình Trạng</i>:  <a href="[[((data :truyeninfo) :searchstate)]]">[[((data :truyeninfo) :state)]]</a></p>
-                <div class="minor-info">Nguồn: [[((data :truyeninfo) :source)]]<br>
-                                        Editor/Translator: [[((data :truyeninfo) :person)]]<br>
-                                        Lượt Xem: [[((data :truyeninfo) :view)]]<br>
-                                        Ngày Cập Nhập: [[((data :truyeninfo) :date_added)]]</div>
+                <p><i>Tên Khác</i>:  %((param :truyeninfo) :alternate)</p>
+                <p><i>Tác Giả</i>:  <a href="[[((param :truyeninfo) :searchauthor)]]">%((param :truyeninfo) :author)</a></p>
+                <p><i>Thể Loại</i>:  <a href="[[((param :truyeninfo) :searchgenre)]]">%((param :truyeninfo) :genre)</a></p>
+                <p><i>Tình Trạng</i>:  <a href="[[((param :truyeninfo) :searchstate)]]">%((param :truyeninfo) :state)</a></p>
+                <div class="minor-info">Nguồn: %((param :truyeninfo) :source)<br>
+                                        Editor/Translator: %((param :truyeninfo) :person)<br>
+                                        Lượt Xem: %((param :truyeninfo) :view)<br>
+                                        Ngày Cập Nhập: %((param :truyeninfo) :date_added)</div>
               </div>
             </div>                             
 
@@ -146,12 +146,12 @@
                 <div class="panel panel-success">                
                   <div class="panel-body">
 
-                    [[(defn chuongmoi [linkchap chapnumber titlechap]
+                    %{(defn chuongmoi [linkchap chapnumber titlechap]
                         (str "<a href='" linkchap "'>Chương " chapnumber ": " titlechap "</a><br>"))
 
-                        (apply str (for [x (data :chuongmoi)] 
+                        (apply str (for [x (param :chuongmoi)] 
                             (chuongmoi (x :linkchap) (x :chapnumber) (x :titlechap))))
-                    ]]
+                    }
 
                   </div>
                 </div>  
@@ -161,11 +161,11 @@
             <br>
 
               <!--<h4 class="white highlight">Giới Thiệu</h4>-->
-              <h4 class="orange"><b>Giới Thiệu truyện </b><i class="green">[[((data :titlepage) :title)]]</i></h4>
+              <h4 class="orange"><b>Giới Thiệu truyện </b><i class="green">%((param :titlepage) :title)</i></h4>
                 <div class="well">
-                  <p>[[((data :gioithieu) :shortoverview)]]</p>
+                  <p>%((param :gioithieu) :shortoverview)</p>
                   <div id="hiddenBlock" class="anHien">
-                    <p>[[((data :gioithieu) :remainoverview)]]</p>
+                    <p>%((param :gioithieu) :remainoverview)</p>
                   </div>
                   <button id="xemThem" type="button" class="btn btn-default btn-sm btn-block 1">Xem Thêm</button>
                 </div>    
@@ -175,7 +175,7 @@
 
             
                 <!--<h4 class="white highlight">Mục Lục</h4>-->
-                <h4 class="orange"><b>Mục Lục truyện </b><i class="green">[[((data :titlepage) :title)]]</i></h4>
+                <h4 class="orange"><b>Mục Lục truyện </b><i class="green">%((param :titlepage) :title)</i></h4>
                 
                 <div class="table-responsive">
                   <table class="table table-striped table-hover ">
@@ -188,16 +188,16 @@
                     </thead>
                     <tbody>
 
-                      [[(defn mucluc [chapnumber linkchap titlechap date_added]
+                      %{(defn mucluc [chapnumber linkchap titlechap date_added]
                          (str "<tr class=''>                  
                                   <td>" chapnumber "</td>
                                   <td><a href='" linkchap "'>" titlechap "</a></td>
                                   <td>" date_added "</td>
                                </tr>"))
 
-                            (apply str (for [x (data :mucluc)] 
+                            (apply str (for [x (param :mucluc)] 
                                 (mucluc (x :chapnumber) (x :linkchap) (x :titlechap) (x :date_added))))
-                      ]]                               
+                      }                               
                   
                     </tbody>
                   </table>

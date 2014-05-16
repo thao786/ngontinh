@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>[[((data :titlepage) :title)]] - Chương [[((data :titlepage) :chapnumber)]] | Trang Ngôn Tình</title>  
+    <title>%((param :titlepage) :title) - Chương %((param :titlepage) :chapnumber): %((param :titlepage) :chaptitle) | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  
@@ -50,8 +50,8 @@
                   <ol class="breadcrumb">
                       <li><a href="trangngontinh.com">Home</a></li>
                       <li><a href="trangngontinh.com/doctruyen">Doc Truyen</a></li>
-                      <li><a href="[[((data :titlepage) :title)]]">[[((data :titlepage) :title)]]</a></li>
-                      <li class="active">#[[((data :titlepage) :chapnumber)]]. [[((data :titlepage) :titlechap)]]</li>
+                      <li><a href="[[((param :titlepage) :title)]]">%((param :titlepage) :title)</a></li>
+                      <li class="active">#%((param :titlepage) :chapnumber): %((param :titlepage) :titlechap)</li>
                     </ol>
                 </div>
                 <br>       
@@ -86,42 +86,38 @@
                 
       <div class="row-fluid">  
         <ul class="pager">
-          <li><button type="submit" class="btn btn-success truoc"><a href="[[((data :headerpage) :chuongtruoc)]]" class="white">&larr; Trước</a></button></li>
+          <li><button type="submit" class="btn btn-success truoc"><a href="[[((param :headerpage) :chuongtruoc)]]" class="white">&larr; Trước</a></button></li>
           <li><button type="submit" class="btn btn-warning btn-sm">Đến</button>
               <input type="text" class="denchuong" id="denchuongmoi" placeholder="Chương:"></li>
-          <li><button type="submit" class="btn btn-success sau"><a href="[[((data :headerpage) :chuongsau)]]" class="white"> Tiếp &rarr;</a></button></li>
+          <li><button type="submit" class="btn btn-success sau"><a href="[[((param :headerpage) :chuongsau)]]" class="white"> Tiếp &rarr;</a></button></li>
         </ul>        
       </div>   
 
 
       <div class="row-fluid">
 
-        <a href=""><h2 class="orange text-center"><strong>[[((data :headerpage) :title)]]</strong></h2></a>
-        <h3 class="blue text-center">Chương [[((data :headerpage) :chapnumber)]]: [[((data :headerpage) :titlechap)]]</h3>
+        <a href=""><h2 class="orange text-center"><strong>%((param :headerpage) :title)</strong></h2></a>
+        <h3 class="blue text-center">Chương %((param :headerpage) :chapnumber): %((param :headerpage) :titlechap)</h3>
         <div class="span1">
         </div>
         
         <div class="span9">
               <br><br>
-              <p class="bodytruyen">[[(data :chapcontent)]]<br>
+              <p class="bodytruyen">%(param :chapcontent)<br>
 
         </div><!--span9-->
       </div> <!--row-fluid-->
 
       <div class="row-fluid">  
         <ul class="pager">
-          <li><button type="submit" class="btn btn-success truoc"><a href="[[((data :headerpage) :chuongtruoc)]]" class="white">&larr; Trước</a></button></li>
+          <li><button type="submit" class="btn btn-success truoc"><a href="[[((param :headerpage) :chuongtruoc)]]" class="white">&larr; Trước</a></button></li>
           <li><button type="submit" class="btn btn-warning btn-sm">Đến</button>
               <input type="text" class="denchuong" id="denchuongmoi" placeholder="Chương:"></li>
-          <li><button type="submit" class="btn btn-success sau"><a href="[[((data :headerpage) :chuongsau)]]" class="white"> Tiếp &rarr;</a></button></li>
+          <li><button type="submit" class="btn btn-success sau"><a href="[[((param :headerpage) :chuongsau)]]" class="white"> Tiếp &rarr;</a></button></li>
         </ul>
       </div> 
         
-      <hr>
-      <div class="text-muted bentrai"> 
-             Truyện được đăng bởi <span class="orange">[[((data :footpage) :nguoiup)]]</span> ngày [[((data :footpage) :date_added)]]
-             <br>
-      </div>
+      
 
     </div><!--whiteBgr-->
 
@@ -179,12 +175,12 @@
         <div class="row-fluid sideBar"><!--Side Bar-->                     
             <div class="list-group">
               
-              [[(defn mucluc [linkchap chapnumber titlechap]
+              %{(defn mucluc [linkchap chapnumber titlechap]
                         (str "<a href='" linkchap "' class='list-group-item list-group-item-warning'>" chapnumber ". " titlechap "</a>"))
 
-                        (apply str (for [x (data :mucluc)] 
+                        (apply str (for [x (param :mucluc)] 
                             (mucluc (x :linkchap) (x :chapnumber) (x :titlechap))))
-              ]]
+              }
                                       
             </div><!--list group-->
         </div><!--sideBar-->

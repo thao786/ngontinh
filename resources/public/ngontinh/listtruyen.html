@@ -58,46 +58,46 @@
           <br>
           <div class="row-fluid">
             <div class="span3 chuThich">
-                <img src="[[((data :lib-path) :cungdau)]]" class="thumbnail img-responsive img-circle" width="130" height="130">
-                <a href="[[((data :theloai) :cungdau)]]"><h4><span class="label label-warning">Cung Đấu</span></h4></a>
+                <img src="%(l/paths :cungdau)" class="thumbnail img-responsive img-circle" width="130" height="130">
+                <a href="%((param :theloai) :cungdau)"><h4><span class="label label-warning">Cung Đấu</span></h4></a>
                 <span class="text-muted">Tranh đoạt chốn cung đình, thường là giữa các phi tử.</span>
             </div>
             <div class="span3">
-                <img src="[[((data :lib-path) :dammy)]]" class="thumbnail img-responsive img-circle" width="130" height="130">
-                <a href="[[((data :theloai) :dammy)]]"><h4><span class="label label-primary">Đam mỹ</h4></a>
+                <img src="%(l/paths :dammy)" class="thumbnail img-responsive img-circle" width="130" height="130">
+                <a href="%((param :theloai) :dammy)"><h4><span class="label label-primary">Đam mỹ</h4></a>
                 <span class="text-muted">Nam x Nam.</span>
             </div>
             <div class="span3 chuThich">
-                <img src="[[((data :lib-path) :huyenhuyen)]]" class="thumbnail img-responsive img-circle" width="130" height="130">
-                <a href="[[((data :theloai) :huyenhuyen)]]"><h4><span class="label label-warning">Huyền Huyễn</h4></a>
+                <img src="%(l/paths :huyenhuyen)" class="thumbnail img-responsive img-circle" width="130" height="130">
+                <a href="%((param :theloai) :huyenhuyen)"><h4><span class="label label-warning">Huyền Huyễn</h4></a>
                 <span class="text-muted">Truyện mang yếu tố kỳ ảo, có thần linh và các dị tương.</span>
             </div>
             <div class="span3">
-                <img src="[[((data :lib-path) :nguoc)]]" class="thumbnail img-responsive img-circle" width="130" height="130">
-                <a href="[[((data :theloai) :nguoc)]]"><h4><span class="label label-primary">Ngược</h4></a>
+                <img src="%(l/paths :nguoc)" class="thumbnail img-responsive img-circle" width="130" height="130">
+                <a href="%((param :theloai) :nguoc)"><h4><span class="label label-primary">Ngược</h4></a>
                 <span class="text-muted">Nhân vật bị hành hạ về thể xác (Ngược thân) hoặc tinh thần (Ngược tâm).</span>
             </div>
           </div><!--Row-fluid-->
           <br>
           <div class="row-fluid">
             <div class="span3">
-                <img src="[[((data :lib-path) :sac)]]" class="thumbnail img-responsive img-circle" width="130" height="130">
-                <a href="[[((data :theloai) :sac)]]"><h4><span class="label label-primary">Sắc</h4></a>
+                <img src="%(l/paths :sac)" class="thumbnail img-responsive img-circle" width="130" height="130">
+                <a href="%((param :theloai) :sac)"><h4><span class="label label-primary">Sắc</h4></a>
                 <span class="text-muted">Cảnh 18+.</span>
             </div>
              <div class="span3 chuThich">
-                <img src="[[((data :lib-path) :trongsinh)]]" class="thumbnail img-responsive img-circle" width="130" height="130">
-                <a href="[[((data :theloai) :trongsinh)]]"><h4><span class="label label-warning">Trọng Sinh</h4></a>
+                <img src="%(l/paths :trongsinh)" class="thumbnail img-responsive img-circle" width="130" height="130">
+                <a href="%((param :theloai) :trongsinh)"><h4><span class="label label-warning">Trọng Sinh</h4></a>
                 <span class="text-muted">Nhân vật được hồi sinh: Sống lại hoặc nhập vào cơ thể khác.</span>
             </div>
             <div class="span3">
-                <img src="[[((data :lib-path) :vongdu)]]" class="thumbnail img-responsive img-circle" width="130" height="130">
-                <a href="[[((data :theloai) :vongdu)]]"><h4><span class="label label-primary">Võng du</h4></a>
+                <img src="%(l/paths :vongdu)" class="thumbnail img-responsive img-circle" width="130" height="130">
+                <a href="%((param :theloai) :vongdu)"><h4><span class="label label-primary">Võng du</h4></a>
                 <span class="text-muted">Truyện miêu tả song song giữa cuộc sống ảo trên mạng và ngoài đời thực của nhân vật.</span>
             </div>  
             <div class="span3 chuThich">
-                <img src="[[((data :lib-path) :xuyenkhong)]]" class="thumbnail img-responsive img-circle" width="130" height="130">
-                <a href="[[((data :theloai) :xuyenkhong)]]"><h4><span class="label label-warning">Xuyên Không</h4></a>
+                <img src="%(l/paths :xuyenkhong)" class="thumbnail img-responsive img-circle" width="130" height="130">
+                <a href="%((param :theloai) :xuyenkhong)"><h4><span class="label label-warning">Xuyên Không</h4></a>
                 <span class="text-muted">Nhân vật vượt qua thời gian trở về quá khứ hoặc đến tương lai.</span>
             </div>                      
           </div>
@@ -117,19 +117,19 @@
               <thead>
                 <tr>
                   <th>Giới Thiệu</th>  
-                  <th><a href="[[((data :sapxep) :theotitle)]]">Tên Truyện<b class="caret"></b></a></th>
-                  <th><a href="[[((data :sapxep) :theoauthor)]]">Tác giả<b class="caret">   </b></a></th>
-                  <th><a href="[[((data :sapxep) :theogenre)]]">Thể loại<b class="caret">  </b></a></th>
-                  <th><a href="[[((data :sapxep) :theoview)]]">Lượt Xem<b class="caret"></b></a></th>
-                  <th><a href="[[((data :sapxep) :theostate)]]">Tình Trạng<b class="caret"></b></a></th>
+                  <th><a href="%((param :sapxep) :theotitle)">Tên Truyện<b class="caret"></b></a></th>
+                  <th><a href="%((param :sapxep) :theoauthor)">Tác giả<b class="caret">   </b></a></th>
+                  <th><a href="%((param :sapxep) :theogenre)">Thể loại<b class="caret">  </b></a></th>
+                  <th><a href="%((param :sapxep) :theoview)">Lượt Xem<b class="caret"></b></a></th>
+                  <th><a href="%((param :sapxep) :theostate)]">Tình Trạng<b class="caret"></b></a></th>
                 </tr>
               </thead>
               <tbody>
 
-                [[(defn listtruyen [linktruyen linkanh title author genre chap shortoverview view state alternate searchauthor searchgenre]
+                %{(defn listtruyen [linktruyen linkanh title author genre chap shortoverview view state alternate searchauthor searchgenre]
                      (str "<tr class=''>
                   <td><span class='dropdown hidden-xs'>
-                          <button class='dropdown-toggle btn btn-sm' data-toggle='dropdown'>Giới Thiệu <b class='caret'></b></button>
+                          <button class='dropdown-toggle btn btn-sm' param-toggle='dropdown'>Giới Thiệu <b class='caret'></b></button>
                               <div class='dropdown-menu VanAnDropdown'>
                                 <div class='row-fluid'>
                                   <div class='span3'>
@@ -156,9 +156,9 @@
                   <td>" state "</td>
                 </tr>"))
 
-                        (apply str (for [x (data :listtruyen)] 
+                        (apply str (for [x (param :listtruyen)] 
                             (listtruyen (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :chap) (x :shortoverview) (x :view) (x :state) (x :alternate) (x :searchauthor) (x :searchgenre))))
-                        ]]             
+             }             
      
             
               </tbody>

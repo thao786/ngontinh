@@ -7,7 +7,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Kết Quả Tìm Kiếm từ khóa "[[(data :tukhoa)]]" | Trang Ngôn Tình</title>  
+    <title>Kết Quả Tìm Kiếm từ khóa "[[(param :tukhoa)]]" | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  
@@ -75,13 +75,13 @@
                           <option>kết thúc bằng</option>                      
                         </select>
                         <input type="text" class="form-control cachnhaura">
-                        <button href ="[[(data :tim)]]" type="submit" class="btn btn-default cachnhaura">Tìm</button>  
+                        <button href ="[[(param :tim)]]" type="submit" class="btn btn-default cachnhaura">Tìm</button>  
                       </div>                    
 
                 <br>
                 <hr>                
 
-                <h3 class="text-muted" id="tukhoa">Tìm kiếm với từ khóa: <i class="green">[[(data :tukhoa)]]</i>
+                <h3 class="text-muted" id="tukhoa">Tìm kiếm với từ khóa: <i class="green">[[(param :tukhoa)]]</i>
                                                               
                 </h3>      
                 <br>
@@ -91,18 +91,18 @@
                         <thead>
                           <tr>
                             <th>Giới Thiệu</th>  
-                            <th><a href="[[((data :sapxep) :theotitle)]]">Tên Truyện<b class="caret"></b></a></th>
-                            <th><a href="[[((data :sapxep) :theochap)]]">Số chương<b class="caret"></b></a></th>
-                            <th><a href="[[((data :sapxep) :theogenre)]]">Thể Loại<b class="caret"></b></a></th>
-                            <th><a href="[[((data :sapxep) :theoview)]]">Lượt Xem<b class="caret"></b></a></th>
+                            <th><a href="[[((param :sapxep) :theotitle)]]">Tên Truyện<b class="caret"></b></a></th>
+                            <th><a href="[[((param :sapxep) :theochap)]]">Số chương<b class="caret"></b></a></th>
+                            <th><a href="[[((param :sapxep) :theogenre)]]">Thể Loại<b class="caret"></b></a></th>
+                            <th><a href="[[((param :sapxep) :theoview)]]">Lượt Xem<b class="caret"></b></a></th>
                           </tr>
                         </thead>
                         <tbody>           
                             
-                [[(defn listtruyen [linktruyen linkanh title alternate author genre shortoverview chap view state searchauthor searchgenre]
+                %{(defn listtruyen [linktruyen linkanh title alternate author genre shortoverview chap view state   searchauthor searchgenre]
                      (str "<tr class=''>
                   <td><span class='dropdown hidden-xs'>
-                          <button class='dropdown-toggle btn btn-xs' data-toggle='dropdown'>Giới Thiệu<b class='caret'></b></button>
+                          <button class='dropdown-toggle btn btn-xs' param-toggle='dropdown'>Giới Thiệu<b class='caret'></b></button>
                               <div class='dropdown-menu VanAnDropdown'>
                                 <div class='row-fluid'>
                                   <div class='span3'>
@@ -129,9 +129,9 @@
                   <td>" view "</td>
                 </tr>"))
 
-                        (apply str (for [x (data :listtruyen)] 
+                        (apply str (for [x (param :listtruyen)] 
                             (listtruyen (x :linktruyen) (x :linkanh) (x :title) (x :alternate) (x :author) (x :genre) (x :shortoverview) (x :chap) (x :view) (x :state) (x :searchauthor) (x :searchgenre))))
-                        ]] 
+          } 
 
                              
                         </tbody>
