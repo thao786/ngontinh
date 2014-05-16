@@ -40,13 +40,13 @@
 		result))
 
 (defn render
-	[file-path]
-	(render file-path {})
+	([file-path]
+	(render file-path {}))
 
-	[file-path params]
+	([file-path params]
 	(if-let [file-ns (get ns-list file-path)]
 		(load-string "(file-ns/render params)")
-		(render-text (slurp file-path) params)))
+		(render-text (slurp file-path) params))))
 
 
 (defmacro ig 

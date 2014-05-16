@@ -3,9 +3,6 @@
 
 (import 'java.sql.DriverManager)
 
-;(def ^:private some-var :value)
-
-
 (defn getTruyen [query]
 	(vec (let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
 															"postgres" 

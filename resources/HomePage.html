@@ -1,4 +1,4 @@
-%{require '[ngontinh.ngontinh.libpath :as l]
+%{(require '[ngontinh.ngontinh.libpath :as l])
 }
 
 <!DOCTYPE html>
@@ -82,7 +82,7 @@
                          </div>                                   
                         </a>"))
 
-                        (apply str (for [x (param :sidebar2)] 
+                        (apply str (for [x (params :sidebar2)] 
                                   (sidebar2 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))
                       }
 
@@ -109,7 +109,7 @@
                               <td>" date_added "</td>                       
                             </tr>"))
 
-                      (apply str (for [x (param :updatechap)] 
+                      (apply str (for [x (params :updatechap)] 
                           (updatechap (x :linktruyen) (x :title) (x :linkchap) (x :chapnumber) (x :titlechap) (x :date_added))))
 
                   }
@@ -125,7 +125,7 @@
 
       <a href="trangngontinh/danhsachtruyen"><h3><span class="label label-warning trangchutitle">Danh Sách Truyện</h3></a>
       <div class="row-fluid lightblue">
-            <a href="trangngontinh/danhsachtruyen"><img src="[[((param :lib-path) :linkanh1)]]" class="thumbnail imgFloat" width="270" height="200"></a>
+            <a href="trangngontinh/danhsachtruyen"><img src="[[((params :lib-path) :linkanh1)]]" class="thumbnail imgFloat" width="270" height="200"></a>
             <br>            
             <a href="#"><h4 class="blue">&raquo; Truyện Cổ Đại</h4></a>
             <a href="#"><h4 class="blue">&raquo; Truyện Hiện Đại</h4></a>
@@ -149,7 +149,7 @@
                                 <a href='" linktruyen" '><h4>" title" </h4></a>          
                             </div>"))
 
-                      (apply str (for [x (param :doctruyen1)] 
+                      (apply str (for [x (params :doctruyen1)] 
                               (doctruyen1 (x :linktruyen) (x :linkanh) (x :title))))
             }
            
@@ -163,7 +163,7 @@
                                 <a href='" linktruyen" '><h4>" title" </h4></a>          
                             </div>"))
 
-                      (apply str (for [x (param :doctruyen2)] 
+                      (apply str (for [x (params :doctruyen2)] 
                               (doctruyen2 (x :linktruyen) (x :linkanh) (x :title))))
             }
 
@@ -186,7 +186,7 @@
                                 <a href='" linktruyen" '><h4>" title" </h4></a>          
                             </div>"))
 
-                      (apply str (for [x (param :engnovel)] 
+                      (apply str (for [x (params :engnovel)] 
                               (engnovel (x :linktruyen) (x :linkanh) (x :title))))
             }            
             
@@ -200,7 +200,7 @@
 
       <a href="#"><h3><span class="label label-warning trangchutitle">Chia Sẻ</h3></a>
       <div class="row-fluid lightblue">
-            <a href="#"><img src="[[((param :lib-path) :linkanh2)]]" class="thumbnail img-responsive imgFloat" width="270" height="200"></a>
+            <a href="#"><img src="[[((params :lib-path) :linkanh2)]]" class="thumbnail img-responsive imgFloat" width="270" height="200"></a>
             <br>            
             <a href="#"><h4 class="blue">&raquo; Hỏi Đáp</h4></a>
             <a href="#"><h4 class="blue">&raquo; Thư Viện Ảnh</h4></a>
@@ -213,7 +213,7 @@
 
       <a href="truyengontinh.com/dangtruyen"><h3><span class="label label-warning trangchutitle">Góc Sáng Tác</h3></a>
       <div class="row-fluid lightblue">
-            <a href="#"><img src="[[((param :lib-path) :linkanh3)]]" class="thumbnail img-responsive imgFloat" width="270" height="200"></a>
+            <a href="#"><img src="[[((params :lib-path) :linkanh3)]]" class="thumbnail img-responsive imgFloat" width="270" height="200"></a>
             <br>
             <a href="#"><h4 class="blue">&raquo; Hướng Dẫn Đăng Tải</h4></a>
             <p class="columnText text-muted">Hãy đăng các tác phầm của bạn để mọi người cùng được thưởng thức. Tác phẩm của bạn có thể là đoản văn, thơ, tiều thuyết, tranh ảnh... <br><br>Mọi hướng dẫn cụ thể về cách đăng truyện xin vui lòng tham khảo ở <a href =""><span class="label label-info">Đây</span></a></p>
