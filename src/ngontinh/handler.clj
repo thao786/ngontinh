@@ -3,6 +3,7 @@
                 ring.middleware.cookies
                 ring.util.response)
         (:require [compojure.handler :as handler]
+                  [sodahead.render :as r]  
             [compojure.route :as route]
             [clojure.java.io :as io]
             [ngontinh.view.core :as view]
@@ -56,17 +57,12 @@
                 (io/resource (str "public/Truyen/" name "/cover.jpg")))
  
  
-        (GET "/" []
-                (str (view/render "ngontinh/HomePage.html" ngontinh.ngontinh.homepage/Homepagedata)))
+        (GET "/" [] (r/render "resources/public/ngontinh/HomePage.html"))
  
         (GET "/doctruyen/:title" [title]
-<<<<<<< HEAD
                 (str (view/render "ngontinh/doctruyen.html" ngontinh.ngontinh.gridtruyen/Truyendata)))
-=======
-                (str (view/render "ngontinh/doctruyen.html" (ngontinh.ngontinh.gridtruyen/Truyendata title))))
->>>>>>> 5531e383b6460f751e63b04af523fd554047f021
- 
-        (GET "/gridtruyen" []
+
+         (GET "/gridtruyen" []
                 (str (view/render "ngontinh/gridtruyen.html" (ngontinh.ngontinh.gridtruyen/Doctruyendata 1))))
         (GET "/gridtruyen/:page" [page]
                 (str (view/render "ngontinh/gridtruyen.html" (ngontinh.ngontinh.gridtruyen/Doctruyendata page))))
