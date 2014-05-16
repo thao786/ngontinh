@@ -13,10 +13,8 @@
             ngontinh.ngontinh.gridtruyen
             ngontinh.ngontinh.listtruyen
             ngontinh.cache
-            ))
-;(:require [my.lib :refer :all])
+            [framework.session :as s]))
 ;lein ring uberwar
-;(def ^:private some-var :value)
 
 (defroutes app-routes
         (HEAD "/" [] "")
