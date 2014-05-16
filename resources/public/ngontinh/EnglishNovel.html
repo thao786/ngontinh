@@ -1,29 +1,31 @@
+%{require '[ngontinh.ngontinh.libpath :as l]
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
     <meta charset="utf-8">
     <title>English Novel | Trang Ngôn Tình</title>  
-    <link rel="icon" href="[[((data :lib-path) :icon)]]" type="image/gif" sizes="16x16">
+    <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  
-    <link href="[[((data :lib-path) :bootcss)]]" rel="stylesheet" media="screen" type="text/css"> 
-    <link rel="stylesheet" href="[[((data :lib-path) :bootstheme)]]">
-    <link href="[[((data :lib-path) :docscss)]]" rel="stylesheet">  
-    <link href="[[((data :lib-path) :bootsresponsive)]]" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="[[((data :lib-path) :stylesheet2)]]">
+    <link href="%(l/paths :bootcss)" rel="stylesheet" media="screen" type="text/css"> 
+    <link rel="stylesheet" href="%(l/paths :bootstheme)">
+    <link href="%(l/paths :docscss)" rel="stylesheet">  
+    <link href="%(l/paths :bootsresponsive)" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="%(l/paths :stylesheet)">
     <style>
-  
-    body{
-      background-image:url("[[((data :lib-path) :bgr)]]");
-    }  
-    @font-face {
-      font-family: 'Glyphicons Halflings';
-      src:  url('[[((data :lib-path) :font1)]]');
-      src:  url('[[((data :lib-path) :font1)]]?#iefix') format('embedded-opentype'), 
-            url('[[((data :lib-path) :font2)]]') format('woff'), 
-            url('[[((data :lib-path) :font3)]]') format('truetype'), 
-            url('[[((data :lib-path) :font4)]]#glyphicons_halflingsregular') format('svg');
-    }
+        body{
+          background-image:url("%(l/paths :bgr)"); 
+        }  
+        @font-face {
+          font-family: 'Glyphicons Halflings';
+          src:  url('%(l/paths :font1)');
+          src:  url('%(l/paths :font1)?#iefix') format('embedded-opentype'), 
+                url('%(l/paths :font2)') format('woff'), 
+                url('%(l/paths :font3)') format('truetype'), 
+                url('%(l/paths :font4)#glyphicons_halflingsregular') format('svg');
+        }
     </style>
 
 </head>
@@ -32,7 +34,7 @@
   <body class="maubody1">
 <div class="le">  
 
-    %include {"public/ngontinh/utility/pageheader.html"}
+    %include {"resources/public/ngontinh/utility/pageheader.html"}
 
 <!--================================================== -->
 
@@ -257,7 +259,7 @@
 
 </div><!--le-->
 
-%include {"public/ngontinh/utility/footer.html"}
+%include {"resources/public/ngontinh/utility/footer.html"}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -273,7 +275,7 @@
     <script src="bootstrap-example/js/bootstrap-tooltip.js"></script>
     <script src="bootstrap-example/js/bootstrap-popover.js"></script>
     <script src="bootstrap-example/js/bootstrap-button.js"></script>-->
-    <script src="[[((data :lib-path) :bootcollapsejs)]]"></script>
+    <script src="%(l/paths :bootcollapsejs)"></script>
    <!--<script src="bootstrap-example/js/bootstrap-carousel.js"></script>
     <script src="bootstrap-example/js/bootstrap-typeahead.js"></script>  -->      
 <script>

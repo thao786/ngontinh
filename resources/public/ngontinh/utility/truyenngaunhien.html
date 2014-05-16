@@ -1,0 +1,25 @@
+<div class="hidden-xs">            
+            <h3><span class="label label-custom">Truyện Ngẫu Nhiên</span></h3>
+            <div class="row-fluid sideBar"><!--Side Bar-->                       
+                  <div class="list-group">
+
+                    [[(defn sidebar [linktruyen linkanh title author genre]
+                     (str "<a href='" linktruyen "' class='list-group-item'>
+                          <div class='row-fluid'>
+                            <div class='span5'><img src='" linkanh "' class='thumbnail img-responsive imgFloatsidebar list-group-item-text' width='90' height='120'></div>
+                            <div class='span7'>
+                              <h4 class='list-group-item-heading'>" title "</h4>               
+                              <p class='blue small'>Tác Giả: " author "<br>
+                                                    Thể Loại: " genre "</p>
+                            </div>
+                         </div>                                   
+                        </a>"))
+
+                        (apply str (for [x (data :sidebar)] 
+                                  (sidebar (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))
+                        ]]
+
+
+                </div><!--list group-->
+            </div><!--sideBar-->
+            </div><!--hiddenxs-->
