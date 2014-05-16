@@ -1,4 +1,4 @@
-%{(require '[ngontinh.ngontinh.libpath :as l]
+%{(require '[ngontinh.libpath :as l]
 )}
 
 <!DOCTYPE html>
@@ -65,7 +65,7 @@
             <br>
             <br>
 
-            %include {"resources/public/ngontinh/utility/truyenmoi.html"}
+            %(r/render "resources/public/ngontinh/utility/truyenmoi.html")
 
     </div><!--Span3-->
 
