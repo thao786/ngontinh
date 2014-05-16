@@ -64,36 +64,6 @@
 
 
 
-
-(let [query 	"select * from truyen order by view USING > limit 5"
-	 	stmt 	(.createStatement connection)
-	 	rs 		(.executeQuery stmt query)]
-	(vec (resultset-seq rs)))
-
-
-
-
-select * from truyen where genre like '%HE%'
-
-
-(defn getGenreCount [genre]
-	(let 	[resVec   	(let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
-																		"postgres" 
-																		"fall2010")
-								query 		(str "select count(*) from truyen where genre like '%" genre "%'")
-								res 	 	(let [	stmt 	(.createStatement connection)
-												 	rs 		(.executeQuery stmt query)]
-												(vec (resultset-seq rs)))
-								ddd 		(.close connection)]
-								res)
-			row 		(nth resVec 0)]
-		(row :count)))
-
-
-
-
-
-
 {:linkanh (lib/lib-path :linkanh) 
 	:linktruyen "That" 
 	:titletruyen "Hoa" 
@@ -111,3 +81,7 @@ select * from truyen where genre like '%HE%'
 :translator "Lục Phong", 
 :date_added #inst "2014-05-04T01:18:27.608000000-00:00", 
 :view 2978}
+
+
+
+

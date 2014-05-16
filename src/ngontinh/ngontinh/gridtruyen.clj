@@ -77,4 +77,48 @@
 		  {:chapnumber "56" :linkchap "http" :titlechap "gegweg 4g4 g4wg" :ngayup "32/5/2014"}
 		  {:chapnumber "56" :linkchap "http" :titlechap "gegweg 4g4 g4wg" :ngayup "32/5/2014"}]
 	})	
+=======
+(defn Truyendata [title]
+	(let 	[truyen 		(nth (hp/getTruyen (str "select * from truyen where path = '" title"'")) 0)
+			genreList 		(truyen :genre)]
+		{:lib-path lib/lib-path 
+
+		;truyen cung the loai
+		:sidebar1 [{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :title "Hoa" :author "Chu" :genre "Co Dai"}
+				{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :title "That" :author "Ngoc" :genre "Co Dai"}	
+				{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :title "Tu" :author "That" :genre "Co Dai"}
+				{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :title "Dan" :author "Cong" :genre "Hien Dai"}
+				{:linkanh (lib/lib-path :linkanh) :linktruyen "That" :title "Duong" :author "That" :genre "Co Dai"}]
+		
+		;truyen cung tac gia
+		:sidebar2 (hp/getTruyen (str "select * from truyen where author like '%" (truyen :author) "%'"))
+		:tim "http"
+		:titlepage {:title (truyen :title) :state "Full" :author (truyen :author)}
+		:chuongmoi [{:linkchap "http" :chapnumber "45" :titlechap "Slh feu kfej fe"}
+				 {:linkchap "http" :chapnumber "45" :titlechap "Slh feu kfej fe"}
+				 {:linkchap "http" :chapnumber "45" :titlechap "Slh feu kfej fe"}
+				 {:linkchap "http" :chapnumber "45" :titlechap "Slh feu kfej fe"}
+				 {:linkchap "http" :chapnumber "45" :titlechap "Slh feu kfej fe"}]				 
+		:gioithieu {:shortoverview "ggggggggggggggggg" :remainoverview "sssssssssssssssssssssssssss" }
+		:truyeninfo {	:linkanh (truyen :linkanh) 
+						:linktruyen (truyen :linktruyen) 
+						:title (truyen :title)
+						:alternate (truyen :alternate)
+						:author (truyen :author)
+						:searchauthor "http" 
+						:genre (truyen :genre)
+						:searchgenre "http" 
+						:state "Full" 
+						:searchstate "http" 
+						:source (truyen :source)
+						:person "esgegww" 
+						:view (truyen :view)
+						:date_added (truyen :date_added)}
+		:mucluc [{:chapnumber "56" :linkchap "http" :titlechap "gegweg 4g4 g4wg" :date_added "32/5/2014"}
+			  {:chapnumber "56" :linkchap "http" :titlechap "gegweg 4g4 g4wg" :date_added "32/5/2014"}
+			  {:chapnumber "56" :linkchap "http" :titlechap "gegweg 4g4 g4wg" :date_added "32/5/2014"}
+			  {:chapnumber "56" :linkchap "http" :titlechap "gegweg 4g4 g4wg" :date_added "32/5/2014"}
+			  {:chapnumber "56" :linkchap "http" :titlechap "gegweg 4g4 g4wg" :date_added "32/5/2014"}]
+		}))
+
 

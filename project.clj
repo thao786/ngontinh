@@ -6,7 +6,8 @@
                  [org.apache.commons/commons-pool2 "2.2"]
                   [redis.clients/jedis "2.4.2"]
                   [org.postgresql/postgresql "9.3-1101-jdbc41"]
-                  [org.clojure/java.jdbc "0.3.3"]]
+                  [org.clojure/java.jdbc "0.3.3"]
+                  [org.clojure/core.cache "0.6.3"]]
   :plugins [[lein-ring "0.8.10"]]
   :ring {:handler ngontinh.handler/app}
   :profiles
