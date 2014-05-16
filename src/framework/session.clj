@@ -1,4 +1,4 @@
-(ns framework.session.session
+(ns framework.session
 	(:import 	(java.security.SecureRandom)))
 
 (def jrandom (java.security.SecureRandom.))
