@@ -1,0 +1,24 @@
+<h3><span class="label label-warning trangchutitle">Chương Mới Cập Nhật</h3>
+      <div class="row-fluid">  
+        <div class="lightblue2">          
+            <div class="table-responsive">
+              <table class="table table-striped table-hover ">                    
+                <tbody>
+
+                  %{(defn updatechap [linktruyen title linkchap chapnumber titlechap date_added]
+                      (str " <tr class='text-muted'>
+                              <td><a href='" linktruyen "' class='tentruyen'>" title "</a></td>
+                              <td><a href='" linkchap "'>Chương " chapnumber ": " titlechap "</a></td>
+                              <td>" date_added "</td>                       
+                            </tr>"))
+
+                      (apply str (for [x (param :updatechap)] 
+                          (updatechap (x :linktruyen) (x :title) (x :linkchap) (x :chapnumber) (x :titlechap) (x :date_added))))
+
+                  }
+                 
+                </tbody>
+              </table>
+            </div><!--Table-responsive-->   
+        </div><!--lightBlue-->  
+      </div><!--row-fluid-->
