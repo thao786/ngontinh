@@ -49,7 +49,9 @@
 
         (GET "/listtruyen" [] (r/render "resources/listtruyen.html"))
 
-        (GET "/listtruyen/:genre" [genre] (r/render "resources/theloai.html"))
+        (GET "/gridtruyen" [] (r/render "resources/gridtruyen.html"))
+
+        (GET "/listtruyen/:genre" [genre] (r/render "resources/theloai.html" {:genre genre}))
 
         (GET "/gridtruyen/:path" [path] (r/render "resources/doctruyen.html" {:path path}))
 
