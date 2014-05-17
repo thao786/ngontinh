@@ -1,0 +1,15 @@
+toi la moi con meo
+<br>
+%{}
+
+%{
+	(def a 4)
+	(def b "fox")
+	nil
+}
+
+
+
+toi thik an ca <br>
+%a <br> furry fox <br>
+%(+ 9 8)
