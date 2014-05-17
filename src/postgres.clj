@@ -116,3 +116,13 @@
 
 
 
+
+
+
+(doseq [folder (.listFiles (File. "/home/thao/ngontinh/resources/Truyen"))]
+	(let [folder-path 	(.getPath folder)
+		overview-file 	(str folder-path "/Overview.txt")
+		first-line 		(re-find #".*\n" (slurp overview-file))]
+		first-line))
+
+
