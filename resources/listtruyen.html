@@ -128,8 +128,7 @@
               </thead>
               <tbody>
 
-                %{
-
+           %{   
                 (defn listtruyen [linktruyen linkanh title author path genre chap shortoverview view state alternate searchauthor searchgenre]
                      (str "<tr class=''>
                   <td><span class='dropdown hidden-xs'>
@@ -160,12 +159,10 @@
                   <td>" state "</td>
                 </tr>"))
 
-            (def truyenall (truyen/getTruyen "SELECT * FROM truyen"
-                 (let [firstoverview (truyen/first-overview)]
-                 (assoc truyenall :shortoverview firstoverview))))
-
-                        (apply str (for [x truyenall] 
-                            (listtruyen (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :path) (x :genre) (x :chap) (x :shortoverview) (x :view) (x :state) (x :alternate) (x :searchauthor) (x :searchgenre))))
+            (def truyenall (truyen/getTruyen "SELECT * FROM truyen"))                       
+           
+                (apply str (for [x truyenall]    
+                    (listtruyen (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :path) (x :genre) (x :chap) (x :shortoverview) (x :view) (x :state) (x :alternate) (x :searchauthor) (x :searchgenre))))
              }             
      
             

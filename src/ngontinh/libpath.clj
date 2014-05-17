@@ -4,10 +4,40 @@
 
 (def hostPath "http://localhost:3000/")
 
-(def genreList ["Chiến Trường" "Cổ Đại" "Công Sở" "Cung đấu" "Cung Đình" "Đam mỹ" "Đoản Văn" 
-				"Đồng nhân" "Điền văn" "Giang Hồ" "Hài" "Hắc bang" "Hiện Đại" "Hoán Thân" "Huyền huyễn" "Kiếm Hiệp"
-				"Ngược" "Nhân thú" "Nữ tôn" "Nữ phẫn nam trang" "NP" "Phúc Hắc Nam" "Quân nhân" "Sắc" "Sủng" "Sư đồ luyến"
-				"Học đường" "Tiên hiệp" "Trọng sinh" "Võng du" "Xuyên không" "HE" "SE" "OE"])
+(def genreList {:chientruong "Chiến Trường" 
+				:codai "Cổ Đại" 
+				:congso "Công Sở" 
+				:cungdau "Cung đấu" 
+				:cungdinh "Cung Đình" 
+				:dammy "Đam mỹ" 
+				:doanvan "Đoản Văn" 
+				:dongnhan "Đồng nhân" 
+				:dienvan "Điền văn" 
+				:giangho "Giang Hồ" 
+				:hai "Hài" 
+				:hacbang "Hắc bang" 
+				:hiendai "Hiện Đại" 
+				:hoanthan "Hoán Thân" 
+				:huyenhuyen "Huyền huyễn" 
+				:kiemhiep "Kiếm Hiệp"
+				:nguoc "Ngược" 
+				:nhanthu "Nhân thú" 
+				:nuton "Nữ tôn" 
+				:nuphannamtrang "Nữ phẫn nam trang" 
+				:np "NP" 
+				:phuchacnam "Phúc Hắc Nam" 
+				:quannhan "Quân nhân" 
+				:sac "Sắc" 
+				:sung "Sủng" 
+				:sudoluyen "Sư đồ luyến"
+				:hocduong "Học đường" 
+				:tienhiep "Tiên hiệp" 
+				:trongsinh "Trọng sinh" 
+				:vongdu "Võng du" 
+				:xuyenkhong "Xuyên không" 
+				:he "HE" 
+				:se "SE" 
+				:oe "OE"})
 
 (def paths {:bootcss (str hostPath "bootstrap.css")
 			   :bootcollapsejs (str hostPath "bootstrap-collapse.js")

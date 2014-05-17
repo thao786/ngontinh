@@ -11,11 +11,12 @@
 								 	rs 		(.executeQuery stmt query)]
 								(vec (resultset-seq rs)))
 				addLink		(for [truyen mostRead]
-								(let 	[name 		(truyen :path)									
-										overview 	(str lib/hostPath "overview/" name)
-										linkanh 	(str lib/hostPath "image/" name)
-										linktruyen 	(str lib/hostPath "gridtruyen/" name)] 
-									(assoc truyen :overview overview :linkanh linkanh :linktruyen linktruyen)))
+								(let 	[name 			(truyen :path)									
+										overview 		(str lib/hostPath "overview/" name)
+										linkanh 		(str lib/hostPath "image/" name)
+										linktruyen 		(str lib/hostPath "gridtruyen/" name) 
+										shortoverview 	(clojure.string/replace (subs (slurp (str "resources/Truyen/" name "/Overview.txt")) 14 300) #"\n" "<br>")	]
+									(assoc truyen :shortoverview shortoverview :overview overview :linkanh linkanh :linktruyen linktruyen)))
 				ddd 		(.close connection)]
 			addLink)))
 
@@ -37,8 +38,5 @@
 			addLink)))
 
 
-(def overview (slurp (str "resources\\Truyen\\" (doctruyen :path) "\\Overview.txt")))
-(def first-overview (clojure.string/replace (subs overview 14 200) #"\n" "<br>")  )
-(def remain-overview (clojure.string/replace (subs overview 200) #"\n" "<br>"))
-(def gioithieu {:first-overview first-overview :remain-overview remain-overview})
+
                
