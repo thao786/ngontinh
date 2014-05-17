@@ -26,11 +26,11 @@
 (def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/test" "postgres" "fall2010"))
 (def stamp 	(Timestamp. (.getTime (java.util.Date.))))
 (doseq [folder (.listFiles (File. "/home/thao/ngontinh/resources/Truyen"))] 
-	(prn (let 	[path 		(str (.getPath folder) "/Info.txt")
+	(let 	[path 		(str (.getPath folder) "/Info.txt")
 			oldContent 	(slurp path)
 			content 	(clojure.string/replace oldContent #"\r" "")
-			content 	(clojure.string/replace content #"0x00" "")
 			infoArray 	(.split content "\n")		
+			genre-str 	(try (nth infoArray 4) (catch Exception e ""))
 			colMap 		{"title" (nth infoArray 0)
 						"alternate" (try (nth infoArray 1) (catch Exception e ""))
 						"author" (try (nth infoArray 2) (catch Exception e ""))
@@ -56,7 +56,7 @@
 							(.setInt 10 (- (count (.listFiles folder)) 3))
 							(.setTimestamp 11 stamp)
 							(.setInt 12 view))]
-		(.execute statement))))
+		(.execute statement)))
 (.close connection)
 
 
