@@ -3,7 +3,7 @@
 )}
 
 <div class="hidden-xs">            
-            <h3><span class="label label-custom">Truyện Xem Nhiều</span></h3>
+            <h3><span class="label label-custom">Truyện Cùng Tác Giả</span></h3>
             <div class="row-fluid sideBar"><!--Side Bar-->                       
                   <div class="list-group">
 
@@ -21,9 +21,9 @@
                          </div>                                   
                         </a>"))
 
-                        (def truyenrandom (truyen/getTruyen "SELECT * FROM truyen ORDER BY view desc limit 5"))
+                (def truyencungauthor (truyen/getTruyen "select * from truyen where author = '" (params :author) "'"))
 
-                        (apply str (for [x truyenrandom] 
+                        (apply str (for [x truyencungauthor] 
                                   (sidebar (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))
                     }
 

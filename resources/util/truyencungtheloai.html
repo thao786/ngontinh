@@ -3,7 +3,7 @@
 )}
 
 <div class="hidden-xs">            
-            <h3><span class="label label-custom">Truyện Xem Nhiều</span></h3>
+            <h3><span class="label label-custom">Truyện Cùng Thể Loại</span></h3>
             <div class="row-fluid sideBar"><!--Side Bar-->                       
                   <div class="list-group">
 
@@ -21,7 +21,7 @@
                          </div>                                   
                         </a>"))
 
-                        (def truyenrandom (truyen/getTruyen "SELECT * FROM truyen ORDER BY view desc limit 5"))
+                 (def truyenrandom (truyen/getTruyen "select * from truyen where author like '%" (params :genre) "%'"))
 
                         (apply str (for [x truyenrandom] 
                                   (sidebar (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))

@@ -13,7 +13,9 @@
 				addLink		(for [truyen mostRead]
 								(let 	[name 		(truyen :path)
 										linkanh 	(str lib/hostPath "image/" name)
-										linktruyen 	(str lib/hostPath "doctruyen/" name)] 
+										linktruyen 	(str lib/hostPath "gridtruyen/" name)] 
 									(assoc truyen :linkanh linkanh :linktruyen linktruyen)))
 				ddd 		(.close connection)]
 			addLink)))
+
+

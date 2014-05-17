@@ -4,8 +4,8 @@
                 ring.util.response)
         (:require [compojure.handler :as handler]
                   [sodahead.render :as r]  
-            [compojure.route :as route]
-            [clojure.java.io :as io]))
+                  [compojure.route :as route]
+                  [clojure.java.io :as io]))
 ;lein ring uberwar
 
 (defroutes app-routes
@@ -45,9 +45,17 @@
                 (io/resource (str "Truyen/" name "/cover.jpg")))
  
  
-        (GET "/" [] (r/render "resources/HomePage.html"))
+        ;(GET "/" [] (r/render "resources/HomePage.html"))
 
-        ;(GET "/" [] (r/render "resources/util/truyenmoi.html"))
+        (GET "/listtruyen" [] (r/render "resources/listtruyen.html"))
+
+        (GET "/listtruyen/:genre" [genre] (r/render "resources/theloai.html"))
+
+        (GET "/gridtruyen/:path" [path] (r/render "resources/doctruyen.html" {:path path}))
+
+        (GET "/advancedsearch" [] (r/render "resources/Tim_nang_cao.html"))
+
+        (GET "/" [] (r/render "resources/util/truyencungtheloai.html"))
  
         (route/resources "/")
         (route/not-found "Not Found"))

@@ -1,4 +1,6 @@
 %{(require '[ngontinh.libpath :as l]
+           '[sodahead.render :as r]
+           '[ngontinh.util.truyen :as truyen]
 )}
 
 <!DOCTYPE html>
@@ -6,7 +8,7 @@
 <head>
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>Nơi Đọc Truyện Lý Tưởng Của Bạn - Trang Chủ - Trang Ngôn Tình</title>  
+    <title>Nơi Đọc Truyện Lý Tưởng Của Bạn - Trang Chủ | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  
@@ -36,7 +38,7 @@
 
 
 
-   %include {"resources/public/ngontinh/utility/pageheader.html"}
+   %include {"resources/util/pageheader.html"}
 
 
 
@@ -59,20 +61,20 @@
       <br>
       <br>
 
-            %include {"resources/public/ngontinh/utility/truyenxemnhieu.html"}
+           %(r/render "resources/util/truyenxemnhieu.html")
               
 
             <br>
             <br>
 
-            %(r/render "resources/public/ngontinh/utility/truyenmoi.html")
+            %(r/render "resources/util/truyenmoi.html")
 
     </div><!--Span3-->
 
     
     <div class="span9 whiteBgr">
 
-          %include {"resources/public/ngontinh/utility/chuongmoicapnhat.html"}
+            %(r/render "resources/util/chuongmoicapnhat.html")
       
           
       <br>
@@ -80,7 +82,7 @@
 
       <a href="trangngontinh/danhsachtruyen"><h3><span class="label label-warning trangchutitle">Danh Sách Truyện</h3></a>
       <div class="row-fluid lightblue">
-            <a href="trangngontinh/danhsachtruyen"><img src="[[((param :lib-path) :linkanh1)]]" class="thumbnail imgFloat" width="270" height="200"></a>
+            <a href="trangngontinh/danhsachtruyen"><img src="%(l/paths :linkanh1)" class="thumbnail imgFloat" width="270" height="200"></a>
             <br>            
             <a href="#"><h4 class="blue">&raquo; Truyện Cổ Đại</h4></a>
             <a href="#"><h4 class="blue">&raquo; Truyện Hiện Đại</h4></a>
@@ -104,7 +106,10 @@
                                 <a href='" linktruyen" '><h4>" title" </h4></a>          
                             </div>"))
 
-                      (apply str (for [x (param :doctruyen1)] 
+                (def truyen1 (truyen/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() limit 4"))
+
+
+                      (apply str (for [x truyen1] 
                               (doctruyen1 (x :linktruyen) (x :linkanh) (x :title))))
             }
            
@@ -118,7 +123,11 @@
                                 <a href='" linktruyen" '><h4>" title" </h4></a>          
                             </div>"))
 
-                      (apply str (for [x (param :doctruyen2)] 
+
+            (def truyen2 (truyen/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() limit 4"))
+
+
+                      (apply str (for [x truyen2] 
                               (doctruyen2 (x :linktruyen) (x :linkanh) (x :title))))
             }
 
@@ -141,7 +150,9 @@
                                 <a href='" linktruyen" '><h4>" title" </h4></a>          
                             </div>"))
 
-                      (apply str (for [x (param :engnovel)] 
+                  (def truyenenglish (truyen/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() limit 4"))
+
+                      (apply str (for [x truyenenglish] 
                               (engnovel (x :linktruyen) (x :linkanh) (x :title))))
             }            
             
@@ -168,7 +179,7 @@
 
       <a href="truyengontinh.com/dangtruyen"><h3><span class="label label-warning trangchutitle">Góc Sáng Tác</h3></a>
       <div class="row-fluid lightblue">
-            <a href="#"><img src="[[((param :lib-path) :linkanh3)]]" class="thumbnail img-responsive imgFloat" width="270" height="200"></a>
+            <a href="#"><img src="%(l/paths :linkanh3)" class="thumbnail img-responsive imgFloat" width="270" height="200"></a>
             <br>
             <a href="#"><h4 class="blue">&raquo; Hướng Dẫn Đăng Tải</h4></a>
             <p class="columnText text-muted">Hãy đăng các tác phầm của bạn để mọi người cùng được thưởng thức. Tác phẩm của bạn có thể là đoản văn, thơ, tiều thuyết, tranh ảnh... <br><br>Mọi hướng dẫn cụ thể về cách đăng truyện xin vui lòng tham khảo ở <a href =""><span class="label label-info">Đây</span></a></p>
@@ -187,7 +198,7 @@
 
 </div><!--le-->
 
-%include {"resources/public/ngontinh/utility/footer.html"}
+%include {"resources/util/footer.html"}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
