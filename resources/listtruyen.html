@@ -128,8 +128,7 @@
               </thead>
               <tbody>
 
-                %{
-
+           %{   
                 (defn listtruyen [linktruyen linkanh title author path genre chap shortoverview view state alternate searchauthor searchgenre]
                      (str "<tr class=''>
                   <td><span class='dropdown hidden-xs'>
@@ -147,7 +146,7 @@
                                         <span style='visibility:hidden'>aaaaa</span><i>Số Chương:</i> " chap "
                                         </p>
                                         <hr>
-                                        <p>" shortoverview "...</p>        
+                                        <p>" shortoverview "</p>        
                                   </div>
                                 </div>            
                               </div>
@@ -160,11 +159,11 @@
                   <td>" state "</td>
                 </tr>"))
 
-            (def truyenall (truyen/getTruyen "SELECT * FROM truyen"
-                 (let [firstoverview (truyen/first-overview)]
-                 (assoc truyenall :shortoverview firstoverview))))
+            (def truyenall (truyen/getTruyen "SELECT * FROM truyen"))     
+                  
+            (for [x truyenall] (def shortoverview (clojure.string/replace (subs (slurp (str "resources/Truyen/" (x :path) "/Overview.txt")) 14 300) #"\n" "<br>"))
 
-                        (apply str (for [x truyenall] 
+                        (apply str (for [x truyenall]    
                             (listtruyen (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :path) (x :genre) (x :chap) (x :shortoverview) (x :view) (x :state) (x :alternate) (x :searchauthor) (x :searchgenre))))
              }             
      

@@ -11,10 +11,11 @@
 								 	rs 		(.executeQuery stmt query)]
 								(vec (resultset-seq rs)))
 				addLink		(for [truyen mostRead]
-								(let 	[name 		(truyen :path)									
-										overview 	(str lib/hostPath "overview/" name)
-										linkanh 	(str lib/hostPath "image/" name)
-										linktruyen 	(str lib/hostPath "gridtruyen/" name)] 
+								(let 	[name 			(truyen :path)									
+										overview 		(str lib/hostPath "overview/" name)
+										linkanh 		(str lib/hostPath "image/" name)
+										linktruyen 		(str lib/hostPath "gridtruyen/" name) 
+										shortoverview 	(clojure.string/replace (subs (slurp (str "resources/Truyen/" (x :path) "/Overview.txt")) 14 300) #"\n" "<br>")	]
 									(assoc truyen :overview overview :linkanh linkanh :linktruyen linktruyen)))
 				ddd 		(.close connection)]
 			addLink)))
