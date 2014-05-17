@@ -48,11 +48,9 @@
 
 (defn render-file
 	([file-path]
-	(render file-path {}))
-
+		(render file-path {}))
 	([file-path params]
-	(render-text (slurp file-path) params)))
-
+		(render-text (slurp file-path) params)))
 
 (defn render-key [rkey params]
 	(if-let [name-ns 	(c/ns-list rkey)]

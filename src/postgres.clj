@@ -23,6 +23,8 @@
 (def f (File. "/home/thao/Truyen"))
 
 ;inject in database
+(def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" "postgres" "fall2010"))
+(def stamp 	(Timestamp. (.getTime (java.util.Date.))))
 (doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
 	(prn (let 	[path 		(str (.getPath folder) "/Info.txt")
 			oldContent 	(slurp path)
@@ -39,8 +41,7 @@
 			sqlStr  	(.prepareStatement connection (str 
 							"INSERT INTO truyen (title, alternate, path, author, state, 
 								genre, source, editor, translator, chap, date_Added, view) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"))
-			stamp 		(Timestamp. (.getTime (java.util.Date.)))
-			view		(+ 500 (rand-int 2500))
+			view		(+ 1000 (rand-int 9000))
 			statement 	(doto sqlStr 
 							(.setString 1 (colMap "title"))
 							(.setString 2 (colMap "alternate")) 
@@ -56,6 +57,8 @@
 							(.setInt 12 view))]
 		(try (.execute statement) 
 			(catch Exception e (prn path))))))
+(.close connection)
+
 
 
 (def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" "postgres" "fall2010"))
@@ -84,28 +87,3 @@
 
 
 
-(doseq [folder (.listFiles (File. "/home/thao/ngontinh/resources/Truyen"))]
-	(let [folder-path 	(.getPath folder)
-		truyen-folder 	(.getName folder)]
-		(doseq 	[file 	(.listFiles (File. folder-path))]
-			(if (.matches (.getName file) "[0-9]+.txt")
-				(let [whole-name (.getName file)
-						chap 	(re-find #"[0-9]*" whole-name)
-						chap-name 	(try (.trim 
-								(re-find #".*[\s]+" (slurp (.getPath file)))) 
-									(catch Exception e ""))
-						]						
-					(prn file))
-				nil))))
-
-
-{:title "Mê Thần Ký", 
-:alternate "", 
-:path "Me_Than_Ky", 
-:author "Thi Định Nhu", 
-:state 1, :chap 26, 
-:genre "Cổ Đại, Giang Hồ, HE", 
-:source "", :editor "", 
-:translator "Lục Phong", 
-:date_added #inst "2014-05-04T01:18:27.608000000-00:00", 
-:view 2978}
