@@ -2,14 +2,12 @@
 (import 'java.sql.PreparedStatement)
 (import 'java.sql.Statement)
 (import 'java.sql.SQLException)
-(import 'java.util.Scanner)
+(import 'java.sql.Timestamp)
 (import 'java.io.File)
-(import 'java.util.Scanner)
 
 (require '[clojure.string :as string])
 (require 'ngontinh.handler)
 (require '[ngontinh.ngontinh.defdata :as defndata])
-(import 'java.sql.Timestamp)
 
 
 
@@ -21,7 +19,6 @@
 
 
 
-(def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" "postgres" "fall2010"))
 
 (def f (File. "/home/thao/Truyen"))
 
@@ -61,24 +58,45 @@
 			(catch Exception e (prn path))))))
 
 
-
-
-(import 'java.io.File)
+(def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" "postgres" "fall2010"))
+(def stamp 	(Timestamp. (.getTime (java.util.Date.))))
 (doseq [folder (.listFiles (File. "/home/thao/ngontinh/resources/Truyen"))]
 	(let [folder-path 	(.getPath folder)
 		truyen-folder 	(.getName folder)]
 		(doseq 	[file 	(.listFiles (File. folder-path))]
-			(if (.matches (.getPath file) ".*[0-9].txt")
+			(if (.matches (.getName file) "[0-9]+.txt")
 				(let [whole-name (.getName file)
 						chap 	(re-find #"[0-9]*" whole-name)
-						chap-name 	()]
-					(prn truyen-folder chap))
+						chap-name 	(try (.trim 
+								(re-find #".*[\s]+" (slurp (.getPath file)))) 
+									(catch Exception e ""))
+						sqlStr  	(.prepareStatement connection (str 
+							"INSERT INTO chap (title, num, truyen, date_added) VALUES 
+							(?, ?, ?, ?)"))						
+						statement 	(doto sqlStr 
+							(.setString 1 chap-name)
+							(.setInt 2 (Integer/parseInt chap))										
+							(.setString 3 truyen-folder) 
+							(.setTimestamp 4 stamp))]						
+					(try (.execute statement) (catch Exception e statement)))
 				nil))))
+(.close connection)
 
 
 
-
-
+(doseq [folder (.listFiles (File. "/home/thao/ngontinh/resources/Truyen"))]
+	(let [folder-path 	(.getPath folder)
+		truyen-folder 	(.getName folder)]
+		(doseq 	[file 	(.listFiles (File. folder-path))]
+			(if (.matches (.getName file) "[0-9]+.txt")
+				(let [whole-name (.getName file)
+						chap 	(re-find #"[0-9]*" whole-name)
+						chap-name 	(try (.trim 
+								(re-find #".*[\s]+" (slurp (.getPath file)))) 
+									(catch Exception e ""))
+						]						
+					(prn file))
+				nil))))
 
 
 {:title "Mê Thần Ký", 
