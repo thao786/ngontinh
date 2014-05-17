@@ -63,12 +63,22 @@
 
 
 
+(import 'java.io.File)
+(doseq [folder (.listFiles (File. "/home/thao/ngontinh/resources/Truyen"))]
+	(let [folder-path 	(.getPath folder)
+		truyen-folder 	(.getName folder)]
+		(doseq 	[file 	(.listFiles (File. folder-path))]
+			(if (.matches (.getPath file) ".*[0-9].txt")
+				(let [whole-name (.getName file)
+						chap 	(re-find #"[0-9]*" whole-name)
+						chap-name 	()]
+					(prn truyen-folder chap))
+				nil))))
 
-{:linkanh (lib/lib-path :linkanh) 
-	:linktruyen "That" 
-	:titletruyen "Hoa" 
-	:author "Chu" 
-	:genre "Co Dai"}
+
+
+
+
 
 
 {:title "Mê Thần Ký", 

@@ -47,6 +47,9 @@
  
         (GET "/" [] (r/render "resources/HomePage.html"))
 
+        (GET "/doctruyen/:genre" [genre] 
+            (r/render "resources/doctruyen.html" {:genre genre}))
+
         ;(GET "/" [] (r/render "resources/util/truyenmoi.html"))
  
         (route/resources "/")
