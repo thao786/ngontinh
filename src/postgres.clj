@@ -63,21 +63,5 @@
 
 
 
-
-{:linkanh (lib/lib-path :linkanh) 
-	:linktruyen "That" 
-	:titletruyen "Hoa" 
-	:author "Chu" 
-	:genre "Co Dai"}
-
-
-{:title "Mê Thần Ký", 
-:alternate "", 
-:path "Me_Than_Ky", 
-:author "Thi Định Nhu", 
-:state 1, :chap 26, 
-:genre "Cổ Đại, Giang Hồ, HE", 
-:source "", :editor "", 
-:translator "Lục Phong", 
-:date_added #inst "2014-05-04T01:18:27.608000000-00:00", 
-:view 2978}
+(doseq [folder (.listFiles (File. "/home/thao/ngontinh/resources/Truyen"))] 
+	)
