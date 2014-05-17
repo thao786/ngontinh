@@ -21,7 +21,7 @@
                          </div>                                   
                         </a>"))
 
-                 (def truyenrandom (truyen/getTruyen "select * from truyen where author like '%" (params :genre) "%'"))
+                 (def truyenrandom (truyen/getTruyen (str "select * from truyen where genre like '%" (params :genre) "%' limit 5 ")))
 
                         (apply str (for [x truyenrandom] 
                                   (sidebar (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))

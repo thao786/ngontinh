@@ -45,7 +45,7 @@
                 (io/resource (str "Truyen/" name "/cover.jpg")))
  
  
-        ;(GET "/" [] (r/render "resources/HomePage.html"))
+        (GET "/" [] (r/render "resources/HomePage.html"))
 
         (GET "/listtruyen" [] (r/render "resources/listtruyen.html"))
 
@@ -55,7 +55,7 @@
 
         (GET "/advancedsearch" [] (r/render "resources/Tim_nang_cao.html"))
 
-        (GET "/" [] (r/render "resources/util/truyencungtheloai.html"))
+        ;(GET "/" [] (r/render "resources/util/truyencungtheloai.html"))
  
         (route/resources "/")
         (route/not-found "Not Found"))

@@ -1,12 +1,21 @@
-%{require '[ngontinh.ngontinh.libpath :as l]
-}
+%{(require '[ngontinh.libpath :as l]
+           '[sodahead.render :as r]
+           '[ngontinh.util.truyen :as truyen]
+)}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  %{ (def genre (params :genre))
+         (def doctruyen (peek (truyen/getTruyen (str "SELECT * FROM truyen where genre ='" genre "'"))))
+
+         nil}
+
+
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>Truyện [[((param :titlepage) :genre)]] | Trang Ngôn Tình</title>  
+    <title>Truyện %(params :genre) | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  
@@ -36,7 +45,7 @@
 <div class="le">  
 
 
-%include {"resources/public/ngontinh/utility/pageheader.html"}
+%include {"resources/util/pageheader.html"}
 
 
     <!--================================================== -->   
@@ -50,7 +59,7 @@
                     %{(defn sidebar1 [theogenre genre sotruyen]
                      (str "<a href='" theogenre "' class='list-group-item'>&raquo " genre "<span class='badge pull-right'>" sotruyen "</span></a>"))
 
-                        (apply str (for [x (param :sidebar1)] 
+                        (apply str (for [x (params :sidebar1)] 
                                   (sidebar1 (x :theogenre) (x :genre) (x :sotruyen))))
                     }
                    
@@ -60,12 +69,12 @@
             <br>
             <br>
 
-           %include {"resources/public/ngontinh/utility/truyenxemnhieu.html"}
+           %(r/render "resources/util/truyenxemnhieu.html")
 
             <br>
             <br>
 
-           %include {"resources/public/ngontinh/utility/truyenngaunhien.html"}
+           %(r/render "resources/util/truyenngaunhien.html")
 
         </div>
 
@@ -77,7 +86,7 @@
                   <ol class="breadcrumb">
                       <li><a href="trangngontinh.com">Home</a></li>
                       <li><a href="trangngontinh.com/doctruyen">Đọc Truyện</a></li>
-                      <li class="active">Truyện [[((param :titlepage) :genre)]]</li>                     
+                      <li class="active">Truyện %genre</li>                     
                     </ol>
                 </div><br>                
                 
@@ -94,7 +103,7 @@
                                               <span class='small'>Lượt Xem:</span> " view "</p>
                            </div>"))
 
-                        (apply str (for [x (param :truyen1)] 
+                        (apply str (for [x (params :truyen1)] 
                                   (truyen1 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view))))
                       }
                          
@@ -115,7 +124,7 @@
                                               <span class='small'>Lượt Xem:</span> " view "</p>
                            </div>"))
 
-                        (apply str (for [x (param :truyen2)] 
+                        (apply str (for [x (params :truyen2)] 
                                   (truyen2 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view))))
                   }
                     
@@ -136,7 +145,7 @@
                                               <span class='small'>Lượt Xem:</span> " view "</p>
                            </div>"))
 
-                        (apply str (for [x (param :truyen3)] 
+                        (apply str (for [x (params :truyen3)] 
                                   (truyen3 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view))))
                   }
                     
@@ -157,7 +166,7 @@
                                               <span class='small'>Lượt Xem:</span> " view "</p>
                            </div>"))
 
-                        (apply str (for [x (param :truyen4)] 
+                        (apply str (for [x (params :truyen4)] 
                                   (truyen4 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view))))
                   }
                     
@@ -178,7 +187,7 @@
                                               <span class='small'>Lượt Xem:</span> " view "</p>
                            </div>"))
 
-                        (apply str (for [x (param :truyen5)] 
+                        (apply str (for [x (params :truyen5)] 
                                   (truyen5 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view))))
                   }
                     
