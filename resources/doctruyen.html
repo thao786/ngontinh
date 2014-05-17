@@ -120,9 +120,14 @@
 
             <br>
 
-            %{ (def overview (slurp (str "resources\\Truyen\\" (doctruyen :path) "\\Overview.txt")))
-               (def first-overview (subs overview 14 200))
-               (def remain-overview (subs overview 200))
+
+        
+
+            %{ (def overview (slurp (str "resources/Truyen/" (doctruyen :path) "/Overview.txt")))
+
+               (def first-overview (clojure.string/replace (subs overview 14 200) #"\n" "<br>"))
+               (def remain-overview (clojure.string/replace (subs overview 200) #"\n" "<br>"))
+               nil
              }
 
               <!--<h4 class="white highlight">Giới Thiệu</h4>-->
@@ -156,7 +161,7 @@
                       %{(defn mucluc [num linkchap title date_added]
                          (str "<tr class=''>                  
                                   <td>" num "</td>
-                                  <td><a href='" linkchap "'>" title "</a></td>
+                                  <td><a href='" linkchap "'><b>" title "</b></a></td>
                                   <td>" date_added "</td>
                                </tr>"))
 
