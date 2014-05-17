@@ -1,0 +1,9 @@
+ %{}
+
+
+
+%{(def a 6)
+(def b 9)}
+im a cat <br>
+
+%a<end>

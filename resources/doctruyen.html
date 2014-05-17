@@ -120,19 +120,22 @@
 
             <br>
 
-            %{ (def overview (slurp (str "resources\\Truyen\\" (doctruyen :path) "\\Overview.txt")))
-               (def first-overview (clojure.string/replace (subs overview 14 200) #"\n" "<br>")  )
+
+        
+
+            %{ (def overview (slurp (str "resources/Truyen/" (doctruyen :path) "/Overview.txt")))
+
+               (def first-overview (clojure.string/replace (subs overview 14 200) #"\n" "<br>"))
                (def remain-overview (clojure.string/replace (subs overview 200) #"\n" "<br>"))
-               (def gioithieu {:first-overview first-overview :remain-overview remain-overview})
                nil
              }
 
               <!--<h4 class="white highlight">Giới Thiệu</h4>-->
               <h4 class="orange"><b>Giới Thiệu truyện </b><i class="green">%(doctruyen :title)</i></h4>
                 <div class="well">
-                  <p>%(gioithieu :first-overview) </p>
+                  <p>%first-overview </p>
                   <div id="hiddenBlock" class="anHien">
-                    <p>%(gioithieu :remain-overview) </p>
+                    <p>%remain-overview </p>
                   </div>
                   <button id="xemThem" type="button" class="btn btn-default btn-sm btn-block 1">Xem Thêm</button>
                 </div>    

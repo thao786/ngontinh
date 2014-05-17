@@ -59,8 +59,7 @@
 
 			(= type "var")
 			(let [variable (subs data 1 data-length)]
-				(str " (try (load-string \"" variable 
-					"\")  (catch Exception e (str \"" escaped-data "\")))\n"))
+				(str variable))
 
 			(= type "expr")
 			(let [function (subs data 1 data-length)]
