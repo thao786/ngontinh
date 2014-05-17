@@ -102,11 +102,15 @@
                 <div class="panel panel-success">                
                   <div class="panel-body">
 
-                    %{(defn chuongmoi [linkchap chapnumber titlechap]
-                        (str "<a href='" linkchap "'>Chương " chapnumber ": " titlechap "</a><br>"))
+                    %{(defn chuongmoi [linkchap num title]
+                        (str "<a href='" linkchap "'>Chương " num ": " title "</a><br>"))
 
-                        (apply str (for [x (params :chuongmoi)] 
-                            (chuongmoi (x :linkchap) (x :chapnumber) (x :titlechap))))
+
+      (def chapmoi (truyen/getChap (str "select * from chap where truyen = '" (doctruyen :path) "'order by num desc limit 5")))
+
+
+                        (apply str (for [x chapmoi] 
+                            (chuongmoi (x :linkchap) (x :num) (x :title))))
                     }
 
                   </div>
@@ -116,12 +120,17 @@
 
             <br>
 
+            %{ (def overview (slurp (str "resources\\Truyen\\" (doctruyen :path) "\\Overview.txt")))
+               (def first-overview (subs overview 14 200))
+               (def remain-overview (subs overview 200))
+             }
+
               <!--<h4 class="white highlight">Giới Thiệu</h4>-->
               <h4 class="orange"><b>Giới Thiệu truyện </b><i class="green">%(doctruyen :title)</i></h4>
                 <div class="well">
-                  <p>%(doctruyen :shortoverview)</p>
+                  <p>%first-overview </p>
                   <div id="hiddenBlock" class="anHien">
-                    <p>%(doctruyen :remainoverview)</p>
+                    <p>%remain-overview </p>
                   </div>
                   <button id="xemThem" type="button" class="btn btn-default btn-sm btn-block 1">Xem Thêm</button>
                 </div>    
@@ -144,15 +153,17 @@
                     </thead>
                     <tbody>
 
-                      %{(defn mucluc [chapnumber linkchap titlechap date_added]
+                      %{(defn mucluc [num linkchap title date_added]
                          (str "<tr class=''>                  
-                                  <td>" chapnumber "</td>
-                                  <td><a href='" linkchap "'>" titlechap "</a></td>
+                                  <td>" num "</td>
+                                  <td><a href='" linkchap "'>" title "</a></td>
                                   <td>" date_added "</td>
                                </tr>"))
 
-                            (apply str (for [x (params :mucluc)] 
-                                (mucluc (x :chapnumber) (x :linkchap) (x :titlechap) (x :date_added))))
+    (def chapter (truyen/getChap (str "select * from chap where truyen = '" (doctruyen :path) "' order by num asc")))
+
+                            (apply str (for [x chapter] 
+                                (mucluc (x :num) (x :linkchap) (x :title) (x :date_added))))
                       }                               
                   
                     </tbody>
