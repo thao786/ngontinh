@@ -23,12 +23,13 @@
 (def f (File. "/home/thao/Truyen"))
 
 ;inject in database
-(def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" "postgres" "fall2010"))
+(def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/test" "postgres" "fall2010"))
 (def stamp 	(Timestamp. (.getTime (java.util.Date.))))
-(doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
+(doseq [folder (.listFiles (File. "/home/thao/ngontinh/resources/Truyen"))] 
 	(prn (let 	[path 		(str (.getPath folder) "/Info.txt")
 			oldContent 	(slurp path)
 			content 	(clojure.string/replace oldContent #"\r" "")
+			content 	(clojure.string/replace content #"0x00" "")
 			infoArray 	(.split content "\n")		
 			colMap 		{"title" (nth infoArray 0)
 						"alternate" (try (nth infoArray 1) (catch Exception e ""))
@@ -43,8 +44,8 @@
 								genre, source, editor, translator, chap, date_Added, view) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"))
 			view		(+ 1000 (rand-int 9000))
 			statement 	(doto sqlStr 
-							(.setString 1 (colMap "title"))
-							(.setString 2 (colMap "alternate")) 
+							(.setString 1 "wrong")
+							(.setString 2 "") 
 							(.setString 3 (.getName folder)) 
 							(.setString 4 (colMap "author"))
 							(.setInt 5 (colMap "state"))
@@ -55,9 +56,37 @@
 							(.setInt 10 (- (count (.listFiles folder)) 3))
 							(.setTimestamp 11 stamp)
 							(.setInt 12 view))]
-		(try (.execute statement) 
-			(catch Exception e (prn path))))))
+		(.execute statement))))
 (.close connection)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
