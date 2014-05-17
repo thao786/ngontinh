@@ -37,3 +37,8 @@
 			addLink)))
 
 
+(def overview (slurp (str "resources\\Truyen\\" (doctruyen :path) "\\Overview.txt")))
+(def first-overview (clojure.string/replace (subs overview 14 200) #"\n" "<br>")  )
+(def remain-overview (clojure.string/replace (subs overview 200) #"\n" "<br>"))
+(def gioithieu {:first-overview first-overview :remain-overview remain-overview})
+               

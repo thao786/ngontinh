@@ -121,16 +121,18 @@
             <br>
 
             %{ (def overview (slurp (str "resources\\Truyen\\" (doctruyen :path) "\\Overview.txt")))
-               (def first-overview (subs overview 14 200))
-               (def remain-overview (subs overview 200))
+               (def first-overview (clojure.string/replace (subs overview 14 200) #"\n" "<br>")  )
+               (def remain-overview (clojure.string/replace (subs overview 200) #"\n" "<br>"))
+               (def gioithieu {:first-overview first-overview :remain-overview remain-overview})
+               nil
              }
 
               <!--<h4 class="white highlight">Giới Thiệu</h4>-->
               <h4 class="orange"><b>Giới Thiệu truyện </b><i class="green">%(doctruyen :title)</i></h4>
                 <div class="well">
-                  <p>%first-overview </p>
+                  <p>%(gioithieu :first-overview) </p>
                   <div id="hiddenBlock" class="anHien">
-                    <p>%remain-overview </p>
+                    <p>%(gioithieu :remain-overview) </p>
                   </div>
                   <button id="xemThem" type="button" class="btn btn-default btn-sm btn-block 1">Xem Thêm</button>
                 </div>    
@@ -156,7 +158,7 @@
                       %{(defn mucluc [num linkchap title date_added]
                          (str "<tr class=''>                  
                                   <td>" num "</td>
-                                  <td><a href='" linkchap "'>" title "</a></td>
+                                  <td><a href='" linkchap "'><b>" title "</b></a></td>
                                   <td>" date_added "</td>
                                </tr>"))
 

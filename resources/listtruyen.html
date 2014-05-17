@@ -147,7 +147,7 @@
                                         <span style='visibility:hidden'>aaaaa</span><i>Số Chương:</i> " chap "
                                         </p>
                                         <hr>
-                                        <p>" shortoverview "</p>        
+                                        <p>" shortoverview "...</p>        
                                   </div>
                                 </div>            
                               </div>
@@ -160,7 +160,9 @@
                   <td>" state "</td>
                 </tr>"))
 
-            (def truyenall (truyen/getTruyen "SELECT * FROM truyen"))
+            (def truyenall (truyen/getTruyen "SELECT * FROM truyen"
+                 (let [firstoverview (truyen/first-overview)]
+                 (assoc truyenall :shortoverview firstoverview))))
 
                         (apply str (for [x truyenall] 
                             (listtruyen (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :path) (x :genre) (x :chap) (x :shortoverview) (x :view) (x :state) (x :alternate) (x :searchauthor) (x :searchgenre))))
