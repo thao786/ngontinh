@@ -1,3 +1,6 @@
+%{(require '[ngontinh.libpath :as l]
+)}
+
  <header class="navbar navbar-static-top top">
   <div class="container">       
       <ul class="nav navbar-nav">
@@ -33,14 +36,14 @@
     <div class="row-fluid orangebackground">
         <div class="span5">
             <br>
-            <a href="trangngontinh.com" ><img src="[[((data :lib-path) :logo3)]]" class="imgFloat" width="360" height="130"></a>
+            <a href="trangngontinh.com" ><img src="%(l/paths :logo3)" class="imgFloat" width="360" height="130"></a>
         </div>
         <div class="span7">
             <div class="socialicon">
-                <a href="#" ><img src="[[((data :lib-path) :facebook)]]" class="socialicon1" width="50" height="50"></a>
-                <a href="#" ><img src="[[((data :lib-path) :twitter)]]" class="socialicon1" width="50" height="50"></a>
-                <a href="#" ><img src="[[((data :lib-path) :rss)]]" class="socialicon1" width="50" height="50"></a> 
-                <a href="#" ><img src="[[((data :lib-path) :google+)]]" class="socialicon1" width="50" height="50"></a> 
+                <a href="#" ><img src="%(l/paths :facebook)" class="socialicon1" width="50" height="50"></a>
+                <a href="#" ><img src="%(l/paths :twitter)" class="socialicon1" width="50" height="50"></a>
+                <a href="#" ><img src="%(l/paths :rss)" class="socialicon1" width="50" height="50"></a> 
+                <a href="#" ><img src="%(l/paths :google+)" class="socialicon1" width="50" height="50"></a> 
             </div>  
         </div>
     </div> 

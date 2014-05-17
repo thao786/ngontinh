@@ -1,5 +1,5 @@
-(ns ngontinh.ngontinh.homepage
-	(:require 	[ngontinh.ngontinh.libpath :as lib]))
+(ns ngontinh.homepage
+	(:require 	[ngontinh.libpath :as lib]))
 
 
 (def Homepagedata 
