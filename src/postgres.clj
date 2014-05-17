@@ -125,3 +125,12 @@
 		first-line 		(re-find #".*\n" (slurp overview-file))]
 		first-line))
 
+(doseq [folder (.listFiles (File. "/home/thao/ngontinh/resources/Truyen"))]
+	(let [folder-path 	(.getPath folder)
+		overview-file 	(str folder-path "/overview.txt")
+		file 	(File. overview-file)]
+		(if (.exists file)
+			(prn folder-path)
+			false)))
+
+
