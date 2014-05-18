@@ -11,16 +11,17 @@
 
 
 
-(ns framework.view.core	 (:require 	[java.io.File :as io]))
-
-[(do (defn lala [a b] (/ a b)) (def x 8) nil) (lala 8 7)]
-[(do (import 'java.io.File) (def f (File. "gfd")) (.canRead f)) f]
-[(ns nt) (import 'java.io.File) (File. "gtfrds")]
 
 
 
+(def m 
+	(let [key-ar 	(keys l/genres)
+			val-ar		(vals l/genres)]
+		(zipmap val-ar key-ar)))
 
-(def f (File. "/home/thao/Truyen"))
+(defn woo [valu]
+	(let [vallue (get m valu)]
+		(str " " vallue " ")))
 
 ;inject in database
 (def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/test" "postgres" "fall2010"))
@@ -31,11 +32,15 @@
 			content 	(clojure.string/replace oldContent #"\r" "")
 			infoArray 	(.split content "\n")		
 			genre-str 	(try (nth infoArray 4) (catch Exception e ""))
+			
+			genre-arr 	(.split genre-str "[ ]*,[ ]*")
+			genres 		(apply str (map woo genre-arr))
+
 			colMap 		{"title" (nth infoArray 0)
 						"alternate" (try (nth infoArray 1) (catch Exception e ""))
 						"author" (try (nth infoArray 2) (catch Exception e ""))
 						"state" (if (.contains (nth infoArray 3) "1") 1 0)
-						"genre" (try (nth infoArray 4) (catch Exception e ""))
+						"genre" genres
 						"source" (try (nth infoArray 5) (catch Exception e ""))
 						"editor" (try (nth infoArray 6) (catch Exception e ""))
 						"translator" (try (nth infoArray 7) (catch Exception e ""))}
@@ -122,11 +127,16 @@
 (def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/test" "postgres" "fall2010"))
 (def stamp 	(Timestamp. (.getTime (java.util.Date.))))
 (import 'java.io.File)
+(require 	'[ngontinh.libpath :as l])
 
-(def m)
+(def m 
+	(let [key-ar 	(keys l/genres)
+			val-ar		(vals l/genres)]
+		(zipmap val-ar key-ar)))
 
-(defn woo []
-	)
+(defn woo [valu]
+	(let [vallue (get m valu)]
+		(str vallue " ")))
 
 (doseq [folder (.listFiles (File. "/home/thao/ngontinh/resources/Truyen"))] 
 	(let 	[path 		(str (.getPath folder) "/Info.txt")
@@ -134,8 +144,11 @@
 			content 	(clojure.string/replace oldContent #"\r" "")
 			infoArray 	(.split content "\n")		
 			genre-str 	(.trim (try (nth infoArray 4) (catch Exception e "")))
-			genre-arr 	(.split genre-str "[ ]*,[ ]*")]
-		(prn (apply str genre-arr))))
+			genre-arr 	(.split genre-str "[ ]*,[ ]*")
+			genres 		(map woo genre-arr)
+			genres-inj 	(.trim (apply str genres))
+			]
+		(prn (apply str genres))))
 
 
 (.close connection)
