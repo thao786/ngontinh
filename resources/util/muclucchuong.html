@@ -10,12 +10,11 @@
               
               %{
               (defn mucluc [linkchap num title]
-                   (str "<a href='" linkchap "' class='list-group-item list-group-item-warning'>" num ". " title "</a>"))
+                   (str "<a href='" linkchap "' class='list-group-item list-group-item-warning'>Chương " num ": " title "</a>"))
 
+        (def index (truyen/getChap (str "select * from chap where truyen = '" (params :path) "' order by num asc")))
 
-        (def mucluc (truyen/getChap (str "select * from chap where truyen = '" (params :path) "' order by num asc")))
-
-                        (apply str (for [x mucluc] 
+                        (apply str (for [x index] 
                             (mucluc (x :linkchap) (x :num) (x :title))))
               }
                                       
