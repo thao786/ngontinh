@@ -119,11 +119,28 @@
 
 
 
-(doseq [folder (.listFiles (File. "/home/thao/ngontinh/resources/Truyen"))]
-	(let [folder-path 	(.getPath folder)
-		overview-file 	(str folder-path "/Overview.txt")
-		first-line 		(.trim (re-find #".*\n" (slurp overview-file)))]
-		(if (= 1 (count first-line))
-			(prn first-line folder-path)
-			false)))
+(def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/test" "postgres" "fall2010"))
+(def stamp 	(Timestamp. (.getTime (java.util.Date.))))
+(import 'java.io.File)
+
+(def m)
+
+(defn woo []
+	)
+
+(doseq [folder (.listFiles (File. "/home/thao/ngontinh/resources/Truyen"))] 
+	(let 	[path 		(str (.getPath folder) "/Info.txt")
+			oldContent 	(slurp path)
+			content 	(clojure.string/replace oldContent #"\r" "")
+			infoArray 	(.split content "\n")		
+			genre-str 	(.trim (try (nth infoArray 4) (catch Exception e "")))
+			genre-arr 	(.split genre-str "[ ]*,[ ]*")]
+		(prn (apply str genre-arr))))
+
+
+(.close connection)
+
+
+
+
 
