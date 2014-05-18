@@ -20,7 +20,7 @@
                             </tr>"))
 
 
-            (def chuongmoi (truyen/getTruyen "SELECT * FROM truyen ORDER BY view desc limit 10"))
+            (def chuongmoi (truyen/getChap "SELECT * FROM chap ORDER BY date-added desc limit 10"))
 
 
                       (apply str (for [x chuongmoi] 
