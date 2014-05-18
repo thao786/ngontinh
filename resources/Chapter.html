@@ -60,7 +60,7 @@
                       <li><a href="%l/hostPath">Home</a></li>
                       <li><a href="%(str l/hostPath "gridtruyen")">Đọc Truyện</a></li>
                       <li><a href="%(docchuong :linktruyen)">%(docchuong :titletruyen)</a></li>
-                      <li class="active">#%(docchuong :num): %(docchuong :title)</li>
+                      <li class="active">Chương %(docchuong :num)</li>
                     </ol>
                 </div>
                 <br>       
@@ -95,16 +95,16 @@
                 
       <div class="row-fluid">  
         <ul class="pager">
-          <li><button type="submit" class="btn btn-success truoc"><a href="[[((params :headerpage) :chuongtruoc)]]" class="white">&larr; Trước</a></button></li>
+          <li><button type="submit" class="btn btn-success btn-sm truoc"><a href="[[((params :headerpage) :chuongtruoc)]]" class="white">&larr; Trước</a></button></li>
           <li><button type="submit" class="btn btn-warning btn-sm">Đến</button>
               <input type="text" class="denchuong" id="denchuongmoi" placeholder="Chương:"></li>
-          <li><button type="submit" class="btn btn-success sau"><a href="[[((params :headerpage) :chuongsau)]]" class="white"> Tiếp &rarr;</a></button></li>
+          <li><button type="submit" class="btn btn-success btn-sm sau"><a href="[[((params :headerpage) :chuongsau)]]" class="white"> Tiếp &rarr;</a></button></li>
         </ul>        
       </div>   
 
 
       %{ (def raw-content (slurp (str "resources/Truyen/" path "/" num ".txt")))
-         (def content (clojure.string/replace (subs raw-content (.indexOf raw-content "\n")) #"\n" "<br>"))
+         (def content (clojure.string/replace (clojure.string/trim (subs raw-content (.indexOf raw-content "\n"))) #"\n" "<br>"))
           nil
        }
 
@@ -123,12 +123,15 @@
         </div><!--span9-->
       </div> <!--row-fluid-->
 
+      <br>
+      <br>
+      
       <div class="row-fluid">  
         <ul class="pager">
-          <li><button type="submit" class="btn btn-success truoc"><a href="[[((params :headerpage) :chuongtruoc)]]" class="white">&larr; Trước</a></button></li>
+          <li><button type="submit" class="btn btn-success btn-sm truoc"><a href="[[((params :headerpage) :chuongtruoc)]]" class="white">&larr; Trước</a></button></li>
           <li><button type="submit" class="btn btn-warning btn-sm">Đến</button>
               <input type="text" class="denchuong" id="denchuongmoi" placeholder="Chương:"></li>
-          <li><button type="submit" class="btn btn-success sau"><a href="[[((params :headerpage) :chuongsau)]]" class="white"> Tiếp &rarr;</a></button></li>
+          <li><button type="submit" class="btn btn-success btn-sm sau"><a href="[[((params :headerpage) :chuongsau)]]" class="white"> Tiếp &rarr;</a></button></li>
         </ul>
       </div> 
         
