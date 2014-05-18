@@ -89,7 +89,7 @@
 
 
 
-
+(re-find #"[\n]{1}.*" (slurp (.getPath file)))) 
 
 
 
