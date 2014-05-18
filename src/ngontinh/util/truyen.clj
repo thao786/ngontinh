@@ -32,8 +32,9 @@
 								(let 	[truyen 	(chap :truyen)
 										title       (chap :title)
 										chap-num    (chap :num)
+										linktruyen  (str lib/hostPath "gridtruyen/" truyen)
 										linkchap 	(str lib/hostPath "gridtruyen/" truyen "/" chap-num)] 
-									(assoc chap :linkchap linkchap)))
+									(assoc chap :linkchap linkchap :linktruyen linktruyen)))
 				ddd 		(.close connection)]
 			addLink)))
 
