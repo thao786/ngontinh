@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
 
-  %{ (def genre (params :genre))
+  %{ (def genre (l/genres (params :genre)))
          (def doctruyen (peek (truyen/getTruyen (str "SELECT * FROM truyen where genre ='" genre "'"))))
 
          nil}
@@ -15,7 +15,7 @@
 
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>Truyện %(params :genre) | Trang Ngôn Tình</title>  
+    <title>Truyện %genre | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  

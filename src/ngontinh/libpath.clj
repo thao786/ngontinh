@@ -3,7 +3,7 @@
 
 (def hostPath "http://localhost:3000/")
 
-(def genres {"chientruong" "Chiến Trường" 
+(def genres {	"chientruong" "Chiến Trường" 
 				"codai" "Cổ Đại" 
 				"congso" "Công Sở" 
 				"cungdau" "Cung đấu" 
