@@ -12,19 +12,18 @@
 
           %{
 
-                  (defn updatechap [linktruyen title linkchap chapnumber titlechap date_added]
+                  (defn updatechap [linktruyen titletruyen linkchap num title]
                       (str " <tr class='text-muted'>
-                              <td><a href='" linktruyen "' class='tentruyen'>" title "</a></td>
-                              <td><a href='" linkchap "'>Chương " chapnumber ": " titlechap "</a></td>
-                              <td>" date_added "</td>                       
+                              <td><a href='" linktruyen "' class='tentruyen'>" titletruyen "</a></td>
+                              <td><a href='" linkchap "'>Chương " num ": " title "</a></td>                      
                             </tr>"))
 
 
-            (def chuongmoi (truyen/getChap "SELECT * FROM chap ORDER BY date-added desc limit 10"))
+            (def chuongmoi (truyen/getChap "SELECT chap.truyen, chap.title, chap.date_added, chap.num, truyen.title as titletruyen FROM chap INNER JOIN truyen ON chap.truyen=truyen.path ORDER BY date_added desc limit 10"))
 
 
                       (apply str (for [x chuongmoi] 
-                                  (updatechap (x :linktruyen) (x :title) (x :linkchap) (x :chapnumber) (x :titlechap) (x :date_added))))
+                                  (updatechap (x :linktruyen) (x :titletruyen) (x :linkchap) (x :num) (x :title))))
 
            }
                  

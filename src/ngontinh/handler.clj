@@ -43,9 +43,6 @@
 ;       (GET "/image/:name" request (str request))
         (GET "/image/:name" [name]
                 (io/resource (str "Truyen/" name "/cover.jpg")))
-
-        (GET "/overview/:name" [name]
-                (r/render (str "Truyen/" name "/Overview.txt")))
  
  
         (GET "/" [] (r/render "resources/HomePage.html"))
