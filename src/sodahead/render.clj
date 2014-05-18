@@ -48,7 +48,7 @@
 
 (defn render-file
 	([file-path]
-		(render file-path {}))
+		(render-file file-path {}))
 	([file-path params]
 		(render-text (slurp file-path) params)))
 
