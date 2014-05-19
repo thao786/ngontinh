@@ -52,19 +52,8 @@
 
   <div class="row-fluid">     
       <div class="span3">              
-            <h3><span class="label label-custom label-danger-1">Thể Loại</span></h3> 
-            <div class="row-fluid sideBar"><!--Side Bar-->                     
-                  <div class="list-group">
-
-                    %{(defn sidebar1 [theogenre genre sotruyen]
-                     (str "<a href='" theogenre "' class='list-group-item'>&raquo " genre "<span class='badge pull-right'>" sotruyen "</span></a>"))
-
-                        (apply str (for [x (params :sidebar1)] 
-                                  (sidebar1 (x :theogenre) (x :genre) (x :sotruyen))))
-                    }
-                   
-                  </div><!--list group-->
-            </div><!--sideBar-->
+          
+            %(r/render "resources/util/theloaisidebar.html")
 
             <br>
             <br>
@@ -84,8 +73,8 @@
             <div class="whiteBgr">
                 <div class="row-fluid">
                   <ol class="breadcrumb">
-                      <li><a href="trangngontinh.com">Home</a></li>
-                      <li><a href="trangngontinh.com/doctruyen">Đọc Truyện</a></li>
+                      <li><a href="%l/hostPath">Home</a></li>
+                      <li><a href="%(str l/hostPath "gridtruyen")">Đọc Truyện</a></li>
                       <li class="active">Truyện %genre</li>                     
                     </ol>
                 </div><br>                
