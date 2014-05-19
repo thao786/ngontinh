@@ -1,5 +1,7 @@
-%{require '[ngontinh.ngontinh.libpath :as l]
-}
+%{(require '[ngontinh.libpath :as l]
+           '[sodahead.render :as r]
+           '[ngontinh.util.truyen :as truyen]
+)}
 
 
 <!DOCTYPE html>
@@ -7,7 +9,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Tìm Kiếm Nâng Cao - Trang Ngôn Tình</title>  
+    <title>Tìm Kiếm Nâng Cao | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  
@@ -35,14 +37,14 @@
    <body class="maubody1">
 <div class="le">  
 
-      %include {"resources/public/ngontinh/utility/pageheader.html"}
+      %include {"resources/util/pageheader.html"}
 
     <!--================================================== -->
 
   <div class="row-fluid">     
       <div class="span3">              
         
-           %include {"resources/public/ngontinh/utility/truyenngaunhien.html"}
+           %include {"resources/util/truyenngaunhien.html"}
 
         </div>
 
@@ -52,7 +54,7 @@
             <div class="whiteBgr">
                 <div class="row-fluid">
                   <ol class="breadcrumb">
-                      <li><a href="#">Home</a></li>
+                      <li><a href="%l/hostPath">Home</a></li>
                       <li class="active">Tìm Kiếm Nâng Cao</li>
                                             
                     </ol>
@@ -396,7 +398,7 @@
 
 </div><!--le-->
 
-%include {"resources/public/ngontinh/utility/footer.html"}
+%include {"resources/util/footer.html"}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
