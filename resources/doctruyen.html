@@ -69,8 +69,8 @@
             <div class="whiteBgr">
                 <div class="row-fluid">
                   <ol class="breadcrumb">
-                      <li><a href="trangngontinh.com">Home</a></li>
-                      <li><a href="trangngontinh.com/doctruyen">Đọc Truyện</a></li>
+                      <li><a href="%l/hostPath">Home</a></li>
+                      <li><a href="%(str l/hostPath "gridtruyen")">Đọc Truyện</a></li>
                       <li class="active">%(doctruyen :title)</li>
                     </ol>
                 </div><br>                
@@ -96,7 +96,7 @@
 
 
 
-            <div class="row-fluid">
+            <div class="row-fluid hidden-xs">
               <div class="span7">
                 <h5 class="orange"><b>Chương Mới Nhất</b></h5>    
                 <div class="panel panel-success">                
@@ -124,11 +124,11 @@
         
 
             %{ (def overview (slurp (str "resources/Truyen/" (doctruyen :path) "/Overview.txt")))
-               (def first-overview (clojure.string/replace (subs overview 14 200) #"\n" "<br>"))
-               (def remain-overview (clojure.string/replace (subs overview 200) #"\n" "<br>"))
+               (def raw-first-overview (subs overview 12 (min 300 (count overview))))
+               (def first-overview (clojure.string/replace (clojure.string/triml raw-first-overview) #"\n" "<br>"))
+               (def remain-overview (clojure.string/replace (subs overview (+ 12 (count raw-first-overview))) #"\n" "<br>"))
                nil
              }
-
               <!--<h4 class="white highlight">Giới Thiệu</h4>-->
               <h4 class="orange"><b>Giới Thiệu truyện </b><i class="green">%(doctruyen :title)</i></h4>
                 <div class="well">
@@ -136,6 +136,7 @@
                   <div id="hiddenBlock" class="anHien">
                     <p>%remain-overview </p>
                   </div>
+
                   <button id="xemThem" type="button" class="btn btn-default btn-sm btn-block 1">Xem Thêm</button>
                 </div>    
             

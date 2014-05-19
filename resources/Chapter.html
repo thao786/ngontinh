@@ -1,12 +1,21 @@
-%{require '[ngontinh.ngontinh.libpath :as l]
-}
+%{(require '[ngontinh.libpath :as l]
+           '[sodahead.render :as r]
+           '[ngontinh.util.truyen :as truyen]
+)}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    %{(def path (params :path))
+      (def num (params :num))
+      (def docchuong (peek (truyen/getChap (str "SELECT chap.truyen, chap.title, chap.date_added, chap.num, truyen.title as titletruyen FROM chap INNER JOIN truyen ON chap.truyen=truyen.path where truyen ='" path "' and num =" num ""))))
+
+         nil}
+
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>%((param :titlepage) :title) - Chương %((param :titlepage) :chapnumber): %((param :titlepage) :chaptitle) | Trang Ngôn Tình</title>  
+    <title>%(docchuong :titletruyen) - Chương %(docchuong :num): %(docchuong :title) | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  
@@ -35,7 +44,7 @@
 <div class="le">  
 
 
-   %include {"resources/public/ngontinh/utility/pageheader.html"}
+   %include {"resources/util/pageheader.html"}
 
 <!--================================================== -->
 
@@ -48,10 +57,10 @@
 
                 <div class="row-fluid">
                   <ol class="breadcrumb">
-                      <li><a href="trangngontinh.com">Home</a></li>
-                      <li><a href="trangngontinh.com/doctruyen">Doc Truyen</a></li>
-                      <li><a href="[[((param :titlepage) :title)]]">%((param :titlepage) :title)</a></li>
-                      <li class="active">#%((param :titlepage) :chapnumber): %((param :titlepage) :titlechap)</li>
+                      <li><a href="%l/hostPath">Home</a></li>
+                      <li><a href="%(str l/hostPath "gridtruyen")">Đọc Truyện</a></li>
+                      <li><a href="%(docchuong :linktruyen)">%(docchuong :titletruyen)</a></li>
+                      <li class="active">Chương %(docchuong :num)</li>
                     </ol>
                 </div>
                 <br>       
@@ -86,34 +95,43 @@
                 
       <div class="row-fluid">  
         <ul class="pager">
-          <li><button type="submit" class="btn btn-success truoc"><a href="[[((param :headerpage) :chuongtruoc)]]" class="white">&larr; Trước</a></button></li>
+          <li><button type="submit" class="btn btn-success btn-sm truoc"><a href="[[((params :headerpage) :chuongtruoc)]]" class="white">&larr; Trước</a></button></li>
           <li><button type="submit" class="btn btn-warning btn-sm">Đến</button>
               <input type="text" class="denchuong" id="denchuongmoi" placeholder="Chương:"></li>
-          <li><button type="submit" class="btn btn-success sau"><a href="[[((param :headerpage) :chuongsau)]]" class="white"> Tiếp &rarr;</a></button></li>
+          <li><button type="submit" class="btn btn-success btn-sm sau"><a href="[[((params :headerpage) :chuongsau)]]" class="white"> Tiếp &rarr;</a></button></li>
         </ul>        
       </div>   
 
 
+      %{ (def raw-content (slurp (str "resources/Truyen/" path "/" num ".txt")))
+         (def content (clojure.string/replace (clojure.string/trim (subs raw-content (.indexOf raw-content "\n"))) #"\n" "<br>"))
+          nil
+       }
+
+
       <div class="row-fluid">
 
-        <a href=""><h2 class="orange text-center"><strong>%((param :headerpage) :title)</strong></h2></a>
-        <h3 class="blue text-center">Chương %((param :headerpage) :chapnumber): %((param :headerpage) :titlechap)</h3>
+        <a href=""><h2 class="orange text-center"><strong>%(docchuong :titletruyen)</strong></h2></a>
+        <h3 class="blue text-center">Chương %(docchuong :num): %(docchuong :title)</h3>
         <div class="span1">
         </div>
         
         <div class="span9">
               <br><br>
-              <p class="bodytruyen">%(param :chapcontent)<br>
+              <p class="bodytruyen">%content</p>
 
         </div><!--span9-->
       </div> <!--row-fluid-->
 
+      <br>
+      <br>
+
       <div class="row-fluid">  
         <ul class="pager">
-          <li><button type="submit" class="btn btn-success truoc"><a href="[[((param :headerpage) :chuongtruoc)]]" class="white">&larr; Trước</a></button></li>
+          <li><button type="submit" class="btn btn-success btn-sm truoc"><a href="[[((params :headerpage) :chuongtruoc)]]" class="white">&larr; Trước</a></button></li>
           <li><button type="submit" class="btn btn-warning btn-sm">Đến</button>
               <input type="text" class="denchuong" id="denchuongmoi" placeholder="Chương:"></li>
-          <li><button type="submit" class="btn btn-success sau"><a href="[[((param :headerpage) :chuongsau)]]" class="white"> Tiếp &rarr;</a></button></li>
+          <li><button type="submit" class="btn btn-success btn-sm sau"><a href="[[((params :headerpage) :chuongsau)]]" class="white"> Tiếp &rarr;</a></button></li>
         </ul>
       </div> 
         
@@ -170,28 +188,14 @@
     </div><!--span9-->
 
   
-    <div class="span3 hidden-xs">  
-        <h3><span class="label label-custom label-danger-1">Mục lục</span></h3> 
-        <div class="row-fluid sideBar"><!--Side Bar-->                     
-            <div class="list-group">
-              
-              %{(defn mucluc [linkchap chapnumber titlechap]
-                        (str "<a href='" linkchap "' class='list-group-item list-group-item-warning'>" chapnumber ". " titlechap "</a>"))
-
-                        (apply str (for [x (param :mucluc)] 
-                            (mucluc (x :linkchap) (x :chapnumber) (x :titlechap))))
-              }
-                                      
-            </div><!--list group-->
-        </div><!--sideBar-->
-    </div><!--span3-->
+    %(r/render "resources/util/muclucchuong.html" {:path path})
 
   </div><!--row-fluid-->
 </div><!--Container fluid-->
  
 </div><!--le-->
 
-%include {"resources/public/ngontinh/utility/footer.html"}
+%include {"resources/util/footer.html"}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -253,8 +257,7 @@
       $(".bodytruyen").css('text-align', 'justify');
     })
 
-    
-     $("#muoitam").click(function(){
+      $("#muoitam").click(function(){
           $(".bodytruyen").css('font-size', '18px');
     })
       $("#muoichin").click(function(){

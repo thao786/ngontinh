@@ -1,0 +1,23 @@
+%{(require '[ngontinh.libpath :as l]
+           '[ngontinh.util.truyen :as truyen]
+)}
+
+
+<div class="span3 hidden-xs">  
+        <h3><span class="label label-custom label-danger-1">Mục lục</span></h3> 
+        <div class="row-fluid sideBar"><!--Side Bar-->                     
+            <div class="list-group">
+              
+              %{
+              (defn mucluc [linkchap num title]
+                   (str "<a href='" linkchap "' class='list-group-item list-group-item-warning'>Chương " num ": " title "</a>"))
+
+        (def index (truyen/getChap (str "select * from chap where truyen = '" (params :path) "' order by num asc")))
+
+                        (apply str (for [x index] 
+                            (mucluc (x :linkchap) (x :num) (x :title))))
+              }
+                                      
+            </div><!--list group-->
+        </div><!--sideBar-->
+    </div><!--span3-->

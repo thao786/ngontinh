@@ -45,19 +45,23 @@
                 (io/resource (str "Truyen/" name "/cover.jpg")))
  
  
-        (GET "/" [] (r/render "resources/HomePage.html"))
+        ;(GET "/" [] (r/render "resources/HomePage.html"))
 
         (GET "/listtruyen" [] (r/render "resources/listtruyen.html"))
 
-        (GET "/gridtruyen" [] (r/render "resources/gridtruyen.html"))
+        (GET "/gridtruyen/page/:index" [index] (r/render "resources/gridtruyen.html" {:index index}))
 
-        (GET "/listtruyen/:genre" [genre] (r/render "resources/theloai.html" {:genre genre}))
+        (GET "/gridtruyen/:genre" [genre] (r/render "resources/theloai.html" {:genre genre}))
 
         (GET "/gridtruyen/:path" [path] (r/render "resources/doctruyen.html" {:path path}))
 
+        (GET "/gridtruyen/:path/:num" [path num] (r/render "resources/Chapter.html" {:path path :num num}))
+
         (GET "/advancedsearch" [] (r/render "resources/Tim_nang_cao.html"))
 
-        ;(GET "/" [] (r/render "resources/util/truyencungtheloai.html"))
+        (GET "/englishnovel" [] (r/render "resources/EnglishNovel.html"))
+
+        (GET "/" [] (r/render "resources/util/theloaisidebar.html"))
 
  
         (route/resources "/")

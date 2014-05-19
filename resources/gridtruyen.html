@@ -6,6 +6,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+%{(def pgIndex (params :index)) 
+  (def truyendisplay (truyen/getTruyen (str "SELECT * FROM truyen limit 20 offset " (* 20 pgIndex) "")))
+  nil
+}
+
 <meta charset="utf-8">
     <meta charset="utf-8">
     <title>Đọc Truyện | Trang Ngôn Tình</title>  
@@ -43,19 +48,8 @@
 
   <div class="row-fluid">     
       <div class="span3">              
-            <h3><span class="label label-custom label-danger-1">Thể Loại</span></h3> 
-            <div class="row-fluid sideBar"><!--Side Bar-->                     
-                  <div class="list-group">
-
-                    [[(defn sidebar1 [theogenre genre sotruyen]
-                     (str "<a href='" theogenre "' class='list-group-item'>&raquo " genre "<span class='badge pull-right'>" sotruyen "</span></a>"))
-
-                        (apply str (for [x (data :sidebar1)] 
-                                  (sidebar1 (x :theogenre) (x :genre) (x :sotruyen))))
-                        ]]
-                   
-                  </div><!--list group-->
-            </div><!--sideBar-->
+             
+            %(r/render "resources/util/theloaisidebar.html")
 
             <br>
             <br>
@@ -75,15 +69,15 @@
             <div class="whiteBgr">
                 <div class="row-fluid">
                   <ol class="breadcrumb">
-                      <li><a href="trangngontinh.com">Home</a></li>
-                      <li class="active"><a>Đọc Truyện</a></li>                      
+                      <li><a href="%l/hostPath">Home</a></li>
+                      <li class="active">Đọc Truyện</li>                      
                     </ol>
                 </div><br>                
                 
 
                 <div class="row-fluid"> 
 
-                    [[(defn truyen1 [linktruyen linkanh title author genre state view]
+                    %{(defn truyen1 [linktruyen linkanh title author genre state view]
                      (str "<div class='span3 doctruyen'>
                         <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail' width='140' height='190'></a>
                         <a href='" linktruyen "'><h4><b>" title "</b></h4></a>
@@ -93,9 +87,11 @@
                                               <span class='small'>Lượt Xem:</span> " view "</p>
                            </div>"))
 
-                        (apply str (for [x (data :truyen1)] 
+                  (def row1 (subvec truyendisplay 0 4))
+
+                        (apply str (for [x row1] 
                                   (truyen1 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view))))
-                        ]]
+                        }
                          
                 </div><!--a Row-->
 
