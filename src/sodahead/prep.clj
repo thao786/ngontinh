@@ -63,8 +63,7 @@
 
 			(= type "expr")
 			(let [function (subs data 1 data-length)]
-				(str " (try " function 
-					" (catch Exception e e))\n"))
+				(str " (try " function " (catch Exception e e))\n"))
 
 			(= type "bloc")
 			(let 	[code 	(subs data 2 (dec data-length))

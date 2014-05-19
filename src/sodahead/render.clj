@@ -1,8 +1,9 @@
 (ns sodahead.render
 	(:require 	[clojure.java.io :as io]
 				[sodahead.parse :as p]
-				[sodahead.prep :as pe]
-				[sodahead.cache :as c]))
+				[sodahead.prep :as pe]))
+
+(def ns-list (atom {}))
 
 (defn bloc-or-expr
 	"return true if this chunk is a block or expression"
@@ -28,12 +29,13 @@
 		body-str))
 
 (defn cache [rkey text]
-	(if (c/ns-list rkey)
+	(if (@ns-list rkey)
 		nil
 		;create a namespace and push it in list
 		(let 	[new-ns 	(gensym "sodahead")
 				load-str 	(gen-ns-file text new-ns)
-				]
+				dummy 	(swap! ns-list assoc rkey new-ns)
+				dummy 	(load-string load-str)]
 			new-ns)))
 
 (defn render-text
@@ -52,11 +54,14 @@
 	([file-path params]
 		(render-text (slurp file-path) params)))
 
-(defn render-key [rkey params]
-	(if-let [name-ns 	(c/ns-list rkey)]
+(defn render-key 
+	([rkey] (render-key rkey {}))
+
+	([rkey params]
+	(if-let [name-ns 	(@ns-list rkey)]
 		(let [load-str 	(str "(" name-ns "/render " params ")")]
 			(load-string load-str))
-		nil))
+		nil)))
 
 (def render render-file)
 
