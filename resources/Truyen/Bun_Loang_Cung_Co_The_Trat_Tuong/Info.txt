@@ -1,7 +1,1 @@
-Bùn Loãng Cũng Có Thể Trát Tường
-
-Vô Tụ Long Hương
-1
-Cổ Đại, Cung Đình, Giang Hồ, Hài, Sủng, HE
-
-
+{"author":"Vô Tụ Long Hương","chap":15,"translator":null,"genre":"Cổ Đại, Cung Đình, Giang Hồ, Hài, Sủng, HE","title":"Bùn Loãng Cũng Có Thể Trát Tường","source":"","state":1,"alternate":null,"editor":null}

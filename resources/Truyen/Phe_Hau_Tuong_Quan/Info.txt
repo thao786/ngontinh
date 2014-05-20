@@ -1,7 +1,1 @@
-Phế hậu tướng quân
-
-Nhất độ Quân Hoa
-1
-Cổ Đại, Cung Đình, Ngược, SE
-hanphongtuyet.wordpress.com
-
+{"author":"Nhất độ Quân Hoa","chap":14,"translator":null,"genre":"Cổ Đại, Cung Đình, Ngược, SE","title":"Phế hậu tướng quân","source":"hanphongtuyet.wordpress.com","state":1,"alternate":null,"editor":null}

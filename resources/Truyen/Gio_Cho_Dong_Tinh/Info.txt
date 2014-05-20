@@ -1,7 +1,1 @@
-Gió chớ động tình
-Phong Mạc động tình
-Diệp Lạc Vô Tâm
-1
-Cổ Đại, Giang Hồ, Ngược, HE
-tieuduongtd.wordpress.com
-Tiểu Dương
+{"author":"Diệp Lạc Vô Tâm","chap":17,"translator":null,"genre":"Cổ Đại, Giang Hồ, Ngược, HE","title":null,"source":"tieuduongtd.wordpress.com","state":1,"alternate":"Phong Mạc động tình","editor":"Tiểu Dương"}

@@ -1,7 +1,1 @@
-Đại Mạc Hoang Nhan
-
-Thương Nguyệt
-1
-Cổ Đại, Kiếm Hiệp, OE
-vnthuquan.net
-
+{"author":"Thương Nguyệt","chap":11,"translator":null,"genre":"Cổ Đại, Kiếm Hiệp, OE","title":"Đại Mạc Hoang Nhan","source":"vnthuquan.net","state":1,"alternate":null,"editor":null}

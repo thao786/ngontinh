@@ -1,7 +1,1 @@
-Hãy chờ em đánh răng xong nhé
-
-Hồng Cửu
-1
-Hiện Đại, HE
-
-
+{"author":"Hồng Cửu","chap":67,"translator":null,"genre":"Hiện Đại, HE","title":"Hãy chờ em đánh răng xong nhé","source":"","state":1,"alternate":null,"editor":null}

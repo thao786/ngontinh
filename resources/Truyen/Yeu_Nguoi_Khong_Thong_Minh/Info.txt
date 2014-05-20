@@ -1,7 +1,1 @@
-Yêu Người Không Thông Minh
-
-Đậu Toa
-1
-Sắc, Hiện Đại, Học đường, Sủng, HE
-duyenkiep.wordpress.com
-Fijian
+{"author":"Đậu Toa","chap":10,"translator":null,"genre":"Sắc, Hiện Đại, Học đường, Sủng, HE","title":"Yêu Người Không Thông Minh","source":"duyenkiep.wordpress.com","state":1,"alternate":null,"editor":"Fijian"}

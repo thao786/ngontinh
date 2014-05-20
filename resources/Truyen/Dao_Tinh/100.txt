@@ -1,3 +1,4 @@
+100
 Đối mặt sinh tử
 
 "Thiết bị động lực đã vượt quá mức cho phép và ngừng hoạt động".

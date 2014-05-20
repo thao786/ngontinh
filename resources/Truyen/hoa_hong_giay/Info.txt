@@ -1,7 +1,1 @@
-Hoa hồng giấy
-
-Lâm Địch Nhi
-1
-Hiện Đại, Ngược, HE
-
-
+{"title" "Hoa hồng giấy", "alternate" "", "author" "Lâm Địch Nhi", "state" 1, "genre" "Hiện Đại, Ngược, HE", "source" "", "editor" "", "translator" ""}

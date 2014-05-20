@@ -1,7 +1,1 @@
-Đen trắng
-Hắc bạch
-Triêu Tiểu Thành
-1
-Hiện Đại, HE
-tieuduongtd.wordpress.com
-Tiểu Dương
+{"title" "Đen trắng", "alternate" "Hắc bạch", "author" "Triêu Tiểu Thành", "state" 1, "genre" "Hiện Đại, HE", "source" "tieuduongtd.wordpress.com", "editor" "Tiểu Dương", "translator" ""}

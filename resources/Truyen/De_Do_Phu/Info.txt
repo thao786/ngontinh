@@ -1,8 +1,1 @@
-Đế đô phú
-
-Thương Nguyệt
-1
-Cổ Đại, Kiếm Hiệp, HE
-Wattpad
-
-Quần Xà Lỏn
+{"author":"Thương Nguyệt","chap":15,"translator":"Quần Xà Lỏn","genre":"Cổ Đại, Kiếm Hiệp, HE","title":"Đế đô phú","source":"Wattpad","state":1,"alternate":null,"editor":null}

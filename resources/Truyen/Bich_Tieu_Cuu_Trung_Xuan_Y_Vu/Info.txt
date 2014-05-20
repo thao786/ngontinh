@@ -1,8 +1,1 @@
-Bích tiêu cửu trùng xuân ý vũ
-
-Tịch Nguyệt Giảo Giảo
-1
-Cổ Đại, Cung Đình, Ngược, Chiến Trường, HE
-hanphongtuyet.wordpress.com
-
-Phan Lưu Ly
+{"author":"Tịch Nguyệt Giảo Giảo","chap":28,"translator":"Phan Lưu Ly","genre":"Cổ Đại, Cung Đình, Ngược, Chiến Trường, HE","title":"Bích tiêu cửu trùng xuân ý vũ","source":"hanphongtuyet.wordpress.com","state":1,"alternate":null,"editor":null}

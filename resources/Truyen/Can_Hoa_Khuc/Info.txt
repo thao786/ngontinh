@@ -1,7 +1,1 @@
-Cán Hoa Khúc
-
-Hồ Điệp SEBA
-1
-Cổ Đại, Xuyên không, Điền văn, HE
-datichlau.wordpress.com
-Gia Lăng Tần
+{"author":"Hồ Điệp SEBA","chap":10,"translator":null,"genre":"Cổ Đại, Xuyên không, Điền văn, HE","title":"Cán Hoa Khúc","source":"datichlau.wordpress.com","state":1,"alternate":null,"editor":"Gia Lăng Tần"}

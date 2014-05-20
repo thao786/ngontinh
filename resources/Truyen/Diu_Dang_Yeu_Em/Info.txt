@@ -1,7 +1,1 @@
-Dịu Dàng Yêu Em
-Non nớt ông xã yêu không đủ
-Thiển Mạc Mặc
-1
-Hiện Đại, HE
-
-
+{"author":"Thiển Mạc Mặc","chap":78,"translator":null,"genre":"Hiện Đại, HE","title":"Dịu Dàng Yêu Em","source":"","state":1,"alternate":"Non nớt ông xã yêu không đủ","editor":null}

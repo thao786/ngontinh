@@ -1,8 +1,1 @@
-Trường An Loạn
-
-Hàn Hàn
-1
-Cổ đại, Hài, Kiếm Hiệp, Giang Hồ, OE
-
-
-Trần Quang Đức
+{"author":"Hàn Hàn","chap":20,"translator":"Trần Quang Đức","genre":"Cổ đại, Hài, Kiếm Hiệp, Giang Hồ, OE","title":null,"source":"","state":1,"alternate":null,"editor":null}

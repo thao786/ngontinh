@@ -1,7 +1,1 @@
-Này, Chớ Làm Loạn
-
-Minh Nguyệt Thính Phong
-1
-Hiện Đại, Hài, HE
-
-greenrosetq
+{"author":"Minh Nguyệt Thính Phong","chap":65,"translator":null,"genre":"Hiện Đại, Hài, HE","title":"Này, Chớ Làm Loạn","source":"","state":1,"alternate":null,"editor":"greenrosetq"}

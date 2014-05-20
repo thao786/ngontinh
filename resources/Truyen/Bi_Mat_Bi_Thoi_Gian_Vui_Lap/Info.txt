@@ -1,7 +1,1 @@
-Bí mật bị thời gian vùi lấp
-
-Đồng Hoa
-1
-Hiện Đại, SE
-
-
+{"author":"Đồng Hoa","chap":25,"translator":null,"genre":"Hiện Đại, SE","title":"Bí mật bị thời gian vùi lấp","source":"","state":1,"alternate":null,"editor":null}

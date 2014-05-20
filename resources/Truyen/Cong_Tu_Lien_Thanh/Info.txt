@@ -1,7 +1,1 @@
-Công tử Liên thành
-
-Mãn Tọa Y Quan Thắng Tuyết
-1
-Hiện đại, Võng Du, Huyền huyễn, HE
-
-
+{"author":"Mãn Tọa Y Quan Thắng Tuyết","chap":21,"translator":null,"genre":"Hiện đại, Võng Du, Huyền huyễn, HE","title":null,"source":"","state":1,"alternate":null,"editor":null}

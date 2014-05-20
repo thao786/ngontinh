@@ -1,7 +1,1 @@
-Gặp phải tôi, em thật bất hạnh
-
-Tội Gia Tội
-0
-Hiện Đại, HE
-linhmaroon.wordpress.com
-LinhMaroon, Ngưu rừng rú
+{"title" "Gặp phải tôi, em thật bất hạnh", "alternate" "", "author" "Tội Gia Tội", "state" 0, "genre" "Hiện Đại, HE", "source" "linhmaroon.wordpress.com", "editor" "LinhMaroon, Ngưu rừng rú", "translator" ""}

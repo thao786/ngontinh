@@ -1,7 +1,1 @@
-Ba tiêu hồ vũ dạ xao song
-
-Qua Ưởng
-1
-Cổ Đại, Huyền huyễn, HE
-tjnkerbell.com
-Vu Lãm
+{"author":"Qua Ưởng","chap":9,"translator":null,"genre":"Cổ Đại, Huyền huyễn, HE","title":"Ba tiêu hồ vũ dạ xao song","source":"tjnkerbell.com","state":1,"alternate":null,"editor":"Vu Lãm"}

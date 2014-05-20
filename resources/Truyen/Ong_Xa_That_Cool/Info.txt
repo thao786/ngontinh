@@ -1,7 +1,1 @@
-Ông Xã Thật Cool
-
-Linh Mặc Nhiên
-1
-Hiện Đại, HE
-
-
+{"author":"Linh Mặc Nhiên","chap":78,"translator":null,"genre":"Hiện Đại, HE","title":"Ông Xã Thật Cool","source":"","state":1,"alternate":null,"editor":null}

@@ -1,7 +1,1 @@
-Sương khói nhân gian
-
-Du Du Nhàn Nhân
-1
-Cổ Đại, Huyền Huyễn, SE
-nhuoclinh.wordpress.com
-Candy
+{"author":"Du Du Nhàn Nhân","chap":10,"translator":null,"genre":"Cổ Đại, Huyền Huyễn, SE","title":"Sương khói nhân gian","source":"nhuoclinh.wordpress.com","state":1,"alternate":null,"editor":"Candy"}

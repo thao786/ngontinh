@@ -1,7 +1,1 @@
-Yêu em là điều tốt nhất anh đã làm 
-
-Sênh Lý
-1
-Hiện đại, HE
-
-
+{"author":"Sênh Lý","chap":29,"translator":null,"genre":"Hiện đại, HE","title":null,"source":"","state":1,"alternate":null,"editor":null}

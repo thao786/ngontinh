@@ -1,8 +1,1 @@
-Phấn hoa lầu xanh
-
-Tào Đình
-1
-Cổ Đại, SE
-hanphongtuyet.wordpress.com
-
-Nguyễn Thị Thúy Ngọc
+{"author":"Tào Đình","chap":25,"translator":"Nguyễn Thị Thúy Ngọc","genre":"Cổ Đại, SE","title":"Phấn hoa lầu xanh","source":"hanphongtuyet.wordpress.com","state":1,"alternate":null,"editor":null}

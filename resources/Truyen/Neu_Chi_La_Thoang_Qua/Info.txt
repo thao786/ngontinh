@@ -1,7 +1,1 @@
-Nếu chỉ là thoáng qua
-
-Mai Tử Hoàng Thì Vũ
-1
-Hiện Đại, HE
-icytuvi.wordpress.com
-Icy
+{"author":"Mai Tử Hoàng Thì Vũ","chap":34,"translator":null,"genre":"Hiện Đại, HE","title":"Nếu chỉ là thoáng qua","source":"icytuvi.wordpress.com","state":1,"alternate":null,"editor":"Icy"}

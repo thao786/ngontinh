@@ -1,7 +1,1 @@
-Boss đen tối, đừng chạy!
-
-Mèo Lười Ngủ Ngày
-1
-Hiện Đại, Hài, HE
-
-
+{"author":"Mèo Lười Ngủ Ngày","chap":24,"translator":null,"genre":"Hiện Đại, Hài, HE","title":"Boss đen tối, đừng chạy!","source":"","state":1,"alternate":null,"editor":null}

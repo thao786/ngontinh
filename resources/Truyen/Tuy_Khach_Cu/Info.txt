@@ -1,7 +1,1 @@
-Túy khách cư
-
-Na Chích Hồ Ly
-1
-Cổ Đại, Giang Hồ, Hài, HE
-thengoaidaonguyen.wordpress.com
-Tiêu nhi, Lâm nhi
+{"author":"Na Chích Hồ Ly","chap":35,"translator":null,"genre":"Cổ Đại, Giang Hồ, Hài, HE","title":null,"source":"thengoaidaonguyen.wordpress.com","state":1,"alternate":null,"editor":"Tiêu nhi, Lâm nhi"}

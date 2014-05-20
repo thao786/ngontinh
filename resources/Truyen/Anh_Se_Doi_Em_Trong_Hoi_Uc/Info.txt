@@ -1,7 +1,1 @@
-Anh sẽ đợi em trong hồi ức
-
-Tân Di Ổ
-1
-Hiện Đại, HE
-
-
+{"author":"Tân Di Ổ","chap":42,"translator":null,"genre":"Hiện Đại, HE","title":null,"source":"","state":1,"alternate":null,"editor":null}

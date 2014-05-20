@@ -1,7 +1,1 @@
-Bong Bóng mùa hè
-
-Minh Hiểu Khê
-1
-Hiện Đại, HE
-
-
+{"author":"Minh Hiểu Khê","chap":48,"translator":null,"genre":"Hiện Đại, HE","title":"Bong Bóng mùa hè","source":"","state":1,"alternate":null,"editor":null}

@@ -1,7 +1,1 @@
-Hóa ra anh vẫn ở đây
-
-Tân Di Ổ
-1
-Hiện Đại, Hài, Ngược, HE
-
-
+{"author":"Tân Di Ổ","chap":23,"translator":null,"genre":"Hiện Đại, Hài, Ngược, HE","title":"Hóa ra anh vẫn ở đây","source":"","state":1,"alternate":null,"editor":null}

@@ -1,7 +1,1 @@
-Đế nghiệp như họa 
-
-Mộ Dung Yên Nhi
-1
-Cổ Đại, Chiến Trường, Cung đấu, Cung Đình, Ngược, OE
-pe3tapchoi.wordpress.com
-Tiểu Đông Tà
+{"author":"Mộ Dung Yên Nhi","chap":31,"translator":null,"genre":"Cổ Đại, Chiến Trường, Cung đấu, Cung Đình, Ngược, OE","title":null,"source":"pe3tapchoi.wordpress.com","state":1,"alternate":null,"editor":"Tiểu Đông Tà"}

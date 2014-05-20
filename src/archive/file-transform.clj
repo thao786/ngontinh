@@ -82,7 +82,28 @@
 
 
 
+(doseq [folder (.listFiles (File. "/home/thao/Truyen"))]
+	(let [file 	(str (.getPath folder) "/Info.txt")
+			json 	(parse-string (slurp file))
+			chap 	(- (count (.listFiles folder)) 3)
+			newmap 	{"title" (json "title")
+					"chap" chap
+					"state" 1
+					"alternate" (json "alternate")
+					"author" (json "author")
+					"genre" (json "genre")
+					"source" (json "source")
+					"editor" (json "editor")
+					"translator" (json "translator")}]
+		(spit file (generate-string newmap)))
 
 
 
+
+(doseq [folder (.listFiles (File. "/home/thao/all"))]
+	(let [file 	(str (.getPath folder) "/cover.jpg")
+			ex 		(.exists (File. file))]
+		(if ex
+			nil
+			(prn folder))))
 

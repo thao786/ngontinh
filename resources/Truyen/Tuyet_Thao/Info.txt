@@ -1,7 +1,1 @@
-Tuyết Thảo
-
-Cửu Lộ Phi Hương
-1
-Cổ Đại, Ngược, Đoản Văn, Giang hồ, SE
-bongbongbien.wordpress.com
-Nguyệt Viên
+{"author":"Cửu Lộ Phi Hương","chap":10,"translator":null,"genre":"Cổ Đại, Ngược, Đoản Văn, Giang hồ, SE","title":"Tuyết Thảo","source":"bongbongbien.wordpress.com","state":1,"alternate":null,"editor":"Nguyệt Viên"}

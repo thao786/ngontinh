@@ -1,7 +1,1 @@
-Bích Thành
-
-Thương Nguyệt
-1
-Cổ Đại, Kiếm Hiệp, HE
-vnThuquan.net
-
+{"author":"Thương Nguyệt","chap":7,"translator":null,"genre":"Cổ Đại, Kiếm Hiệp, HE","title":"Bích Thành","source":"vnThuquan.net","state":1,"alternate":null,"editor":null}

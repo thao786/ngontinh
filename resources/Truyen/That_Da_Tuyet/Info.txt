@@ -1,8 +1,1 @@
-Thất Dạ Tuyết
-
-Thương Nguyệt
-1
-Cổ Đại, Kiếm Hiệp, SE
-Wattpad
-
-Lục Hương
+{"author":"Thương Nguyệt","chap":18,"translator":"Lục Hương","genre":"Cổ Đại, Kiếm Hiệp, SE","title":"Thất Dạ Tuyết","source":"Wattpad","state":1,"alternate":null,"editor":null}

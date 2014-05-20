@@ -1,7 +1,1 @@
-Thủy tú sơn minh
-
-Na chích hồ ly
-1
-Cổ Đại, Giang Hồ, Huyền huyễn, HE
-thengoaidaonguyen.wordpress.com
-Tiêu nhi, Lệ Lâm
+{"author":"Na chích hồ ly","chap":32,"translator":null,"genre":"Cổ Đại, Giang Hồ, Huyền huyễn, HE","title":"Thủy tú sơn minh","source":"thengoaidaonguyen.wordpress.com","state":1,"alternate":null,"editor":"Tiêu nhi, Lệ Lâm"}

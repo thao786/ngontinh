@@ -1,8 +1,1 @@
-Nữ hoàng và kẻ cướp
-
-Nhân Hải Trung
-1
-Hiện Đại, HE
-
-
-Đỗ Mai Dung
+{"author":"Nhân Hải Trung","chap":14,"translator":"Đỗ Mai Dung","genre":"Hiện Đại, HE","title":null,"source":"","state":1,"alternate":null,"editor":null}

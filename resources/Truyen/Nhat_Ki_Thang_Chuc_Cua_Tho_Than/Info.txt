@@ -1,8 +1,1 @@
-Nhật Ký Thăng Chức Của Thổ Thần
-
-Mèo lười ngủ ngày
-1
-Cổ Đại, Huyền Huyễn, Hài, HE
-
-
-Lam Nguyệt
+{"author":"Mèo lười ngủ ngày","chap":68,"translator":"Lam Nguyệt","genre":"Cổ Đại, Huyền Huyễn, Hài, HE","title":"Nhật Ký Thăng Chức Của Thổ Thần","source":"","state":1,"alternate":null,"editor":null}

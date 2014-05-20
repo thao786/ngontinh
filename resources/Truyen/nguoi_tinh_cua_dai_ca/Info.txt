@@ -1,7 +1,1 @@
-Người tình của đại ca
-
-Tiểu Ngôn
-1
-Hiện Đại, HE
-qttp.wordpress.com
-mimi
+{"title" "Người tình của đại ca", "alternate" "", "author" "Tiểu Ngôn", "state" 1, "genre" "Hiện Đại, HE", "source" "qttp.wordpress.com", "editor" "mimi", "translator" ""}

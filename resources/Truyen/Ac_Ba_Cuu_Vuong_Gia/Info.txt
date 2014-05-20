@@ -1,7 +1,1 @@
-Ác bá Cửu Vương Gia
-
-Cầu Mộng
-1
-Cổ Đại, Cung Đình, HE
-letsenjoytogether.wordpress.com
-Cesia
+{"author":"Cầu Mộng","chap":10,"translator":null,"genre":"Cổ Đại, Cung Đình, HE","title":"Ác bá Cửu Vương Gia","source":"letsenjoytogether.wordpress.com","state":1,"alternate":null,"editor":"Cesia"}

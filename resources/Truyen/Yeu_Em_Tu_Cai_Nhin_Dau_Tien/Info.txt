@@ -1,7 +1,1 @@
-Yêu em từ cái nhìn đầu tiên
-
-Cố Mạn
-1
-Hiện đại, Hài, Sủng, Võng du, HE
-
-
+{"author":"Cố Mạn","chap":57,"translator":null,"genre":"Hiện đại, Hài, Sủng, Võng du, HE","title":null,"source":"","state":1,"alternate":null,"editor":null}

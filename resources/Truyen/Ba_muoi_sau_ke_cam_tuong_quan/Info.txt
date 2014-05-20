@@ -1,7 +1,1 @@
-Ba Mươi Sáu Kế Cầm Tướng Quân
-
-Cầu Mộng
-1
-Cổ Đại, Cung Đình, HE
-tuthienquoc.wordpress.com
-Rùa, Tiêu Nhi
+{"author":"Cầu Mộng","chap":11,"translator":null,"genre":"Cổ Đại, Cung Đình, HE","title":"Ba Mươi Sáu Kế Cầm Tướng Quân","source":"tuthienquoc.wordpress.com","state":1,"alternate":null,"editor":"Rùa, Tiêu Nhi"}

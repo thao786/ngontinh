@@ -1,7 +1,1 @@
-Vượt Qua Lôi Trì
-
-Diệp Lạc Vô Tâm
-1
-Hiện Đại, HE
-Zeusvn.net
-
+{"author":"Diệp Lạc Vô Tâm","chap":37,"translator":null,"genre":"Hiện Đại, HE","title":null,"source":"Zeusvn.net","state":1,"alternate":null,"editor":null}

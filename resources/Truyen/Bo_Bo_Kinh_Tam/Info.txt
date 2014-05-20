@@ -1,7 +1,1 @@
-Bộ Bộ Kinh Tâm
-
-Đồng Hoa
-1
-Cổ Đại, Cung Đình, Xuyên không, SE
-
-
+{"author":"Đồng Hoa","chap":135,"translator":null,"genre":"Cổ Đại, Cung Đình, Xuyên không, SE","title":null,"source":"","state":1,"alternate":null,"editor":null}

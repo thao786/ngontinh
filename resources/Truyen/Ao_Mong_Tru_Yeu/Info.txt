@@ -1,7 +1,1 @@
-Ảo mộng tru yêu
-
-Thẩm Thương My
-1
-Cổ Đại, Giang Hồ, Kiếm Hiệp, Cung Đình, HE
-duongnga199615.wordpress.com
-Dương Muội
+{"author":"Thẩm Thương My","chap":43,"translator":null,"genre":"Cổ Đại, Giang Hồ, Kiếm Hiệp, Cung Đình, HE","title":"Ảo mộng tru yêu","source":"duongnga199615.wordpress.com","state":1,"alternate":null,"editor":"Dương Muội"}

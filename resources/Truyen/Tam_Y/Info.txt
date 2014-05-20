@@ -1,7 +1,1 @@
-Tàm y
-
-Đan Ninh
-1
-Cổ đại, Cung đình, Huyền huyễn, HE
-thinhvulau.wordpress.com
-Thính Vũ Lâu
+{"author":"Đan Ninh","chap":12,"translator":null,"genre":"Cổ đại, Cung đình, Huyền huyễn, HE","title":null,"source":"thinhvulau.wordpress.com","state":1,"alternate":null,"editor":"Thính Vũ Lâu"}

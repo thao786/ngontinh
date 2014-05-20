@@ -1,7 +1,1 @@
-Phượng Điểm Giang Sơn
-
-Ngư Nghiệt
-1
-Cổ Đại, Cung Đình, Chiến Trường, Giang Hồ, HE
-kunnhi.wordpress.com
-Kún
+{"author":"Ngư Nghiệt","chap":145,"translator":null,"genre":"Cổ Đại, Cung Đình, Chiến Trường, Giang Hồ, HE","title":"Phượng Điểm Giang Sơn","source":"kunnhi.wordpress.com","state":1,"alternate":null,"editor":"Kún"}
