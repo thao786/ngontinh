@@ -8,8 +8,9 @@
 <head>
 
   %{ (def genre (l/genres (params :genre)))
+     (def genre2 (l/genres2 (params :genre)))
      (def pgIndex (Integer/parseInt (params :index)))
-     (def truyendisplay (truyen/getTruyen (str "SELECT * FROM truyen where genre like '%" genre "%' limit 20 offset " (- (* 20 pgIndex) 20) "")))
+     (def truyendisplay (truyen/getTruyen (str "SELECT * FROM truyen where lower(genre) like '%" genre2 "%' limit 20 offset " (- (* 20 pgIndex) 20) "")))
       nil}
 
 
@@ -184,20 +185,22 @@
 
                 <br>
                 <br> 
+
+      %{(def numberoftruyeninDB (truyen/getGenreCount genre2))
+        (def pagequantity (if (= (rem numberoftruyeninDB 20) 0) (quot numberoftruyeninDB 20) (+ (quot numberoftruyeninDB 20) 1)))
+        nil
+      }
                 <div class="row-fluid text-center">                    
                     <ul class="pagination">
-                      <li class="disabled"><a href="#">&laquo;</a></li>                      
+                      <li><a href="%(str l/hostPath "listtruyen/" (params :genre) "/" pagequantity)">&laquo;</a></li>                      
 
                        %{(defn pagination [x]
-                          (str "<li><a href='" l/hostPath "gridtruyen/" x "'>" x "</a></li>"))
+                          (str "<li><a href='" l/hostPath "listtruyen/" (params :genre) "/" x "'>" x "</a></li>"))               
 
-              (def numberoftruyeninDB truyen/truyenCount)
-              (def pagequantity (if (= (rem numberoftruyeninDB 20) 0) (quot numberoftruyeninDB 20) (+ (quot numberoftruyeninDB 20) 1)))  
-
-                          (apply str (for [x (range (min pagequantity (+ 4 pgIndex)))] 
+                          (apply str (for [x (range (max 1 (- pgIndex 4)) (min (+ 1 pagequantity) (+ 5 pgIndex)))] 
                                    (pagination x)))
                       }
-                      <li><a href="#">&raquo;</a></li>
+                      <li><a href="%(str l/hostPath "listtruyen/" (params :genre) "/" pagequantity)">&raquo;</a></li>
                     </ul>
                 </div>    
 
