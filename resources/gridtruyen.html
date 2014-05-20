@@ -6,13 +6,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
 %{(def pgIndex (Integer/parseInt (params :index)))
   (def truyendisplay (truyen/getTruyen (str "SELECT * FROM truyen limit 20 offset " (- (* 20 pgIndex) 20) "")))
-=======
-%{(def pgIndex (params :index)) 
-  (def truyendisplay (truyen/getTruyen (str "SELECT * FROM truyen limit 20 offset " (* 20 pgIndex) "")))
->>>>>>> 8633a4a6c5302e68a9badf95128f64dc2d9b78ed
+
   nil
 }
 
