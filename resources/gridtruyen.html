@@ -208,7 +208,7 @@
                       %{(defn pagination [x]
                           (str "<li><a href='" l/hostPath "gridtruyen/" x "'>" x "</a></li>"))
 
-              (def numberoftruyeninDB (truyen/truyenCount))
+              (def numberoftruyeninDB truyen/truyenCount)
               (def pagequantity (if (= (rem numberoftruyeninDB 20) 0) (quot numberoftruyeninDB 20) (+ (quot numberoftruyeninDB 20) 1)))  
 
                           (apply str (for [x (range (min pagequantity (+ 4 pgIndex)))] 
