@@ -123,37 +123,3 @@
 
 
 
-
-(def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/test" "postgres" "fall2010"))
-(def stamp 	(Timestamp. (.getTime (java.util.Date.))))
-(import 'java.io.File)
-(require 	'[ngontinh.libpath :as l])
-
-(def m 
-	(let [key-ar 	(keys l/genres)
-			val-ar		(vals l/genres)]
-		(zipmap val-ar key-ar)))
-
-(defn woo [valu]
-	(let [vallue (get m valu)]
-		(str vallue " ")))
-
-(doseq [folder (.listFiles (File. "/home/thao/ngontinh/resources/Truyen"))] 
-	(let 	[path 		(str (.getPath folder) "/Info.txt")
-			oldContent 	(slurp path)
-			content 	(clojure.string/replace oldContent #"\r" "")
-			infoArray 	(.split content "\n")		
-			genre-str 	(.trim (try (nth infoArray 4) (catch Exception e "")))
-			genre-arr 	(.split genre-str "[ ]*,[ ]*")
-			genres 		(map woo genre-arr)
-			genres-inj 	(.trim (apply str genres))
-			]
-		(prn (apply str genres))))
-
-
-(.close connection)
-
-
-
-
-
