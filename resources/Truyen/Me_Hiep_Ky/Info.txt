@@ -1,8 +1,1 @@
-Mê hiệp ký
-
-Thi Định Nhu
-1
-Cổ Đại, Giang Hồ, Ngược, HE
-hanphongtuyet.wordpress.com
-
-Lục Phong
+{"author":"Thi Định Nhu","chap":40,"translator":"Lục Phong","genre":"Cổ Đại, Giang Hồ, Ngược, HE","title":"Mê hiệp ký","source":"hanphongtuyet.wordpress.com","state":1,"alternate":null,"editor":null}

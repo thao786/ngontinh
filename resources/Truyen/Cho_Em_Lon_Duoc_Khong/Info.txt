@@ -1,7 +1,1 @@
-Chờ em lớn, được không?
-
-Diệp Lạc Vô Tâm
-1
-Hiện đại, HE
-lilicious14.wordpress.com
-Lily Trần
+{"author":"Diệp Lạc Vô Tâm","chap":36,"translator":null,"genre":"Hiện đại, HE","title":null,"source":"lilicious14.wordpress.com","state":1,"alternate":null,"editor":"Lily Trần"}

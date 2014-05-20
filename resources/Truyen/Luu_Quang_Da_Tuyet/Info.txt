@@ -1,8 +1,1 @@
-Lưu Quang Dạ Tuyết
-
-Thập Tứ Khuyết
-1
-Cổ Đại, Giang Hồ, HE
-vantuongvi.wordpress.com
-
-Peony, Phỉ Thúy Tiên Tử
+{"author":"Thập Tứ Khuyết","chap":22,"translator":"Peony, Phỉ Thúy Tiên Tử","genre":"Cổ Đại, Giang Hồ, HE","title":"Lưu Quang Dạ Tuyết","source":"vantuongvi.wordpress.com","state":1,"alternate":null,"editor":null}

@@ -1,7 +1,1 @@
-Cô gái năm ấy chúng ta cùng theo đuổi
-
-Cửu Bả Đao
-1
-Hiện Đại, Học đường, OE
-hanphongtuyet.wordpress.com
-
+{"author":"Cửu Bả Đao","chap":31,"translator":null,"genre":"Hiện Đại, Học đường, OE","title":"Cô gái năm ấy chúng ta cùng theo đuổi","source":"hanphongtuyet.wordpress.com","state":1,"alternate":null,"editor":null}

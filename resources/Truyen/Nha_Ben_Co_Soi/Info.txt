@@ -1,7 +1,1 @@
-Nhà bên có sói
-
-Gia Diệp Mạn
-1
-Hiện Đại, Hài, Sắc, HE
-gjnnan0.wordpress.com
-Chuột Ngơ
+{"author":"Gia Diệp Mạn","chap":37,"translator":null,"genre":"Hiện Đại, Hài, Sắc, HE","title":"Nhà bên có sói","source":"gjnnan0.wordpress.com","state":1,"alternate":null,"editor":"Chuột Ngơ"}

@@ -1,8 +1,1 @@
-Tam sinh tam thế thập lý đào hoa
-
-Đường Thất Công Tử
-1
-Cổ Đại, Huyền huyễn, HE
-
-
-Giang Phương
+{"author":"Đường Thất Công Tử","chap":30,"translator":"Giang Phương","genre":"Cổ Đại, Huyền huyễn, HE","title":"Tam sinh tam thế thập lý đào hoa","source":"","state":1,"alternate":null,"editor":null}

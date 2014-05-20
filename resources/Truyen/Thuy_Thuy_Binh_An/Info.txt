@@ -1,7 +1,1 @@
-Thụy thụy bình an
-
-Biển Du Ly
-1
-Cổ Đại, Huyền huyễn, Hài, Sủng, HE
-bongbongbien.wordpress.com
-Bùm Bùm
+{"author":"Biển Du Ly","chap":20,"translator":null,"genre":"Cổ Đại, Huyền huyễn, Hài, Sủng, HE","title":"Thụy thụy bình an","source":"bongbongbien.wordpress.com","state":1,"alternate":null,"editor":"Bùm Bùm"}

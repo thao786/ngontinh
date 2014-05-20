@@ -1,7 +1,1 @@
-Nương tử, thỉnh chỉ giáo nhiều hơn
-
-Cổ Linh
-1
-Cổ Đại, Cung Đình, HE
-chikarin11906.wordpress.com
-
+{"author":"Cổ Linh","chap":9,"translator":null,"genre":"Cổ Đại, Cung Đình, HE","title":"Nương tử, thỉnh chỉ giáo nhiều hơn","source":"chikarin11906.wordpress.com","state":1,"alternate":null,"editor":null}

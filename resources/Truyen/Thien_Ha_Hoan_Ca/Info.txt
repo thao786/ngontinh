@@ -1,7 +1,1 @@
-Thiên Hạ Hoan Ca
-Thần Tiên Cũng Ngắm Mưa Sao Băng
-Kiều Gia Tiểu Kiều
-1
-Cổ Đại, Huyền huyễn, HE
-liknaz.wordpress.com
-Lik
+{"author":"Kiều Gia Tiểu Kiều","chap":67,"translator":null,"genre":"Cổ Đại, Huyền huyễn, HE","title":"Thiên Hạ Hoan Ca","source":"liknaz.wordpress.com","state":1,"alternate":"Thần Tiên Cũng Ngắm Mưa Sao Băng","editor":"Lik"}

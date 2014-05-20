@@ -1,7 +1,1 @@
-Độc Y Vương Phi
-
-Ngô Tiếu Tiếu
-1
-Cổ Đại, Xuyên không, Cung Đình, HE
-tamvunguyetlau.wordpress.com
-QT
+{"author":"Ngô Tiếu Tiếu","chap":130,"translator":null,"genre":"Cổ Đại, Xuyên không, Cung Đình, HE","title":"Độc Y Vương Phi","source":"tamvunguyetlau.wordpress.com","state":1,"alternate":null,"editor":"QT"}

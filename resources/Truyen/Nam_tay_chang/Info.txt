@@ -1,7 +1,1 @@
-Nắm tay chàng
-
-Gia Diệp Mạn
-1
-Cổ Đại, Trọng sinh, Đoản Văn, Huyền huyễn, HE
-tieuxuyen.wordpress.com
-
+{"author":"Gia Diệp Mạn","chap":4,"translator":null,"genre":"Cổ Đại, Trọng sinh, Đoản Văn, Huyền huyễn, HE","title":"Nắm tay chàng","source":"tieuxuyen.wordpress.com","state":1,"alternate":null,"editor":null}

@@ -1,8 +1,1 @@
-Đông Cung
-
-Phỉ Ngã Tư Tồn
-1
-Cổ Đại, Cung Đình, SE
-schan07.wordpress.com
-
-Schan
+{"author":"Phỉ Ngã Tư Tồn","chap":43,"translator":"Schan","genre":"Cổ Đại, Cung Đình, SE","title":"Đông Cung","source":"schan07.wordpress.com","state":1,"alternate":null,"editor":null}

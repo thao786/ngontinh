@@ -1,8 +1,1 @@
-Quan hệ nguy hiểm
-
-Khiêu Dược Hỏa Diễm
-1
-Hiện Đại, Hắc bang, Sắc, HE
-devilxangel.wordpress.com
-
-greenrosetq
+{"author":"Khiêu Dược Hỏa Diễm","chap":47,"translator":"greenrosetq","genre":"Hiện Đại, Hắc bang, Sắc, HE","title":"Quan hệ nguy hiểm","source":"devilxangel.wordpress.com","state":1,"alternate":null,"editor":null}

@@ -1,7 +1,1 @@
-Chết, sập bẫy rồi
-
-KingKong Barbie
-1
-Hiện Đại, HE
-
-
+{"author":"KingKong Barbie","chap":13,"translator":null,"genre":"Hiện Đại, HE","title":"Chết, sập bẫy rồi","source":"","state":1,"alternate":null,"editor":null}

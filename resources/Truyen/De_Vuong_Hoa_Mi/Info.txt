@@ -1,7 +1,1 @@
-Đế Vương Họa Mi
-
-Hi Trữ Nhược Hải Nguyệt
-1
-Cổ Đại, Xuyên không, Cung đấu, HE
-vantuongvi.wordpress.com
-
+{"author":"Hi Trữ Nhược Hải Nguyệt","chap":16,"translator":"Dương Mỹ Nhân, Khán Nguyệt Quang","genre":"Cổ Đại, Xuyên không, Cung đấu, HE","title":"Đế Vương Họa Mi","source":"vantuongvi.wordpress.com","state":1,"alternate":null,"editor":null}

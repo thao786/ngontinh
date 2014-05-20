@@ -1,7 +1,1 @@
-Đánh cắp tình yêu
-
-Tuyết Mặc
-1
-Hiện Đại, Sủng, HE
-bin0kun0.wordpress.com
-Meixiang
+{"author":"Tuyết Mặc","chap":42,"translator":null,"genre":"Hiện Đại, Sủng, HE","title":"Đánh cắp tình yêu","source":"bin0kun0.wordpress.com","state":1,"alternate":null,"editor":"Meixiang"}

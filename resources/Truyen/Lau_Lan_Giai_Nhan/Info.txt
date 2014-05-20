@@ -1,7 +1,1 @@
-Lâu lan giai nhân
-
-Điển Tâm
-1
-Cổ đại, Cung đình, Ngược, HE
-paradisekiss1.wordpress.com
-qu33njc3
+{"author":"Điển Tâm","chap":10,"translator":null,"genre":"Cổ đại, Cung đình, Ngược, HE","title":null,"source":"paradisekiss1.wordpress.com","state":1,"alternate":null,"editor":"qu33njc3"}

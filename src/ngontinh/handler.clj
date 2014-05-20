@@ -49,7 +49,11 @@
 
         (GET "/listtruyen" [] (r/render "resources/listtruyen.html"))
 
+<<<<<<< HEAD
         (GET "/gridtruyen/pgnumber/:index" [index] (r/render "resources/gridtruyen.html" {:index index}))
+=======
+        (GET "/gridtruyen/page/:index" [index] (r/render "resources/gridtruyen.html" {:index index}))
+>>>>>>> 8633a4a6c5302e68a9badf95128f64dc2d9b78ed
 
         (GET "/listtruyen/:genre/:index" [genre index] (r/render "resources/theloai.html" {:genre genre :index index}))
 

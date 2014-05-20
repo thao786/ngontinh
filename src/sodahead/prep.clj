@@ -63,13 +63,12 @@
 
 			(= type "expr")
 			(let [function (subs data 1 data-length)]
-				(str " (try " function 
-					" (catch Exception e \"Exception happened\"))\n"))
+				(str " (try " function " (catch Exception e e))\n"))
 
 			(= type "bloc")
 			(let 	[code 	(subs data 2 (dec data-length))
 					do-bloc 	(str " (do " code ")")]
-				(str " (try " do-bloc " (catch Exception e \"Exception happened\"))\n")))))
+				(str " (try " do-bloc " (catch Exception e e))\n")))))
 
 (defn get-def-str 
 	"return the string (def variable value)"

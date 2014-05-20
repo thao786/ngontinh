@@ -1,7 +1,1 @@
-Sam Sam đến đây ăn nè!
-
-Cố Mạn
-1
-Hiện Đại, Hài, Công Sở, Phúc Hắc Nam, HE
-th0xjnh.wordpress.com
-Th0xjnh
+{"author":"Cố Mạn","chap":54,"translator":null,"genre":"Hiện Đại, Hài, Công Sở, Phúc Hắc Nam, HE","title":"Sam Sam đến đây ăn nè!","source":"th0xjnh.wordpress.com","state":1,"alternate":null,"editor":"Th0xjnh"}

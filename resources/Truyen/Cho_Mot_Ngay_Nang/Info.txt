@@ -1,8 +1,1 @@
-Chờ một ngày nắng
-
-Điệp Chi Linh
-1
-Hiện Đại, HE
-
-
-Thu Trần
+{"author":"Điệp Chi Linh","chap":22,"translator":"Thu Trần","genre":"Hiện Đại, HE","title":"Chờ một ngày nắng","source":null,"state":1,"alternate":null,"editor":null}

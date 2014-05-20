@@ -1,7 +1,1 @@
-Đánh Cược Trái Tim
-
-SakuraMooru
-1
-Hiện Đại, Học đường, HE
-
-
+{"title" "Đánh Cược Trái Tim", "alternate" "", "author" "SakuraMooru", "state" 1, "genre" "Hiện Đại, Học đường, HE", "source" "", "editor" "", "translator" ""}

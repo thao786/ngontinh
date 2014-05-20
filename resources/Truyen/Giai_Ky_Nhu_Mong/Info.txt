@@ -1,7 +1,1 @@
-Giai Kỳ Như Mộng
-
-Phỉ Ngã Tư Tồn
-1
-Hiện Đại, HE
-keichan2306.wordpress.com
-keichan
+{"author":"Phỉ Ngã Tư Tồn","chap":27,"translator":null,"genre":"Hiện Đại, HE","title":"Giai Kỳ Như Mộng","source":"keichan2306.wordpress.com","state":1,"alternate":null,"editor":"keichan"}

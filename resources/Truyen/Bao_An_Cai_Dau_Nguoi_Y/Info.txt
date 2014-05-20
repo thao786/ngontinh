@@ -1,7 +1,1 @@
- Báo Ân Cái Đầu Ngươi ý!
-
-Sữa Chua Be Be
-1
-Cổ Đại, Xuyên không, Đồng Nhân, Sủng, Hài, HE
-tamvunguyetlau.com
-Tiểu Mộng
+{"author":"Sữa Chua Be Be","chap":54,"translator":null,"genre":"Cổ Đại, Xuyên không, Đồng Nhân, Sủng, Hài, HE","title":"Báo Ân Cái Đầu Ngươi ý!","source":"tamvunguyetlau.com","state":1,"alternate":null,"editor":"Tiểu Mộng"}

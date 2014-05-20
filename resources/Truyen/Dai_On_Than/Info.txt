@@ -1,7 +1,1 @@
-Đại ôn thần
-
-Cầu Mộng
-1
-Cổ Đại, Giang Hồ, HE
-tuuyenthanh.wordpress.com
-Tử Uyển Thanh
+{"author":"Cầu Mộng","chap":10,"translator":null,"genre":"Cổ Đại, Giang Hồ, HE","title":"Đại ôn thần","source":"tuuyenthanh.wordpress.com","state":1,"alternate":null,"editor":"Tử Uyển Thanh"}

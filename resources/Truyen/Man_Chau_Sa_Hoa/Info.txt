@@ -1,7 +1,1 @@
-Mạn Châu Sa Hoa
-
-Thương Nguyệt
-1
-Cổ Đại, Kiếm Hiệp, SE
-gacsach.com
-
+{"author":"Thương Nguyệt","chap":10,"translator":null,"genre":"Cổ Đại, Kiếm Hiệp, SE","title":"Mạn Châu Sa Hoa","source":"gacsach.com","state":1,"alternate":null,"editor":null}

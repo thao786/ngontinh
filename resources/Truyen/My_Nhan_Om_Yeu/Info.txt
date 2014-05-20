@@ -1,7 +1,1 @@
-Mỹ nhân ốm yếu
-
-Trạm Lượng
-1
-Cổ Đại, Sủng, Giang Hồ, HE
-thengoaidaonguyen.wordpress.com
-Lệ Lâm
+{"author":"Trạm Lượng","chap":11,"translator":null,"genre":"Cổ Đại, Sủng, Giang Hồ, HE","title":"Mỹ nhân ốm yếu","source":"thengoaidaonguyen.wordpress.com","state":1,"alternate":null,"editor":"Lệ Lâm"}

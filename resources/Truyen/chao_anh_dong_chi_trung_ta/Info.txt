@@ -1,7 +1,1 @@
-Chào anh, đồng chí Trung tá!
-Nhĩ hảo, trung tá tiên sinh
-Scotland Chiết Nhĩ Miêu
-1
-Hiện Đại, Quân nhân, HE
-lacmathunnie.wordpress.com
-lacmathunnie
+{"title" "Chào anh, đồng chí Trung tá!", "alternate" "Nhĩ hảo, trung tá tiên sinh", "author" "Scotland Chiết Nhĩ Miêu", "state" 1, "genre" "Hiện Đại, Quân nhân, HE", "source" "lacmathunnie.wordpress.com", "editor" "lacmathunnie", "translator" ""}

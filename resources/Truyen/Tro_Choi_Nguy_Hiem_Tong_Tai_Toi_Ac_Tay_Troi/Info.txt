@@ -1,7 +1,1 @@
-Trò Chơi Nguy Hiểm - Tổng Tài Tội Ác Tày Trời
-Trò Chơi Nguy Hiểm
-Ân Tầm
-1
-Hiện Đại, Sắc, HE
-nguyenla.wordpress.com
-Jins, FY
+{"author":"Ân Tầm","chap":179,"translator":null,"genre":"Hiện Đại, Sắc, HE","title":"Trò Chơi Nguy Hiểm - Tổng Tài Tội Ác Tày Trời","source":"nguyenla.wordpress.com","state":1,"alternate":"Trò Chơi Nguy Hiểm","editor":"Jins, FY"}

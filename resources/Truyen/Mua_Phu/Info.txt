@@ -1,7 +1,1 @@
-Mua Phu
-
-Lâu Vũ Tình
-1
-Cổ Đại, Điền văn, HE
-docke.wordpress.com
-
+{"author":"Lâu Vũ Tình","chap":17,"translator":null,"genre":"Cổ Đại, Điền văn, HE","title":"Mua Phu","source":"docke.wordpress.com","state":1,"alternate":null,"editor":"Docke"}

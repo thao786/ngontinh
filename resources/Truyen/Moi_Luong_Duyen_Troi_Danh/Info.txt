@@ -1,8 +1,1 @@
-Mối lương duyên trời đánh
-
-Hoa Thanh Thần
-1
-Hiện Đại, HE
-
-
-Phan Lưu Ly
+{"author":"Hoa Thanh Thần","chap":22,"translator":"Phan Lưu Ly","genre":"Hiện Đại, HE","title":"Mối lương duyên trời đánh","source":"","state":1,"alternate":null,"editor":null}

@@ -1,3 +1,4 @@
+48
 Chương 48
 
 Người đầu tiên là sếp của phòng chúng ta —— Lý Tử Nho. Năng lực làm việc của sếp siêu khủng, như hôm trước chỉ cần thức một đêm đã nhẹ nhàng xử lý xong cả một bộ hồ sơ. Nhưng biến thái nhất không phải ở chỗ sếp có thể một mình làm bằng bốn người, mà ở tốc độ đọc của hắn, ngươi đừng nghĩ sếp công việc bề bộn mà không có thời gian xem kỹ bản thảo của ngươi, hắn có thể đọc hết một siêu bản thảo dài N vạn chữ chỉ trong 10 phút, sau đó bới ra N sai lầm của ngươi, rồi tiêu sái phun ra hai từ “Trừ lương”.

@@ -1,7 +1,1 @@
-Con thỏ bắt nạt cỏ gần hang
-
-Ức Cẩm
-1
-Hiện Đại, Sắc, HE
-
-
+{"author":"Ức Cẩm","chap":76,"translator":null,"genre":"Hiện Đại, Sắc, HE","title":"Con thỏ bắt nạt cỏ gần hang","source":"","state":1,"alternate":null,"editor":null}

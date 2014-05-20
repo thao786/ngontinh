@@ -1,8 +1,1 @@
-Cậu chủ hồ đồ 
-
-Tinh Dã Anh
-1
-Hiện Đại, HE
-
-
-Lục Hoa
+{"author":"Tinh Dã Anh","chap":43,"translator":"Lục Hoa","genre":"Hiện Đại, HE","title":null,"source":"","state":1,"alternate":null,"editor":null}

@@ -1,8 +1,1 @@
-Mê Thần Ký
-
-Thi Định Nhu
-1
-Cổ Đại, Giang Hồ, HE
-
-
-Lục Phong
+{"author":"Thi Định Nhu","chap":26,"translator":"Lục Phong","genre":"Cổ Đại, Giang Hồ, HE","title":"Mê Thần Ký","source":"","state":1,"alternate":null,"editor":null}

@@ -1,7 +1,1 @@
-Ảo Thế
-
-Thương Nguyệt
-1
-Cổ Đại, Kiếm Hiệp, SE
-tangthuvien.vn
-
+{"author":"Thương Nguyệt","chap":11,"translator":"Lãnh Huyết","genre":"Cổ Đại, Kiếm Hiệp, SE","title":"Ảo Thế","source":"tangthuvien.vn","state":1,"alternate":null,"editor":null}

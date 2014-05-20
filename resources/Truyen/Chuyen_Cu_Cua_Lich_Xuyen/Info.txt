@@ -1,7 +1,1 @@
-Chuyện cũ của Lịch Xuyên
-Lịch Xuyên chuyện cũ
-Huyền Ẩn
-1
-Hiện Đại, Ngược, HE
-krazymi.wordpress.com
-
+{"author":"Huyền Ẩn","chap":65,"translator":null,"genre":"Hiện Đại, Ngược, HE","title":"Chuyện cũ của Lịch Xuyên","source":"krazymi.wordpress.com","state":1,"alternate":"Lịch Xuyên chuyện cũ","editor":null}

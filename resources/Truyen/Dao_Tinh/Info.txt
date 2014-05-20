@@ -1,7 +1,1 @@
-Đạo tình
-
-Chu Ngọc
-1
-Hiện Đại, Hắc bang, HE
-
-
+{"author":"Chu Ngọc","chap":123,"translator":null,"genre":"Hiện Đại, Hắc bang, HE","title":"Đạo tình","source":"","state":1,"alternate":null,"editor":null}

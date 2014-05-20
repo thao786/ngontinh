@@ -1,7 +1,1 @@
-Đào yêu
-
-Cửu Lộ Phi Hương
-1
-Cổ đại, Đoản Văn, HE
-tukhidonglai.wordpress.com
-Tử khí đông lai
+{"author":"Cửu Lộ Phi Hương","chap":3,"translator":null,"genre":"Cổ đại, Đoản Văn, HE","title":"Đào yêu","source":"tukhidonglai.wordpress.com","state":1,"alternate":null,"editor":"Tử khí đông lai"}

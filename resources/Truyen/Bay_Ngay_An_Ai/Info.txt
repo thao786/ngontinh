@@ -1,7 +1,1 @@
-Bảy ngày ân ái
-
-Ân Tầm
-1
-Hiện Đại, Sắc, Ngược, HE
-
-
+{"author":"Ân Tầm","chap":173,"translator":null,"genre":"Hiện Đại, Sắc, Ngược, HE","title":"Bảy ngày ân ái","source":"","state":1,"alternate":null,"editor":null}

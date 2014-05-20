@@ -1,7 +1,1 @@
-Yêu người tĩnh lặng
-
-Đậu Toa
-1
-Sắc, Hiện Đại, HE
-duyenkiep.wordpress.com
-Fijian
+{"author":"Đậu Toa","chap":11,"translator":null,"genre":"Sắc, Hiện Đại, HE","title":"Yêu người tĩnh lặng","source":"duyenkiep.wordpress.com","state":1,"alternate":null,"editor":"Fijian"}

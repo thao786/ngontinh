@@ -1,7 +1,1 @@
-Sa Ngã Vô Tội
-
-Diệp Lạc Vô Tâm
-1
-Hiện Đại, Sắc, HE
-macdichhoi.wordpress.com
-Vô Phương, Banhmatong, Phong Lin, Cà Xí Xọn
+{"author":"Diệp Lạc Vô Tâm","chap":26,"translator":null,"genre":"Hiện Đại, Sắc, HE","title":"Sa Ngã Vô Tội","source":"macdichhoi.wordpress.com","state":1,"alternate":null,"editor":"Vô Phương, Banhmatong, Phong Lin, Cà Xí Xọn"}

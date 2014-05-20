@@ -1,7 +1,1 @@
-Khóa trụ tim em
-365 ngày hôn nhân
-Guai Wu
-1
-Hiện Đại, Sắc, HE
-
-
+{"author":"Guai Wu","chap":257,"translator":null,"genre":"Hiện Đại, Sắc, HE","title":"Khóa trụ tim em","source":null,"state":1,"alternate":"365 ngày hôn nhân","editor":null}

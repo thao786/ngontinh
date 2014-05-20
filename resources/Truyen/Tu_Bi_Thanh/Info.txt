@@ -1,8 +1,1 @@
-Từ Bi Thành
-
-Đinh Mặc
-1
-Hiện Đại, Hắc bang, HE
-
-
-greenrosetq
+{"author":"Đinh Mặc","chap":80,"translator":"greenrosetq","genre":"Hiện Đại, Hắc bang, HE","title":"Từ Bi Thành","source":"","state":1,"alternate":null,"editor":null}

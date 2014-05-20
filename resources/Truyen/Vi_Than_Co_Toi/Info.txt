@@ -1,7 +1,1 @@
-Vi thần có tội
-
-Tùy Vũ Mà An
-1
-Cổ Đại, Cung Đình, Hài, Sủng, HE
-mipmipi.wordpress.com
-
+{"author":"Tùy Vũ Mà An","chap":7,"translator":null,"genre":"Cổ Đại, Cung Đình, Hài, Sủng, HE","title":"Vi thần có tội","source":"mipmipi.wordpress.com","state":1,"alternate":null,"editor":null}

@@ -1,7 +1,1 @@
-Công tử sờ sợ
-
-Trạm Lượng
-1
-Cổ Đại, Giang Hồ, Hài, HE
-linhmaroon.wordpress.com
-Cesia
+{"author":"Trạm Lượng","chap":11,"translator":null,"genre":"Cổ Đại, Giang Hồ, Hài, HE","title":"Công tử sờ sợ","source":"linhmaroon.wordpress.com","state":1,"alternate":null,"editor":"Cesia"}

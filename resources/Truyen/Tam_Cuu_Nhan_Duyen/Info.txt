@@ -1,7 +1,1 @@
-Tam cứu nhân duyên
-
-Tiếu Thanh
-1
-Cổ Đại, Xuyên không, HE
-tukhidonglai.wordpress.com
-Mạc Tiếu, Tử khí đông lai
+{"author":"Tiếu Thanh","chap":43,"translator":null,"genre":"Cổ Đại, Xuyên không, HE","title":"Tam cứu nhân duyên","source":"tukhidonglai.wordpress.com","state":1,"alternate":null,"editor":"Mạc Tiếu, Tử khí đông lai"}

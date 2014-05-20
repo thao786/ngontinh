@@ -1,7 +1,1 @@
-Anh Có Thích Nước Mỹ Không?
-
-Tân Di Ổ
-1
-Hiện đại, SE
-
-
+{"author":"Tần Di Ổ","chap":24,"translator":null,"genre":"Hiện đại, SE","title":null,"source":"","state":1,"alternate":null,"editor":null}

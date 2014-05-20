@@ -1,7 +1,1 @@
-Năm tháng là đóa hoa hai lần nở
-Năm tháng là đóa Lưỡng Sinh Hoa
-Đường Thất Công Tử
-1
-Hiện Đại, HE
-
-
+{"author":"Đường Thất Công Tử","chap":28,"translator":null,"genre":"Hiện Đại, HE","title":"Năm tháng là đóa hoa hai lần nở","source":null,"state":1,"alternate":"Năm tháng là đóa Lưỡng Sinh Hoa","editor":null}

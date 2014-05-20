@@ -1,7 +1,1 @@
-Bần cùng dã nương tử
-
-Trầm Vi
-1
-Cổ Đại, HE
-tieunguyennguyen.wordpress.com
-
+{"author":"Trầm Vi","chap":11,"translator":null,"genre":"Cổ Đại, HE","title":"Bần cùng dã nương tử","source":"tieunguyennguyen.wordpress.com","state":1,"alternate":null,"editor":null}

@@ -1,7 +1,1 @@
-Yêu Nghiệt Nhà Ta
-
-Cầu Mộng
-1
-Cổ Đại, Giang Hồ, Hài, HE
-letsenjoytogether.wordpress.com
-Cesia
+{"author":"Cầu Mộng","chap":10,"translator":null,"genre":"Cổ Đại, Giang Hồ, Hài, HE","title":"Yêu Nghiệt Nhà Ta","source":"letsenjoytogether.wordpress.com","state":1,"alternate":null,"editor":"Cesia"}

@@ -1,7 +1,1 @@
-Đồng Lang Cộng Hôn
-
-Diệp Lạc Vô Tâm
-1
-Hiện Đại, Hắc bang, Sắc, HE
-
-
+{"author":"Diệp Lạc Vô Tâm","chap":36,"translator":null,"genre":"Hiện Đại, Hắc bang, Sắc, HE","title":null,"source":"","state":1,"alternate":null,"editor":null}

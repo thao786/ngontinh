@@ -1,7 +1,1 @@
-Tam sinh tam thế Chẩm thượng thư - Tập 1
-Chẩm thượng thư - Quyển Thượng
-Đường Thất Công Tử
-1
-Cổ Đại, Huyền huyễn, HE
-
-
+{"author":"Đường Thất Công Tử","chap":14,"translator":null,"genre":"Cổ Đại, Huyền huyễn, HE","title":"Tam sinh tam thế Chẩm thượng thư - Tập 1","source":"","state":1,"alternate":"Chẩm thượng thư - Quyển Thượng","editor":null}

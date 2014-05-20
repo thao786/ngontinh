@@ -1,7 +1,1 @@
-Trăng Lạnh Như Sương
-Lãnh Nguyệt Như Sương
-Phỉ Ngã Tư Tồn
-1
-Cổ Đại, Cung Đình, Ngược, SE
-
-
+{"author":"Phỉ Ngã Tư Tồn","chap":27,"translator":null,"genre":"Cổ Đại, Cung Đình, Ngược, SE","title":"Trăng Lạnh Như Sương","source":"","state":1,"alternate":"Lãnh Nguyệt Như Sương","editor":null}

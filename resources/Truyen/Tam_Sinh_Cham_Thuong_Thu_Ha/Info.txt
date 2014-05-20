@@ -1,7 +1,1 @@
-Tam sinh tam thế Chẩm thượng thư - Tập 2
-Chẩm thượng thư - Quyển Hạ
-Đường Thất Công Tử
-1
-Cổ Đại, Huyền huyễn, HE
-hanphongtuyet.wordpress.com
-Phong Tuyết, Ely, hanhmyu
+{"author":"Đường Thất Công Tử","chap":22,"translator":null,"genre":"Cổ Đại, Huyền huyễn, HE","title":"Tam sinh tam thế Chẩm thượng thư - Tập 2","source":"hanphongtuyet.wordpress.com","state":1,"alternate":"Chẩm thượng thư - Quyển Hạ","editor":"Phong Tuyết, Ely, hanhmyu"}

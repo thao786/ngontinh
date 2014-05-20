@@ -1,7 +1,1 @@
-Anh, em sai rồi
-
-Hoàng Hôn Tứ Hợp
-1
-Hiện Đại, Hài, HE
-windgoddess.wordpress.com
-Nhóm Cửu Tứ
+{"author":"Hoàng Hôn Tứ Hợp","chap":27,"translator":null,"genre":"Hiện Đại, Hài, HE","title":"Anh, em sai rồi","source":"windgoddess.wordpress.com","state":1,"alternate":null,"editor":"Nhóm Cửu Tứ"}

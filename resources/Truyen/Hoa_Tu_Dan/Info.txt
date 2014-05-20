@@ -1,8 +1,1 @@
-Hoa tư dẫn
-
-Đường Thất Công Tử
-1
-Cổ Đại, Ngược, Trọng sinh, Huyền huyễn, HE
-
-
-Nguyễn Thành Phước
+{"author":"Đường Thất Công Tử","chap":30,"translator":"Nguyễn Thành Phước","genre":"Cổ Đại, Ngược, Trọng sinh, Huyền huyễn, HE","title":"Hoa tư dẫn","source":null,"state":1,"alternate":null,"editor":null}
