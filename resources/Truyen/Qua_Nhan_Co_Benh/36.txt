@@ -1,4 +1,3 @@
-36
 Chân tướng
 
 
@@ -168,4 +167,4 @@ Nạp cát: nhà trai sau khi bốc được quẻ tốt, thông báo cho bên n
 Nạp trưng: nhà trai mang sính lễ sang nhà gái
 Thỉnh kỳ: nhà trai chọn ngày định hôn, chuẩn bị lễ, thông báo cho nhà gái, chờ nhà gái đồng ý
 Thân nghênh: rước dâu
-Cre: Lạc Việt 
+Cre: Lạc Việt

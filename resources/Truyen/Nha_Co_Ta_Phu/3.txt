@@ -1,4 +1,3 @@
-3
 Đệ tam chương
 
 
@@ -445,4 +444,4 @@ Chú thích:
 
 (2) Giang kỳ mĩ nam bảng: bảng xếp hạng các mĩ nam giang hồ
 
-(3) cô lậu quả văn: lỗi thời, ko cập nhật tin tức 
+(3) cô lậu quả văn: lỗi thời, ko cập nhật tin tức

@@ -6,13 +6,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
 %{(def pgIndex (Integer/parseInt (params :index)))
   (def truyendisplay (truyen/getTruyen (str "SELECT * FROM truyen limit 20 offset " (- (* 20 pgIndex) 20) "")))
-=======
-%{(def pgIndex (params :index)) 
-  (def truyendisplay (truyen/getTruyen (str "SELECT * FROM truyen limit 20 offset " (* 20 pgIndex) "")))
->>>>>>> 8633a4a6c5302e68a9badf95128f64dc2d9b78ed
+
   nil
 }
 
@@ -205,15 +201,19 @@
                     <ul class="pagination">
                       <li class="disabled"><a href="#">&laquo;</a></li>
                      
-                      %{(defn pagination [x]
-                          (str "<li><a href='" l/hostPath "gridtruyen/" x "'>" x "</a></li>"))
+%{(defn pagination [x]
+    (str "<li><a href='" l/hostPath "gridtruyen/" x "'>" x "</a></li>"))
 
-              (def numberoftruyeninDB truyen/truyenCount)
-              (def pagequantity (if (= (rem numberoftruyeninDB 20) 0) (quot numberoftruyeninDB 20) (+ (quot numberoftruyeninDB 20) 1)))  
 
-                          (apply str (for [x (range (min pagequantity (+ 4 pgIndex)))] 
-                                   (pagination x)))
-                      }
+
+    (def numberoftruyeninDB truyen/truyenCount)
+    (def pagequantity 
+        (if (= (rem numberoftruyeninDB 20) 0) (quot numberoftruyeninDB 20) (+ (quot numberoftruyeninDB 20) 1)))  
+
+
+    (apply str (for [x (range (min pagequantity (+ 4 pgIndex)))] 
+             (pagination x)))
+}
 
                       <li><a href="#">&raquo;</a></li>
                     </ul>

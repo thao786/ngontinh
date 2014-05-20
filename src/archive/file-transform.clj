@@ -100,10 +100,20 @@
 
 
 
-(doseq [folder (.listFiles (File. "/home/thao/all"))]
-	(let [file 	(str (.getPath folder) "/cover.jpg")
-			ex 		(.exists (File. file))]
-		(if ex
-			nil
-			(prn folder))))
+;remove number in 44.txt
+(doseq [folder (.listFiles (File. "/home/thao/Truyen"))]
+	(doseq [file (.listFiles (File. (.getPath folder)))]
+		(if (.matches (.getName file) "[0-9]+.txt")
+			(let [content 	(slurp file)
+					pos 	(.indexOf content "\n")
+					num 	(.trim (subs content 0 pos))]
+				(if (.matches num "[0-9]+")
+					(let [newcontent 	(subs content pos (count content))]
+						(spit file (.trim newcontent))))))))
+
+
+
+
+
+
 
