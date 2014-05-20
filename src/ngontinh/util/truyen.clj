@@ -40,11 +40,11 @@
 
 
 (defn getGenreCount [genre]
-    (let [resVec (let [connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh"
+    (let [resVec (let [		connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh"
                                                                     "postgres"
                                                                     "fall2010")
                             query (str "select count(*) from (select lower(genre) from truyen) as theloai2 where lower like '%" genre "%'")
-                         res (let [ stmt (.createStatement connection)
+                         	res (let [ stmt (.createStatement connection)
                                                 rs (.executeQuery stmt query)]
                                                         (vec (resultset-seq rs)))
                             ddd (.close connection)]
@@ -53,5 +53,16 @@
         (row :count)))
 
 
-
+(def truyenCount 
+    (let [resVec (let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh"
+                                                                    "postgres"
+                                                                    "fall2010")
+                         query (str "select count(*) from truyen")
+                         res (let [ stmt (.createStatement connection)
+                                                rs (.executeQuery stmt query)]
+                                                        (vec (resultset-seq rs)))
+                         ddd (.close connection)]
+                             res)
+            row (nth resVec 0)]
+        (row :count)))
                

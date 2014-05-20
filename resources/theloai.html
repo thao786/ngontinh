@@ -8,9 +8,9 @@
 <head>
 
   %{ (def genre (l/genres (params :genre)))
-         (def doctruyen (peek (truyen/getTruyen (str "SELECT * FROM truyen where genre ='" genre "'"))))
-
-         nil}
+     (def pgIndex (Integer/parseInt (params :index)))
+     (def truyendisplay (truyen/getTruyen (str "SELECT * FROM truyen where genre like '%" genre "%' limit 20 offset " (- (* 20 pgIndex) 20) "")))
+      nil}
 
 
 <meta charset="utf-8">
@@ -74,7 +74,7 @@
                 <div class="row-fluid">
                   <ol class="breadcrumb">
                       <li><a href="%l/hostPath">Home</a></li>
-                      <li><a href="%(str l/hostPath "gridtruyen")">Đọc Truyện</a></li>
+                      <li><a href="%(str l/hostPath "listtruyen")">Danh Sách Truyện</a></li>
                       <li class="active">Truyện %genre</li>                     
                     </ol>
                 </div><br>                
