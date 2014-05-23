@@ -30,7 +30,7 @@
 
 (defn cache [rkey text]
 	(if (@ns-list rkey)
-		nil
+		(@ns-list rkey)
 		;create a namespace and push it in list
 		(let 	[new-ns 	(gensym "sodahead")
 				load-str 	(gen-ns-file text new-ns)
