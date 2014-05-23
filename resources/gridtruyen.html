@@ -209,7 +209,7 @@
                      
 
     %{(defn pagination [x]
-        (str "<li><a href='" l/hostPath "gridtruyen/pgnumber/"  x "'>" x "</a></li>")) 
+        (str "<li id='" x "'><a href='" l/hostPath "gridtruyen/pgnumber/"  x "'>" x "</a></li>")) 
 
 
         (apply str (for [x (range (max 1 (- pgIndex 4)) (min (+ 1 pagequantity) (+ 5 pgIndex)))] 
@@ -268,7 +268,11 @@
   $(document).ready(function(){
     $(".list-group-item:even").addClass("list-group-item-warning");
     $(".list-group-item:odd").addClass("list-group-item-success");
+
+    %(str "$('#" pgIndex "').addClass('active');")
   });
+
+
   
 </script>
 

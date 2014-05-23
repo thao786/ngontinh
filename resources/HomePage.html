@@ -94,7 +94,9 @@
           <br>
           <br>
 
-      
+       %(def doctruyen-all (truyen/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() limit 8"))
+
+    
       <div class="row-fluid">    
         <a href="#"><h3><span class="label label-warning trangchutitle">Đọc Truyện</h3></a>  
         <div class="lightblue2">
@@ -106,7 +108,7 @@
                                 <a href='" linktruyen" '><h4>" title" </h4></a>          
                             </div>"))
 
-                (def truyen1 (truyen/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() limit 4"))
+                (def truyen1 (subvec doctruyen-all 0 4))
 
 
                       (apply str (for [x truyen1] 
@@ -124,7 +126,7 @@
                             </div>"))
 
 
-            (def truyen2 (truyen/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() limit 4"))
+            (def truyen2 (subvec doctruyen-all 4 8))
 
 
                       (apply str (for [x truyen2] 

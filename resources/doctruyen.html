@@ -8,12 +8,13 @@
 <html lang="en">
 <head>
 %{ (def path (params :path))
-         (def doctruyen (peek (truyen/getTruyen (str "SELECT * FROM truyen where path ='" path "'"))))
+   (def doctruyen-raw (peek (truyen/getTruyen (str "SELECT * FROM truyen where path ='" path "'"))))
+   (def doctruyen (assoc doctruyen-raw :newstate (if (= (compare (doctruyen-raw :state) 1) 0) "Full" "Còn Tiếp")))
 
          nil}
 
     <meta charset="utf-8">
-    <title>%(doctruyen :title) - %(doctruyen :state) - %(doctruyen :author) | Trang Ngôn Tình</title>  
+    <title>%(doctruyen :title) - %(doctruyen :newstate) - %(doctruyen :author) | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  
@@ -86,7 +87,7 @@
                 <p><i>Tên Khác</i>:  %(doctruyen :alternate)</p>
                 <p><i>Tác Giả</i>:  <a href="[[(doctruyen :searchauthor)]]">%(doctruyen :author)</a></p>
                 <p><i>Thể Loại</i>:  <a href="[[(doctruyen :searchgenre)]]">%(doctruyen :genre)</a></p>
-                <p><i>Tình Trạng</i>:  <a href="[[(doctruyen :searchstate)]]">%(doctruyen :state)</a></p>
+                <p><i>Tình Trạng</i>:  <a href="[[(doctruyen :searchstate)]]">%(doctruyen :newstate)</a></p>
                 <div class="minor-info">Nguồn: %(doctruyen :source)<br>
                                         Editor/Translator: %(doctruyen :person)<br>
                                         Lượt Xem: %(doctruyen :view)<br>

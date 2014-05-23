@@ -51,7 +51,7 @@
 
                 <div class="row-fluid">
                   <ol class="breadcrumb">
-                      <li><a href="#">Home</a></li>
+                      <li><a href="%l/hostPath">Home</a></li>
                       <li class="active">Danh Sách Truyện</li>
                     </ol>
                 </div><br>
@@ -129,7 +129,7 @@
               <tbody>
 
            %{   
-                (defn listtruyen [linktruyen linkanh title author path genre chap shortoverview view state alternate searchauthor searchgenre]
+                (defn listtruyen [linktruyen linkanh title author path genre chap shortoverview view newstate alternate searchauthor searchgenre]
                      (str "<tr class=''>
                   <td><span class='dropdown hidden-xs'>
                           <button class='dropdown-toggle btn btn-sm' param-toggle='dropdown'>Giới Thiệu <b class='caret'></b></button>
@@ -156,13 +156,16 @@
                   <td><a href='" searchauthor "'>" author "</a></td>
                   <td><a href='" searchgenre "'>" genre "</a></td>
                   <td>" view "</td>
-                  <td>" state "</td>
+                  <td>" newstate "</td>
                 </tr>"))
 
-            (def truyenall (truyen/getTruyen "SELECT * FROM truyen"))                       
+            (def truyenall (truyen/getTruyen "SELECT * FROM truyen")) 
+            (def truyenall2 (for [x truyenall] (assoc x :newstate (if (= (compare (x :state) 1) 0) "Hoàn Thành" "Chưa Hoàn")))) 
+
+                             
            
-                (apply str (for [x truyenall]    
-                    (listtruyen (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :path) (x :genre) (x :chap) (x :shortoverview) (x :view) (x :state) (x :alternate) (x :searchauthor) (x :searchgenre))))
+                (apply str (for [x truyenall2]    
+                    (listtruyen (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :path) (x :genre) (x :chap) (x :shortoverview) (x :view) (x :newstate) (x :alternate) (x :searchauthor) (x :searchgenre))))
              }             
      
             
