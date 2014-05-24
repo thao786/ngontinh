@@ -27,19 +27,6 @@
 
 
 
-;convert all info to map
-(doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
-	(let 	[path 		(str (.getPath folder) "/Info.txt")
-			text 	(slurp path)]
-		(if (.contains text ":")
-			(let [mapm 	(parse-string text)]
-				(spit path mapm))
-			nil)))
-
-
-
-
-
 
 ;inject in database
 (def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/test" "postgres" "fall2010"))
@@ -92,9 +79,8 @@
 
 (doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
 	(let 	[path 		(str (.getPath folder) "/Info.txt")
-			text 	(slurp path)
-			mapm 	(load-string text)
-			title	(mapm "title")
+			mapm 	(load-string (slurp path))
+			genre-str	(mapm "genre")
 			]
 		(if (nil? title)
 			(prn path)
