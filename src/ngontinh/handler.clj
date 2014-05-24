@@ -65,7 +65,8 @@
 
         (GET "/englishnovel/:path/:num" [path num] (r/render "resources/Chapter.html" {:path path :num num}))
 
-        (GET "/search" request (str request))
+        (GET "/search" request (r/render "resources/KetQuaTimKiem.html" 
+            {:tukhoa ((request :query-params) "term")}))
  
         (route/resources "/")
         (route/not-found "Not Found"))

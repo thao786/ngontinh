@@ -1,15 +1,13 @@
 %{(require '[ngontinh.libpath :as l]
            '[sodahead.render :as r]
-           '[ngontinh.util.truyen :as truyen]
-)}
+           '[ngontinh.util.truyen :as truyen])}
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="utf-8">
-    <title>Kết Quả Tìm Kiếm từ khóa "[[(param :tukhoa)]]" | Trang Ngôn Tình</title>  
+    <title>Kết Quả Tìm Kiếm từ khóa "%(params :tukhoa)" | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  
@@ -20,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="%(l/paths :stylesheet)">
     <style>
         body{
-          background-image:url("%(l/paths :bgr)"); 
+          background-image:url("%(l/paths :bgr)");
         }  
         @font-face {
           font-family: 'Glyphicons Halflings';
@@ -37,7 +35,7 @@
 </head>
 
 <!--================================================== -->
- <body class="maubody1">
+ <body class="maubody1"> 
 <div class="le">  
 
   %include {"resources/util/pageheader"}
@@ -77,13 +75,13 @@
                           <option>kết thúc bằng</option>                      
                         </select>
                         <input type="text" class="form-control cachnhaura">
-                        <button href ="[[(param :tim)]]" type="submit" class="btn btn-default cachnhaura">Tìm</button>  
+                        <button href ="%(params :tim)" type="submit" class="btn btn-default cachnhaura">Tìm</button>  
                       </div>                    
 
                 <br>
                 <hr>                
 
-                <h3 class="text-muted" id="tukhoa">Tìm kiếm với từ khóa: <i class="green">[[(param :tukhoa)]]</i>
+                <h3 class="text-muted" id="tukhoa">Tìm kiếm với từ khóa: <i class="green">%(params :tukhoa)</i>
                                                               
                 </h3>      
                 <br>
@@ -93,10 +91,10 @@
                         <thead>
                           <tr>
                             <th>Giới Thiệu</th>  
-                            <th><a href="[[((param :sapxep) :theotitle)]]">Tên Truyện<b class="caret"></b></a></th>
-                            <th><a href="[[((param :sapxep) :theochap)]]">Số chương<b class="caret"></b></a></th>
-                            <th><a href="[[((param :sapxep) :theogenre)]]">Thể Loại<b class="caret"></b></a></th>
-                            <th><a href="[[((param :sapxep) :theoview)]]">Lượt Xem<b class="caret"></b></a></th>
+                            <th><a href="%((params :sapxep) :theotitle)">Tên Truyện<b class="caret"></b></a></th>
+                            <th><a href="%((params :sapxep) :theochap)">Số chương<b class="caret"></b></a></th>
+                            <th><a href="%((params :sapxep) :theogenre)">Thể Loại<b class="caret"></b></a></th>
+                            <th><a href="%((params :sapxep) :theoview)">Lượt Xem<b class="caret"></b></a></th>
                           </tr>
                         </thead>
                         <tbody>           
@@ -104,7 +102,7 @@
                 %{(defn listtruyen [linktruyen linkanh title alternate author genre shortoverview chap view state   searchauthor searchgenre]
                      (str "<tr class=''>
                   <td><span class='dropdown hidden-xs'>
-                          <button class='dropdown-toggle btn btn-xs' param-toggle='dropdown'>Giới Thiệu<b class='caret'></b></button>
+                          <button class='dropdown-toggle btn btn-xs' params-toggle='dropdown'>Giới Thiệu<b class='caret'></b></button>
                               <div class='dropdown-menu VanAnDropdown'>
                                 <div class='row-fluid'>
                                   <div class='span3'>
@@ -131,7 +129,7 @@
                   <td>" view "</td>
                 </tr>"))
 
-                        (apply str (for [x (param :listtruyen)] 
+                        (apply str (for [x (params :listtruyen)] 
                             (listtruyen (x :linktruyen) (x :linkanh) (x :title) (x :alternate) (x :author) (x :genre) (x :shortoverview) (x :chap) (x :view) (x :state) (x :searchauthor) (x :searchgenre))))
           } 
 
