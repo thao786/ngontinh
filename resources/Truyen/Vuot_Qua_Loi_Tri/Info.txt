@@ -1,1 +1,1 @@
-{"author":"Diệp Lạc Vô Tâm","chap":37,"translator":null,"genre":"Hiện Đại, HE","title":null,"source":"Zeusvn.net","state":1,"alternate":null,"editor":null}
+{"author":"Diệp Lạc Vô Tâm","chap":37,"translator":null,"genre":"Hiện Đại, HE","title":"Vượt Qua Lôi Trì","source":"Zeusvn.net","state":1,"alternate":null,"editor":null}
