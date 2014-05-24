@@ -1,8 +1,0 @@
-i love cats
-
-%{}
-
-%{(def a 9)
-nil}
-
-result %(params :key)
