@@ -100,7 +100,7 @@
 
 
 
-;remove number in 44.txt
+;remove number in each chapter file
 (doseq [folder (.listFiles (File. "/home/thao/Truyen"))]
 	(doseq [file (.listFiles (File. (.getPath folder)))]
 		(if (.matches (.getName file) "[0-9]+.txt")
@@ -110,6 +110,19 @@
 				(if (.matches num "[0-9]+")
 					(let [newcontent 	(subs content pos (count content))]
 						(spit file (.trim newcontent))))))))
+
+
+
+
+
+
+(doseq [folder (.listFiles (File. "/home/thao/Truyen"))]
+	(let [file 	(str (.getPath folder) "/overview.txt")]
+		(if (.exists (File. file))
+			nil
+			(prn file))))
+
+
 
 
 
