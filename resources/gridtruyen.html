@@ -82,14 +82,13 @@
                         <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail' width='140' height='190'></a>
                         <a href='" linktruyen "'><h4><b>" title "</b></h4></a>
                         <p class='text-muted'><span class='small'>Tác Giả:</span> " author "<br>
-                                              <span class='small'>Thể Loại:</span> " genre "<br>
-                                              <span class='small'>Tình Trạng:</span> " state "<br>     
+                                              <span class='small'>Thể Loại:</span> " genre "<br>   
                                               <span class='small'>Lượt Xem:</span> " view "</p>
                            </div> "))
 
             (defn rowtruyen [a] (str "<div class='row-fluid'>"
                         (apply str (for [x (subvec truyendisplay (* 4 a) (+ 4 (* 4 a)))] 
-                                  (truyen4 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view)))) "</div><br><br>"))
+                                  (truyen4 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view)))) "</div><br>"))
 
             (def truyenquantity (count truyendisplay))
             (def num-row (if (= (rem truyenquantity 4) 0) (quot truyenquantity 4) (+ (quot truyenquantity 4) 1)))

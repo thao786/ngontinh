@@ -160,7 +160,7 @@
                 </tr>"))
 
             (def truyenall (truyen/getTruyen "SELECT * FROM truyen")) 
-            (def truyenall2 (for [x truyenall] (assoc x :newstate (if (= (compare (x :state) 1) 0) "Hoàn Thành" "Chưa Hoàn")))) 
+            (def truyenall2 (for [x truyenall] (assoc x :newstate (if (= (compare (x :state) 1) 0) "Full" "Còn Tiếp")))) 
 
                              
            

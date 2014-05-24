@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="%(l/paths :bootstheme)">
     <link href="%(l/paths :docscss)" rel="stylesheet">  
     <link href="%(l/paths :bootsresponsive)" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="%(l/paths :stylesheet)">
+    <link rel="stylesheet" type="text/css" href="%(l/paths :stylesheet2)">
     <style>
         body{
           background-image:url("%(l/paths :bgr)"); 
@@ -96,14 +96,13 @@
                         <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail' width='140' height='190'></a>
                         <a href='" linktruyen "'><h4><b>" title "</b></h4></a>
                         <p class='text-muted'><span class='small'>Author:</span> " author "<br>
-                                              <span class='small'>Genre:</span> " genre "<br>
-                                              <span class='small'>Status:</span> " state "<br>     
+                                              <span class='small'>Genre:</span> " genre "<br>   
                                               <span class='small'>Views:</span> " view "</p>
                            </div> "))
 
             (defn rowtruyen [a] (str "<div class='row-fluid'>"
                         (apply str (for [x (subvec truyendisplay (* 4 a) (+ 4 (* 4 a)))] 
-                                  (truyen4 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view)))) "</div><br><br>"))
+                                  (truyen4 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view)))) "</div><br>"))
 
             (def truyenquantity (count truyendisplay))
             (def num-row (if (= (rem truyenquantity 4) 0) (quot truyenquantity 4) (+ (quot truyenquantity 4) 1)))

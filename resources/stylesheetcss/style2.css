@@ -182,7 +182,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', end
         .socialicon{
           float:right;
           margin-right: 60px;
-          margin-top: 125px;
+          margin-top: 85px;
         }
         @media (max-width: 991px) {
           .socialicon {
@@ -203,7 +203,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', end
         }
         .subhead2{
           background-color: #2e3639;
-          border-top: solid 3px #b9340e;           
+          border-top: solid 3px #9933FF;           
           color:white;          
           width:100%;
         }        
