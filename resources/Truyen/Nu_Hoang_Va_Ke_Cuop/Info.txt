@@ -1,1 +1,1 @@
-{"author":"Nhân Hải Trung","chap":14,"translator":"Đỗ Mai Dung","genre":"Hiện Đại, HE","title":null,"source":"","state":1,"alternate":null,"editor":null}
+{"author":"Nhân Hải Trung","chap":14,"translator":"Đỗ Mai Dung","genre":"Hiện Đại, HE","title":"Nữ Hoàng Và Kẻ Cướp","source":"","state":1,"alternate":null,"editor":null}

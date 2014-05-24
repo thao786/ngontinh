@@ -1,1 +1,1 @@
-{"author":"Hàn Hàn","chap":20,"translator":"Trần Quang Đức","genre":"Cổ đại, Hài, Kiếm Hiệp, Giang Hồ, OE","title":null,"source":"","state":1,"alternate":null,"editor":null}
+{"author":"Hàn Hàn","chap":20,"translator":"Trần Quang Đức","genre":"Cổ đại, Hài, Kiếm Hiệp, Giang Hồ, OE","title":"Trường An Loạn","source":"","state":1,"alternate":null,"editor":null}
