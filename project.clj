@@ -7,7 +7,10 @@
                   [redis.clients/jedis "2.4.2"]
                   [org.postgresql/postgresql "9.3-1101-jdbc41"]
                   [org.clojure/core.cache "0.6.3"]
-                  [cheshire "5.3.1"]]
+                  [cheshire "5.3.1"]
+                  [org.apache.lucene/lucene-core "4.8.1"]
+                  [org.apache.lucene/lucene-analyzers-common "4.8.1"]
+                  [org.apache.lucene/lucene-queryparser "4.8.1"]]
   :plugins [[lein-ring "0.8.10"]]
   :ring {:handler ngontinh.handler/app}
   :profiles

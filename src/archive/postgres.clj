@@ -8,13 +8,14 @@
 (require '[clojure.string :as string])
 (require 'ngontinh.handler)
 (require '[ngontinh.ngontinh.defdata :as defndata])
+(require '[cheshire.core :refer :all])
 
 
 
 
 
-
-(def m 
+;reverse-genre-map
+(def m
 	(let [key-ar 	(keys l/genres)
 			val-ar		(vals l/genres)]
 		(zipmap val-ar key-ar)))
@@ -23,10 +24,14 @@
 	(let [vallue (get m valu)]
 		(str " " vallue " ")))
 
+
+
+
+
 ;inject in database
 (def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/test" "postgres" "fall2010"))
 (def stamp 	(Timestamp. (.getTime (java.util.Date.))))
-(doseq [folder (.listFiles (File. "/home/thao/ngontinh/resources/Truyen"))] 
+(doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
 	(let 	[path 		(str (.getPath folder) "/Info.txt")
 			oldContent 	(slurp path)
 			content 	(clojure.string/replace oldContent #"\r" "")
@@ -62,6 +67,7 @@
 							(.setTimestamp 11 stamp)
 							(.setInt 12 view))]
 		(.execute statement)))
+
 (.close connection)
 
 
@@ -71,6 +77,14 @@
 
 
 
+(doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
+	(let 	[path 		(str (.getPath folder) "/Info.txt")
+			mapm 	(load-string (slurp path))
+			genre-str	(mapm "genre")
+			]
+		(if (nil? title)
+			(prn path)
+			nil)))
 
 
 
@@ -80,44 +94,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-(re-find #"[\n]{1}.*" (slurp (.getPath file)))) 
-
-
-
-
-
-(def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" "postgres" "fall2010"))
-(def stamp 	(Timestamp. (.getTime (java.util.Date.))))
-(doseq [folder (.listFiles (File. "/home/thao/ngontinh/resources/Truyen"))]
-	(let [folder-path 	(.getPath folder)
-		truyen-folder 	(.getName folder)]
-		(doseq 	[file 	(.listFiles (File. folder-path))]
-			(if (.matches (.getName file) "[0-9]+.txt")
-				(let [whole-name (.getName file)
-						chap 	(re-find #"[0-9]*" whole-name)
-						chap-name 	(try (.trim 
-								(re-find #".*[\s]+" (slurp (.getPath file)))) 
-									(catch Exception e ""))
-						sqlStr  	(.prepareStatement connection (str 
-							"INSERT INTO chap (title, num, truyen, date_added) VALUES 
-							(?, ?, ?, ?)"))						
-						statement 	(doto sqlStr 
-							(.setString 1 chap-name)
-							(.setInt 2 (Integer/parseInt chap))										
-							(.setString 3 truyen-folder) 
-							(.setTimestamp 4 stamp))]						
-					(try (.execute statement) (catch Exception e statement)))
-				nil))))
-(.close connection)
 
 
 
