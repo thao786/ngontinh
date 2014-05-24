@@ -65,7 +65,7 @@
 
         (GET "/englishnovel/:path/:num" [path num] (r/render "resources/Chapter.html" {:path path :num num}))
 
-        ;(GET "/" [] (r/render "resources/util/theloaisidebar.html"))
+        (POST "/test" request (str request))
 
  
         (route/resources "/")
