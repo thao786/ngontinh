@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>Nơi Đọc Truyện Lý Tưởng Của Bạn - Trang Chủ | Trang Ngôn Tình</title>  
+    <title>Nơi Đọc Truyện Online Lý Tưởng Của Bạn | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  
@@ -51,7 +51,7 @@
         <div class="sideBarInside">
               <div class="panel-body">
                 <h3 class="heavyText blue">Đọc truyện</h3>
-                <p class="text-justify">Nơi đọc truyện trực tuyến lý tưởng. Truyện được nhiều độc giả quan tâm, danh sách truyện đầy đủ và hệ thống tìm kiếm giúp bạn đến với những trang sách dễ dàng hơn.<br><br>                      
+                <p class="text-justify">Nơi đọc truyện online lý tưởng. Truyện được nhiều độc giả quan tâm, danh sách truyện đầy đủ và hệ thống tìm kiếm giúp bạn đến với những trang sách dễ dàng hơn.<br><br>                      
                 Chúc bạn có những giây phút thoải mái và thư giãn với <b>trangngontinh.com</b> </p>
               </div>
             
@@ -80,7 +80,7 @@
       <br>
       <br>
 
-      <a href="trangngontinh/danhsachtruyen"><h3><span class="label label-warning trangchutitle">Danh Sách Truyện</h3></a>
+      <a href="%(str l/hostPath "listtruyen")"><h3><span class="label label-warning trangchutitle">Danh Sách Truyện</h3></a>
       <div class="row-fluid lightblue">
             <a href="trangngontinh/danhsachtruyen"><img src="%(l/paths :linkanh1)" class="thumbnail imgFloat" width="270" height="200"></a>
             <br>            
@@ -94,11 +94,13 @@
           <br>
           <br>
 
-       %(def doctruyen-all (truyen/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() limit 8"))
+       %{(def doctruyen-all (truyen/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() limit 8"))
+          nil
+        }
 
     
       <div class="row-fluid">    
-        <a href="#"><h3><span class="label label-warning trangchutitle">Đọc Truyện</h3></a>  
+        <a href="%(str l/hostPath "gridtruyen/pgnumber/1")"><h3><span class="label label-warning trangchutitle">Đọc Truyện</h3></a>  
         <div class="lightblue2">
           <div class="row-fluid">
 
@@ -142,7 +144,7 @@
 
 
       <div class="row-fluid">    
-        <a href="trangngontinh.com/englishnovel"><h3><span class="label label-warning trangchutitle">English Novel</h3></a>  
+        <a href="%(str l/hostPath "englishnovel/pgnumber/1")"><h3><span class="label label-warning trangchutitle">English Novel</h3></a>  
         <div class="lightorange2">
           <div class="row-fluid">
 
@@ -179,7 +181,7 @@
       <br>
       <br>
 
-      <a href="truyengontinh.com/dangtruyen"><h3><span class="label label-warning trangchutitle">Góc Sáng Tác</h3></a>
+      <a href="%(str l/hostPath "listtruyen")"><h3><span class="label label-warning trangchutitle">Góc Sáng Tác</h3></a>
       <div class="row-fluid lightblue">
             <a href="#"><img src="%(l/paths :linkanh3)" class="thumbnail img-responsive imgFloat" width="270" height="200"></a>
             <br>

@@ -55,11 +55,15 @@
 
         (GET "/gridtruyen/:path" [path] (r/render "resources/doctruyen.html" {:path path}))
 
-        (GET "/gridtruyen/:path/:num" [path num] (r/render "resources/Chapter.html" {:path path :num num}))
+        (GET "/gridtruyen/:path/:num" [path num] (r/render "resources/Chuong.html" {:path path :num num}))
 
         (GET "/advancedsearch" [] (r/render "resources/Tim_nang_cao.html"))
 
-        (GET "/englishnovel" [] (r/render "resources/EnglishNovel.html"))
+        (GET "/englishnovel/pgnumber/:index" [index] (r/render "resources/EnglishNovel.html" {:index index}))
+
+        (GET "/englishnovel/:path" [path] (r/render "resources/readstory.html" {:path path}))
+
+        (GET "/englishnovel/:path/:num" [path num] (r/render "resources/Chapter.html" {:path path :num num}))
 
         ;(GET "/" [] (r/render "resources/util/theloaisidebar.html"))
 

@@ -1,3 +1,8 @@
+%{(require '[ngontinh.libpath :as l]
+           '[sodahead.render :as r]
+           '[ngontinh.util.truyen :as truyen]
+)}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +13,9 @@
 
     nil}
 
-
 <meta charset="utf-8">
     <meta charset="utf-8">
-   <title>%(docchuong :titletruyen) - #%(docchuong :num): %(docchuong :title) | Trang Ngôn Tình</title>  
+    <title>%(docchuong :titletruyen) - Chương %(docchuong :num): %(docchuong :title) | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  
@@ -19,7 +23,7 @@
     <link rel="stylesheet" href="%(l/paths :bootstheme)">
     <link href="%(l/paths :docscss)" rel="stylesheet">  
     <link href="%(l/paths :bootsresponsive)" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="%(l/paths :stylesheet2)">
+    <link rel="stylesheet" type="text/css" href="%(l/paths :stylesheet)">
     <style>
         body{
           background-image:url("%(l/paths :bgr)"); 
@@ -32,17 +36,18 @@
                 url('%(l/paths :font3)') format('truetype'), 
                 url('%(l/paths :font4)#glyphicons_halflingsregular') format('svg');
         }
-
     </style>
 </head>
 
 <!--================================================== -->
-  <body class="maubody1">
+ <body class="maubody1">
 <div class="le">  
+
 
    %include {"resources/util/pageheader.html"}
 
-   <!--================================================== -->
+<!--================================================== -->
+
 
   <div class="row-fluid">   
 
@@ -50,23 +55,19 @@
     <div id="mautrang" class="whiteBgr">
 
 
-                <div class="row-fluid" id="bcrumb">
-
-                  <span  id="template1" style="display:none">
+                <div class="row-fluid">
                   <ol class="breadcrumb">
                       <li><a href="%l/hostPath">Home</a></li>
-                      <li><a href="%(str l/hostPath "englishnovel/pgnumber/1")">English Novel</a></li>
+                      <li><a href="%(str l/hostPath "gridtruyen/pgnumber/1")">Đọc Truyện</a></li>
                       <li><a href="%(docchuong :linktruyen)">%(docchuong :titletruyen)</a></li>
                       <li class="active">Chương %(docchuong :num)</li>
-                  </ol>
-                  </span>
-                  
+                    </ol>
                 </div>
                 <br>       
 
                 <form class="form-inline" style="float:right;">
                   <div class="btn-group form-group">
-                    <button type="button" id="doimau" class="btn btn-default btn-sm text-center">Change Background</button>
+                    <button type="button" id="doimau" class="btn btn-default btn-sm text-center">Đổi Màu Nền</button>
                     <button type="button" id="alignleft" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-align-left"></span></button>
                     <button type="button" id="aligncenter" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-align-center"></span></button>
                     <button type="button" id="alignright" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-align-right"></span></button>
@@ -75,7 +76,7 @@
                   </div>
                   <div class="form-group">  
                     <select class="form-control" id="coChu" style="height:30px;">
-                          <option> Size </option>
+                          <option> Cỡ Chữ </option>
                           <option value="18" id="muoitam">18 </option>
                           <option value="19" id="muoichin">19 </option>
                           <option value="20" id="haimuoi">20 </option>
@@ -84,39 +85,37 @@
                           <option value="23" id="haiba">23 </option>
                           <option value="24" id="haitu">24 </option>         
                           <option value="25" id="hailam">25 </option>     
-                          <option value="26" id="haisau">26 </option>                   
+                          <option value="26" id="haisau">26 </option>            
                     </select>                  
                   </div>
                 </form>
                 <br>
                 <hr>
 
-                
-    %{(def disable (if (= (compare (docchuong :num) 1) 0) "disabled" ""))
+  %{(def disable (if (= (compare (docchuong :num) 1) 0) "disabled" ""))
     (def disable2 (if (= (compare (docchuong :num) (docchuong :sochuong)) 0) "disabled" ""))
-    nil}
+  nil}
                 
       <div class="row-fluid">  
         <ul class="pager">
-          <a href="%(str (docchuong :linktruyen) "/" (- (docchuong :num) 1))"><button class="btn btn-success btn-sm truoc %disable">&larr; Back </button></a>
-          <li><button class="btn btn-warning btn-sm">Go To</button>
-              <input type="text" class="denchuong" id="denchuongmoi" placeholder="Chapter:"></li>
-          <a href="%(str (docchuong :linktruyen) "/" (+ (docchuong :num) 1))"><button class="btn btn-success btn-sm sau %disable2"> Next &rarr;</button></a>
+          <a href="%(str (docchuong :linktruyen) "/" (- (docchuong :num) 1))"><button class="btn btn-success btn-sm truoc %disable">&larr; Trước </button></a>
+          <li><button class="btn btn-warning btn-sm">Đến</button>
+              <input type="text" class="denchuong" id="denchuongmoi" placeholder="Chương:"></li>
+          <a href="%(str (docchuong :linktruyen) "/" (+ (docchuong :num) 1))"><button class="btn btn-success btn-sm sau %disable2"> Tiếp &rarr;</button></a>
         </ul>        
-      </div>    
-
+      </div>   
 
 
       %{ (def raw-content (slurp (str "resources/Truyen/" path "/" num ".txt")))
-      (def content (clojure.string/replace (clojure.string/trim (subs raw-content (.indexOf raw-content "\n"))) #"\n" "<br>"))
-      nil
-      }
+         (def content (clojure.string/replace (clojure.string/trim (subs raw-content (.indexOf raw-content "\n"))) #"\n" "<br>"))
+          nil
+       }
 
 
-      <div class="row-fluid" id="doctruyen">
-      <div id = "template2" style ="display:none">
+      <div class="row-fluid">
+
         <a href="%(docchuong :linktruyen)"><h2 class="orange text-center"><strong>%(docchuong :titletruyen)</strong></h2></a>
-        <h3 class="blue text-center">Chap %(docchuong :num): %(docchuong :title)</h3>
+        <h3 class="blue text-center">Chương %(docchuong :num): %(docchuong :title)</h3>
         <div class="span1">
         </div>
         
@@ -132,10 +131,10 @@
 
       <div class="row-fluid">  
         <ul class="pager">
-          <a href="%(str (docchuong :linktruyen) "/" (- (docchuong :num) 1))"><button class="btn btn-success btn-sm truoc %disable">&larr; Back</button></a>
-          <li><button class="btn btn-warning btn-sm">Go To</button>
-              <input type="text" class="denchuong" id="denchuongmoi" placeholder="Chapter:"></li>
-          <a href="%(str (docchuong :linktruyen) "/" (+ (docchuong :num) 1))"><button class="btn btn-success btn-sm sau %disable2"> Next &rarr;</button></a>
+          <a href="%(str (docchuong :linktruyen) "/" (- (docchuong :num) 1))"><button class="btn btn-success btn-sm truoc %disable">&larr; Trước</button></a>
+          <li><button class="btn btn-warning btn-sm">Đến</button>
+              <input type="text" class="denchuong" id="denchuongmoi" placeholder="Chương:"></li>
+          <a href="%(str (docchuong :linktruyen) "/" (+ (docchuong :num) 1))"><button class="btn btn-success btn-sm sau %disable2"> Tiếp &rarr;</button></a>
         </ul> 
       </div> 
         
@@ -192,7 +191,7 @@
     </div><!--span9-->
 
   
-    %(r/render "resources/util/tableofcontent.html" {:path path})
+    %(r/render "resources/util/muclucchuong.html" {:path path})
 
   </div><!--row-fluid-->
 </div><!--Container fluid-->
@@ -204,7 +203,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
    <!-- <script src="bootstrap.js"></script> 
     <script src="bootstrap-example/js/bootstrap-transition.js"></script>
     <script src="bootstrap-example/js/bootstrap-alert.js"></script>
@@ -215,13 +214,14 @@
     <script src="bootstrap-example/js/bootstrap-tooltip.js"></script>
     <script src="bootstrap-example/js/bootstrap-popover.js"></script>
     <script src="bootstrap-example/js/bootstrap-button.js"></script>-->
-    <script src="[[((data :lib-path) :bootcollapsejs)]]"></script>
+    <script src="%(l/paths :bootcollapsejs)"></script>
    <!--<script src="bootstrap-example/js/bootstrap-carousel.js"></script>
-    <script src="bootstrap-example/js/bootstrap-typeahead.js"></script>  -->  
+    <script src="bootstrap-example/js/bootstrap-typeahead.js"></script>  -->    
 
-    <script>  
+    
 
-   $("#doimau").click(function(){
+    <script>
+      $("#doimau").click(function(){
       $("#mautrang").toggleClass('whiteBgr blackBgr');
       $("body").toggleClass('maubody1 maubody2');  
     });
@@ -260,8 +260,7 @@
       $(".bodytruyen").css('text-align', 'justify');
     })
 
-    
-     $("#muoitam").click(function(){
+      $("#muoitam").click(function(){
           $(".bodytruyen").css('font-size', '18px');
     })
       $("#muoichin").click(function(){

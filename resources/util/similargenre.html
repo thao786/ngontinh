@@ -3,7 +3,7 @@
 )}
 
 <div class="hidden-xs">            
-            <h3><span class="label label-custom">Truyện Cùng Thể Loại</span></h3>
+            <h3><span class="label label-custom">Related Series</span></h3>
             <div class="row-fluid sideBar"><!--Side Bar-->                       
                   <div class="list-group">
 
@@ -15,13 +15,13 @@
                             <div class='span5'><img src='" linkanh "' class='thumbnail img-responsive imgFloatsidebar list-group-item-text' width='90' height='120'></div>
                             <div class='span7'>
                               <h4 class='list-group-item-heading'>" title "</h4>               
-                              <p class='blue small'>Tác Giả: " author "<br>
-                                                    Thể Loại: " genre "</p>
+                              <p class='blue small'>Author: " author "<br>
+                                                    Genre: " genre "</p>
                             </div>
                          </div>                                   
                         </a>"))
 
-                 (def truyencunggenre (truyen/getTruyen (str "select * from truyen where genre like '%" (params :genre) "%' limit 5 ")))
+                 (def truyencunggenre (truyen/getTruyen (str "select * from truyeneng where genre like '%" (params :genre) "%' limit 5 ")))
 
                         (apply str (for [x truyencunggenre] 
                                   (sidebar (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))

@@ -76,9 +76,8 @@
                 </div><br>                
                 
 
-                <div class="row-fluid"> 
-
-                    {(defn truyen1 [linktruyen linkanh title author genre state view]
+        %{
+            (defn truyen4 [linktruyen linkanh title author genre state view]
                      (str "<div class='span3 doctruyen'>
                         <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail' width='140' height='190'></a>
                         <a href='" linktruyen "'><h4><b>" title "</b></h4></a>
@@ -86,117 +85,20 @@
                                               <span class='small'>Thể Loại:</span> " genre "<br>
                                               <span class='small'>Tình Trạng:</span> " state "<br>     
                                               <span class='small'>Lượt Xem:</span> " view "</p>
-                           </div>"))
+                           </div> "))
+
+            (defn rowtruyen [a] (str "<div class='row-fluid'>"
+                        (apply str (for [x (subvec truyendisplay (* 4 a) (+ 4 (* 4 a)))] 
+                                  (truyen4 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view)))) "</div><br><br>"))
+
+            (def truyenquantity (count truyendisplay))
+            (def num-row (if (= (rem truyenquantity 4) 0) (quot truyenquantity 4) (+ (quot truyenquantity 4) 1)))
+
+            (apply str (for [a (range num-row)] (rowtruyen a)))             
+        }
 
 
-                (def truyenquantity (count truyendisplay))
-                (def row1 (if (> truyenquantity 4) (subvec truyendisplay 0 4) (subvec truyendisplay 0 truyenquantity)))
 
-                        (apply str (for [x row1] 
-                                  (truyen1 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view))))
-                        }
-                         
-                </div><!--a Row-->
-
-                <br> 
-
-                <div class="row-fluid"> 
-
-                  {(defn truyen2 [linktruyen linkanh title author genre state view]
-                     (str "<div class='span3 doctruyen'>
-                        <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail' width='140' height='190'></a>
-                        <a href='" linktruyen "'><h4><b>" title "</b></h4></a>
-                        <p class='text-muted'><span class='small'>Tác Giả:</span> " author "<br>
-                                              <span class='small'>Thể Loại:</span> " genre "<br>
-                                              <span class='small'>Tình Trạng:</span> " state "<br>     
-                                              <span class='small'>Lượt Xem:</span> " view "</p>
-                           </div>"))
-              (def offset (+ 0 offset))
-              (def row1 (subvec truyendisplay 0 (mod truyenquantity 4)))
-
-                        (apply str (for [x (params :truyen2)] 
-                                  (truyen2 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view))))
-                  }
-                    
-                </div><!--a Row-->
-
-                <br>
-
-                <div class="row-fluid"> 
-
-                  {
-              (defn truyen-row (
-                  (defn truyen-one [linktruyen linkanh title author genre state view]
-                     (str "<div class='span3 doctruyen'>
-                        <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail' width='140' height='190'></a>
-                        <a href='" linktruyen "'><h4><b>" title "</b></h4></a>
-                        <p class='text-muted'><span class='small'>Tác Giả:</span> " author "<br>
-                                              <span class='small'>Thể Loại:</span> " genre "<br>
-                                              <span class='small'>Tình Trạng:</span> " state "<br>     
-                                              <span class='small'>Lượt Xem:</span> " view "</p>
-                           </div>"))
-
-        (def truyenquantity (count truyendisplay))
-        (def num-truyen (if (> truyenquantity 0) (subvec truyendisplay 0 (mod truyenquantity 4)) (subvec truyendisplay 0 truyenquantity)))
-
-                  (apply str (for [x truyenmot] 
-                      (truyen-one (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view)))))
-
-        (def truyenquantity (count truyendisplay))
-        (def num-row (if (= (rem truyenquantity 4) 0) (quot truyenquantity 4) (+ (quot truyenquantity 4) 1)))
-        (def row-truyen1 (subvec truyendisplay 0 4))
-        (def row-truyen2 (subvec truyendisplay 4 4))
-        (def row-truyen3 (subvec truyendisplay 0 4))
-        (def row-truyen4 (subvec truyendisplay 0 4))
-        (def row-truyen5 (subvec truyendisplay 0 4))
-        (for [x (range num-row)] (let [index .indexOf ) (truyen-row))) 
-                                  
-                  }
-                    
-                </div><!--a Row-->
-
-                <br>        
-
-                <div class="row-fluid"> 
-
-                  %{(defn truyen4 [linktruyen linkanh title author genre state view]
-                     (str "<div class='span3 doctruyen'>
-                        <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail' width='140' height='190'></a>
-                        <a href='" linktruyen "'><h4><b>" title "</b></h4></a>
-                        <p class='text-muted'><span class='small'>Tác Giả:</span> " author "<br>
-                                              <span class='small'>Thể Loại:</span> " genre "<br>
-                                              <span class='small'>Tình Trạng:</span> " state "<br>     
-                                              <span class='small'>Lượt Xem:</span> " view "</p>
-                           </div>"))
-
-                        (apply str (for [x (params :truyen4)] 
-                                  (truyen4 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view))))
-                  }
-                    
-                </div><!--a Row-->
-
-                <br>
-
-                <div class="row-fluid"> 
-
-                  [[(defn truyen5 [linktruyen linkanh title author genre state view]
-                     (str "<div class='span3 doctruyen'>
-                        <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail' width='140' height='190'></a>
-                        <a href='" linktruyen "'><h4><b>" title "</b></h4></a>
-                        <p class='text-muted'><span class='small'>Tác Giả:</span> " author "<br>
-                                              <span class='small'>Thể Loại:</span> " genre "<br>
-                                              <span class='small'>Tình Trạng:</span> " state "<br>     
-                                              <span class='small'>Lượt Xem:</span> " view "</p>
-                           </div>"))
-
-                        (apply str (for [x (params :truyen5)] 
-                                  (truyen5 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view))))
-                  ]]
-                    
-                </div><!--a Row-->
-
-                <br>
-                <br>
 
         %{
         (def numberoftruyeninDB truyen/truyenCount)
@@ -208,13 +110,12 @@
                       <li><a href="%(str l/hostPath "gridtruyen/pgnumber/" 1)">&laquo;</a></li>
                      
 
-    %{(defn pagination [x]
-        (str "<li id='" x "'><a href='" l/hostPath "gridtruyen/pgnumber/"  x "'>" x "</a></li>")) 
+                %{(defn pagination [x]
+                    (str "<li class='" (let [active (if (= x pgIndex) "active" "")] active) "'><a href='" l/hostPath "gridtruyen/pgnumber/"  x "'>" x "</a></li>")) 
 
-
-        (apply str (for [x (range (max 1 (- pgIndex 4)) (min (+ 1 pagequantity) (+ 5 pgIndex)))] 
-                                       (pagination x)))
-    }
+                    (apply str (for [x (range (max 1 (- pgIndex 4)) (min (+ 1 pagequantity) (+ 5 pgIndex)))] 
+                                                   (pagination x)))
+                }
 
                       <li><a href="%(str l/hostPath "gridtruyen/pgnumber/" pagequantity)">&raquo;</a></li>
                     </ul>
@@ -268,8 +169,6 @@
   $(document).ready(function(){
     $(".list-group-item:even").addClass("list-group-item-warning");
     $(".list-group-item:odd").addClass("list-group-item-success");
-
-    %(str "$('#" pgIndex "').addClass('active');")
   });
 
 
