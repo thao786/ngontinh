@@ -65,8 +65,7 @@
 
         (GET "/englishnovel/:path/:num" [path num] (r/render "resources/Chapter.html" {:path path :num num}))
 
-        (POST "/test" request (str request))
-
+        (GET "/search" request (str request))
  
         (route/resources "/")
         (route/not-found "Not Found"))
