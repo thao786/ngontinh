@@ -21,7 +21,7 @@
 		(zipmap val-ar key-ar)))
 
 (defn woo [valu]
-	(let [vallue (get m valu)]
+	(let [vallue (get m (.trim valu))]
 		(str " " vallue " ")))
 
 
@@ -76,19 +76,15 @@
 
 
 
-
+;get new genres str
 (doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
 	(let 	[path 		(str (.getPath folder) "/Info.txt")
 			mapm 	(load-string (slurp path))
 			genre-str	(mapm "genre")
-			]
-		(if (nil? title)
-			(prn path)
-			nil)))
-
-
-
-
+			genre-vec	(.split genre-str ",")
+			genres (apply str (map woo genre-vec))
+			new-map 	(assoc mapm "genre" genres)]
+		(spit path new-map)))
 
 
 
