@@ -1,1 +1,1 @@
-{"author" "Vô Tụ Long Hương", "chap" 14, "translator" nil, "genre" "Cổ Đại, Xuyên không, Hài, Sủng, HE", "title" "Bùn Loãng Cũng Có Thể Trát Tường", "source" "", "state" 1, "alternate" nil, "editor" nil}
+{"author" "Vô Tụ Long Hương", "chap" 14, "translator" nil, "genre" "Cổ Đại, Xuyên không, Hài, Sủng, HE", "title" "Nguyệt Xuất Kinh Sơn Điểu", "source" "", "state" 1, "alternate" nil, "editor" nil}
