@@ -6,8 +6,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  %(def keyword (params :tukhoa))
     <meta charset="utf-8">
-    <title>Kết Quả Tìm Kiếm từ khóa "%(params :tukhoa)" | Trang Ngôn Tình</title>  
+    <title>Kết Quả Tìm Kiếm từ khóa "%keyword" | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  
@@ -69,19 +70,21 @@
                 <br>               
                       <div class="form-inline well well-sm">
                         <label class="cachnhaura">Tên Truyện</label>
-                        <select class="form-control cachnhaura">
+                      <form action="search" method="get">
+                        <select name ="contain" class="form-control cachnhaura">
                           <option>chứa từ</option>
                           <option>bắt đầu bằng</option>
                           <option>kết thúc bằng</option>                      
                         </select>
-                        <input type="text" class="form-control cachnhaura">
-                        <button href ="%(params :tim)" type="submit" class="btn btn-default cachnhaura">Tìm</button>  
+                        <input type="text" name="input" class="form-control cachnhaura">
+                        <button type="submit" class="btn btn-default cachnhaura">Tìm</button> 
+                      </form> 
                       </div>                    
 
                 <br>
                 <hr>                
 
-                <h3 class="text-muted" id="tukhoa">Tìm kiếm với từ khóa: <i class="green">%(params :tukhoa)</i>
+                <h3 class="text-muted" id="tukhoa">Tìm kiếm với từ khóa: <i class="green">%keyword</i>
                                                               
                 </h3>      
                 <br>
@@ -129,7 +132,10 @@
                   <td>" view "</td>
                 </tr>"))
 
-                        (apply str (for [x (params :listtruyen)] 
+
+              (def truyenresult (truyen/getTruyen (str "select * from truyen where title like '%" %keyword "%' or alternate like '%" %keyword "%' or author like '%" %keyword "%' or path like '%" %keyword "%' or genre like '%" %keyword "%' or source like '%" %keyword "%' or editor like '%" %keyword "%' or translator like '%" %keyword "%'"))) 
+
+                        (apply str (for [x truyenresult] 
                             (listtruyen (x :linktruyen) (x :linkanh) (x :title) (x :alternate) (x :author) (x :genre) (x :shortoverview) (x :chap) (x :view) (x :state) (x :searchauthor) (x :searchgenre))))
           } 
 
