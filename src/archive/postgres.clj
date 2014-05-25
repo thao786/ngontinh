@@ -55,7 +55,6 @@
 							(.setTimestamp 11 stamp)
 							(.setInt 12 view))]
 		(.execute statement)))
-
 (.close connection)
 
 
@@ -64,28 +63,20 @@
 
 
 
-;get new genres str
-(doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
-	(let 	[path 		(str (.getPath folder) "/Info.txt")
-			mapm 	(load-string (slurp path))
-			genre-str	(mapm "genre")
-			genre-vec	(.split genre-str ",")
-			genres (apply str (map woo genre-vec))
-			new-map 	(assoc mapm "genre" genres)]
-		(spit path new-map)))
 
 
 
 
 
 
-;conver json to map
-(doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
-	(let 	[path 		(str (.getPath folder) "/Info.txt")
-			text 	(slurp path)]
-		(if (.contains text ":")
-			(let [mapm (parse-string text)]
-				(spit path mapm))
-			nil)))
+
+
+
+
+
+
+
+
+
 
 

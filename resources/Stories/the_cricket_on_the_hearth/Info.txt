@@ -1,0 +1,7 @@
+{
+"title" "The Cricket on the Hearth" 
+"author" "Charles Dickens" 
+"genre" "Classical" 
+"state" 1 
+"source" "literature.org" 
+}

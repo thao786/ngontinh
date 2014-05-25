@@ -1,0 +1,7 @@
+{
+"title" "The Professor" 
+"author" "Charlotte Bronte" 
+"genre" "Classical" 
+"state" 1 
+"source" "literature.org" 
+}

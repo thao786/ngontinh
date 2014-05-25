@@ -1,0 +1,7 @@
+{
+"title" "The Iron Heel" 
+"author" "Jack London" 
+"genre" "Classical" 
+"state" 1 
+"source" "literature.org" 
+}
