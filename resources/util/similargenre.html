@@ -21,7 +21,7 @@
                          </div>                                   
                         </a>"))
 
-                 (def truyencunggenre (truyen/getTruyen (str "select * from truyeneng where genre like '%" (params :genre) "%' limit 5 ")))
+                 (def truyencunggenre (truyen/getTruyen2 (str "select * from truyeneng where genre like '%" (params :genre) "%' limit 5 ")))
 
                         (apply str (for [x truyencunggenre] 
                                   (sidebar (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))

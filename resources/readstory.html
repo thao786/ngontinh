@@ -1,9 +1,15 @@
+%{(require '[ngontinh.libpath :as l]
+           '[sodahead.render :as r]
+           '[ngontinh.util.truyen :as truyen]
+)}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
 %{ (def path (params :path))
-   (def doctruyen-raw (peek (truyen/getTruyen (str "SELECT * FROM truyeneng where path ='" path "'"))))
+   (def doctruyen-raw (peek (truyen/getTruyen2 (str "SELECT * FROM truyeneng where path ='" path "'"))))
    (def doctruyen (assoc doctruyen-raw :newstate (if (= (compare (doctruyen-raw :state) 1) 0) "Full" "Ongoing")))
 
    nil}
@@ -81,14 +87,12 @@
               <div class="span6">
                 <a href="%(doctruyen :linktruyen)"><h2 class="green"><b>%(doctruyen :title)</b></h2></a>
                 <br>
-                <p><i>Alternate Name</i>:  %(doctruyen :alternate)</p>
                 <p><i>Author</i>:  <a href="[[(doctruyen :searchauthor)]]">%(doctruyen :author)</a></p>
                 <p><i>Genre</i>:  <a href="[[(doctruyen :searchgenre)]]">%(doctruyen :genre)</a></p>
                 <p><i>Status</i>:  <a href="[[(doctruyen :searchstate)]]">%(doctruyen :newstate)</a></p>
-                <div class="minor-info">Source: %(doctruyen :source)<br>
-                                        Editor/Translator: %(doctruyen :person)<br>
-                                        Views: %(doctruyen :view)<br>
-                                        Date Added: %(doctruyen :date_added)</div>
+                <p><i>Source: %(doctruyen :source)</p>
+                <p><i>Views: %(doctruyen :view)</p>
+                <p><i>Date Added: %(doctruyen :date_added)</p>
               </div>
             </div>         
             

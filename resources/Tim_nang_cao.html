@@ -63,15 +63,16 @@
 
                 <h4 class="highlight white">Tìm Kiếm Nâng Cao</h4> 
 
-                <br>               
+                <br>
+                <form action="search" method="get">               
                       <div class="form-inline well well-sm">
                         <label class="cachnhaura">Tên Truyện</label>
-                        <select class="form-control cachnhaura">
+                        <select class="form-control cachnhaura" name="chuatu">
                           <option>chứa từ</option>
                           <option>bắt đầu bằng</option>
                           <option>kết thúc bằng</option>                      
                         </select>
-                        <input type="text" class="form-control cachnhaura">
+                        <input type="text" class="form-control cachnhaura" name="input">
                         <button href ="[[((param :tim) :timthuong)]]" type="submit" class="btn btn-default cachnhaura">Tìm</button>  
                       </div>                       
 
@@ -80,12 +81,12 @@
                       <div class="row-fluid">
                         <div class="span2"><label>Tác Giả</label></div>
                         <div class="span8 form-inline">
-                            <select class="form-control cachnhaura">
+                            <select class="form-control cachnhaura" name="filterauthor">
                               <option>chứa từ</option>
                               <option>bắt đầu bằng</option>
                               <option>kết thúc bằng</option>                      
                             </select>
-                          <input type="text" class="form-control cachnhaura">                          
+                          <input type="text" class="form-control cachnhaura" name="author">                          
                         </div> 
                       </div>  
 
@@ -94,12 +95,12 @@
                       <div class="row-fluid">
                         <div class="span2"><label>Dịch giả/ Editor</label></div>
                         <div class="span8 form-inline">
-                            <select class="form-control cachnhaura">
+                            <select class="form-control cachnhaura" name="filtertrans">
                               <option>chứa từ</option>
                               <option>bắt đầu bằng</option>
                               <option>kết thúc bằng</option>                      
                             </select>
-                          <input type="text" class="form-control cachnhaura">                          
+                          <input type="text" class="form-control cachnhaura" name="trans">                          
                         </div> 
                       </div>      
 
@@ -334,37 +335,16 @@
                         <br>
 
                         <div class="row-fluid">
-                          <div class="span2"><label>Đánh Giá </label></div>
-                          <div class="span8 form-inline">
-                            <select class="form-control cachnhaura">
-                              <option>bằng</option>
-                              <option>ít hơn</option>
-                              <option>nhiều hơn</option>                      
-                            </select>
-                            <select class="form-control cachnhaura">
-                              <option>sao cũng được</option>
-                              <option>1 sao</option>
-                              <option>2 sao</option> 
-                              <option>3 sao</option> 
-                              <option>4 sao</option> 
-                              <option>5 sao</option>                      
-                            </select>                          
-                          </div> 
-                        </div>   
-
-                        <br>
-
-                        <div class="row-fluid">
                           <div class="span2"><label>Tình Trạng</label></div>
                           <div class="span8 form-inline">
                               <div class="checkbox cachnhaura">
-                                  <label><input type="checkbox" id="optionscheckboxs1" value="1"> Hoàn Thành</label>
+                                  <label><input type="checkbox" name ="val1" value="1"> Hoàn Thành</label>
                               </div>
                               <div class="checkbox cachnhaura">
-                                  <label><input type="checkbox" id="optionscheckboxs1" value="1"> Chưa Hoàn</label>
+                                  <label><input type="checkbox" name ="val2" value="1"> Chưa Hoàn</label>
                               </div>
                               <div class="checkbox cachnhaura">
-                                  <label><input type="checkbox" id="optionscheckboxs1" value="1"> Cả Hai</label>
+                                  <label><input type="checkbox" name ="val3" value="1"> Cả Hai</label>
                               </div>
                           </div> 
                         </div> 
@@ -373,14 +353,16 @@
                         <br>
 
                         <div class="form-inline text-center">
-                          <button href="[[((param :tim) :timnangcao)]]" type="button" class="btn btn-success">Tìm nâng cao</button>
+                          <button type="button" class="btn btn-success">Tìm nâng cao</button>
                           <button href="#" type="button" class="btn btn-default">Làm Lại</button>
-                        </div>                    
+                        </div>
+                  </form>                    
 
 
 
                 </div><!--row-fluid-->   
-                    
+                <br>
+                <br> 
 
             </div><!--whiteBgr-->  
               

@@ -21,6 +21,24 @@
 			addLink)))
 
 
+(defn getTruyen2 [query]
+	(vec (let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
+															"postgres" 
+															"fall2010")
+				mostRead 	(let [	stmt 	(.createStatement connection)
+								 	rs 		(.executeQuery stmt query)]
+								(vec (resultset-seq rs)))
+				addLink		(for [truyen mostRead]
+								(let 	[name 			(truyen :path)									
+										overview 		(slurp (str "resources/Stories/" name "/Overview.txt"))
+										linkanh 		(str lib/hostPath "imageeng/" name)
+										linktruyen 		(str lib/hostPath "englishnovel/" name) 
+										shortoverview 	(clojure.string/replace (clojure.string/trim (subs overview 12 (min 300 (count overview)))) #"\n" "<br>")	]
+									(assoc truyen :shortoverview shortoverview :overview overview :linkanh linkanh :linktruyen linktruyen)))
+				ddd 		(.close connection)]
+			addLink)))
+
+
 (defn getChap [query]
 	(vec (let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
 															"postgres" 

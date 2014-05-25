@@ -21,7 +21,7 @@
                          </div>                                   
                         </a>"))
 
-                        (def truyenrandom (truyen/getTruyen "SELECT * FROM truyeneng ORDER BY view desc limit 5"))
+                        (def truyenrandom (truyen/getTruyen2 "SELECT * FROM truyeneng ORDER BY view desc limit 5"))
 
                         (apply str (for [x truyenrandom] 
                                   (sidebar (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))
