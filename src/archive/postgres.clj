@@ -29,7 +29,9 @@
 
 
 ;inject in database
-(def connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/test" "postgres" "fall2010"))
+(def connection 
+	(DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
+		"postgres" "fall2010"))
 (def stamp 	(Timestamp. (.getTime (java.util.Date.))))
 (doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
 	(let 	[path 		(str (.getPath folder) "/Info.txt")

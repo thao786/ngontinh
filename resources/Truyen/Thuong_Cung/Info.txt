@@ -1,1 +1,1 @@
-{"author":"Kiều Gia Tiểu Kiều","chap":48,"translator":null,"genre":"Cổ Đại, Cung đấu, Ngược, HE","title":"Thượng Cung","source":"lachoacung.wordpress.com","state":1,"alternate":null,"editor":"Shin, Myumyu"}
+{"author" "Kiều Gia Tiểu Kiều", "chap" 48, "translator" nil, "genre" "Cổ Đại, Cung đấu, Ngược, HE", "title" "Thượng Cung", "source" "lachoacung.wordpress.com", "state" 1, "alternate" nil, "editor" "Shin, Myumyu"}
