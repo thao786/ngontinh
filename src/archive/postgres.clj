@@ -33,11 +33,11 @@
 	(DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
 		"postgres" "fall2010"))
 (def stamp 	(Timestamp. (.getTime (java.util.Date.))))
-(doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
+(doseq [folder (.listFiles (File. "/home/thao/Stories"))] 
 	(let 	[path 		(str (.getPath folder) "/Info.txt")
 			colMap 		(load-string (slurp path))
 			sqlStr  	(.prepareStatement connection (str 
-							"INSERT INTO truyen (title, alternate, path, author, state, 
+							"INSERT INTO truyeneng (title, alternate, path, author, state, 
 								genre, source, editor, translator, chap, date_Added, 
 								view) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"))
 			view		(+ 1000 (rand-int 9000))
@@ -62,14 +62,33 @@
 
 
 
+;add chapters
+(def connection 
+	(DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
+		"postgres" "fall2010"))
+(def stamp 	(Timestamp. (.getTime (java.util.Date.))))
 
+(time (doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
+	(doseq [file (.listFiles folder)] 
+		(if (.matches (.getName file) "[0-9]+.txt")
+			(let 	
+				[text 	(slurp (.getPath file))
+				pos 	(.indexOf text "\n")
+				title 	(subs text 0 pos)
+				chapnum-str 	(re-find #"[0-9]+" (.getName file))
+				chapnum 	(Integer/parseInt chapnum-str)
+				sqlStr  	(.prepareStatement connection (str 
+								"INSERT INTO chap (title, num, truyen, date_added) 
+								VALUES (?, ?, ?, ?)"))
+				statement 	(doto sqlStr 
+								(.setString 1 title)
+								(.setInt 2 chapnum)
+								(.setString 3 (.getName folder))
+								(.setTimestamp 4 stamp))]
+				(.execute statement))
+			nil))))
 
-
-
-
-
-
-
+(.close connection)
 
 
 
