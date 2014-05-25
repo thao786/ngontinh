@@ -1,5 +1,6 @@
 (ns ngontinh.util.truyen
-	(:require 	[ngontinh.libpath :as lib]))
+	(:require 	[ngontinh.libpath :as lib]
+				[clojure.java.io :as io]))
 
 (import 'java.sql.DriverManager)
 
@@ -16,7 +17,7 @@
 								(vec (resultset-seq rs)))
 				addLink		(for [truyen mostRead]
 								(let 	[name 			(truyen :path)									
-										overview 		(slurp (str "resources/Truyen/" name "/Overview.txt"))
+										overview 		(slurp (io/resource (str "Truyen/" name "/Overview.txt")))
 										linkanh 		(str lib/hostPath "image/" name)
 										linktruyen 		(str lib/hostPath "gridtruyen/" name) 
 										shortoverview 	(clojure.string/replace (clojure.string/trim (subs overview 12 (min 300 (count overview)))) #"\n" "<br>")	]
@@ -34,7 +35,7 @@
 								(vec (resultset-seq rs)))
 				addLink		(for [truyen mostRead]
 								(let 	[name 			(truyen :path)									
-										overview 		(slurp (str "resources/Stories/" name "/Overview.txt"))
+										overview 		(slurp (io/resource (str "Stories/" name "/Overview.txt")))
 										linkanh 		(str lib/hostPath "imageeng/" name)
 										linktruyen 		(str lib/hostPath "englishnovel/" name) 
 										shortoverview 	(clojure.string/replace (clojure.string/trim (subs overview 12 (min 300 (count overview)))) #"\n" "<br>")	]
@@ -77,7 +78,6 @@
 									(assoc chap :linkchap linkchap :linktruyen linktruyen)))
 				ddd 		(.close connection)]
 			addLink)))
-
 
 
 (defn getGenreCount [genre]
