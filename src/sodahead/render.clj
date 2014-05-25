@@ -52,7 +52,7 @@
 	([file-path]
 		(render-file file-path {}))
 	([file-path params]
-		(render-text (slurp file-path) params)))
+		(render-text (slurp (io/resource file-path)) params)))
 
 (defn render-key 
 	([rkey] (render-key rkey {}))
