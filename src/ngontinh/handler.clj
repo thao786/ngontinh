@@ -6,8 +6,11 @@
                   [sodahead.render :as r]  
                   [compojure.route :as route]
                   [clojure.java.io :as io]))
+
 ;lein ring uberwar
 ;username="tomcat" password="s3cret"
+;nohup java -jar start.jar jetty.port=3000 &
+;kill 3618
 
 (defroutes app-routes
         (HEAD "/" [] "")

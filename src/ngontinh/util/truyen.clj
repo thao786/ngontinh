@@ -3,6 +3,10 @@
 
 (import 'java.sql.DriverManager)
 
+(def connection-str "jdbc:postgresql://23.239.1.206:5432/ngontinh")
+(def username "postgres")
+(def password "fall2010")
+
 (defn getTruyen [query]
 	(vec (let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
 															"postgres" 
