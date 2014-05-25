@@ -1,1 +1,1 @@
-{"author":"Hồ Điệp SEBA","chap":32,"translator":null,"genre":"Cổ Đại, Nữ tôn, Cung Đình, Chiến Trường, HE","title":"Quyện tầm phương","source":null,"state":1,"alternate":null,"editor":null}
+{"author" "Hồ Điệp SEBA", "chap" 32, "translator" nil, "genre" "Cổ Đại, Nữ tôn, Cung Đình, Chiến Trường, HE", "title" "Quyện tầm phương", "source" nil, "state" 1, "alternate" nil, "editor" nil}

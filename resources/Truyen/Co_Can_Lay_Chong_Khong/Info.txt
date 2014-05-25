@@ -1,1 +1,1 @@
-{"author":"Ức Cẩm","chap":21,"translator":null,"genre":"Hiện Đại, Hài, HE","title":"Có cần lấy chồng không","source":"","state":1,"alternate":null,"editor":null}
+{"author" "Ức Cẩm", "chap" 21, "translator" nil, "genre" "Hiện Đại, Hài, HE", "title" "Có cần lấy chồng không", "source" "", "state" 1, "alternate" nil, "editor" nil}

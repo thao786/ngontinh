@@ -1,0 +1,6 @@
+{
+"title" "Cat and mouse in partnership" 
+"author" "Brothers Grimm" 
+"genre" "Fairy Tales" 
+"state" 1 
+}

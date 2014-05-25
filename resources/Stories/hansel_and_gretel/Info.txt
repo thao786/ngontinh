@@ -1,0 +1,6 @@
+{
+"title" "Hansel and Gretel" 
+"author" "Brothers Grimm" 
+"genre" "Fairy Tales" 
+"state" 1 
+}
