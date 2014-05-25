@@ -7,6 +7,7 @@
                   [compojure.route :as route]
                   [clojure.java.io :as io]))
 ;lein ring uberwar
+;username="tomcat" password="s3cret"
 
 (defroutes app-routes
         (HEAD "/" [] "")
