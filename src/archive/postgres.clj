@@ -33,29 +33,15 @@
 (def stamp 	(Timestamp. (.getTime (java.util.Date.))))
 (doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
 	(let 	[path 		(str (.getPath folder) "/Info.txt")
-			oldContent 	(slurp path)
-			content 	(clojure.string/replace oldContent #"\r" "")
-			infoArray 	(.split content "\n")		
-			genre-str 	(try (nth infoArray 4) (catch Exception e ""))
-			
-			genre-arr 	(.split genre-str "[ ]*,[ ]*")
-			genres 		(apply str (map woo genre-arr))
-
-			colMap 		{"title" (nth infoArray 0)
-						"alternate" (try (nth infoArray 1) (catch Exception e ""))
-						"author" (try (nth infoArray 2) (catch Exception e ""))
-						"state" (if (.contains (nth infoArray 3) "1") 1 0)
-						"genre" genres
-						"source" (try (nth infoArray 5) (catch Exception e ""))
-						"editor" (try (nth infoArray 6) (catch Exception e ""))
-						"translator" (try (nth infoArray 7) (catch Exception e ""))}
+			colMap 		(load-string (slurp path))
 			sqlStr  	(.prepareStatement connection (str 
 							"INSERT INTO truyen (title, alternate, path, author, state, 
-								genre, source, editor, translator, chap, date_Added, view) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"))
+								genre, source, editor, translator, chap, date_Added, 
+								view) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"))
 			view		(+ 1000 (rand-int 9000))
 			statement 	(doto sqlStr 
-							(.setString 1 "wrong")
-							(.setString 2 "") 
+							(.setString 1 (colMap "title"))
+							(.setString 2 (colMap "alternate"))
 							(.setString 3 (.getName folder)) 
 							(.setString 4 (colMap "author"))
 							(.setInt 5 (colMap "state"))
@@ -91,7 +77,13 @@
 
 
 
-
-
+;conver json to map
+(doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
+	(let 	[path 		(str (.getPath folder) "/Info.txt")
+			text 	(slurp path)]
+		(if (.contains text ":")
+			(let [mapm (parse-string text)]
+				(spit path mapm))
+			nil)))
 
 
