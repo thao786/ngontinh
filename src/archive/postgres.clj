@@ -68,7 +68,7 @@
 		"postgres" "fall2010"))
 (def stamp 	(Timestamp. (.getTime (java.util.Date.))))
 
-(time (doseq [folder (.listFiles (File. "/home/thao/Truyen"))] 
+(time (doseq [folder (.listFiles (File. "/home/thao/Stories"))] 
 	(doseq [file (.listFiles folder)] 
 		(if (.matches (.getName file) "[0-9]+.txt")
 			(let 	
@@ -78,7 +78,7 @@
 				chapnum-str 	(re-find #"[0-9]+" (.getName file))
 				chapnum 	(Integer/parseInt chapnum-str)
 				sqlStr  	(.prepareStatement connection (str 
-								"INSERT INTO chap (title, num, truyen, date_added) 
+								"INSERT INTO chapeng (title, num, truyen, date_added) 
 								VALUES (?, ?, ?, ?)"))
 				statement 	(doto sqlStr 
 								(.setString 1 title)

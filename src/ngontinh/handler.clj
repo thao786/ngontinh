@@ -7,6 +7,7 @@
                   [compojure.route :as route]
                   [clojure.java.io :as io]))
 ;lein ring uberwar
+;username="tomcat" password="s3cret"
 
 (defroutes app-routes
         (HEAD "/" [] "")
@@ -49,26 +50,36 @@
  
         (GET "/" [] (r/render "resources/HomePage.html"))
 
-        (GET "/listtruyen" [] (r/render "resources/listtruyen.html"))
+        (GET "/listtruyen" [] 
+            (r/render "resources/listtruyen.html"))
 
-        (GET "/gridtruyen/pgnumber/:index" [index] (r/render "resources/gridtruyen.html" {:index index}))
+        (GET "/gridtruyen/pgnumber/:index" [index] 
+            (r/render "resources/gridtruyen.html" {:index index}))
 
-        (GET "/listtruyen/:genre/:index" [genre index] (r/render "resources/theloai.html" {:genre genre :index index}))
+        (GET "/listtruyen/:genre/:index" [genre index] 
+            (r/render "resources/theloai.html" {:genre genre :index index}))
 
-        (GET "/gridtruyen/:path" [path] (r/render "resources/doctruyen.html" {:path path}))
+        (GET "/gridtruyen/:path" [path] 
+            (r/render "resources/doctruyen.html" {:path path}))
 
-        (GET "/gridtruyen/:path/:num" [path num] (r/render "resources/Chuong.html" {:path path :num num}))
+        (GET "/gridtruyen/:path/:num" [path num] 
+            (r/render "resources/Chuong.html" {:path path :num num}))
 
-        (GET "/advancedsearch" [] (r/render "resources/Tim_nang_cao.html"))
+        (GET "/advancedsearch" [] 
+            (r/render "resources/Tim_nang_cao.html"))
 
-        (GET "/englishnovel/pgnumber/:index" [index] (r/render "resources/EnglishNovel.html" {:index index}))
+        (GET "/englishnovel/pgnumber/:index" [index] 
+            (r/render "resources/EnglishNovel.html" {:index index}))
 
-        (GET "/englishnovel/:path" [path] (r/render "resources/readstory.html" {:path path}))
+        (GET "/englishnovel/:path" [path] 
+            (r/render "resources/readstory.html" {:path path}))
 
-        (GET "/englishnovel/:path/:num" [path num] (r/render "resources/Chapter.html" {:path path :num num}))
+        (GET "/englishnovel/:path/:num" [path num] 
+            (r/render "resources/Chapter.html" {:path path :num num}))
 
-        (GET "/search" request (r/render "resources/KetQuaTimKiem.html" 
-            {:tukhoa ((request :query-params) "term")}))
+        (GET "/search" request 
+            (r/render "resources/KetQuaTimKiem.html" 
+                {:tukhoa ((request :query-params) "term")}))
  
         (route/resources "/")
         (route/not-found "Not Found"))
