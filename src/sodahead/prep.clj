@@ -15,7 +15,7 @@
 			:else
 			(let 	[name 	(subs file-name-within-quote 1 
 							(dec (count file-name-within-quote)))
-					content 	(try (slurp name) (catch Exception e nil))]
+					content 	(try (slurp (io/resource name)) (catch Exception e nil))]
 				(if content 
 					content nil)))))
 
