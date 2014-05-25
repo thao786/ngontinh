@@ -8,7 +8,7 @@
 <head>
 %{(def pgIndex (Integer/parseInt (params :index)))
   (def truyendisplay (truyen/getTruyen (str "SELECT * FROM truyen limit 20 offset " (- (* 20 pgIndex) 20) "")))
-
+  (def truyenquantity (count truyendisplay))
   nil
 }
 
@@ -90,7 +90,7 @@
                         (apply str (for [x (subvec truyendisplay (* 4 a) (min (+ 4 (* 4 a)) truyenquantity))] 
                                   (truyen4 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view)))) "</div><br>"))
 
-            (def truyenquantity (count truyendisplay))
+            
             (def num-row (if (= (rem truyenquantity 4) 0) (quot truyenquantity 4) (+ (quot truyenquantity 4) 1)))
 
             (apply str (for [a (range num-row)] (rowtruyen a)))             
