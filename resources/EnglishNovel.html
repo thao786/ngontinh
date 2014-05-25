@@ -8,7 +8,7 @@
 <head>
 
   %{(def pgIndex (Integer/parseInt (params :index)))
-  (def truyendisplay (truyen/getTruyen (str "SELECT * FROM truyeneng limit 20 offset " (- (* 20 pgIndex) 20) "")))
+  (def truyendisplay (truyen/getTruyen2 (str "SELECT * FROM truyeneng limit 20 offset " (- (* 20 pgIndex) 20) "")))
 
   nil
 }
