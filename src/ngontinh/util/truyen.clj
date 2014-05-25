@@ -20,7 +20,9 @@
 										overview 		(slurp (io/resource (str "Truyen/" name "/Overview.txt")))
 										linkanh 		(str lib/hostPath "image/" name)
 										linktruyen 		(str lib/hostPath "gridtruyen/" name) 
-										shortoverview 	(clojure.string/replace (clojure.string/trim (subs overview 12 (min 300 (count overview)))) #"\n" "<br>")	]
+										shortoverview 	(clojure.string/replace 
+															(clojure.string/trim 
+																(subs overview 12 (min 300 (count overview)))) #"\n" "<br>")]
 									(assoc truyen :shortoverview shortoverview :overview overview :linkanh linkanh :linktruyen linktruyen)))
 				ddd 		(.close connection)]
 			addLink)))
