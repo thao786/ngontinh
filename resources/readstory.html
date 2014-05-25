@@ -46,7 +46,7 @@
    <body class="maubody1">
 <div class="le">  
 
-   %include {"resources/util/pageheader.html"}
+   %include {"util/pageheader.html"}
 
 
   <!--================================================== -->
@@ -56,13 +56,13 @@
       <div class="span3">     
 
 
-            %(r/render "resources/util/similargenre.html" {:genre (doctruyen :genre)})
+            %(r/render "util/similargenre.html" {:genre (doctruyen :genre)})
 
 
             <br>
             <br>
 
-            %(r/render "resources/util/sameauthor.html" {:author (doctruyen :author)})
+            %(r/render "util/sameauthor.html" {:author (doctruyen :author)})
             
         </div>
 
@@ -122,7 +122,7 @@
 
             <br>
 
-             %{ (def overview (slurp (str "resources/Stories/" (doctruyen :path) "/Overview.txt")))
+             %{ (def overview (slurp (io/resource (str "Stories/" (doctruyen :path) "/Overview.txt")))
                (def raw-first-overview (subs overview 12 (min 300 (count overview))))
                (def first-overview (clojure.string/replace (clojure.string/triml raw-first-overview) #"\n" "<br>"))
                (def remain-overview (clojure.string/replace (subs overview (+ 12 (count raw-first-overview))) #"\n" "<br>"))
@@ -236,7 +236,7 @@
 </div><!--le-->
 
 
-%include {"resources/util/footer.html"}
+%include {"util/footer.html"}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

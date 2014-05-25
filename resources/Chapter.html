@@ -47,7 +47,7 @@
   <body class="maubody1">
 <div class="le">  
 
-   %include {"resources/util/pageheader.html"}
+   %include {"util/pageheader.html"}
 
    <!--================================================== -->
 
@@ -111,7 +111,7 @@
 
 
 
-      %{ (def raw-content (slurp (str "resources/Stories/" path "/" num ".txt")))
+      %{ (def raw-content (slurp (io/resource (str "Stories/" path "/" num ".txt"))))
       (def content (clojure.string/replace (clojure.string/trim (subs raw-content (.indexOf raw-content "\n"))) #"\n" "<br>"))
       nil
       }
@@ -196,14 +196,14 @@
     </div><!--span9-->
 
   
-    %(r/render "resources/util/tableofcontent.html" {:path path})
+    %(r/render "util/tableofcontent.html" {:path path})
 
   </div><!--row-fluid-->
 </div><!--Container fluid-->
  
 </div><!--le-->
 
-%include {"resources/util/footer.html"}
+%include {"util/footer.html"}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
