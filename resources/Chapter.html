@@ -10,14 +10,14 @@
 
   %{(def path (params :path))
     (def num (params :num))
-    (def docchuong (peek (truyen/getChap (str "SELECT chap.truyen, chap.title, chap.date_added, chap.num, truyen.chap as sochuong, truyen.title as titletruyen FROM chap INNER JOIN truyen ON chap.truyen=truyen.path where truyen ='" path "' and num =" num ""))))
+    (def docchuong (peek (truyen/getChap2 (str "SELECT chapeng.truyen, chapeng.title, chapeng.date_added, chapeng.num, truyeneng.chap as sochuong, truyeneng.title as titletruyen FROM chapeng INNER JOIN truyeneng ON chapeng.truyen=truyeneng.path where truyen ='" path "' and num =" num ""))))
 
     nil}
 
 
 <meta charset="utf-8">
     <meta charset="utf-8">
-   <title>%(docchuong :titletruyen) - #%(docchuong :num): %(docchuong :title) | Trang Ngôn Tình</title>  
+   <title>%(docchuong :titletruyen) - Chap %(docchuong :num): %(docchuong :title) | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->  
@@ -54,25 +54,22 @@
 
     <div class="span9">
     <div id="mautrang" class="whiteBgr">
+                     
 
-
-                <div class="row-fluid" id="bcrumb">
-
-                  <span  id="template1" style="display:none">
+                <div class="row-fluid">
                   <ol class="breadcrumb">
                       <li><a href="%l/hostPath">Home</a></li>
                       <li><a href="%(str l/hostPath "englishnovel/pgnumber/1")">English Novel</a></li>
                       <li><a href="%(docchuong :linktruyen)">%(docchuong :titletruyen)</a></li>
-                      <li class="active">Chương %(docchuong :num)</li>
-                  </ol>
-                  </span>
-                  
+                      <li class="active">Chapter %(docchuong :num)</li>
+                    </ol>
                 </div>
-                <br>       
+                <br>    
+
 
                 <form class="form-inline" style="float:right;">
                   <div class="btn-group form-group">
-                    <button type="button" id="doimau" class="btn btn-default btn-sm text-center">Change Background</button>
+                    <button type="button" id="doimau" class="btn btn-default btn-sm text-center">Đổi Màu Nền</button>
                     <button type="button" id="alignleft" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-align-left"></span></button>
                     <button type="button" id="aligncenter" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-align-center"></span></button>
                     <button type="button" id="alignright" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-align-right"></span></button>
@@ -81,16 +78,16 @@
                   </div>
                   <div class="form-group">  
                     <select class="form-control" id="coChu" style="height:30px;">
-                          <option> Size </option>
-                          <option value="18" id="muoitam">18 </option>
-                          <option value="19" id="muoichin">19 </option>
-                          <option value="20" id="haimuoi">20 </option>
-                          <option value="21" id="haimot">21 </option>
-                          <option value="22" id="haihai">22 </option>  
-                          <option value="23" id="haiba">23 </option>
-                          <option value="24" id="haitu">24 </option>         
-                          <option value="25" id="hailam">25 </option>     
-                          <option value="26" id="haisau">26 </option>                   
+                          <option> Cỡ Chữ </option>
+                          <option value="16" id="muoitam">16 </option>
+                          <option value="17" id="muoichin">17 </option>
+                          <option value="18" id="haimuoi">18 </option>
+                          <option value="19" id="haimot">19 </option>
+                          <option value="20" id="haihai">20 </option>  
+                          <option value="21" id="haiba">21 </option>
+                          <option value="22" id="haitu">22 </option>         
+                          <option value="23" id="hailam">23 </option>     
+                          <option value="24" id="haisau">24 </option>             
                     </select>                  
                   </div>
                 </form>
@@ -113,14 +110,14 @@
 
 
 
-      %{ (def raw-content (slurp (str "resources/Truyen/" path "/" num ".txt")))
+      %{ (def raw-content (slurp (str "resources/Stories/" path "/" num ".txt")))
       (def content (clojure.string/replace (clojure.string/trim (subs raw-content (.indexOf raw-content "\n"))) #"\n" "<br>"))
       nil
       }
 
 
-      <div class="row-fluid" id="doctruyen">
-      <div id = "template2" style ="display:none">
+    <div class="row-fluid">
+
         <a href="%(docchuong :linktruyen)"><h2 class="orange text-center"><strong>%(docchuong :titletruyen)</strong></h2></a>
         <h3 class="blue text-center">Chap %(docchuong :num): %(docchuong :title)</h3>
         <div class="span1">
@@ -225,9 +222,8 @@
    <!--<script src="bootstrap-example/js/bootstrap-carousel.js"></script>
     <script src="bootstrap-example/js/bootstrap-typeahead.js"></script>  -->  
 
-    <script>  
-
-   $("#doimau").click(function(){
+    <script>
+      $("#doimau").click(function(){
       $("#mautrang").toggleClass('whiteBgr blackBgr');
       $("body").toggleClass('maubody1 maubody2');  
     });
@@ -266,34 +262,34 @@
       $(".bodytruyen").css('text-align', 'justify');
     })
 
-    
-     $("#muoitam").click(function(){
-          $(".bodytruyen").css('font-size', '18px');
+      $("#muoitam").click(function(){
+          $(".bodytruyen").css('font-size', '16px');
     })
       $("#muoichin").click(function(){
-          $(".bodytruyen").css('font-size', '19px');
+          $(".bodytruyen").css('font-size', '17px');
     })
       $("#haimuoi").click(function(){
-          $(".bodytruyen").css('font-size', '20px');
+          $(".bodytruyen").css('font-size', '18px');
     })
       $("#haimot").click(function(){
-          $(".bodytruyen").css('font-size', '21px');
+          $(".bodytruyen").css('font-size', '19px');
     })
       $("#haihai").click(function(){
-          $(".bodytruyen").css('font-size', '22px');
+          $(".bodytruyen").css('font-size', '20px');
     })
       $("#haiba").click(function(){
-          $(".bodytruyen").css('font-size', '23px');
+          $(".bodytruyen").css('font-size', '21px');
     })
       $("#haitu").click(function(){
-          $(".bodytruyen").css('font-size', '24px');
+          $(".bodytruyen").css('font-size', '22px');
     })
       $("#hailam").click(function(){
-          $(".bodytruyen").css('font-size', '25px');
+          $(".bodytruyen").css('font-size', '23px');
     })
       $("#haisau").click(function(){
-          $(".bodytruyen").css('font-size', '26px');
+          $(".bodytruyen").css('font-size', '24px');
     })
     </script>
+    
   </body>
 </html>

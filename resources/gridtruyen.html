@@ -87,7 +87,7 @@
                            </div> "))
 
             (defn rowtruyen [a] (str "<div class='row-fluid'>"
-                        (apply str (for [x (subvec truyendisplay (* 4 a) (+ 4 (* 4 a)))] 
+                        (apply str (for [x (subvec truyendisplay (* 4 a) (min (+ 4 (* 4 a)) truyenquantity))] 
                                   (truyen4 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view)))) "</div><br>"))
 
             (def truyenquantity (count truyendisplay))
@@ -100,7 +100,7 @@
 
 
         %{
-        (def numberoftruyeninDB truyen/truyenCount)
+        (def numberoftruyeninDB (truyen/truyenCount "truyen"))
         (def pagequantity  (if (= (rem numberoftruyeninDB 20) 0) (quot numberoftruyeninDB 20) (+ (quot numberoftruyeninDB 20) 1)))
         nil}
                 

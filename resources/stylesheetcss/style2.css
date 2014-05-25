@@ -452,10 +452,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8e292', end
         }
         .bodytruyen{
           text-align: justify;
-          font-size: 22px;
-          margin-left: 5px;
+          font-size: 19px;
+          margin-left: 0px;
           margin-right: -30px;
-          font-family:"Times New Roman",Times,serif;
+          /*font-family:"Times New Roman",Times,serif;*/
         }
         @media (max-width: 800px) {
           .bodytruyen{

@@ -90,9 +90,9 @@
                 <p><i>Author</i>:  <a href="[[(doctruyen :searchauthor)]]">%(doctruyen :author)</a></p>
                 <p><i>Genre</i>:  <a href="[[(doctruyen :searchgenre)]]">%(doctruyen :genre)</a></p>
                 <p><i>Status</i>:  <a href="[[(doctruyen :searchstate)]]">%(doctruyen :newstate)</a></p>
-                <p><i>Source: %(doctruyen :source)</p>
-                <p><i>Views: %(doctruyen :view)</p>
-                <p><i>Date Added: %(doctruyen :date_added)</p>
+                <p><i>Source</i>: %(doctruyen :source)</p>
+                <p><i>Views</i>: %(doctruyen :view)</p>
+                <p><i>Date Added</i>: %(doctruyen :date_added)</p>
               </div>
             </div>         
             
@@ -107,7 +107,7 @@
                         (str "<a href='" linkchap "'>Chap " num ": " title "</a><br>"))
 
 
-      (def chapmoi (truyen/getChap (str "select * from chapeng where truyen = '" (doctruyen :path) "'order by num desc limit 5")))
+      (def chapmoi (truyen/getChap2 (str "select * from chapeng where truyen = '" (doctruyen :path) "'order by num desc limit 5")))
 
 
                         (apply str (for [x chapmoi] 
@@ -163,7 +163,7 @@
                                   <td>" date_added "</td>
                                </tr>"))
 
-    (def chapter (truyen/getChap (str "select * from chapeng where truyen = '" (doctruyen :path) "' order by num asc")))
+    (def chapter (truyen/getChap2 (str "select * from chapeng where truyen = '" (doctruyen :path) "' order by num asc")))
 
                             (apply str (for [x chapter] 
                                 (mucluc (x :num) (x :linkchap) (x :title) (x :date_added))))

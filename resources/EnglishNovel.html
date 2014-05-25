@@ -9,7 +9,7 @@
 
   %{(def pgIndex (Integer/parseInt (params :index)))
   (def truyendisplay (truyen/getTruyen2 (str "SELECT * FROM truyeneng limit 20 offset " (- (* 20 pgIndex) 20) "")))
-
+  (def truyenquantity (count truyendisplay))
   nil
 }
 
@@ -101,10 +101,10 @@
                            </div> "))
 
             (defn rowtruyen [a] (str "<div class='row-fluid'>"
-                        (apply str (for [x (subvec truyendisplay (* 4 a) (+ 4 (* 4 a)))] 
+                        (apply str (for [x (subvec truyendisplay (* 4 a) (min (+ 4 (* 4 a)) truyenquantity))] 
                                   (truyen4 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view)))) "</div><br>"))
 
-            (def truyenquantity (count truyendisplay))
+            
             (def num-row (if (= (rem truyenquantity 4) 0) (quot truyenquantity 4) (+ (quot truyenquantity 4) 1)))
 
             (apply str (for [a (range num-row)] (rowtruyen a)))             
@@ -113,7 +113,7 @@
 
 
 
-  %{  (def numberoftruyeninDB truyen/truyenCount)
+  %{  (def numberoftruyeninDB (truyen/truyenCount "truyeneng"))
       (def pagequantity  (if (= (rem numberoftruyeninDB 20) 0) (quot numberoftruyeninDB 20) (+ (quot numberoftruyeninDB 20) 1)))
       nil
   }
@@ -123,7 +123,7 @@
                       <li><a href="%(str l/hostPath "englishnovel/pgnumber/" 1)">&laquo;</a></li>                     
 
       %{(defn pagination [x]
-        (str "<li class='" (let [active (if (= x pgIndex) "active" "")] active) "'><a href='" l/hostPath "gridtruyen/pgnumber/"  x "'>" x "</a></li>")) 
+        (str "<li class='" (let [active (if (= x pgIndex) "active" "")] active) "'><a href='" l/hostPath "englishnovel/pgnumber/"  x "'>" x "</a></li>")) 
 
         (apply str (for [x (range (max 1 (- pgIndex 4)) (min (+ 1 pagequantity) (+ 5 pgIndex)))] 
                                        (pagination x)))      

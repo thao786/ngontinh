@@ -57,6 +57,25 @@
 			addLink)))
 
 
+(defn getChap2 [query]
+	(vec (let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
+															"postgres" 
+															"fall2010")
+				mostRead 	(let [	stmt 	(.createStatement connection)
+								 	rs 		(.executeQuery stmt query)]
+								(vec (resultset-seq rs)))
+				addLink		(for [chap mostRead]
+								(let 	[truyen 	(chap :truyen)
+										title       (chap :title)
+										chap-num    (chap :num)
+										linktruyen  (str lib/hostPath "englishnovel/" truyen)
+										linkchap 	(str lib/hostPath "englishnovel/" truyen "/" chap-num)] 
+									(assoc chap :linkchap linkchap :linktruyen linktruyen)))
+				ddd 		(.close connection)]
+			addLink)))
+
+
+
 (defn getGenreCount [genre]
     (let [resVec (let [		connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh"
                                                                     "postgres"
@@ -71,11 +90,11 @@
         (row :count)))
 
 
-(def truyenCount 
+(defn truyenCount [database]
     (let [resVec (let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh"
                                                                     "postgres"
                                                                     "fall2010")
-                         query (str "select count(*) from truyen")
+                         query (str "select count(*) from " database "")
                          res (let [ stmt (.createStatement connection)
                                                 rs (.executeQuery stmt query)]
                                                         (vec (resultset-seq rs)))
