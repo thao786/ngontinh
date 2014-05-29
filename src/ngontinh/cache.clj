@@ -1,8 +1,9 @@
 (ns ngontinh.cache
-	(:require 	[sodahead.render :as r]))
+	(:require 	[sodahead.render :as r]
+				[clojure.java.io :as io]))
 
 
-(cache "resources/HomePage.html" (slurp (io/resource "HomePage.html")))
+(r/cache "resources/HomePage.html" (slurp (io/resource "HomePage.html")))
 
 
 

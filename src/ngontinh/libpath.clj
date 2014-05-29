@@ -1,7 +1,9 @@
 (ns ngontinh.libpath
 	(:require 	[clojure.java.io :as io]))
 
-(def hostPath "http://localhost:3000/")
+;(def hostPath "http://localhost/")
+
+(def hostPath "http://li679-206.members.linode.com/")
 
 (def genres {	"chientruong" "Chiến Trường" 
 				"codai" "Cổ Đại" 
