@@ -119,7 +119,7 @@
             <table class="table table-striped table-hover">
               <thead>
                 <tr>
-                  <th>Giới Thiệu</th>  
+                  <th class="hidden-xs">Giới Thiệu</th>  
                   <th><a href="">Tên Truyện<b class="caret"></b></a></th>
                   <th><a href="">Tác giả<b class="caret">   </b></a></th>
                   <th><a href="">Thể loại<b class="caret">  </b></a></th>
@@ -132,7 +132,7 @@
            %{   
                 (defn listtruyen [linktruyen linkanh title author path genre chap shortoverview view newstate alternate searchauthor searchgenre]
                      (str "<tr class=''>
-                  <td><span class='dropdown hidden-xs'>
+                  <td class='hidden-xs'><span class='dropdown'>
                           <button class='dropdown-toggle btn btn-sm' param-toggle='dropdown'>Giới Thiệu <b class='caret'></b></button>
                               <div class='dropdown-menu VanAnDropdown'>
                                 <div class='row-fluid'>
