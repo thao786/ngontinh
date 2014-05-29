@@ -3,7 +3,6 @@
                 ring.middleware.cookies
                 ring.util.response)
         (:require [compojure.handler :as handler]
-<<<<<<< HEAD
                   [sodahead.render :as r]  
                   [compojure.route :as route]
                   [clojure.java.io :as io]))
@@ -12,20 +11,6 @@
 ;username="tomcat" password="s3cret"
 ;nohup java -jar start.jar jetty.port=80 &
 ;kill 3618
-=======
-            [compojure.route :as route]
-            [clojure.java.io :as io]
-            [ngontinh.view.core :as view]
-            [ngontinh.ngontinh.defdata :as defndata]
-            [clojure.core.cache :as cache]
-            ngontinh.ngontinh.homepage
-            ngontinh.ngontinh.doctruyen
-            ngontinh.ngontinh.gridtruyen
-            ngontinh.ngontinh.listtruyen
-            ngontinh.cache
-            [framework.session :as s]))
-;lein ring uberwar
->>>>>>> 3cddc4ec1cee0a8f81bed52a1a173e7a6496f02f
 
 (defroutes app-routes
         (HEAD "/" [] "")
