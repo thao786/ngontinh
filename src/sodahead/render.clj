@@ -2,6 +2,10 @@
 	(:require 	[clojure.java.io :as io]
 				[sodahead.parse :as p]
 				[sodahead.prep :as pe]))
+<<<<<<< HEAD
+=======
+;(remove-ns 'sodahead)
+>>>>>>> 3cddc4ec1cee0a8f81bed52a1a173e7a6496f02f
 
 (def ns-list (atom {}))
 
@@ -15,6 +19,7 @@
 			:else false)))
 
 (defn gen-ns-file
+<<<<<<< HEAD
 	"return a loadable body string preceded by the require and ns block"
 	[text new-ns]
 	(let 	[chunks 	(-> text (pe/get-included) (p/chop))
@@ -38,16 +43,36 @@
 				dummy 	(load-string load-str)]
 			new-ns)))
 
+=======
+	"return a loadable body string preceded by the require block"
+	[original-text]
+	(let 	[chunks 	(-> original-text (pe/get-included) (p/chop))
+			ns-block-index 	(some (partial bloc-or-expr chunks) chunks)
+			ns-block 	(get chunks ns-block-index)
+			ns-block-content (str (pe/morph-into-code ns-block) "\n")
+			body-chunks 	(remove #(= ns-block-index (.indexOf chunks %)) chunks)
+			code-vector 	(map pe/morph-into-code body-chunks)
+			body-code 	(pe/wrap-do code-vector)
+			body-str 	(str ns-block-content body-code)]
+		body-str))
+
+>>>>>>> 3cddc4ec1cee0a8f81bed52a1a173e7a6496f02f
 (defn render-text
 	"render text, remove temp ns right after"
 	[text params]
 	(let 	[temp-ns 	(gensym "sodahead")
+<<<<<<< HEAD
 			load-str 	(gen-ns-file text temp-ns)
+=======
+			temp-ns-str 	(str "(ns " temp-ns ")\n")
+			load-str 	(str temp-ns-str (gen-ns-file text))
+>>>>>>> 3cddc4ec1cee0a8f81bed52a1a173e7a6496f02f
 			dummy 	(load-string load-str)
 			result 	(load-string (str "(" temp-ns "/render " params ")"))
 			dummy 	(remove-ns temp-ns)]
 		result))
 
+<<<<<<< HEAD
 (defn render-file
 	([file-path]
 		(render-file file-path {}))
@@ -64,6 +89,17 @@
 		nil)))
 
 (def render render-file)
+=======
+(defn render
+	[file-path]
+	(render file-path {})
+
+	[file-path params]
+	(if-let [file-ns (get ns-list file-path)]
+		(load-string "(file-ns/render params)")
+		(render-text (slurp file-path) params)))
+
+>>>>>>> 3cddc4ec1cee0a8f81bed52a1a173e7a6496f02f
 
 (defmacro ig 
 	"comment macro"

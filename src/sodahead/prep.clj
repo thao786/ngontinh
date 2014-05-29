@@ -15,7 +15,11 @@
 			:else
 			(let 	[name 	(subs file-name-within-quote 1 
 							(dec (count file-name-within-quote)))
+<<<<<<< HEAD
 					content 	(try (slurp (io/resource name)) (catch Exception e nil))]
+=======
+					content 	(try (slurp name) (catch Exception e nil))]
+>>>>>>> 3cddc4ec1cee0a8f81bed52a1a173e7a6496f02f
 				(if content 
 					content nil)))))
 
@@ -59,16 +63,30 @@
 
 			(= type "var")
 			(let [variable (subs data 1 data-length)]
+<<<<<<< HEAD
 				(str variable))
 
 			(= type "expr")
 			(let [function (subs data 1 data-length)]
 				(str " (try " function " (catch Exception e e))\n"))
+=======
+				(str " (try (load-string \"" variable 
+					"\")  (catch Exception e (str \"" escaped-data "\")))\n"))
+
+			(= type "expr")
+			(let [function (subs data 1 data-length)]
+				(str " (try " function 
+					" (catch Exception e \"Exception happened\"))\n"))
+>>>>>>> 3cddc4ec1cee0a8f81bed52a1a173e7a6496f02f
 
 			(= type "bloc")
 			(let 	[code 	(subs data 2 (dec data-length))
 					do-bloc 	(str " (do " code ")")]
+<<<<<<< HEAD
 				(str " (try " do-bloc " (catch Exception e e))\n")))))
+=======
+				(str " (try " do-bloc " (catch Exception e \"Exception happened\"))\n")))))
+>>>>>>> 3cddc4ec1cee0a8f81bed52a1a173e7a6496f02f
 
 (defn get-def-str 
 	"return the string (def variable value)"
