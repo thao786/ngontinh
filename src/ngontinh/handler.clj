@@ -5,7 +5,8 @@
         (:require [compojure.handler :as handler]
                   [sodahead.render :as r]  
                   [compojure.route :as route]
-                  [clojure.java.io :as io]))
+                  [clojure.java.io :as io]
+                  [ngontinh.libpath :as lib]))
 
 ;lein ring uberwar
 ;username="tomcat" password="s3cret"
@@ -46,10 +47,9 @@
         (GET "/glyphicons-halflings-regular.svg" [] (io/resource "fonts/glyphicons-halflings-regular.svg"))
 ;       (GET "/image/:name" request (str request))
         (GET "/image/:name" [name]
-                (io/resource (str "Truyen/" name "/cover.jpg")))
+                (io/resource (str lib/truyen-path "viet/" name "/cover.jpg")))
         (GET "/imageeng/:name" [name]
-                (io/resource (str "Stories/" name "/cover.jpg")))
- 
+                (io/resource (str "Stories/" name "/cover.jpg"))) 
  
         (GET "/" [] (r/render "HomePage.html"))
 

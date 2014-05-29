@@ -1,12 +1,7 @@
 (ns ngontinh.util.truyen
 	(:require 	[ngontinh.libpath :as lib]
 				[clojure.java.io :as io]))
-
 (import 'java.sql.DriverManager)
-
-(def connection-str "jdbc:postgresql://23.239.1.206:5432/ngontinh")
-(def username "postgres")
-(def password "fall2010")
 
 (defn getTruyen [query]
 	(vec (let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
@@ -17,7 +12,7 @@
 								(vec (resultset-seq rs)))
 				addLink		(for [truyen mostRead]
 								(let 	[name 			(truyen :path)									
-										overview 		(try (slurp (io/resource (str "Truyen/" name "/Overview.txt")))
+										overview 		(try (slurp (str lib/truyen-path "viet/" name "/Overview.txt"))
 															(catch Exception e (prn name)))
 										linkanh 		(str lib/hostPath "image/" name)
 										linktruyen 		(str lib/hostPath "gridtruyen/" name) 
@@ -29,7 +24,6 @@
 				dummy 		(.close connection)]
 			addLink)))
 
-
 (defn getTruyen2 [query]
 	(vec (let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
 															"postgres" 
@@ -39,7 +33,7 @@
 								(vec (resultset-seq rs)))
 				addLink		(for [truyen mostRead]
 								(let 	[name 			(truyen :path)									
-										overview 		(slurp (io/resource (str "Stories/" name "/Overview.txt")))
+										overview 		(slurp (str lib/truyen-path "Stories/" name "/Overview.txt"))
 										linkanh 		(str lib/hostPath "imageeng/" name)
 										linktruyen 		(str lib/hostPath "englishnovel/" name) 
 										shortoverview 	(clojure.string/replace (clojure.string/trim (subs overview 12 (min 300 (count overview)))) #"\n" "<br>")	]

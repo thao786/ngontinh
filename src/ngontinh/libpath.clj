@@ -1,9 +1,14 @@
 (ns ngontinh.libpath
 	(:require 	[clojure.java.io :as io]))
 
-;(def hostPath "http://localhost/")
+(def hostPath "http://localhost:3000/")
+;(def hostPath "http://li679-206.members.linode.com/")
 
-(def hostPath "http://li679-206.members.linode.com/")
+(def truyen-path "/home/thao/Truyen/")
+
+(def connection-str "jdbc:postgresql://23.239.1.206:5432/ngontinh")
+(def username "postgres")
+(def password "fall2010")
 
 (def genres {	"chientruong" "Chiến Trường" 
 				"codai" "Cổ Đại" 

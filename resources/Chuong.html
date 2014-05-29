@@ -107,7 +107,7 @@
       </div>   
 
 
-      %{ (def raw-content (slurp (io/resource (str "Truyen/" path "/" num ".txt"))))
+      %{ (def raw-content (slurp (str l/truyen-path "viet/" path "/" num ".txt")))
          (def content (clojure.string/replace (clojure.string/trim (subs raw-content (.indexOf raw-content "\n"))) #"\n" "<br>"))
           nil
        }
