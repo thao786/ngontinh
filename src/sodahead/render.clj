@@ -74,7 +74,7 @@
 	([file-path]
 		(render-file-cache file-path {}))
 	([file-path params]
-		(if-let [containing-ns 	(@ns-list rkey)]
+		(if-let [containing-ns 	(@ns-list file-path)]
 			(load-string (str "(" containing-ns "/render " params ")"))
 			;cache, then render
 			(let [new-ns (cache file-path (slurp (io/resource file-path)))]
