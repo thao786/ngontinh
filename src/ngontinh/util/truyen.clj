@@ -17,9 +17,9 @@
 								(vec (resultset-seq rs)))
 				addLink		(for [truyen mostRead]
 								(let 	[name 			(truyen :path)									
-										overview 		(try (slurp (io/resource (str "Truyen/" name "/Overview.txt")))
+										overview 		(try (slurp (str lib/local-file-path "Truyen/" name "/Overview.txt"))
 															(catch Exception e (prn name)))
-										linkanh 		(str lib/hostPath "image/" name)
+										linkanh 		(str lib/nginx-path "Truyen/" name "/cover.jpg")
 										linktruyen 		(str lib/hostPath "gridtruyen/" name) 
 										shortoverview 	(clojure.string/replace 
 															(clojure.string/trim 
@@ -39,8 +39,8 @@
 								(vec (resultset-seq rs)))
 				addLink		(for [truyen mostRead]
 								(let 	[name 			(truyen :path)									
-										overview 		(slurp (io/resource (str "Stories/" name "/Overview.txt")))
-										linkanh 		(str lib/hostPath "imageeng/" name)
+										overview 		(slurp (str lib/local-file-path "Stories/" name "/Overview.txt"))
+										linkanh 		(str lib/nginx-path "Stories/" name "/cover.jpg")
 										linktruyen 		(str lib/hostPath "englishnovel/" name) 
 										shortoverview 	(clojure.string/replace (clojure.string/trim (subs overview 12 (min 300 (count overview)))) #"\n" "<br>")	]
 									(assoc truyen :shortoverview shortoverview :overview overview :linkanh linkanh :linktruyen linktruyen)))

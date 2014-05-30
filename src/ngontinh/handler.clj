@@ -14,10 +14,6 @@
 
 (defroutes app-routes
         (HEAD "/" [] "")
-        (GET "/image/:name" [name]
-                (io/resource (str "Truyen/" name "/cover.jpg")))
-        (GET "/imageeng/:name" [name]
-                (io/resource (str "Stories/" name "/cover.jpg")))
  
         (GET "/" [] (r/render "HomePage.html"))
 
