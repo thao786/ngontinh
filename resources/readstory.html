@@ -53,7 +53,7 @@
  
 
   <div class="row-fluid">     
-      <div class="span3">     
+      <div class="span3 hidden-xs">     
 
 
             %(r/render "util/similargenre.html" {:genre (doctruyen :genre)})
@@ -70,14 +70,12 @@
 
           <div class="span9">            
             <div class="whiteBgr">
-                <div class="row-fluid" id="bcrumb">
-                  <span id="template3" style="display:none">
+                <div class="row-fluid">
                   <ol class="breadcrumb">
                       <li><a href="%l/hostPath">Home</a></li>
                       <li><a href="%(str l/hostPath "englishnovel/pgnumber/1")">English Novel</a></li>
                       <li class="active">%(doctruyen :title)</li>
                     </ol>
-                  </span>  
                 </div><br>                
                 
 
@@ -140,7 +138,6 @@
                   <button id="xemThem" type="button" class="btn btn-default btn-sm btn-block 1">Read More</button>
                 </div>           
 
-            <br>
             <br>
 
             

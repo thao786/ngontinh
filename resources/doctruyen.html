@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 %{ (def path (params :path))
    (def doctruyen-raw (peek (truyen/getTruyen (str "SELECT * FROM truyen where path ='" path "'"))))
    (def doctruyen (assoc doctruyen-raw :newstate (if (= (compare (doctruyen-raw :state) 1) 0) "Full" "Còn Tiếp")))
@@ -131,7 +132,8 @@
                (def remain-overview (clojure.string/replace (subs overview (+ 12 (count raw-first-overview))) #"\n" "<br>"))
                nil
              }
-              <!--<h4 class="white highlight">Giới Thiệu</h4>-->
+              
+              
               <h4 class="orange"><b>Giới Thiệu truyện </b><i class="green">%(doctruyen :title)</i></h4>
                 <div class="well">
                   <p>%first-overview </p>
