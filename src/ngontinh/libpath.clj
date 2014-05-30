@@ -4,7 +4,7 @@
 (def staticPath "http://li679-206.members.linode.com:8000/files/")
 ;(def hostPath "http://li679-206.members.linode.com/")
 (def hostPath "http://localhost:3000/")
-(def local-file-path "/home/thao/Statics/Truyen")
+(def local-file-path "/home/thao/Statics/")
 
 
 (def genres {	"chientruong" "Chiến Trường" 

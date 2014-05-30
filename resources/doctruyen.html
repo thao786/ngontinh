@@ -125,7 +125,7 @@
 
         
 
-            %{ (def overview (slurp (io/resource (str "Truyen/" (doctruyen :path) "/Overview.txt"))))
+            %{ (def overview (slurp (str l/local-file-path "Truyen/" (doctruyen :path) "/Overview.txt")))
                (def raw-first-overview (subs overview 12 (min 300 (count overview))))
                (def first-overview (clojure.string/replace (clojure.string/triml raw-first-overview) #"\n" "<br>"))
                (def remain-overview (clojure.string/replace (subs overview (+ 12 (count raw-first-overview))) #"\n" "<br>"))

@@ -1,1 +1,0 @@
-{"author" "Phỉ Ngã Tư Tồn", "chap" 27, "translator" nil, "genre" "Cổ Đại, Cung Đình, Ngược, SE", "title" "Trăng Lạnh Như Sương", "source" "", "state" 1, "alternate" "Lãnh Nguyệt Như Sương", "editor" nil}

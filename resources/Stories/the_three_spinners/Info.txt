@@ -1,6 +1,0 @@
-{
-"title" "The three spinners" 
-"author" "Brothers Grimm" 
-"genre" "Fairy Tales" 
-"state" 1 
-}
