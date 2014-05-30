@@ -19,7 +19,6 @@
         (GET "/imageeng/:name" [name]
                 (io/resource (str "Stories/" name "/cover.jpg")))
  
- 
         (GET "/" [] (r/render "HomePage.html"))
 
         (GET "/listtruyen" [] 

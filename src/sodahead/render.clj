@@ -70,7 +70,7 @@
 		(render-text (slurp (io/resource file-path)) params)))
 
 (defn render-file-cache
-	"render the text in file after caching"
+	"first cache file, then render"
 	([file-path]
 		(render-file-cache file-path {}))
 	([file-path params]
@@ -80,7 +80,7 @@
 			(let [new-ns (cache file-path (slurp (io/resource file-path)))]
 				(load-string (str "(" new-ns "/render " params ")"))))))
 
-(def render render-file)
+(def render render-file-cache)
 
 (defmacro ig 
 	"comment macro"
