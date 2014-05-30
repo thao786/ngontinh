@@ -45,6 +45,10 @@
 								(subs text (inc matching-sign-pos) text-length))))))
 			text)))
 
+;produce (try code (catch Exception e (str e "" code)))
+(defn get-exception-str [code]
+	(str " (try " code " (catch Exception e (str e " code ")))"))
+
 (defn morph-into-code
 	"depends on the type of code block, wrap it in appropriate handler"
 	[single-raw-data-chunk]
