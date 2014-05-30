@@ -46,8 +46,8 @@
 			text)))
 
 ;produce (try code (catch Exception e (str e "" code)))
-(defn get-exception-str [code]
-	(str " (try " code " (catch Exception e (str e " code ")))"))
+(defn wrap-exception [code]
+	(str " (try " code " (catch Exception e (str e " code ")))\n"))
 
 (defn morph-into-code
 	"depends on the type of code block, wrap it in appropriate handler"
@@ -67,12 +67,12 @@
 
 			(= type "expr")
 			(let [function (subs data 1 data-length)]
-				(str " (try " function " (catch Exception e e))\n"))
+				(wrap-exception function))
 
 			(= type "bloc")
 			(let 	[code 	(subs data 2 (dec data-length))
 					do-bloc 	(str " (do " code ")")]
-				(str " (try " do-bloc " (catch Exception e e))\n")))))
+				(wrap-exception do-bloc)))))
 
 (defn get-def-str 
 	"return the string (def variable value)"
