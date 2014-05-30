@@ -5,7 +5,7 @@
 (def staticPath (str nginx-path "files/"))
 ;(def hostPath "http://li679-206.members.linode.com/")
 (def hostPath "http://localhost:3000/")
-(def local-file-path "/home/thao/Statics/")
+(def local-file-path "C:/Users/Thuy/Desktop/git/Statics/")
 
 
 (def genres {	"chientruong" "Chiến Trường" 

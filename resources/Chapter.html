@@ -111,7 +111,7 @@
 
 
 
-      %{ (def raw-content (slurp (io/resource (str "Stories/" path "/" num ".txt"))))
+      %{ (def raw-content (slurp (str l/local-file-path "Stories/" path "/" num ".txt"))))
       (def content (clojure.string/replace (clojure.string/trim (subs raw-content (.indexOf raw-content "\n"))) #"\n" "<br>"))
       nil
       }
