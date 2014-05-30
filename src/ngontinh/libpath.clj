@@ -1,7 +1,8 @@
 (ns ngontinh.libpath
 	(:require 	[clojure.java.io :as io]))
 
-(def staticPath "http://li679-206.members.linode.com:8000/files/")
+(def nginx-path "http://li679-206.members.linode.com:8000/")
+(def staticPath (str nginx-path "files/"))
 ;(def hostPath "http://li679-206.members.linode.com/")
 (def hostPath "http://localhost:3000/")
 (def local-file-path "/home/thao/Statics/")
