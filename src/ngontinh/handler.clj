@@ -10,7 +10,7 @@
 ;lein ring uberwar
 ;username="tomcat" password="s3cret"
 ;nohup java -jar start.jar jetty.port=80 &
-;kill 3618
+;
 
 (defroutes app-routes
         (HEAD "/" [] "")
