@@ -3,7 +3,9 @@
 				[sodahead.parse :as p]
 				[sodahead.prep :as pe]))
 
-(def ns-list (atom {}))
+(def ns-list
+	"pairs of filename - containing namespace"
+	(atom {}))
 
 (defn bloc-or-expr
 	"return true if this chunk is a block or expression"
@@ -28,10 +30,12 @@
 			body-str 	(str ns-expr require-block-content body-code)]
 		body-str))
 
-(defn cache [rkey text]
+(defn cache
+	"create a namespace and push it in list, return the name of containing namespace
+	if rkey already exists throw exception"
+	[rkey text]
 	(if (@ns-list rkey)
-		(@ns-list rkey)
-		;create a namespace and push it in list
+		(throw (Exception. "Sodahead Exception: key already exists."))
 		(let 	[new-ns 	(gensym "sodahead")
 				load-str 	(gen-ns-file text new-ns)
 				dummy 	(swap! ns-list assoc rkey new-ns)
@@ -39,7 +43,7 @@
 			new-ns)))
 
 (defn render-text
-	"render text, remove temp ns right after"
+	"render text, remove temp namespace right after"
 	[text params]
 	(let 	[temp-ns 	(gensym "sodahead")
 			load-str 	(gen-ns-file text temp-ns)
@@ -48,13 +52,8 @@
 			dummy 	(remove-ns temp-ns)]
 		result))
 
-(defn render-file
-	([file-path]
-		(render-file file-path {}))
-	([file-path params]
-		(render-text (slurp (io/resource file-path)) params)))
-
-(defn render-key 
+(defn render-key
+	"look up the filename in ns-list and load cached containing namespace"
 	([rkey] (render-key rkey {}))
 
 	([rkey params]
@@ -62,6 +61,24 @@
 		(let [load-str 	(str "(" name-ns "/render " params ")")]
 			(load-string load-str))
 		nil)))
+
+(defn render-file
+	"render the text in file, dont cache"
+	([file-path]
+		(render-file file-path {}))
+	([file-path params]
+		(render-text (slurp (io/resource file-path)) params)))
+
+(defn render-file-cache
+	"render the text in file after caching"
+	([file-path]
+		(render-file-cache file-path {}))
+	([file-path params]
+		(if-let [containing-ns 	(@ns-list rkey)]
+			(load-string (str "(" containing-ns "/render " params ")"))
+			;cache, then render
+			(let [new-ns (cache file-path (slurp (io/resource file-path)))]
+				(load-string (str "(" new-ns "/render " params ")"))))))
 
 (def render render-file)
 
