@@ -8,6 +8,7 @@
                   [org.postgresql/postgresql "9.3-1101-jdbc41"]
                   [org.clojure/core.cache "0.6.3"]
                   [cheshire "5.3.1"]
+                  [org.clojure/tools.trace "0.7.5"]
                   [org.apache.lucene/lucene-core "4.8.1"]
                   [org.apache.lucene/lucene-analyzers-common "4.8.1"]
                   [org.apache.lucene/lucene-queryparser "4.8.1"]]

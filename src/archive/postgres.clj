@@ -96,6 +96,33 @@
 
 
 
+;add chapters
+(def connection 
+	(DriverManager/getConnection "jdbc:postgresql://testingdb.ce5xmqtpnclj.us-west-1.rds.amazonaws.com:5432/ngontinh" 
+		"thao" "fall2010"))
+(def stamp 	(Timestamp. (.getTime (java.util.Date.))))
 
+(time (doseq [folder (.listFiles (File. "/home/thao/Statics/Truyen"))] 
+	(doseq [file (.listFiles folder)] 
+		(if (.matches (.getName file) "[0-9]+.txt")
+			(let 	
+				[text 	(slurp (.getPath file))
+				pos 	(.indexOf text "\n")
+				title 	"(subs text 0 pos)"
+
+				chapnum-str 	(re-find #"[0-9]+" (.getName file))
+				chapnum 	(Integer/parseInt chapnum-str)
+				sqlStr  	(.prepareStatement connection (str 
+								"INSERT INTO chap (title, num, truyen, date_added) 
+								VALUES (?, ?, ?, ?)"))
+				statement 	(doto sqlStr 
+								(.setString 1 title)
+								(.setInt 2 chapnum)
+								(.setString 3 (.getName folder))
+								(.setTimestamp 4 stamp))]
+				(.execute statement))
+			nil))))
+
+(.close connection)
 
 
