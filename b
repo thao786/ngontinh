@@ -1,4 +1,4 @@
-(ns sodahead1298)(require 	'[clojure.java.io :as io]
+(ns sodahead1347)(require 	'[clojure.java.io :as io]
 				'[sodahead.parse :as p]
 				'[sodahead.prep :as pe])
 (require '[clojure.java.io :as io])
@@ -9,6 +9,12 @@
 my name is kitty
 
 ")
- (try  (do (+ 8 7 h)) (catch Exception e (str e  (do (+ 8 7 h)))))
+ (try  (do (+ 8 7)) (catch Exception e))
+ (str "
+
+hahahha
+
+")
+Math/PI (str "")
 ]]
 (apply str blocks)))

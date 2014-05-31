@@ -31,7 +31,7 @@
 		code-pos 	(+ do-pos 4)]
 		(subs chunk code-pos catch-pos)))
 
-(defn check
+(defn- check
 	"check the closest chunk that throw exception"
 	[requirev bodyv]
 	(if (= 0(count bodyv))
@@ -44,15 +44,29 @@
 					(let [bodyv-so-far 	(subvec bodyv 0 inx)
 							code-body 	(pe/wrap-do bodyv-so-far)
 							loadable-str 	(str ns-expr requirev code-body)
-							dummy (spit "b" loadable-str)
 							dummy 	(try (load-string loadable-str)
 										(catch Exception e 
-											(throw 
-												(Exception. 
-													(str e " thrown by " (peek bodyv-so-far))))))]
+											(do 
+												(try (remove-ns new-ns) (catch Exception e))
+												(throw 
+													(Exception. 
+														(str e " thrown by " 
+															(get-exception-code (peek bodyv-so-far))))))))]
 						(recur (inc inx))))))))
 
-(defn gen-ns-file2
+(defn- check-require-code
+	"check require section"
+	[code]
+	(let [new-ns 	(gensym "sodahead")
+			ns-expr 	(str "(ns " new-ns ")")
+			loadable-str 	(str ns-expr requirev)]
+		(try (load-string loadable-str)
+			(catch Exception e 
+				(do 
+					(try (remove-ns new-ns) (catch Exception e))
+					(throw (Exception. (str e " thrown by " code))))))))
+
+(defn gen-ns-file
 	"return a loadable body string preceded by the require and ns block"
 	[text new-ns]
 	(let 	[chunks 	(-> text (pe/get-included) (p/chop))
@@ -61,18 +75,8 @@
 			require-block-content (str (pe/get-require-code require-block) "\n")
 			body-chunks 	(remove #(= require-block-index (.indexOf chunks %)) chunks)
 			code-vector 	(map pe/morph-into-code body-chunks)
-			dummy 	 	(check require-block-content (vec code-vector))]
-		code-vector))
-
-(defn gen-ns-file
-	"return a loadable body string preceded by the require and ns block"
-	[text new-ns]
-	(let 	[chunks 	(-> text (pe/get-included) (p/chop))
-			require-block-index 	(some (partial bloc-or-expr chunks) chunks)
-			require-block 	(get chunks require-block-index)
-			require-block-content (str (pe/morph-into-code require-block) "\n")
-			body-chunks 	(remove #(= require-block-index (.indexOf chunks %)) chunks)
-			code-vector 	(map pe/morph-into-code body-chunks)
+			dummy 		(check-require-code require-block-content)
+			dummy 	 	(check require-block-content (vec code-vector))
 			body-code 	(pe/wrap-do code-vector)
 			ns-expr 	(str "(ns " new-ns ")\n")
 			body-str 	(str ns-expr require-block-content body-code)]

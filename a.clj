@@ -5,7 +5,7 @@
 
 my name is kitty
 
-%{(+ 8 7 h)}
+%{(+ 8 7)}
 
 hahahha
 
