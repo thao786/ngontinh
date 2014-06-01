@@ -39,20 +39,20 @@
 		(let [new-ns 	(gensym "sodahead")
 			ns-expr 	(str "(ns " new-ns ")")]
 			(loop [inx 1]
-				(if (> inx (count bodyv))
-					(try (remove-ns new-ns) (catch Exception e))
-					(let [bodyv-so-far 	(subvec bodyv 0 inx)
-							code-body 	(pe/wrap-do bodyv-so-far)
-							loadable-str 	(str ns-expr requirev code-body)
-							dummy 	(try (load-string loadable-str)
-									(catch Exception e 
-										(do 
-											(try (remove-ns new-ns) (catch Exception e))
-											(throw 
-											(Exception. 
-												(str e " thrown by " 
-													(get-exception-code (peek bodyv-so-far))))))))]
-						(recur (inc inx))))))))
+			(if (> inx (count bodyv))
+				(try (remove-ns new-ns) (catch Exception e))
+				(let [bodyv-so-far 	(subvec bodyv 0 inx)
+						code-body 	(pe/wrap-do bodyv-so-far)
+						loadable-str 	(str ns-expr requirev code-body)
+						dummy 	(try (load-string loadable-str)
+								(catch Exception e 
+									(do 
+										(try (remove-ns new-ns) (catch Exception e))
+										(throw 
+										(Exception. 
+											(str e " thrown by " 
+												(get-exception-code (peek bodyv-so-far))))))))]
+					(recur (inc inx))))))))
 
 (defn- check-require-code
 	"check require section"
