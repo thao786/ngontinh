@@ -48,8 +48,7 @@
 							(catch Exception e 
 								(do 
 									(try (remove-ns new-ns) (catch Exception e))
-									(throw 
-									(Exception. 
+									(throw (Exception. 
 										(str e " thrown by " 
 											(get-exception-code (peek bodyv-so-far))))))))]
 					(recur (inc inx))))))))
