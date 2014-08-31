@@ -58,7 +58,7 @@
 	[code]
 	(let [new-ns 	(gensym "sodahead")
 			ns-expr 	(str "(ns " new-ns ")")
-			loadable-str 	(str ns-expr requirev)]
+			loadable-str 	(str ns-expr code)]
 		(try (load-string loadable-str)
 			(catch Exception e 
 				(do 
