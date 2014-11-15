@@ -1,0 +1,1 @@
+{"author" "Phi Cô Nương", "chap" 45, "translator" nil, "genre" "Hiện Đại, Hài, Phúc Hắc Nam, HE", "title" "Ăn Xong Chùi Mép", "source" "haibonthang7.wordpress.com", "state" 1, "alternate" "Ăn Xong Lau Sạch", "editor" "Elvie Yuen"}

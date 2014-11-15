@@ -1,0 +1,1 @@
+{"author" "Yến Ngữ Yên Nhiên", "chap" 68, "translator" nil, "genre" "Hiện Đại, HE", "title" "Tổng tài bức hôn: Ngạo thê khó thuần phục", "source" "taodo1992.wordpress.com", "state" 1, "alternate" "Tổng tài bức hôn", "editor" "Táo"}

@@ -1,0 +1,1 @@
+{"author" "Diệp Lạc Vô Tâm", "chap" 17, "translator" nil, "genre" "Hiện Đại, HE", "title" "Thoát không khỏi ôn nhu của anh", "source" "rubyluu.wordpress.com", "state" 1, "alternate" "Thoát không khỏi sự dịu dàng của anh", "editor" "Rubyluu"}

@@ -1,0 +1,1 @@
+{"author" "Lục Quang", "chap" 20, "translator" nil, "genre" "Cổ đại, Cung đấu, nữ phẫn nam trang, HE", "title" "Nàng Phi Yêu Tiền Của Tà Hoàng", "source" "pyluoi.wordpress.com", "state" 1, "alternate" nil, "editor" "meoxjh"}

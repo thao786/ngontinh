@@ -1,0 +1,1 @@
+{"author" "Hàn Hàn", "chap" 20, "translator" "Trần Quang Đức", "genre" "Cổ đại, Hài, Kiếm Hiệp, Giang Hồ, OE", "title" "Trường An Loạn", "source" "", "state" 1, "alternate" nil, "editor" nil}

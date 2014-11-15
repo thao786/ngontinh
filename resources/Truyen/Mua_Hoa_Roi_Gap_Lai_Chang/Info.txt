@@ -1,0 +1,1 @@
+{"author" "Thục Khách", "chap" 47, "translator" nil, "genre" "Cổ Đại, Xuyên không, Huyền huyễn, Tiên hiệp, Trọng sinh, HE", "title" "Mùa hoa rơi gặp lại chàng", "source" "paradisekiss1.wordpress.com", "state" 1, "alternate" nil, "editor" "Lăng Sương, Qu33njc3, Lệ Phong"}

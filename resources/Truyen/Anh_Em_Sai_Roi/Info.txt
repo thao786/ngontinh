@@ -1,0 +1,1 @@
+{"author" "Hoàng Hôn Tứ Hợp", "chap" 27, "translator" nil, "genre" "Hiện Đại, Hài, HE", "title" "Anh, em sai rồi", "source" "windgoddess.wordpress.com", "state" 1, "alternate" nil, "editor" "Nhóm Cửu Tứ"}

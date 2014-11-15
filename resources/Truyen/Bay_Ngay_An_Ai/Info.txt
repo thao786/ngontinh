@@ -1,0 +1,1 @@
+{"author" "Ân Tầm", "chap" 173, "translator" nil, "genre" "Hiện Đại, Sắc, Ngược, HE", "title" "Bảy ngày ân ái", "source" "", "state" 1, "alternate" nil, "editor" nil}

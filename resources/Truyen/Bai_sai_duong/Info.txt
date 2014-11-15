@@ -1,0 +1,1 @@
+{"author" "Hương Di", "chap" 10, "translator" "Shinku [Tiêu Dao cốc chủ]", "genre" "Cổ Đại, HE", "title" "Bái sai đường", "source" "tieudaococ.wordpress.com", "state" 1, "alternate" nil, "editor" nil}

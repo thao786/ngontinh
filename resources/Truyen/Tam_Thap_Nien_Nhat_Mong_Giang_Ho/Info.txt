@@ -1,0 +1,1 @@
+{"author" "Âm Sí Thịnh", "chap" 134, "translator" nil, "genre" "Cổ Đại, Giang Hồ, Sắc, Đam mỹ, NP, Hài, HE", "title" "Tam thập niên nhất mộng giang hồ", "source" "huy3nl1nh.wordpress.com", "state" 1, "alternate" nil, "editor" "Linh Nhi"}

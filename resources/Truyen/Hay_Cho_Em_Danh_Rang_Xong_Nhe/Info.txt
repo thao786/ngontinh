@@ -1,0 +1,1 @@
+{"author" "Hồng Cửu", "chap" 67, "translator" nil, "genre" "Hiện Đại, HE", "title" "Hãy chờ em đánh răng xong nhé", "source" "", "state" 1, "alternate" nil, "editor" nil}

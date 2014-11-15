@@ -1,0 +1,1 @@
+{"author" "Cửu Lộ Phi Hương", "chap" 109, "translator" nil, "genre" "Cổ Đại, Ngược, Giang Hồ, Trọng sinh, Cung Đình, Xuyên không, Huyền huyễn, HE, SE, OE", "title" "Bách quỷ tập", "source" "hacgia149.wordpress.com", "state" 1, "alternate" nil, "editor" "Hắc"}

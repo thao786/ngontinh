@@ -1,0 +1,1 @@
+{"author" "Phong Lâm Nhi", "chap" 57, "translator" nil, "genre" "Hiện Đại, Phúc Hắc Nam, HE", "title" "Chẳng phải trộm của ngươi một chiếc cốc?!", "source" "panamitachan.wordpress.com", "state" 1, "alternate" nil, "editor" "Pachan"}

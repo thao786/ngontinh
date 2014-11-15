@@ -1,0 +1,1 @@
+{"author" "Orange Quất Tử", "chap" 54, "translator" nil, "genre" "Hiện Đại, HE", "title" "Ngoan, anh yêu em", "source" "cicadavase.wordpress.com", "state" 1, "alternate" nil, "editor" "VitaminB2"}

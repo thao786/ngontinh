@@ -1,0 +1,1 @@
+{"author" "Mộ Dung Yên Nhi", "chap" 31, "translator" nil, "genre" "Cổ Đại, Chiến Trường, Cung đấu, Cung Đình, Ngược, OE", "title" "Đế Nghiệp Như Họa", "source" "pe3tapchoi.wordpress.com", "state" 1, "alternate" nil, "editor" "Tiểu Đông Tà"}

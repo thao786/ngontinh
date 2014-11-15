@@ -1,0 +1,1 @@
+{"author" "Mãn Tọa Y Quan Thắng Tuyết", "chap" 21, "translator" nil, "genre" "Hiện đại, Võng Du, Huyền huyễn, HE", "title" "Công Tử Liên Thành", "source" "", "state" 1, "alternate" nil, "editor" nil}

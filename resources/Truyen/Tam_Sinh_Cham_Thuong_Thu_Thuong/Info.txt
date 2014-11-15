@@ -1,0 +1,1 @@
+{"author" "Đường Thất Công Tử", "chap" 14, "translator" nil, "genre" "Cổ Đại, Huyền huyễn, HE", "title" "Tam sinh tam thế Chẩm thượng thư - Tập 1", "source" "", "state" 1, "alternate" "Chẩm thượng thư - Quyển Thượng", "editor" nil}

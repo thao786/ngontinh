@@ -1,0 +1,1 @@
+{"author" "Cẩm Trúc", "chap" 72, "translator" nil, "genre" "Cổ Đại, Trọng Sinh, Cung Đình, HE", "title" "Bạch nhật y sam tận", "source" "kubylscorpio.wordpress.com/", "state" 1, "alternate" nil, "editor" "Tiểu Yết"}

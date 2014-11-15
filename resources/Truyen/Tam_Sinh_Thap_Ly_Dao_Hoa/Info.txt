@@ -1,0 +1,1 @@
+{"author" "Đường Thất Công Tử", "chap" 30, "translator" "Giang Phương", "genre" "Cổ Đại, Huyền huyễn, HE", "title" "Tam sinh tam thế thập lý đào hoa", "source" "", "state" 1, "alternate" nil, "editor" nil}

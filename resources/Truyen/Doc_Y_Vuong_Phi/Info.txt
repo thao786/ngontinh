@@ -1,0 +1,1 @@
+{"author" "Ngô Tiếu Tiếu", "chap" 130, "translator" nil, "genre" "Cổ Đại, Xuyên không, Cung Đình, HE", "title" "Độc Y Vương Phi", "source" "tamvunguyetlau.wordpress.com", "state" 1, "alternate" nil, "editor" "QT"}

@@ -1,0 +1,1 @@
+{"author" "Đinh Mặc", "chap" 88, "translator" nil, "genre" "Hiện Đại,, HE", "title" "Hãy nhắm mắt khi anh đến", "source" "", "state" 1, "alternate" "Anh ấy đã đến, xin hãy nhắm mắt lại", "editor" "greenrosetq, Trâm Phạm"}

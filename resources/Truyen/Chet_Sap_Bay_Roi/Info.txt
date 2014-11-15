@@ -1,0 +1,1 @@
+{"author" "KingKong Barbie", "chap" 13, "translator" nil, "genre" "Hiện Đại, HE", "title" "Chết, sập bẫy rồi", "source" "", "state" 1, "alternate" nil, "editor" nil}

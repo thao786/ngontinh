@@ -1,0 +1,1 @@
+{"title" "Đá quý không nói dối", "alternate" "宝石不说谎", "author" "Tâm Doanh Cốc", "state" 1, "genre" "Hiện Đại, HE", "source" "", "editor" "", "translator" "Nguyễn Trang"}

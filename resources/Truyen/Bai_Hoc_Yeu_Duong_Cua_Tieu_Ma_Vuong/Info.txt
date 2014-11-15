@@ -1,0 +1,1 @@
+{"author" "Minh Nguyệt Thính Phong", "chap" 76, "translator" nil, "genre" "Hiện Đại, Hài, Huyền huyễn, HE", "title" "Bài học yêu đương của tiểu ma vương", "source" "congchuakhangiay.wordpress.com", "state" 1, "alternate" nil, "editor" "Heo con"}

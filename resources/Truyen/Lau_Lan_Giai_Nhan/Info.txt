@@ -1,0 +1,1 @@
+{"author" "Điển Tâm", "chap" 10, "translator" nil, "genre" "Cổ đại, Cung đình, Ngược, HE", "title" "Lâu Lan Giai Nhân", "source" "paradisekiss1.wordpress.com", "state" 1, "alternate" nil, "editor" "qu33njc3"}

@@ -1,0 +1,1 @@
+{"author" "Đường Thất Công Tử", "chap" 28, "translator" nil, "genre" "Hiện Đại, HE", "title" "Năm tháng là đóa hoa hai lần nở", "source" nil, "state" 1, "alternate" "Năm tháng là đóa Lưỡng Sinh Hoa", "editor" nil}

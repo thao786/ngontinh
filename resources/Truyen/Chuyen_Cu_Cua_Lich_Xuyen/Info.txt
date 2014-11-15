@@ -1,0 +1,1 @@
+{"author" "Huyền Ẩn", "chap" 65, "translator" nil, "genre" "Hiện Đại, Ngược, HE", "title" "Chuyện cũ của Lịch Xuyên", "source" "krazymi.wordpress.com", "state" 1, "alternate" "Lịch Xuyên chuyện cũ", "editor" nil}

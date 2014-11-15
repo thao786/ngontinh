@@ -1,0 +1,1 @@
+{"author" "Tần Tranh", "chap" 31, "translator" "Hoàng Mai Hương", "genre" "Cổ Đại, Ngược, Giang Hồ, Kiếm Hiệp, SE", "title" "Nhất đao khuynh thành", "source" "hanphongtuyet.wordpress.com", "state" 1, "alternate" nil, "editor" nil}

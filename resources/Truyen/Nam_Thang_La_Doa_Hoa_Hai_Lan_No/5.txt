@@ -1,0 +1,113 @@
+Chương 05 
+
+Bóng đêm ngoài cửa sổ vô cùng mờ ảo.
+
+Kỳ thật thành phố C cho dù ban ngày hay ban đêm đều mờ ảo, bởi nó là một thành phố công nghiệp nặng ô nhiễm vượt chỉ tiêu nghiêm trọng. Vì gìn giữ những di sản văn hóa lịch sử tổ tiên để lại, thành phố ô nhiễm này có lẽ đã trở thành chiếc quan tài cổ. Mỗi lần những khu công nghiệp lớn thải khí độc đều đem cả một góc thành phố bao trùm, vì vậy căn bản thành phố C không thể không mờ ảo, có đôi khi còn vô cùng vô cùng mờ ảo là đằng khác.
+
+Tôi nghĩ trong tương lai không xa, dân cư thành phố C sẽ bởi vì ô nhiễm mà chết hàng loạt, sau đó khu công nghiệp này lại biến thành một cái di chỉ. Hậu thế của chúng ta vì có thể bảo tồn nguyên trạng di chỉ này, chỉ có thể một lần nữa xây dựng các khu công nghiệp, cứ thế mà suy ra, sớm muộn gì cũng có một ngày, thành phố C sẽ trở thành thành phố nhiều di chỉ nhất ở Trung Quốc.
+
+Ánh đèn neon trước mặt tôi hiện lên rất nhanh, tay phải Tần Mạc rời khỏi tay lái, thoạt nhìn như muốn mở nhạc. Tôi dự cảm anh ta sắp sửa giống như trong các quyển tiểu thuyết ngôn tình, nhân vật nam chính đều thích nghe “…Anh chưa bao giờ gặp qua một thứ tình yêu dễ dàng bỏ qua, anh vẫn chỉ biết cho, anh chỉ biết cho đi một mình, bây giờ, anh mới biết rằng, thứ duy nhất bị mất đi là chính mình.” Của một cô gái Pháp hát, bài hát nổi tiếng tên là tiếp tục tiền duyên hay là cái gì đó. Tuy nhiên tôi vẫn cảm thấy ca khúc này biểu đạt kiểu tình cảm ngoại tình ngoài luồng mới đúng.
+
+Không khí trong xe có chút nặng nề, sự chuyển động không tiếng động làm cho người ta cảm giác khó mở miệng.
+
+Nếu Tần Mạc quả thực mở bài hát kia, tôi đã có cơ hội khơi mào một số chủ đề cao nhã phá vỡ không khí nặng nề này. Nhưng không ngờ là anh ta cũng không mở bài hát nối tiếp tiền duyên gì gì đó. “Bởi vì nhớ em mới cô đơn” của Thư Minh vang lên trong không gian lúc này khiến tôi thật hối hận mình trước đây không tiến hành nghiên cứu sâu một chút về ca sĩ Quảng Đông thích các món ăn cay Tứ Xuyên này.
+
+Tiền đồ của Thư Minh rất sáng lạn, tôi dự cảm tương lai không lâu nữa anh ta sẽ làm dân tình điên đảo, bởi vì một người sinh ra ở Quảng Đông, giọng hát lại không có chút hương vị Quảng Đông nào cả.
+
+Ca khúc hát thế này: “…Bởi vì nhớ em nên mới cô đơn, bởi vì yêu em nên mới đau khổ, nghe tên em làm cho anh bối rối, bởi vì nhớ em nên mới trầm mặc, bởi vì yêu em nên mới lẻ loi, chuyện của chúng ta chẳng thể giãi bày cùng ai. Em có hay không nghĩ tới anh, em có hay không nhớ đến anh, hay vẫn lựa chọn quên đi coi như một sự giải thoát? Em còn có thể nghĩ đến anh, em còn có thể tiếp tục yêu anh, lúc gặp lại là một chiếc ôm hay là lướt qua?”
+
+Tôi cảm thấy ca khúc này viết rất biện chứng mà vẫn logic, hơn nữa ca từ đều không sai ngữ pháp, việc này thật không dễ dàng.
+
+Tần Mạc nói: “Làm phiền cô sao?”
+
+Tôi nói: “Không có, không ngờ được anh Tần cũng thích nhạc thị trường, bài hát này rất hay.”
+
+Tần Mạc ừ một tiếng: “Mua bừa thôi.” Nói xong cười cười: “Trước kia theo tôi học vẽ có một cô gái đặc biệt thích nhạc thị trường. Khi đó mẹ cô ấy cho cô ấy rất ít tiền tiêu vặt, cô ấy muốn mua đĩa mà không có tiền sẽ mè nheo tôi, một năm rưỡi dần dần thành thói quen, trên thị trường có đĩa nhạc gì mới tôi đều để ý giúp cô ấy.”
+
+Tôi ngạc nhiên mở to hai mắt, thật không ngờ được Tần Mạc lại có thể mở miệng nói nhiều như vậy. Tôi xem những người nổi tiếng trên TV, vì duy trì sự bí hiểm trước mặt các fan, trên cơ bản rất ít khi mở miệng nói chuyện, khi bất đắc dĩ thì nói vài ba câu tỉnh lược, người giống như Tần Mạc chỉ cần nói một câu thôi cũng thật đáng giá, mặc dù câu đó chỉ là một câu tỉnh lược không chủ không vị.
+
+Tôi kinh ngạc trong chốc lát, nói: “Học trò của anh cũng thật hết nói, mẹ cô ấy không cho cô ấy tiền tiêu vặt thì nên đi kỳ kèo ba mình mới đúng, tìm đến anh, nhưng anh lại cho, muốn nói cho cô học trò này biết, không có tiền tiêu vặt chỉ cần gặp anh là được, gánh nặng này của anh cũng thật vất vả.”
+
+Xe rẽ ngang, Tần Mạc cười nhẹ rồi nên tiếng: “Cũng may, tôi chỉ có một học trò duy nhất là cô ấy.”
+
+Tôi nói: “Thì ra là một kèm một sao, cái này rất tốt, trên thế giới đều đề cao cách học này, nếu là anh tự mình dạy dỗ, cô gái đó hiện tại chắc cũng rất giỏi phải không?”
+
+Sắc mặt Tần Mạc cứng đờ: “Cô ấy chết rồi.”
+
+Tôi nói: “A?”
+
+Xe chậm rãi dừng lại, anh ta lấy bao thuốc ra: “Cô ấy chết rồi, đã chết rất nhiều năm, năm ấy cô ấy vừa tròn mười tám tuổi, tang lễ của cô ấy tôi còn ở nước ngoài. Ngoại hình của cô và cô ấy rất giống nhau.”
+
+Tôi sửng sốt trong chốc lát, không biết nên nói gì. Tần Mạc quay đầu nhìn tôi, ánh mắt trầm mặc, tôi bị nhìn đến nổi da gà, cảm thấy tình cảnh này nhất định phải nói gì đó. Nhưng thời điểm này giống như năm phút cuối trước khi hết giờ thi, càng gấp càng làm cho người ta cuống không biết nên viết gì, không khỏi làm cho người ta sinh ra một cảm giác nhìn thấu sự đau thương trên đời, thật sự là: “Thư đáo dụng thì phương hận thiểu, trừ khước vu sơn bất thị vân”[1]
+
+Tần Mạc nói: “Đến rồi, xuống xe thôi.” Nói xong xuống xe hút thuốc.
+
+Tôi tập trung nhìn, chiếc xe bị ánh đèn ban bêm nhuộm thành màu vàng, đúng là một chiếc taxi. Lại tập trung nhìn một lần nữa, bánh xe trước đã bị tháo ra, quả nhiên là chiếc taxi nổ lốp hồi nãy.
+
+Tôi vừa xuống xe vừa nói: “Anh Tần thật tinh mắt, tốc độ cao như vậy cũng có thể nhìn thấy phía trước có xe, nếu là tôi, chắc chắn sẽ đâm thẳng vào chiếc xe đó rồi.”
+
+Tần Mạc nói: “Con đường này là đường hai chiều, chiếc xe kia ở bên trái, chúng ta ở bên phải, cô có thể đem xe của chúng ta đâm thẳng vào chiếc xe kia cũng thật là khó, huống chi chiếc xe này đứng im chứ không phải đang chạy.”
+
+Tôi hổ thẹn nói: “Đúng là khó thật.”
+
+Anh ta cười cười, đột nhiên vươn tay xoa xoa đầu tôi. Xoa xong, cả hai chúng tôi đều sửng sốt, lâm vào không khí xấu hổ không cách nào thoát ra đươc. Anh ta có vẻ nhanh hơn một chút, ho khan hai tiếng nói: “Xin lỗi…”
+
+Tôi nhanh chóng tiếp lời: “Không sao, không sao, tôi biết anh lại nhầm tôi là cô bé học sinh đã mất của anh.”
+
+Anh ta cười cười, không nói gì.
+
+Chiếc xe taxi kia bị nổ lốp lâu như vậy rồi mà còn chưa được đưa đi. Hiệu suất làm việc của ngành giao thông thật làm cho người ta thấy mà sợ.
+
+Lấy chiếc taxi làm mốc, tiến lên phía trước hai bước, tôi sờ soạng lung tung trong chốc lát, vậy mà đúng là tìm được đôi giày da đen tôi mua ở cửa hàng giầy da theo mùa trước tiểu khu.
+
+Tôi đã lo lắng chúng sẽ bị những bọn lưu manh đi qua cuỗm đi, không ngờ được con đường này quá hẻo lánh, ngay cả đám người phi pháp lưu lạc cũng không thèm đi qua, quả là một nơi lý tưởng để cướp của giết người bịt đầu mối.
+
+Tìm được giầy, mừng như điên làm cho tôi đột nhiên nhớ tới Chu Việt Việt vừa rồi đi tìm xe hỗ trợ, không biết cô ấy gọi xe xong phát hiện tôi biến mất rồi có đi báo 110 hay không. Tôi cảm thấy chắc phải lập tức gọi điện thoại cho cô ấy thông báo một tiếng, lấy di động ra, lúc này mới phát hiện đã hết pin rồi.
+
+Tần Mạc kẹp điếu thuốc giữa ngón tay, khẽ tựa người vào cánh cửa xe, cách nhau một thước dưới ánh đèn đường mờ nhạt. Tôi chạy hai bước đến, vốn định mượn di động của anh ta gọi một cuộc điện thoại, nhưng đột nhiên nghĩ số di động của người nổi tiếng đều phải giữ bí mật, vì thế lời đã ra miệng lại chuyển thành: “Tôi có thể mượn điện thoại của anh lắp sim để gọi một cuộc không?”
+
+Anh ta cúi đầu vào xe lấy di động ra: “Gọi điện cho chồng cô báo bình an sao? Hay là dùng của tôi luôn đi?”
+
+Tôi xem thái độ của anh ta không phải là khách sáo, vì vậy cảm động nhận lấy, gọi đến số của Chu Việt Việt, còn chưa kịp nói chuyện, chợt nghe thấy giọng nói của Chu Việt Việt oang oang vang đến: “Năm phút nữa gọi điện đến thì chết à, anh không biết sau chín giờ Trung Quốc gọi điện đến người nghe sẽ được miễn phí sao, anh là cao nhân phương nào, có gì nói nhanh rồi cúp máy, đừng có lãng phí tiền điện thoại của bà cô này.”
+
+Tôi nói: “Chu Việt Việt, mình là Nhan Tống.”
+
+Giọng nói oang oang của Chu Việt Việt lập tức dịu xuống: “A… Tống Tống, là cậu à, làm mình sợ muốn chết rồi, mình vất vả gọi xe chạy tới lại không thấy mọi người đâu rồi, gọi điện thoại cho cậu thì không được, mình nghĩ cậu đến bệnh viện rồi nên lập tức chạy đến, kết quả cũng không tìm được. Bây giờ mình đang ở văn phòng của Lâm Kiều, định nhờ mối quan hệ của anh ta hỏi thăm danh sách bệnh nhân nhập viện của các bệnh viện trong thành phố tìm cậu, rốt cuộc cậu đang ở đâu? Lãng Lãng có sao không?”
+
+Tôi vội vàng nói: “Không việc gì, không việc gì, bây giờ mình đang ở Nhân Y, cậu về nhà trước đi, buổi sáng ngày mai mình trở về lấy ít đồ, Nhan Lãng còn phải nằm viện vài ngày.”
+
+Chu Việt Việt nói: “Mình đến ngay lập tức. Yên tâm, mình sẽ không nói với Lâm Kiều cậu ở Nhân Y, vốn cả tối nay cậu ta cũng không biết chuyện gì, chỉ là cậu ta trực ca đêm, mình đến tìm cậu không cẩn thận đụng phải cậu ta mà thôi.”
+
+Tôi nói: “Mình không quen con người tên Lâm Kiều ấy, với lại cậu cũng không cần đến đâu.”
+
+Cô ấy nói: “Mình cứ đến, mình cứ đến, cậu càng không cho mình lại càng đến, càng đến đấy.” Sau đó tức giận cúp máy.
+
+Tôi nghĩ, cá tính của Chu Việt Việt cũng thật là có tình người mà.
+
+Đem điện thoại trả lại cho Tần Mạc, anh ta nhíu nhíu mày: “Chồng cô…”
+
+Tôi vội vã hiểu ý: “Tôi sẽ không nói cho cô ấy biết đây là số điện thoại của anh…”
+
+Anh ta nhìn tôi chốc lát, nghiêng đầu dập tàn thuốc nói: “Lên xe đi.” Những người nổi tiếng quả nhiên là rất chú trọng bí mật đời tư.
+
+Ở trên xe, Tần Mạc nghe một cuộc điện thoại, nói là có việc gấp phải trở về xử lý, ngày mai sẽ qua thăm Nhan Lãng, thuận tiện lấy thẻ VIP cho tôi. Tôi cảm động nhìn theo xe anh ta cho đến khi nó biến mất trong đường chân trời mờ mịt, mới xoay người chạy thẳng về phòng giải phẫu. Tần Mạc thật là một người tốt, làm việc tốt xong còn thăm hỏi, quả thực là Lôi Phong tái thế. Chu Việt Việt lén lút diễn tập nhiều lần gặp gỡ với Tần Mạc như vậy, đảo mắt sẽ biến thành sự thật, cỡ nào cảm động, cỡ nào vui mừng đây.
+
+Thời gian rất chuẩn, năm phút đồng hồ sau khi đèn phẫu thuật tắt, y tá đẩy giường nằm của Nhan Lãng còn mê man vì thuốc tê đến phòng bệnh. Bác sĩ tươi cười rạng rỡ đi về phía tôi chúc mừng, nói ca phẫu thuật cực kỳ thành công, con trai tôi cũng cực kỳ dũng cảm, trong quá trình giải phẫu ngay cả một tiếng cũng không rên, thật là rất kiên cường. Quả thực tôi không dám gật đầu tán thành ý kiến của vị bác sĩ này. Tôi cảm thấy sở dĩ Nhan Lãng không rên được dù chỉ một tiếng là bởi nó đã bị tiêm thuốc mê.
+
+Nhan Lãng bị sắp xếp vào một phòng hai giường bệnh, bệnh nhân cùng phòng với nó là một anh chàng rất ham đọc sách. Bởi vì từ khi Nhan Lãng chuyển vào phòng, công việc đọc sách của anh ta vẫn luôn tiếp tục, không hề gián đoạn, thật là “Đóa tiến tiểu lâu thành nhất thống, chúng nhân giai túy ngã độc tỉnh”[2].
+
+Tôi ngồi chán chết ở trước giường bệnh Nhan Lãng tầm hai mươi phút, đang định đứng dậy đi toilet, vừa mở cửa, liền đụng ngay phải Chu Việt Việt đang hấp tấp chạy đến. Tôi nhanh nhẹn tránh sang, cảm giác được Chu Việt Việt xẹt qua người mình, tạo thành một cơn gió mạnh. Tôi sợ run cả người, Chu Việt Việt thở hổn hển hai hơi, chửi ẩm lên: “Mẹ nó, bệnh viện cái kiểu gì chứ, muốn giết bà cô này hả?”
+
+Anh chàng luôn chăm chú đọc sách ở đầu giường rốt cuộc ngầng đầu lên, chúng tôi ngạc nhiên phát hiện khuôn mặt anh ta có chút giống Quách Phú Thành.
+
+Trong mắt của Chu Việt Việt phát ra một tia sáng mạnh, tôi đọc ra đó là một ánh sáng hối hận, đại ý hẳn là: “Chết tiệt, sao lại có thể mất mặt trước một anh chàng dễ nhìn thế này.” Nói văn vẻ hơn là: “Làm chuyện thất lễ trước mặt Phan Lang, tôi thật sự rất ngại ngùng,thà hành lễ Chu Công với mẹ chàng còn hơn là mất mặt với chàng như vậy, thật hận.”
+
+Cửa vừa đóng vào lại một lần nữa bị đẩy ra, tôi cùng Chu Việt Việt quay đầu nhìn, Lâm Kiều áo mũ chỉnh tề đứng phía ngoài, ánh đèn ngoài hành lang đều bị anh ta chắn mất.
+
+[1] Thư đáo dụng thì phương hận thiểu: Đến lúc cần dùng đến sách vở mới hận mình tri thức còn thiếu, một câu nói của cổ nhân
+
+Trừ khước vu sơn bất thị vân: Ngoài mây vu sơn, mây nơi khác cũng chẳng là mây, trong bài thơ khóc vợ của Nguyên Chẩn.
+
+Chị Nhan Tống này có sở trường cắt lung tác tác phẩm ghép lại thành một.
+
+[2] Câu đầu là trong “Tự Trào” của Lỗ Tấn, câu sau lại là thơ của Khuất Nguyên = =

@@ -1,0 +1,1 @@
+{"author" "Quất Hoa Tán Lý", "chap" 116, "translator" "Hồng Tú Tú", "genre" "Cổ Đại, Cung Đình, Chiến Trường, HE", "title" "Tướng Quân Ở Trên, Ta Ở Dưới", "source" "", "state" 1, "alternate" nil, "editor" nil}

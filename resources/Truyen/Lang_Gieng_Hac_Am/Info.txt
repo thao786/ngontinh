@@ -1,0 +1,1 @@
+{"author" "Tát Không Không", "chap" 83, "translator" nil, "genre" "Hiện Đại, Hài, Phúc Hắc Nam, HE", "title" "Láng giềng hắc ám", "source" "", "state" 1, "alternate" "Hàng xóm hắc ám", "editor" nil}

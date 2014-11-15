@@ -1,0 +1,1 @@
+{"author" "Điển Tâm", "chap" 14, "translator" "Sâu", "genre" "Cổ Đại, Ngược, Sắc, HE", "title" "U Lan", "source" "thanhdaocac.wordpress.com", "state" 1, "alternate" nil, "editor" nil}

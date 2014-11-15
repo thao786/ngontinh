@@ -1,0 +1,1 @@
+{"author" "Biển Du Ly", "chap" 20, "translator" nil, "genre" "Cổ Đại, Huyền huyễn, Hài, Sủng, HE", "title" "Thụy thụy bình an", "source" "bongbongbien.wordpress.com", "state" 1, "alternate" nil, "editor" "Bùm Bùm"}

@@ -1,0 +1,1 @@
+{"author" "Linh Mặc Nhiên", "chap" 78, "translator" nil, "genre" "Hiện Đại, HE", "title" "Ông Xã Thật Cool", "source" "", "state" 1, "alternate" nil, "editor" nil}

@@ -1,0 +1,1 @@
+{"author" "Gia Diệp Mạn", "chap" 4, "translator" nil, "genre" "Cổ Đại, Trọng sinh, Đoản Văn, Huyền huyễn, HE", "title" "Nắm tay chàng", "source" "tieuxuyen.wordpress.com", "state" 1, "alternate" nil, "editor" nil}

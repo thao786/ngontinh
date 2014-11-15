@@ -1,0 +1,1 @@
+{"author" "Đậu Toa", "chap" 10, "translator" nil, "genre" "Sắc, Hiện Đại, Học đường, Sủng, HE", "title" "Yêu Người Không Thông Minh", "source" "duyenkiep.wordpress.com", "state" 1, "alternate" nil, "editor" "Fijian"}

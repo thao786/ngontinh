@@ -1,0 +1,1 @@
+{"author" "Điệp Chi Linh", "chap" 22, "translator" "Thu Trần", "genre" "Hiện Đại, HE", "title" "Chờ một ngày nắng", "source" nil, "state" 1, "alternate" nil, "editor" nil}

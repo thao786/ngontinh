@@ -1,0 +1,1 @@
+{"author" "Cố Mạn", "chap" 16, "translator" "Nguyễn Thành Phước", "genre" "Hiện Đại, Phúc Hắc Nam, HE", "title" "Bên nhau trọn đời", "source" nil, "state" 1, "alternate" nil, "editor" nil}

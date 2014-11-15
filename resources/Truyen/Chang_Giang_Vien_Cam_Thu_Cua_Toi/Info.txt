@@ -1,0 +1,1 @@
+{"author" "Tát Không Không", "chap" 23, "translator" nil, "genre" "Hiện Đại, Hài, Sư đồ luyến, Phúc Hắc Nam, HE", "title" "Chàng giảng viên cầm thú của tôi", "source" "thanhdaocac.wordpress.com", "state" 1, "alternate" "Loại thú phụ đạo viên", "editor" "Sâu"}

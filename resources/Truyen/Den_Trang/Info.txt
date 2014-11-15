@@ -1,0 +1,1 @@
+{"title" "Đen trắng", "alternate" "Hắc bạch", "author" "Triêu Tiểu Thành", "state" 1, "genre" "Hiện Đại, HE", "source" "tieuduongtd.wordpress.com", "editor" "Tiểu Dương", "translator" ""}

@@ -1,0 +1,1 @@
+{"author" "Tân Di Ổ", "chap" 23, "translator" nil, "genre" "Hiện Đại, Hài, Ngược, HE", "title" "Hóa ra anh vẫn ở đây", "source" "", "state" 1, "alternate" nil, "editor" nil}

@@ -1,0 +1,1 @@
+{"author" "Diệp Lạc Vô Tâm", "chap" 37, "translator" nil, "genre" "Hiện Đại, HE", "title" "Vượt Qua Lôi Trì", "source" "Zeusvn.net", "state" 1, "alternate" nil, "editor" nil}

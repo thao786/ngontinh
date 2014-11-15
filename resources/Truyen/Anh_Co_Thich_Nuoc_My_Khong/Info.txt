@@ -1,0 +1,1 @@
+{"author" "Tần Di Ổ", "chap" 24, "translator" nil, "genre" "Hiện đại, SE", "title" "Anh Có Thích Nước Mỹ Không? ", "source" "", "state" 1, "alternate" nil, "editor" nil}

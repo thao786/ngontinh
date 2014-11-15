@@ -1,0 +1,1 @@
+{"author" "Cố Mạn", "chap" 54, "translator" nil, "genre" "Hiện Đại, Hài, Công Sở, Phúc Hắc Nam, HE", "title" "Sam Sam đến đây ăn nè!", "source" "th0xjnh.wordpress.com", "state" 1, "alternate" nil, "editor" "Th0xjnh"}

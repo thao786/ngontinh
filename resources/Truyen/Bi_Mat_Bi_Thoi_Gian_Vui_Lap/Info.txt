@@ -1,0 +1,1 @@
+{"author" "Đồng Hoa", "chap" 25, "translator" nil, "genre" "Hiện Đại, SE", "title" "Bí mật bị thời gian vùi lấp", "source" "", "state" 1, "alternate" nil, "editor" nil}
