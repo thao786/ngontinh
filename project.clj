@@ -11,7 +11,8 @@
                   [org.clojure/tools.trace "0.7.5"]
                   [org.apache.lucene/lucene-core "4.8.1"]
                   [org.apache.lucene/lucene-analyzers-common "4.8.1"]
-                  [org.apache.lucene/lucene-queryparser "4.8.1"]]
+                  [org.apache.lucene/lucene-queryparser "4.8.1"]
+                  [org.xerial/sqlite-jdbc "3.8.7"]]
   :plugins [[lein-ring "0.8.10"]]
   :ring {:handler ngontinh.handler/app}
   :profiles
