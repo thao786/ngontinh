@@ -1,0 +1,6 @@
+{
+"title" "The white snake" 
+"author" "Brothers Grimm" 
+"genre" "Fairy Tales" 
+"state" 1 
+}

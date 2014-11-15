@@ -1,0 +1,7 @@
+{
+"title" "A Tale of Two Cities" 
+"author" "Charles Dickens" 
+"genre" "Classical" 
+"state" 1 
+"source" "literature.org" 
+}
