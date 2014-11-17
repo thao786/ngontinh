@@ -1,7 +1,0 @@
-{
-"title" "Great Expectations" 
-"author" "Charles Dickens" 
-"genre" "Classical" 
-"state" 1 
-"source" "literature.org" 
-}

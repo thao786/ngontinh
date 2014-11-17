@@ -1,7 +1,0 @@
-{
-"title" "Moon-Face and Other Stories " 
-"author" "Jack London" 
-"genre" "Classical" 
-"state" 1 
-"source" "literature.org" 
-}

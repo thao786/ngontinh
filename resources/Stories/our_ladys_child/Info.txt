@@ -1,6 +1,0 @@
-{
-"title" "Our Lady's Child" 
-"author" "Brothers Grimm" 
-"genre" "Fairy Tales" 
-"state" 1 
-}

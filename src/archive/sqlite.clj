@@ -13,14 +13,12 @@
 
 
 
-(def query "create table truyen(parent_folder varchar(50), path varchar(50), title  varchar(50), alternate  varchar(50), author  varchar(50), state  varchar(2), genre  varchar(50), source  varchar(50), editor  varchar(50), translator  varchar(50), chapters int, view int)")
-
-
 
 (Class/forName "org.sqlite.JDBC")
 (def c (DriverManager/getConnection "jdbc:sqlite:ngontinh.db"))
 (def stmt (.createStatement c))
-(def query "INSERT INTO truyen (parent_folder,title,alternate,author,state,genre,source,editor,translator,chapters) VALUES ('Truyen', 'Anh yêu em rất nhiều','' , 'Cố Tô Lan', '1', 'Hiện Đại, HE', 'meoluoi247.wordpress.com', 'mèo Kat, Zun, Trái Táo, Tiểu Kê, Yuki', '', 9)")
+(def query "create table truyen(parent_folder varchar(50), path varchar(50), title  varchar(50), alternate  varchar(50), author  varchar(50), state  varchar(2), genre  varchar(50), source  varchar(50), editor  varchar(50), translator  varchar(50), chapters int, view int)")
+
 (.executeUpdate stmt query)
 (.close stmt)
 (.close c)
@@ -58,8 +56,6 @@
 
 
 
-(doseq [folder (.listFiles (File. "/home/thao/projects/ngontinh/resources/Truyen"))]
-	(prn (.getName folder)))
 
 
 
