@@ -14,7 +14,7 @@
 (defroutes app-routes
         (HEAD "/" [] "")
  
-        (GET "/" [] (r/render "HomePage.html"))
+        (GET "/" [] (r/render "index.html"))
 
         (GET "/listtruyen" [] 
             (r/render "listtruyen.html"))
