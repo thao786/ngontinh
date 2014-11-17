@@ -13,7 +13,7 @@
 
 
 
-(def query "create table truyen(parent_folder varchar(50), title  varchar(50), alternate  varchar(50), author  varchar(50), state  varchar(2), genre  varchar(50), source  varchar(50), editor  varchar(50), translator  varchar(50), chapters int, view int)")
+(def query "create table truyen(parent_folder varchar(50), path varchar(50), title  varchar(50), alternate  varchar(50), author  varchar(50), state  varchar(2), genre  varchar(50), source  varchar(50), editor  varchar(50), translator  varchar(50), chapters int, view int)")
 
 
 
@@ -36,7 +36,7 @@
 	(let [file (str (.getPath folder) "/Info.txt")
 		mapinfo 	(load-string (slurp file))
 		chapters 	(- (count (.listFiles folder)) 3)
-		query 	"INSERT INTO truyen (parent_folder, title, alternate, author, state, genre, source, editor, translator, chapters, view) VALUES ('Truyen', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+		query 	"INSERT INTO truyen (parent_folder, title, alternate, author, state, genre, source, editor, translator, chapters, view, path) VALUES ('Truyen', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
 		stmt 	(.prepareStatement c query)
 		stmt 	(doto stmt 
 					(.setString 1 (mapinfo "title"))
@@ -48,8 +48,22 @@
 					(.setString 7 (mapinfo "editor"))
 					(.setString 8 (mapinfo "translator"))
 					(.setInt 9 chapters)
-					(.setInt 10 (+ 2000 (rand-int 9000))))]
+					(.setInt 10 (+ 2000 (rand-int 9000)))
+					(.setString 11 (.getName folder)))]
 		(.execute stmt)))
+
+
+
+
+
+
+
+(doseq [folder (.listFiles (File. "/home/thao/projects/ngontinh/resources/Truyen"))]
+	(prn (.getName folder)))
+
+
+
+
 
 
 
