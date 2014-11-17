@@ -1,0 +1,1 @@
+{"author" "Đinh Mặc", "chap" 80, "translator" "greenrosetq", "genre" "Hiện Đại, Hắc bang, HE", "title" "Từ Bi Thành", "source" "", "state" 1, "alternate" nil, "editor" nil}

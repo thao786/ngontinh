@@ -1,0 +1,1 @@
+{"author" "Thương Nguyệt", "chap" 11, "translator" nil, "genre" "Cổ Đại, Kiếm Hiệp, OE", "title" "Đại Mạc Hoang Nhan", "source" "vnthuquan.net", "state" 1, "alternate" nil, "editor" nil}

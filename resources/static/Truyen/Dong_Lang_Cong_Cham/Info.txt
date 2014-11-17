@@ -1,0 +1,1 @@
+{"author" "Diệp Lạc Vô Tâm", "chap" 43, "translator" nil, "genre" "Hiện Đại, Hắc bang, Sắc, Ngược, HE", "title" "Đồng Lang Cộng Chẩm", "source" "", "state" 1, "alternate" "Ngủ Cùng Sói", "editor" nil}

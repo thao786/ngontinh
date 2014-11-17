@@ -1,0 +1,1 @@
+{"author" "Minh Hiểu Khê", "chap" 18, "translator" nil, "genre" "Hiện Đại, HE", "title" "Sẽ có thiên thần thay anh yêu em", "source" "", "state" 1, "alternate" "Sẽ có thiên sứ thay anh yêu em", "editor" nil}

@@ -1,0 +1,1 @@
+{"author" "Đậu Toa", "chap" 11, "translator" nil, "genre" "Sắc, Hiện Đại, HE", "title" "Yêu người tĩnh lặng", "source" "duyenkiep.wordpress.com", "state" 1, "alternate" nil, "editor" "Fijian"}

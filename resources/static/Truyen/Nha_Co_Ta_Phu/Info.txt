@@ -1,0 +1,1 @@
+{"author" "Cầu Mộng", "chap" 10, "translator" nil, "genre" "Cổ Đại, Giang Hồ, HE", "title" "Nhà có tà phu", "source" "nguyetlamquan.wordpress.com", "state" 1, "alternate" nil, "editor" "Nguyệt Lâm Quân"}

@@ -1,0 +1,1 @@
+{"author" "Điển Tâm", "chap" 15, "translator" "Dương Mỹ Nhân, Khán Nguyệt Quang", "genre" "Cổ Đại, HE", "title" "Họa mi", "source" "kogetsu.wordpress.com", "state" 1, "alternate" nil, "editor" nil}

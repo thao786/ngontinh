@@ -1,0 +1,1 @@
+{"author" "Tát Không Không", "chap" 22, "translator" nil, "genre" "Hiện Đại, Hài, Sắc, Học đường, HE", "title" "Bạn học, chào em!", "source" "bin0kun0.wordpress.com", "state" 1, "alternate" "Đồng học, nhĩ hảo!", "editor" "viochan"}

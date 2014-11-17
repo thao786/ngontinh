@@ -1,0 +1,1 @@
+{"author" "Minh Hiểu Khê", "chap" 48, "translator" nil, "genre" "Hiện Đại, HE", "title" "Bong Bóng mùa hè", "source" "", "state" 1, "alternate" nil, "editor" nil}

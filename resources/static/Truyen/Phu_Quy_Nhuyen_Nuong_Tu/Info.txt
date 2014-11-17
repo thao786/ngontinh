@@ -1,0 +1,1 @@
+{"author" "Điển Tâm", "chap" 11, "translator" nil, "genre" "Cổ Đại, HE", "title" "Phú quý nhuyễn nương tử", "source" "xinbi02.wordpress.com/", "state" 1, "alternate" nil, "editor" nil}

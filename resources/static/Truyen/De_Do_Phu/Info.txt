@@ -1,0 +1,1 @@
+{"author" "Thương Nguyệt", "chap" 15, "translator" "Quần Xà Lỏn", "genre" "Cổ Đại, Kiếm Hiệp, HE", "title" "Đế đô phú", "source" "Wattpad", "state" 1, "alternate" nil, "editor" nil}

@@ -1,0 +1,1 @@
+{"author" "Cổ Linh", "chap" 9, "translator" nil, "genre" "Cổ Đại, Cung Đình, HE", "title" "Nương tử, thỉnh chỉ giáo nhiều hơn", "source" "chikarin11906.wordpress.com", "state" 1, "alternate" nil, "editor" nil}

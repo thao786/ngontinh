@@ -1,0 +1,1 @@
+{"author" "Sữa Chua Be Be", "chap" 54, "translator" nil, "genre" "Cổ Đại, Xuyên không, Đồng Nhân, Sủng, Hài, HE", "title" "Báo Ân Cái Đầu Ngươi ý!", "source" "tamvunguyetlau.com", "state" 1, "alternate" nil, "editor" "Tiểu Mộng"}

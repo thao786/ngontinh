@@ -1,0 +1,1 @@
+{"author" "Hoa Diên U Lạc", "chap" 65, "translator" nil, "genre" "Cổ Đại, Giang Hồ, Hài, Cung Đình, Nữ phẫn nam trang, HE", "title" "Nương Tử, Xin Nhẹ Chút", "source" "nguyettolau.wordpress.com", "state" 1, "alternate" nil, "editor" "kun’xjh, QQ, Gió Lạc, Diễm Mỗ"}

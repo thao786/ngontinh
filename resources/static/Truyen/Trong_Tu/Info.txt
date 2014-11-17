@@ -1,0 +1,1 @@
+{"author" "Thục Khách", "chap" 66, "translator" nil, "genre" "Cổ Đại, Huyền huyễn, Ngược, Sư đồ luyến, Tiên Hiệp, Trọng Sinh, HE", "title" "Trọng Tử", "source" "macdichhoi.wordpress.com", "state" 1, "alternate" nil, "editor" "Vô Phương, Ong MD, Như Bình, Cà xí xọn, kenshin_duong"}

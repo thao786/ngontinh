@@ -1,0 +1,1 @@
+{"author" "Mộng Tịch", "chap" 47, "translator" nil, "genre" "Hiện Đại, Phúc Hắc Nam, HE", "title" "Phúc hắc tổng tài, đừng ăn tôi", "source" nil, "state" 1, "alternate" "Phúc hắc tổng tài, đừng ăn ta", "editor" "Lady"}

@@ -1,0 +1,1 @@
+{"author" "Tinh Dã Anh", "chap" 43, "translator" "Lục Hoa", "genre" "Hiện Đại, HE", "title" "Cậu Chủ Hồ Đồ", "source" "", "state" 1, "alternate" nil, "editor" nil}

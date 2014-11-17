@@ -1,0 +1,1 @@
+{"author" "Thương Nguyệt", "chap" 7, "translator" nil, "genre" "Cổ Đại, Kiếm Hiệp, HE", "title" "Bích Thành", "source" "vnThuquan.net", "state" 1, "alternate" nil, "editor" nil}

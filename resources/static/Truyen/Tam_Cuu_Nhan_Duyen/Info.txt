@@ -1,0 +1,1 @@
+{"author" "Tiếu Thanh", "chap" 43, "translator" nil, "genre" "Cổ Đại, Xuyên không, HE", "title" "Tam cứu nhân duyên", "source" "tukhidonglai.wordpress.com", "state" 1, "alternate" nil, "editor" "Mạc Tiếu, Tử khí đông lai"}

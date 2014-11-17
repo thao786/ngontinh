@@ -1,0 +1,1 @@
+{"author" "Hồ Điệp SEBA", "chap" 10, "translator" nil, "genre" "Cổ Đại, Xuyên không, Điền văn, HE", "title" "Cán Hoa Khúc", "source" "datichlau.wordpress.com", "state" 1, "alternate" nil, "editor" "Gia Lăng Tần"}

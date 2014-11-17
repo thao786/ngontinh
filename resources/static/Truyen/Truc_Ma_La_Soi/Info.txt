@@ -1,0 +1,1 @@
+{"author" "Mèo lười ngủ ngày", "chap" 25, "translator" "Trần Quỳnh Hương", "genre" "Hiện Đại, HE", "title" "Trúc mã là sói", "source" "", "state" 1, "alternate" nil, "editor" nil}

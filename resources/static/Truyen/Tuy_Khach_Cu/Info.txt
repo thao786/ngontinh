@@ -1,0 +1,1 @@
+{"author" "Na Chích Hồ Ly", "chap" 35, "translator" nil, "genre" "Cổ Đại, Giang Hồ, Hài, HE", "title" "Túy Khách Cư", "source" "thengoaidaonguyen.wordpress.com", "state" 1, "alternate" nil, "editor" "Tiêu nhi, Lâm nhi"}

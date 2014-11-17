@@ -1,0 +1,1 @@
+{"author" "Du Du Nhàn Nhân", "chap" 10, "translator" nil, "genre" "Cổ Đại, Huyền Huyễn, SE", "title" "Sương khói nhân gian", "source" "nhuoclinh.wordpress.com", "state" 1, "alternate" nil, "editor" "Candy"}

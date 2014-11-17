@@ -1,0 +1,1 @@
+{"author" "Thương Nguyệt", "chap" 10, "translator" nil, "genre" "Cổ Đại, Kiếm Hiệp, SE", "title" "Mạn Châu Sa Hoa", "source" "gacsach.com", "state" 1, "alternate" nil, "editor" nil}

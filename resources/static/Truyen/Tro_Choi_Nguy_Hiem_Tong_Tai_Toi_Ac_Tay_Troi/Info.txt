@@ -1,0 +1,1 @@
+{"author" "Ân Tầm", "chap" 179, "translator" nil, "genre" "Hiện Đại, Sắc, HE", "title" "Trò Chơi Nguy Hiểm - Tổng Tài Tội Ác Tày Trời", "source" "nguyenla.wordpress.com", "state" 1, "alternate" "Trò Chơi Nguy Hiểm", "editor" "Jins, FY"}

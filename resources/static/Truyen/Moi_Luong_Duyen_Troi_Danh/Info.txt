@@ -1,0 +1,1 @@
+{"author" "Hoa Thanh Thần", "chap" 22, "translator" "Phan Lưu Ly", "genre" "Hiện Đại, HE", "title" "Mối lương duyên trời đánh", "source" "", "state" 1, "alternate" nil, "editor" nil}

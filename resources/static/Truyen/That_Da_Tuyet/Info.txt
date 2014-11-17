@@ -1,0 +1,1 @@
+{"author" "Thương Nguyệt", "chap" 18, "translator" "Lục Hương", "genre" "Cổ Đại, Kiếm Hiệp, SE", "title" "Thất Dạ Tuyết", "source" "Wattpad", "state" 1, "alternate" nil, "editor" nil}

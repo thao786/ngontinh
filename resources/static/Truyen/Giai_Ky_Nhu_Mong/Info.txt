@@ -1,0 +1,1 @@
+{"author" "Phỉ Ngã Tư Tồn", "chap" 27, "translator" nil, "genre" "Hiện Đại, HE", "title" "Giai Kỳ Như Mộng", "source" "keichan2306.wordpress.com", "state" 1, "alternate" nil, "editor" "keichan"}

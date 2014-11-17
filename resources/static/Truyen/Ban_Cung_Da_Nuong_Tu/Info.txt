@@ -1,0 +1,1 @@
+{"author" "Trầm Vi", "chap" 11, "translator" nil, "genre" "Cổ Đại, HE", "title" "Bần cùng dã nương tử", "source" "tieunguyennguyen.wordpress.com", "state" 1, "alternate" nil, "editor" nil}

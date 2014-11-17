@@ -1,0 +1,1 @@
+{"author" "Đồng Hoa", "chap" 61, "translator" nil, "genre" "Cổ Đại, Cung Đình, Ngược, SE", "title" "Vân Trung Ca", "source" "tuyettrentay.wordpress.com", "state" 1, "alternate" "Đại Hán tình duyên Vân Trung Ca", "editor" "light-yagami(Tiểu Hoắc)"}

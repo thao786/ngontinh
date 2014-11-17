@@ -1,0 +1,1 @@
+{"author" "Tửu Tiểu Thất", "chap" 25, "translator" nil, "genre" "Hiện Đại, Hài, Phúc Hắc Nam, HE", "title" "Bà xã, theo anh về nhà đi!", "source" "linhmaroon.wordpress.com", "state" 1, "alternate" "Lão bà, theo ta về nhà đi!", "editor" "LinhMaroon"}

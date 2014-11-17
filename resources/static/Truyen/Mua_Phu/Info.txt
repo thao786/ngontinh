@@ -1,0 +1,1 @@
+{"author" "Lâu Vũ Tình", "chap" 17, "translator" nil, "genre" "Cổ Đại, Điền văn, HE", "title" "Mua Phu", "source" "docke.wordpress.com", "state" 1, "alternate" nil, "editor" "Docke"}

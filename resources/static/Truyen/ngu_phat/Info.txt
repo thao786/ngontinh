@@ -1,0 +1,1 @@
+{"title" "Ngự Phật", "alternate" "", "author" "O Trích Thần", "state" 1, "genre" "Cổ Đại, Hài, Huyền huyễn, Sủng, Phúc Hắc Nam, Tiên hiệp, HE", "source" "linhmaroon.wordpress.com", "editor" "LinhMaroon", "translator" ""}

@@ -1,0 +1,1 @@
+{"author" "Thương Nguyệt", "chap" 15, "translator" nil, "genre" "Cổ Đại, Kiếm Hiệp, HE", "title" "Bỉ Ngạn Hoa", "source" "vnthuquan.net", "state" 1, "alternate" nil, "editor" nil}

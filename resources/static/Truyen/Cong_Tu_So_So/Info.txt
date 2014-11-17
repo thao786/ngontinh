@@ -1,0 +1,1 @@
+{"author" "Trạm Lượng", "chap" 11, "translator" nil, "genre" "Cổ Đại, Giang Hồ, Hài, HE", "title" "Công tử sờ sợ", "source" "linhmaroon.wordpress.com", "state" 1, "alternate" nil, "editor" "Cesia"}

@@ -1,0 +1,1 @@
+{"author" "Hội Giả Định Ly", "chap" 68, "translator" nil, "genre" "Cổ Đại, Huyền huyễn, Sư đồ luyến, HE", "title" "Tiên Phong Đạo Thê", "source" "bongbongbien.wordpress.com", "state" 1, "alternate" nil, "editor" "Bùm Bùm"}

@@ -1,0 +1,1 @@
+{"author" "Hạ Huyền Chú", "chap" 49, "translator" nil, "genre" "Hiện Đại, Phúc Hắc Nam, Hài, Sắc, HE", "title" "Một đêm sau cưới", "source" "dieptuvi.wordpress.com", "state" 1, "alternate" "Cưới sau một đêm", "editor" "Momo, Nấm Siêu Nhân"}

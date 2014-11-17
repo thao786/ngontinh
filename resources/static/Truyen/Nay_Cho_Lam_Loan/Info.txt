@@ -1,0 +1,1 @@
+{"author" "Minh Nguyệt Thính Phong", "chap" 65, "translator" nil, "genre" "Hiện Đại, Hài, HE", "title" "Này, Chớ Làm Loạn", "source" "", "state" 1, "alternate" nil, "editor" "greenrosetq"}

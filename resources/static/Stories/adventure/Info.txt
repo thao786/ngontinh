@@ -1,0 +1,7 @@
+{
+"title" "Adventure" 
+"author" "Jack London" 
+"genre" "Classical" 
+"state" 1 
+"source" "literature.org" 
+}

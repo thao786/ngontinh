@@ -1,0 +1,1 @@
+{"author" "Phỉ Ngã Tư Tồn", "chap" 43, "translator" "Schan", "genre" "Cổ Đại, Cung Đình, SE", "title" "Đông Cung", "source" "schan07.wordpress.com", "state" 1, "alternate" nil, "editor" nil}

@@ -1,0 +1,1 @@
+{"author" "Guai Wu", "chap" 257, "translator" nil, "genre" "Hiện Đại, Sắc, HE", "title" "Khóa trụ tim em", "source" nil, "state" 1, "alternate" "365 ngày hôn nhân", "editor" nil}

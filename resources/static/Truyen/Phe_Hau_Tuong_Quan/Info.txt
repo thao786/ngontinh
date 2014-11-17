@@ -1,0 +1,1 @@
+{"author" "Nhất độ Quân Hoa", "chap" 14, "translator" nil, "genre" "Cổ Đại, Cung Đình, Ngược, SE", "title" "Phế hậu tướng quân", "source" "hanphongtuyet.wordpress.com", "state" 1, "alternate" nil, "editor" nil}

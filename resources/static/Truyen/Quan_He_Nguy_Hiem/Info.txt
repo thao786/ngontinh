@@ -1,0 +1,1 @@
+{"author" "Khiêu Dược Hỏa Diễm", "chap" 47, "translator" "greenrosetq", "genre" "Hiện Đại, Hắc bang, Sắc, HE", "title" "Quan hệ nguy hiểm", "source" "devilxangel.wordpress.com", "state" 1, "alternate" nil, "editor" nil}

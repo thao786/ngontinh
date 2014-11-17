@@ -1,0 +1,6 @@
+{
+"title" "The Wonderful Musician" 
+"author" "Brothers Grimm" 
+"genre" "Fairy Tales" 
+"state" 1 
+}
