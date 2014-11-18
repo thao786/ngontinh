@@ -1,0 +1,85 @@
+.navmenu{
+  border:1px solid #ccc;
+  border-width:1px 0;
+  list-style:none;
+  margin:0;
+  padding:0;
+  text-align:center;
+  font-size: 18px;
+  font-family: 'Patrick Hand', cursive;
+}
+.navmenu li{
+    display:inline;
+}
+.navmenu a{
+  text-decoration:none;
+  font-weight:bold;
+  display:inline-block;
+  padding:10px;
+  -webkit-transition: background-color 0.3s  ;
+    -moz-transition: background-color 0.3s  ;
+    -ms-transition: background-color 0.3s  ;
+    -o-transition: background-color 0.3s ;
+    transition: background-color 0.3s;
+}
+.navmenu a:hover{
+  text-decoration:none;
+  color:#fff;
+  background-color: #ebbc26;
+  border-bottom:solid 2px #cc0000;
+  margin-bottom:-2px;
+}
+
+.navmenu .active{
+  border-bottom:solid 4px #AA54CC;
+  margin-bottom:-4px;
+  color: #f7a006;
+}
+
+
+#slideshow { 
+    position: relative; 
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+}
+
+
+
+.head img:hover{
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+     
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);     
+ 
+}  
+
+.thumbnail:hover{
+  filter: grayscale(60%);
+    -webkit-filter: grayscale(60%);  /* For Webkit browsers */
+    filter: gray;  /* For IE 6 - 9 */
+    -webkit-transition-duration: all 0.8s ease;
+}
+
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    opacity: 0.7;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
