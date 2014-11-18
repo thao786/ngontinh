@@ -19,7 +19,7 @@
 								(let 	[name 			(truyen :path)									
 										overview 		(try (slurp (str lib/local-file-path "Truyen/" name "/Overview.txt"))
 															(catch Exception e (prn name)))
-										linkanh 		(str lib/nginx-path "Truyen/" name "/cover.jpg")
+										linkanh 		(lib/getImageCover name)
 										linktruyen 		(str lib/hostPath "gridtruyen/" name) 
 										shortoverview 	(clojure.string/replace 
 															(clojure.string/trim 
@@ -40,7 +40,7 @@
 				addLink		(for [truyen mostRead]
 								(let 	[name 			(truyen :path)									
 										overview 		(slurp (str lib/local-file-path "Stories/" name "/Overview.txt"))
-										linkanh 		(str lib/nginx-path "Stories/" name "/cover.jpg")
+										linkanh 		(lib/getImageCover name "a")
 										linktruyen 		(str lib/hostPath "englishnovel/" name) 
 										shortoverview 	(clojure.string/replace (clojure.string/trim (subs overview 12 (min 300 (count overview)))) #"\n" "<br>")	]
 									(assoc truyen :shortoverview shortoverview :overview overview :linkanh linkanh :linktruyen linktruyen)))
