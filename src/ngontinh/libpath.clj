@@ -109,6 +109,14 @@
 			   :font3 (str staticPath "fonts/glyphicons-halflings-regular.ttf")
 			   :font4 (str staticPath "fonts/glyphicons-halflings-regular.svg")})
 
-(defn getImageLink [ten-truyen]
-	(str staticPath ten-truyen "/cover"))
+(defn getImageCover
+	([ten-truyen lang]
+		(if (= lang "v")
+			(getImageLink ten-truyen)
+			(str hostPath "Stories/" ten-truyen "/cover.jpg")))
+	([ten-truyen]
+		(str hostPath "Truyen/" ten-truyen "/cover.jpg")))
 
+
+(defn getImageLink [iname] 
+	(str hostPath "static/image/" iname))

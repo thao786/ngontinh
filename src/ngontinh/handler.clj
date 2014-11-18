@@ -47,6 +47,10 @@
             (r/render "KetQuaTimKiem.html" 
                 {:tukhoa ((request :query-params) "term")}))
 
+        (GET "/static/:name/:name2/:name3" req 
+            (let [uri   (req :uri)
+                file-path   (subs uri 1)]
+                (io/resource file-path)))
         (GET "/static/:name/:name2" req 
             (let [uri   (req :uri)
                 file-path   (subs uri 1)]
