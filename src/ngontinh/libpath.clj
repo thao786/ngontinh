@@ -3,7 +3,6 @@
 
 (def nginx-path "http://li679-206.members.linode.com:8000/")
 (def staticPath (str nginx-path "files/"))
-;(def hostPath "http://li679-206.members.linode.com/")
 (def hostPath "http://localhost:3000/")
 (def local-file-path "C:/Users/Thuy/Desktop/git/Statics/")
 
@@ -111,11 +110,11 @@
 (defn getImageCover
 	([ten-truyen lang]
 		(if (= lang "v")
-			(getImageLink ten-truyen)
-			(str hostPath "Stories/" ten-truyen "/cover.jpg")))
+			(getImageCover ten-truyen)
+			(str hostPath "static/Stories/" ten-truyen "/cover.jpg")))
 	([ten-truyen]
-		(str hostPath "Truyen/" ten-truyen "/cover.jpg")))
+		(str hostPath "static/Truyen/" ten-truyen "/cover.jpg")))
 
 
-(defn getImageLink [iname] 
-	(str hostPath "static/image/" iname))
+(defn getFileLink [ipath] 
+	(str hostPath "static/" ipath))

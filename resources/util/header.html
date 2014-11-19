@@ -1,0 +1,29 @@
+%{(require '[ngontinh.libpath :as l]
+)}
+
+
+  <div class="head" style='background-image: url(%(l/getFileLink "image/header.png"));'>
+          <a href="#"><img src="%(l/getFileLink "image/logo3.png")" width="250" height="100"></a>
+          <span style="float:right; margin:50px 0 0 0;">
+          <form class="navbar-form searchbox" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search..." style="margin-bottom">
+              </div>
+              <button type="submit" class="btn btn-warning btn-sm">Go</button>
+          </form>
+          <a href=""><img src="%(l/getFileLink "image/email.png")" width="45px"></a>
+          <a href=""><img src="%(l/getFileLink "image/facebook.png")" width="45px"></a>
+          <a href=""><img src="%(l/getFileLink "image/twitter.png")" width="45px"></a>
+          <a href=""><img src="%(l/getFileLink "image/rss.png")" width="45px"></a></span>
+        </div>
+
+
+        <div>
+          <ul class="navmenu">  
+            <li><a href="%{l/hostPath}" id="trangchu"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a href="%{l/hostPath}/liststory" id="danhsachtruyen">List of stories</a></li>
+            <li><a href="/portfolio/" id="theloai">Genres</a></li>
+            <li><a href="/archives/" id="englishsite">Vietnamese Site</a></li>
+            <li><a href="/resources/" id="timnangcao">Advanced Search</a></li>
+          </ul>
+        </div>

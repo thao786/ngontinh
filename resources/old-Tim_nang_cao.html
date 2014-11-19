@@ -1,0 +1,424 @@
+%{(require '[ngontinh.libpath :as l]
+           '[sodahead.render :as r]
+           '[ngontinh.util.truyen :as truyen]
+           '[clojure.java.io :as io]
+)}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>Tìm Kiếm Nâng Cao | Trang Ngôn Tình</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
+    <!-- Bootstrap -->  
+    <link href="%(l/paths :bootcss)" rel="stylesheet" media="screen" type="text/css"> 
+    <link rel="stylesheet" href="%(l/paths :bootstheme)">
+    <link href="%(l/paths :docscss)" rel="stylesheet">  
+    <link href="%(l/paths :bootsresponsive)" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="%(l/paths :stylesheet)">
+    <style>
+        body{
+          background-image:url("%(l/paths :bgr)"); 
+        }  
+        @font-face {
+          font-family: 'Glyphicons Halflings';
+          src:  url('%(l/paths :font1)');
+          src:  url('%(l/paths :font1)?#iefix') format('embedded-opentype'), 
+                url('%(l/paths :font2)') format('woff'), 
+                url('%(l/paths :font3)') format('truetype'), 
+                url('%(l/paths :font4)#glyphicons_halflingsregular') format('svg');
+        }
+    </style>
+</head>
+
+<!--================================================== -->
+   <body class="maubody1">
+<div class="le">  
+
+      %include {"util/pageheader.html"}
+
+    <!--================================================== -->
+
+  <div class="row-fluid">     
+      <div class="span3">              
+        
+           %include {"util/truyenngaunhien.html"}
+
+        </div>
+
+           <!--================================================== -->
+
+          <div class="span9">            
+            <div class="whiteBgr">
+                <div class="row-fluid">
+                  <ol class="breadcrumb">
+                      <li><a href="%l/hostPath">Home</a></li>
+                      <li class="active">Tìm Kiếm Nâng Cao</li>
+                                            
+                    </ol>
+                </div>
+                <br>
+
+                <h4 class="highlight white">Tìm Kiếm Nâng Cao</h4> 
+
+                <br>
+                <form action="search" method="get">               
+                      <div class="form-inline well well-sm">
+                        <label class="cachnhaura">Tên Truyện</label>
+                        <select class="form-control cachnhaura" name="chuatu">
+                          <option>chứa từ</option>
+                          <option>bắt đầu bằng</option>
+                          <option>kết thúc bằng</option>                      
+                        </select>
+                        <input type="text" class="form-control cachnhaura" name="input">
+                        <button href ="[[((param :tim) :timthuong)]]" type="submit" class="btn btn-default cachnhaura">Tìm</button>  
+                      </div>                       
+
+                      <br>
+
+                      <div class="row-fluid">
+                        <div class="span2"><label>Tác Giả</label></div>
+                        <div class="span8 form-inline">
+                            <select class="form-control cachnhaura" name="filterauthor">
+                              <option>chứa từ</option>
+                              <option>bắt đầu bằng</option>
+                              <option>kết thúc bằng</option>                      
+                            </select>
+                          <input type="text" class="form-control cachnhaura" name="author">                          
+                        </div> 
+                      </div>  
+
+                      <br>
+
+                      <div class="row-fluid">
+                        <div class="span2"><label>Dịch giả/ Editor</label></div>
+                        <div class="span8 form-inline">
+                            <select class="form-control cachnhaura" name="filtertrans">
+                              <option>chứa từ</option>
+                              <option>bắt đầu bằng</option>
+                              <option>kết thúc bằng</option>                      
+                            </select>
+                          <input type="text" class="form-control cachnhaura" name="trans">                          
+                        </div> 
+                      </div>      
+
+                      <br>
+
+                      <div class="row-fluid">
+                        <div class="span2"><label>Thể Loại</label></div>
+                        <div class="span10">
+                          <div class="row-fluid">
+                            <div class="span3">                                
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="2">
+                                      <abbr title="Thống lĩnh quân đội, hành quân đánh giặc">Chiến Trường</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Truyện lấy bối cảnh cổ ngày xưa">Cổ Đại</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="1">
+                                      <abbr title="Các tình huống và tình cảm phát sinh ở nơi làm việc">Công Sở</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Đấu đá tranh đoạt trong cung đình, giữa phi tử">Cung đấu</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="4">
+                                      <abbr title="Truyện liên quan đến tranh chấp và các tình huống trong triều đình">Cung Đình</abbr>
+                                  </label>
+                                </div>                                                        
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="7">
+                                      <abbr title="Nam x Nam">Đam mỹ</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="7">
+                                      <abbr title="Truyện Ngắn">Đoản Văn</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="8">
+                                      <abbr title="Thể loại truyện lấy bối cảnh từ truyện tranh, phim ảnh, phim hoạt hình, hoặc một câu chuyện nào đó có sẵn">Đồng nhân</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="9">
+                                      <abbr title="Truyện không có cao trào, nút thắt, chỉ xoay quanh cuộc sống hằng ngày của nhân vật, bình thản, chầm chậm">Điền văn</abbr>
+                                  </label>
+                                </div>                                
+                            </div><!--span3-->
+
+
+                            <div class="span3">                                
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="1">
+                                      <abbr title="Bối cảnh giang hồ với các môn phái">Giang Hồ</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="2">
+                                      <abbr title="Hãy cười thật thoải mái">Hài</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Xã hội đen">Hắc bang</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Truyện lấy bối cảnh hiện đại">Hiện Đại</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Hoán đổi thân xác">Hoán Thân</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Truyện có yếu tố phép thuật, kỳ ảo… được đặt trong bối cảnh siêu tưởng (tiên giới, ma giới…)">Huyền huyễn</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Ân oán giang hồ, chiêu thức võ công...Võ thuật">Kiếm Hiệp</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Nhân vật bị hành hạ về thể xác (Ngược thân) hoặc tinh thần (Ngược tâm)">Ngược</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Người với Thú">Nhân thú</abbr>
+                                  </label>
+                                </div>                                
+                            </div><!--span3-->
+
+
+                            <div class="span3">                                
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Truyện mang tư tưởng trọng nữ khinh nam">Nữ tôn</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Nữ giả nam">Nữ phẫn nam trang</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="2">
+                                      <abbr title="1 nữ nhiều nam; 1 nam nhiều nữ hoặc nhiều nữ nhiều nam">NP</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Bụng dạ đen tối">Phúc Hắc Nam</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Truyện có đề tài liên quan đến quân nhân">Quân nhân</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Truyện có những cảnh 18+, 20+, 25+,…">Sắc</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Trái lại với ngược">Sủng</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Tình yêu giữa sư phụ đồ đệ/ học sinh thầy giáo">Sư đồ luyến</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Cuộc sống sinh viên">Học đường</abbr>
+                                  </label>
+                                </div>
+                            </div><!--span3-->
+
+
+                            <div class="span3">                             
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Truyện có yếu tố thần tiên, tu đạo">Tiên hiệp</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="2">
+                                      <abbr title="Nhân vật chết đi rồi sống lại hoặc “nhập” vào một cơ thể khác">Trọng sinh</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Truyện miêu tả song song giữa cuộc sống ảo trên mạng và ngoài đời thực của nhân vật">Võng du</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Nhân vật vượt qua thời gian/ không gian đến một thời gian/ không gian khác">Xuyên không</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Kết vui">HE</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Kết buồn">SE</abbr>
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="optionscheckboxs1" value="3">
+                                      <abbr title="Kết mở">OE</abbr>
+                                  </label>
+                                </div>                                
+                            </div><!--span3-->
+                          </div><!--span10-->                       
+                        </div><!--row-fluid--> 
+                        </div> 
+
+                        <br>
+
+                        <div class="row-fluid">
+                          <div class="span2"><label>Tình Trạng</label></div>
+                          <div class="span8 form-inline">
+                              <div class="checkbox cachnhaura">
+                                  <label><input type="checkbox" name ="val1" value="1"> Hoàn Thành</label>
+                              </div>
+                              <div class="checkbox cachnhaura">
+                                  <label><input type="checkbox" name ="val2" value="1"> Chưa Hoàn</label>
+                              </div>
+                              <div class="checkbox cachnhaura">
+                                  <label><input type="checkbox" name ="val3" value="1"> Cả Hai</label>
+                              </div>
+                          </div> 
+                        </div> 
+
+                        <br>
+                        <br>
+
+                        <div class="form-inline text-center">
+                          <button type="button" class="btn btn-success">Tìm nâng cao</button>
+                          <button href="#" type="button" class="btn btn-default">Làm Lại</button>
+                        </div>
+                  </form>                    
+
+
+
+                </div><!--row-fluid-->   
+                <br>
+                <br> 
+
+            </div><!--whiteBgr-->  
+              
+          <br>
+          <br>            
+          
+ 
+
+
+      </div><!--Span9-269-->
+    
+    
+  </div><!--Row fluid-137-->
+</div><!--Container fluid-->
+
+</div><!--le-->
+
+%include {"util/footer.html"}
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <<!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   <!-- <script src="bootstrap.js"></script> 
+    <script src="bootstrap-example/js/bootstrap-transition.js"></script>
+    <script src="bootstrap-example/js/bootstrap-alert.js"></script>
+    <script src="bootstrap-example/js/bootstrap-modal.js"></script>
+    <script src="bootstrap-example/js/bootstrap-dropdown.js"></script>
+    <script src="bootstrap-example/js/bootstrap-scrollspy.js"></script>
+    <script src="bootstrap-example/js/bootstrap-tab.js"></script>
+    <script src="bootstrap-example/js/bootstrap-tooltip.js"></script>
+    <script src="bootstrap-example/js/bootstrap-popover.js"></script>
+    <script src="bootstrap-example/js/bootstrap-button.js"></script>-->
+    <script src="%(l/paths :bootcollapsejs)"></script>
+   <!--<script src="bootstrap-example/js/bootstrap-carousel.js"></script>
+    <script src="bootstrap-example/js/bootstrap-typeahead.js"></script>  -->
+
+<script>
+  
+  $("#xemThem").click(function(){
+    $("#hiddenBlock").slideToggle();    
+  });
+
+  $("#hiendangnhap").click(function(){
+        $("#dangnhapblock").slideToggle();    
+  });
+
+  $(document).ready(function(){
+    $(".list-group-item:even").addClass("list-group-item-warning");
+    $(".list-group-item:odd").addClass("list-group-item-success");
+  });
+
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,190 @@
+%{(require '[ngontinh.libpath :as l]
+           '[sodahead.render :as r]
+           '[ngontinh.util.truyen :as truyen]
+           '[clojure.java.io :as io]
+)}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  %{(def pgIndex (Integer/parseInt (params :index)))
+  (def truyendisplay (truyen/getTruyen2 (str "SELECT * FROM truyeneng limit 20 offset " (- (* 20 pgIndex) 20) "")))
+  (def truyenquantity (count truyendisplay))
+  nil
+}
+
+
+<meta charset="utf-8">
+    <meta charset="utf-8">
+    <title>English Novel | Trang Ngôn Tình</title>  
+    <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
+    <!-- Bootstrap -->  
+    <link href="%(l/paths :bootcss)" rel="stylesheet" media="screen" type="text/css"> 
+    <link rel="stylesheet" href="%(l/paths :bootstheme)">
+    <link href="%(l/paths :docscss)" rel="stylesheet">  
+    <link href="%(l/paths :bootsresponsive)" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="%(l/paths :stylesheet2)">
+    <style>
+        body{
+          background-image:url("%(l/paths :bgr)"); 
+        }  
+        @font-face {
+          font-family: 'Glyphicons Halflings';
+          src:  url('%(l/paths :font1)');
+          src:  url('%(l/paths :font1)?#iefix') format('embedded-opentype'), 
+                url('%(l/paths :font2)') format('woff'), 
+                url('%(l/paths :font3)') format('truetype'), 
+                url('%(l/paths :font4)#glyphicons_halflingsregular') format('svg');
+        }
+    </style>
+
+</head>
+
+<!--================================================== -->
+  <body class="maubody1">
+<div class="le">  
+
+    %include {"util/pageheader.html"}
+
+<!--================================================== -->
+
+
+  <div class="row-fluid">     
+      <div class="span3">              
+            <!--<h3><span class="label label-custom label-danger-1">Genre</span></h3> 
+             <div class="row-fluid sideBar">                     
+                  <div class="list-group">
+
+                    %{(defn sidebar1 [genre sotruyen]
+                     (str "<a href='" (str l/hostPath genre) "' class='list-group-item'>&raquo " genre "<span class='badge pull-right'>" sotruyen "</span></a>"))
+
+
+                        (apply str (for [x (params :sidebar1)] 
+                                  (sidebar1 (x :genre) (x :sotruyen))))
+                        }
+                   
+                  </div><!--list group
+            </div><!--sideBar
+
+            <br>
+            <br>-->
+
+          %(r/render "util/popularseries.html")
+
+          <br>
+          <br>
+
+          %(r/render "util/randomseries.html")
+
+        </div>
+
+           <!--================================================== -->
+
+          <div class="span9">            
+            <div class="whiteBgr">
+                <div class="row-fluid">
+                  <ol class="breadcrumb">
+                      <li><a href="%l/hostPath">Home</a></li>
+                      <li class="active">English Novel</li>                      
+                    </ol>
+                </div><br>                
+                
+
+        %{
+            (defn truyen4 [linktruyen linkanh title author genre state view]
+                     (str "<div class='span3 doctruyen'>
+                        <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail' width='140' height='190'></a>
+                        <a href='" linktruyen "'><h4><b>" title "</b></h4></a>
+                        <p class='text-muted'><span class='small'>Author:</span> " author "<br>
+                                              <span class='small'>Genre:</span> " genre "<br>   
+                                              <span class='small'>Views:</span> " view "</p>
+                           </div> "))
+
+            (defn rowtruyen [a] (str "<div class='row-fluid'>"
+                        (apply str (for [x (subvec truyendisplay (* 4 a) (min (+ 4 (* 4 a)) truyenquantity))] 
+                                  (truyen4 (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view)))) "</div><br>"))
+
+            
+            (def num-row (if (= (rem truyenquantity 4) 0) (quot truyenquantity 4) (+ (quot truyenquantity 4) 1)))
+
+            (apply str (for [a (range num-row)] (rowtruyen a)))             
+        }
+
+
+
+
+  %{  (def numberoftruyeninDB (truyen/truyenCount "truyeneng"))
+      (def pagequantity  (if (= (rem numberoftruyeninDB 20) 0) (quot numberoftruyeninDB 20) (+ (quot numberoftruyeninDB 20) 1)))
+      nil
+  }
+
+                <div class="row-fluid text-center">                    
+                    <ul class="pagination">
+                      <li><a href="%(str l/hostPath "englishnovel/pgnumber/" 1)">&laquo;</a></li>                     
+
+      %{(defn pagination [x]
+        (str "<li class='" (let [active (if (= x pgIndex) "active" "")] active) "'><a href='" l/hostPath "englishnovel/pgnumber/"  x "'>" x "</a></li>")) 
+
+        (apply str (for [x (range (max 1 (- pgIndex 4)) (min (+ 1 pagequantity) (+ 5 pgIndex)))] 
+                                       (pagination x)))      
+      }
+
+                      <li><a href="%(str l/hostPath "englishnovel/pgnumber/" pagequantity)">&raquo;</a></li>
+                    </ul>
+                </div>    
+
+            </div><!--whiteBgr-->  
+              
+          <br>
+          <br>           
+          
+ 
+
+
+      </div><!--Span9-269-->
+    
+    
+  </div><!--Row fluid-137-->
+</div><!--Container fluid-->
+
+</div><!--le-->
+
+%include {"util/footer.html"}
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   <!-- <script src="bootstrap.js"></script> 
+    <script src="bootstrap-example/js/bootstrap-transition.js"></script>
+    <script src="bootstrap-example/js/bootstrap-alert.js"></script>
+    <script src="bootstrap-example/js/bootstrap-modal.js"></script>
+    <script src="bootstrap-example/js/bootstrap-dropdown.js"></script>
+    <script src="bootstrap-example/js/bootstrap-scrollspy.js"></script>
+    <script src="bootstrap-example/js/bootstrap-tab.js"></script>
+    <script src="bootstrap-example/js/bootstrap-tooltip.js"></script>
+    <script src="bootstrap-example/js/bootstrap-popover.js"></script>
+    <script src="bootstrap-example/js/bootstrap-button.js"></script>-->
+    <script src="%(l/paths :bootcollapsejs)"></script>
+   <!--<script src="bootstrap-example/js/bootstrap-carousel.js"></script>
+    <script src="bootstrap-example/js/bootstrap-typeahead.js"></script>  -->      
+<script>
+
+   $("#xemThem").click(function(){
+    $("#hiddenBlock").slideToggle();    
+  });
+
+  $("#hiendangnhap").click(function(){
+        $("#dangnhapblock").slideToggle();    
+      });
+
+  $(document).ready(function(){
+    $(".list-group-item:even").addClass("list-group-item-success");
+    $(".list-group-item:odd").addClass("list-group-item-info");
+  });
+
+</script>
+
+  </body>
+</html>

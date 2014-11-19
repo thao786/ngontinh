@@ -1,0 +1,159 @@
+%{(require '[ngontinh.libpath :as l]
+           '[sodahead.render :as r]
+           '[ngontinh.util.truyen :as truyen]
+           '[clojure.java.io :as io]
+)}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <meta charset="utf-8">
+    <title>Đế Đô Phú </title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" href="image/icon.png" type="image/gif" sizes="16x16">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="csssheet.css" rel="stylesheet">
+    <link href="advanced-css.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Patrick+Hand&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <style>
+      body{        
+          background-image: url('%(l/getFileLink "image/bokeh.png")');
+      }
+      .jumbotron{
+          background-image: url('%(l/getFileLink "image/zenbg-1.png")'), url('%(l/getFileLink "image/zenbg-2.png")');
+      }
+    </style>
+</head>
+
+<!--================================================== -->
+  <body>
+
+ <div class="container">
+      <div class="startofbody">
+
+
+        %include {"util/header.html"}
+        
+
+        <div class="jumbotron">
+          <p></p>
+        </div>
+
+
+
+        <div class="row body">
+          <div class="col-sm-3">
+              %include {"util/truyenngaunhien.html"}
+          </div><!--col-sm-3-->
+
+          
+          <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="%{l/host}">Home</a></li>
+                <li><a href="%{l/host}">Danh Sach Truyen</a></li>
+                <li class="active">Đế Đô Phú</li>
+            </ol>
+
+
+            <div class="row">    
+              <div class="col-sm-4">
+                <img src="image/7.jpg" class="thumbnail img-responsive" width="300" height="425">
+              </div>
+              <div class="col-sm-6">
+                <a href="#"><h2 class="text-success"><b>Thiên hạ hoan ca</b></h2></a>
+                <br>
+                <p><i>Tên Khác</i>:  Thần Tiên Cũng Ngắm Mưa Sao Băng</p>
+                <p><i>Tác Giả</i>:  <a href="">Kiều Gia Tiểu Kiều</a></p>
+                <p><i>Thể Loại</i>:  <a href="">Cổ Đại, Huyền Huyễn, HE</a></p>
+                <p><i>Tình Trạng</i>:  <a href="">Hoàn Thành</a></p>
+                <div class="text-muted">Nguồn: vdgrd.wordpress.com<br>
+                                        Editor/Translator: teg<br>
+                                        Lượt Xem: 53788<br>
+                                        Ngày Cập Nhập: 01/05/2014</div>
+              </div>
+            </div>       
+
+
+            <div class="row">
+              <div class="col-sm-7"> 
+                <h4 class="text-primary"><b>Chương Mới Nhất </b></h4>
+                <div class="panel panel-success">       
+                  <div class="panel-body">
+                      <a href="">1. Alalalaljg ihfeih iheuq3 hfw</a><br>
+                      <a href="">2. Alaug ihfeih iheuq3 hfw</a><br>
+                      <a href="">3. Alhdlaljg ihfeih iheuq3 hfw</a><br>
+                      <a href="">4. Aldzaljg ihfeih iheuq3 hfw</a><br>
+                      <a href="">5. Aldjg ihfeih iheuq3 hfw</a>  
+                  </div>
+                </div>  
+              </div>          
+            </div>
+
+            <br>
+
+            <h4 class="text-warning"><b>Giới Thiệu </b></h4>
+            <div class="well">
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover ma</p>                  
+            </div>    
+            
+
+            <br>
+
+            <h4 class="text-danger"><b>Mục Lục truyện </b></h4>            
+            <div class="table-responsive">
+              <table class="table table-striped table-hover ">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Tên Chương</th>                        
+                    <th>Ngày Đăng</th>                        
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>ipsum</td>
+                    <td>dolor</td>                       
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>consectetur</td>
+                    <td>adipiscing</td>                        
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>nec</td>
+                    <td>odio</td>                      
+                  </tr>    
+                </tbody>
+              </table>
+            </div>          
+
+                
+          </div><!-- col-sm-9 -->
+        </div><!-- row body -->
+      </div><!--startofbody-->
+    </div><!--container-->  
+
+
+    %include {"util/footer.html"}
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script src="%(l/getFileLink "bootstrap/css/bootstrap.min.js")"></script>
+   <script>
+
+      $(document).ready(function(){
+          $("#danhsachtruyen").addClass("active");
+          $("tr:odd").addClass("warning");
+          $(".list-group-item:even").addClass("list-group-item-warning");
+          $(".list-group-item:odd").addClass("list-group-item-success");
+      });
+      
+  </script>
+  </body>
+</html>
+
+
+
