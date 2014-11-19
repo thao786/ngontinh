@@ -58,7 +58,25 @@
 
 
 
-
+(doseq [folder (.listFiles (File. "/home/thao/projects/ngontinh/resources/static/Stories"))]
+	(let [file (str (.getPath folder) "/Info.txt")
+		mapinfo 	(load-string (slurp file))
+		chapters 	(- (count (.listFiles folder)) 3)
+		query 	"INSERT INTO truyen (parent_folder, title, alternate, author, state, genre, source, editor, translator, chapters, view, path) VALUES ('Stories', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+		stmt 	(.prepareStatement c query)
+		stmt 	(doto stmt 
+					(.setString 1 (mapinfo "title"))
+					(.setString 2 (mapinfo "alternate"))
+					(.setString 3 (mapinfo "author"))
+					(.setString 4 (str (mapinfo "state")))
+					(.setString 5 (mapinfo "genre"))
+					(.setString 6 (mapinfo "source"))
+					(.setString 7 (mapinfo "editor"))
+					(.setString 8 (mapinfo "translator"))
+					(.setInt 9 chapters)
+					(.setInt 10 (+ 2000 (rand-int 9000)))
+					(.setString 11 (.getName folder)))]
+		(.execute stmt)))
 
 
 
