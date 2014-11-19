@@ -4,6 +4,7 @@
            '[clojure.java.io :as io]
 )}
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +13,17 @@
     <title>Trang Ngôn Tình | Nơi Đọc Truyện Lý Tưởng Của Bạn</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/getFileLink "image/favicon.png")" type="image/gif" sizes="16x16">
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="%(l/getFileLink "bootstrap/css/bootstrap.css")" rel="stylesheet">
     <link href="%(l/getFileLink "css/csssheet.css")" rel="stylesheet">
-    <link href="advanced-css.css" rel="stylesheet">
+    <link href="%(l/getFileLink "css/advanced-css.css")" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900' rel='stylesheet' type='text/css'>
     <style>
-    
+      body{        
+          background-image: url('%(l/getFileLink "image/bokeh.png")');
+      }
+      .jumbotron{
+          background-image: url('%(l/getFileLink "image/zenbg-1.png")'), url('%(l/getFileLink "image/zenbg-2.png")');
+      }    
     </style>
 </head>
 
@@ -27,33 +33,7 @@
  <div class="container">
       <div class="startofbody">
 
-
-        <div class="head">
-          <a href="#"><img src="image/logo3.png" width="250" height="100"></a>
-          <span style="float:right; margin:50px 0 0 0;">
-          <form class="navbar-form searchbox" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search..." style="margin-bottom">
-              </div>
-              <button type="submit" class="btn btn-warning btn-sm">Go</button>
-          </form>
-          <a href=""><img src="image/email.png" width="45px"></a>
-          <a href=""><img src="image/facebook.png" width="45px"></a>
-          <a href=""><img src="image/twitter.png" width="45px"></a>
-          <a href=""><img src="image/rss.png" width="45px"></a></span>
-        </div>
-
-
-        <div>
-          <ul class="navmenu">  
-            <li><a href="/" id="trangchu"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-            <li><a href="/about/" id="danhsachtruyen">List of stories</a></li>
-            <li><a href="/portfolio/" id="theloai">Genres</a></li>
-            <li><a href="/archives/" id="englishsite">Vietnamese Site</a></li>
-            <li><a href="/resources/" id="timnangcao">Advanced Search</a></li>
-          </ul>
-        </div>
-
+        %include {"util/header.html"}
         
         
         <div class="jumbotron">
@@ -61,54 +41,9 @@
           <p>Your ideal online reading website. With complete table of content and searching system, you will be able too find your title effortlessly.</p>
         </div>
 
-          <div class="row body">
+        <div class="row body">
             <div class="col-sm-3">              
-                <div class="panel panel-success">
-                  <div class="panel-heading">
-                    <h3 class="panel-title"><b>Random Series</b></h3>
-                </div>
-                <div class="panel-body">
-                  <div class="list-group">
-                    <a href="#" class="list-group-item">
-                      <img src="image/on.png" class="img-responsive floatLeft" width="90" height="120">
-                      <h4 class="list-group-item-heading">Hoa Tu Dan</h4>               
-                      <p class="small">Author: Chu Ngoc<br>
-                                       Genre: Xuyen Khong</p>                               
-                    </a>
-                    <a href="#" class="list-group-item">
-                      <img src="image/on.png" class="img-responsive floatLeft" width="90" height="120">
-                      <h4 class="list-group-item-heading">Hoa Tu Dan</h4>               
-                      <p class="small">Author: Chu Ngoc<br>
-                                       Genre: Xuyen Khong</p>                               
-                    </a>
-                    <a href="#" class="list-group-item">
-                      <img src="image/on.png" class="img-responsive floatLeft" width="90" height="120">
-                      <h4 class="list-group-item-heading">Hoa Tu Dan</h4>               
-                      <p class="small">Author: Chu Ngoc<br>
-                                       Genre: Xuyen Khong</p>                               
-                    </a>
-                    <a href="#" class="list-group-item">
-                      <img src="image/on.png" class="img-responsive floatLeft" width="90" height="120">
-                      <h4 class="list-group-item-heading">Hoa Tu Dan</h4>               
-                      <p class="small">Author: Chu Ngoc<br>
-                                       Genre: Xuyen Khong</p>                               
-                    </a>
-                    <a href="#" class="list-group-item">
-                      <img src="image/on.png" class="img-responsive floatLeft" width="90" height="120">
-                      <h4 class="list-group-item-heading">Hoa Tu Dan</h4>               
-                      <p class="small">Author: Chu Ngoc<br>
-                                       Genre: Xuyen Khong</p>                               
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-success">
-                  <div class="panel-body">
-                    <p>Trangngontinh is a free online reading website. Stories are collected and uploaded from freelance source.</p>
-                    <p>To advertise, please contact roseskindergarten@gmail.com, or (1) 416 819 1995.</p>
-                  </div>
-                </div>
+                %include {"util/truyenngaunhien.html"}
             </div><!--col-sm-3-->
 
             
@@ -116,31 +51,18 @@
               <div class="red panel panel-danger">
                 <a href=""><h2>List of Stories</h2></a>
                 <p>Completed table of contents and advanced searching system, you will be able to find you title effortlessly.</p>
-                    <div class="row-fluid">
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Ao The</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Quay Ve Doi Duong Lam Luu Manh</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
+                    <div class="row">
+                        %{
+                          (defn vn-row [linktruyen linkanh title] 
+                            (str "<div class='col-sm-2'> 
+                                    <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail img-responsive' width='120' height='160'></a>
+                                    <a href='" linktruyen "'><h5>" title "</h5></a>          
+                                  </div>"
+                          ))              
+                          (def truyenrandom (truyen/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() LIMIT 6"))
+
+                          (apply str (for [x truyenrandom] (vn-row (x :linktruyen) (x :linkanh) (x :title))))           
+                        }
                     </div><!--row-fluid-->
               </div>
 
@@ -170,31 +92,18 @@
               <div class="yellow panel panel-warning">
                 <a href=""><h2>Vietnamese Site</h2></a>
                 <p>Truyen Ngon Tinh truyen duoc nhieu doc gia quan tam, truyen co dai, truyen hien dai...</p>
-                    <div class="row-fluid">
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Ao The</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Quay Ve Doi Duong Lam Luu Manh</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
+                    <div class="row">
+                        %{
+                          (defn vn-row [linktruyen linkanh title] 
+                            (str "<div class='col-sm-2'> 
+                                    <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail img-responsive' width='120' height='160'></a>
+                                    <a href='" linktruyen "'><h5>" title "</h5></a>          
+                                  </div>"
+                          ))              
+                          (def truyenrandom (truyen/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() LIMIT 6"))
+
+                          (apply str (for [x truyenrandom] (vn-row (x :linktruyen) (x :linkanh) (x :title))))           
+                        }
                     </div><!--row-fluid-->
               </div>      
                      
@@ -203,29 +112,12 @@
       </div><!--startofbody-->
     </div><!--container-->  
 
+      
+    %include {"util/footer.html"}
 
-    <div class="footer">  
-          <div class="row">    
-            <ul class="footer-menu">
-              <a href="trangngontinh.com"><li>Home</li></a>
-              <li>|</li>
-              <a href="trangngontinh.com/codaihoan"><li>List of Stories</li></a>
-              <li>|</li>
-              <a href="trangngontinh.com/codaihoan"><li>Genres</li></a>
-              <li>|</li>
-              <a href="trangngontinh.com/hiendaihoan"><li>Vietnamese Site</li></a>
-              <li>|</li>
-              <a href="trangngontinh.com/timkiemnangcao"><li>Advanced Search</li></a>
-            </ul>
-          </div>
-          <div>
-            <p>© 2014 TrangNgonTinh, CA. All Rights Reserved.<br>
-            Designed by <a href="http://catindisguise.com/">Cat In Disguise</a></p>
-          </div>
-    </div><!--footer-->
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   <script src="bootstrap/js/bootstrap.min.js"></script>
+   <script src="%(l/getFileLink "bootstrap/css/bootstrap.min.js")"></script>
    <script>
 
       $(document).ready(function(){

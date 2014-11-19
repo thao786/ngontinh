@@ -1,166 +1,117 @@
+%{(require '[ngontinh.libpath :as l]
+           '[sodahead.render :as r]
+           '[ngontinh.util.truyen :as truyen]
+           '[clojure.java.io :as io]
+)}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+
     <meta charset="utf-8">
-    <title>Chương 1 - Hoa Tư Dẫn </title>  
+    <title>Tìm Kiếm Nâng Cao | Trang Ngôn Tình</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
-    <link href="%(l/paths :stylesheet1)" rel="stylesheet">
-    <link href="%(l/paths :stylesheet2)" rel="stylesheet">
-    <link href="%(l/paths :bootstrap)" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Patrick+Hand&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->  
+    <link href="%(l/paths :bootcss)" rel="stylesheet" media="screen" type="text/css"> 
+    <link rel="stylesheet" href="%(l/paths :bootstheme)">
+    <link href="%(l/paths :docscss)" rel="stylesheet">  
+    <link href="%(l/paths :bootsresponsive)" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="%(l/paths :stylesheet)">
     <style>
-    
+        body{
+          background-image:url("%(l/paths :bgr)"); 
+        }  
+        @font-face {
+          font-family: 'Glyphicons Halflings';
+          src:  url('%(l/paths :font1)');
+          src:  url('%(l/paths :font1)?#iefix') format('embedded-opentype'), 
+                url('%(l/paths :font2)') format('woff'), 
+                url('%(l/paths :font3)') format('truetype'), 
+                url('%(l/paths :font4)#glyphicons_halflingsregular') format('svg');
+        }
     </style>
 </head>
 
 <!--================================================== -->
-  <body>
+   <body class="maubody1">
+<div class="le">  
 
- <div class="container">
-      <div class="startofbody">
+      %include {"util/pageheader.html"}
 
+    <!--================================================== -->
 
-        <div class="head">
-          <a href="#"><img src="image/logo3.png" width="250" height="100"></a>
-          <span style="float:right; margin:50px 0 0 0;">
-          <form class="navbar-form searchbox" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search..." style="margin-bottom">
-              </div>
-              <button type="submit" class="btn btn-warning btn-sm">Go</button>
-          </form>
-          <a href=""><img src="image/email.png" width="45px"></a>
-          <a href=""><img src="image/facebook.png" width="45px"></a>
-          <a href=""><img src="image/twitter.png" width="45px"></a>
-          <a href=""><img src="image/rss.png" width="45px"></a></span>
-        </div>
-
-
-        <div>
-          <ul class="navmenu">  
-            <li><a href="/" id="trangchu"><span class="glyphicon glyphicon-home"></span> Trang Chủ</a></li>
-            <li><a href="/about/" id="danhsachtruyen">Danh Sách Truyện</a></li>
-            <li><a href="/portfolio/" id="theloai">Thể Loại</a></li>
-            <li><a href="/archives/" id="englishsite">English Site</a></li>
-            <li><a href="/resources/" id="timnangcao">Tìm Nâng Cao</a></li>
-          </ul>
-        </div>
+  <div class="row-fluid">     
+      <div class="span3">              
         
+           %include {"util/truyenngaunhien.html"}
 
-        <div class="jumbotron">
-          <p></p>
         </div>
 
+           <!--================================================== -->
 
-
-        <div class="row body">
-          <div class="col-sm-3">
-
-              <div class="panel panel-success">
-                <div class="panel-heading">
-                  <h3 class="panel-title"><b>Truyện ngẫu nhiên</b></h3>
+          <div class="span9">            
+            <div class="whiteBgr">
+                <div class="row-fluid">
+                  <ol class="breadcrumb">
+                      <li><a href="%l/hostPath">Home</a></li>
+                      <li class="active">Tìm Kiếm Nâng Cao</li>
+                                            
+                    </ol>
                 </div>
-                <div class="panel-body">
-                  <div class="list-group">
-                    <a href="#" class="list-group-item">
-                      <img src="image/on.png" class="img-responsive floatLeft" width="90" height="120">
-                      <h4 class="list-group-item-heading">Hoa Tu Dan</h4>               
-                      <p class="small">Tác Giả: Chu Ngoc<br>
-                                       Thể Loại: Xuyen Khong</p>                               
-                    </a>
-                    <a href="#" class="list-group-item">
-                      <img src="image/on.png" class="img-responsive floatLeft" width="90" height="120">
-                      <h4 class="list-group-item-heading">Hoa Tu Dan</h4>               
-                      <p class="small">Tác Giả: Chu Ngoc<br>
-                                       Thể Loại: Xuyen Khong</p>                               
-                    </a>
-                    <a href="#" class="list-group-item">
-                      <img src="image/on.png" class="img-responsive floatLeft" width="90" height="120">
-                      <h4 class="list-group-item-heading">Hoa Tu Dan</h4>               
-                      <p class="small">Tác Giả: Chu Ngoc<br>
-                                       Thể Loại: Xuyen Khong</p>                               
-                    </a>
-                    <a href="#" class="list-group-item">
-                      <img src="image/on.png" class="img-responsive floatLeft" width="90" height="120">
-                      <h4 class="list-group-item-heading">Hoa Tu Dan</h4>               
-                      <p class="small">Tác Giả: Chu Ngoc<br>
-                                       Thể Loại: Xuyen Khong</p>                               
-                    </a>
-                    <a href="#" class="list-group-item">
-                      <img src="image/on.png" class="img-responsive floatLeft" width="90" height="120">
-                      <h4 class="list-group-item-heading">Hoa Tu Dan</h4>               
-                      <p class="small">Tác Giả: Chu Ngoc<br>
-                                       Thể Loại: Xuyen Khong</p>                               
-                    </a>
-                  </div>
-                </div>
-              </div>
+                <br>
 
+                <h4 class="highlight white">Tìm Kiếm Nâng Cao</h4> 
 
-              <div class="panel panel-success">
-                <div class="panel-body">
-                  <p>Trang Ngôn Tình là trang web đọc truyện miễn phí. Truyện được sưu tầm và đăng tải từ các nguồn trên mạng.</p>
-                  <p>Để quảng cáo, xin vui lòng liên hệ qua địa chỉ: abdc@gmail.com, hoặc 0123456789</p>
-                </div>
-              </div>
-          </div><!--col-sm-3-->
-
-          
-          <div class="col-sm-9">
-            <ol class="breadcrumb">
-                <li><a href="%{l/host}">Home</a></li>
-                <li class="active">Tìm kiếm nâng cao</li>
-            </ol>
-
-            <div class="form-inline well well-sm">
+                <br>
+                <form action="search" method="get">               
+                      <div class="form-inline well well-sm">
                         <label class="cachnhaura">Tên Truyện</label>
-                        <select class="form-control cachnhaura">
+                        <select class="form-control cachnhaura" name="chuatu">
                           <option>chứa từ</option>
                           <option>bắt đầu bằng</option>
                           <option>kết thúc bằng</option>                      
                         </select>
-                        <input type="text" class="form-control cachnhaura">
-                        <button type="submit" class="btn btn-default cachnhaura">Tìm</button>  
+                        <input type="text" class="form-control cachnhaura" name="input">
+                        <button href ="[[((param :tim) :timthuong)]]" type="submit" class="btn btn-default cachnhaura">Tìm</button>  
                       </div>                       
 
                       <br>
 
-                      <div class="row">
-                        <div class="col-sm-2"><label>Tác Giả</label></div>
-                        <div class="col-sm-8 form-inline">
-                            <select class="form-control cachnhaura">
+                      <div class="row-fluid">
+                        <div class="span2"><label>Tác Giả</label></div>
+                        <div class="span8 form-inline">
+                            <select class="form-control cachnhaura" name="filterauthor">
                               <option>chứa từ</option>
                               <option>bắt đầu bằng</option>
                               <option>kết thúc bằng</option>                      
                             </select>
-                          <input type="text" class="form-control cachnhaura">                          
+                          <input type="text" class="form-control cachnhaura" name="author">                          
                         </div> 
                       </div>  
 
                       <br>
 
-                      <div class="row">
-                        <div class="col-sm-2"><label>Dịch giả/ Editor</label></div>
-                        <div class="col-sm-8 form-inline">
-                            <select class="form-control cachnhaura">
+                      <div class="row-fluid">
+                        <div class="span2"><label>Dịch giả/ Editor</label></div>
+                        <div class="span8 form-inline">
+                            <select class="form-control cachnhaura" name="filtertrans">
                               <option>chứa từ</option>
                               <option>bắt đầu bằng</option>
                               <option>kết thúc bằng</option>                      
                             </select>
-                          <input type="text" class="form-control cachnhaura">                          
+                          <input type="text" class="form-control cachnhaura" name="trans">                          
                         </div> 
                       </div>      
 
                       <br>
 
-                      <div class="row">
-                        <div class="col-sm-2"><label>Thể Loại</label></div>
-                        <div class="col-sm-10">
-                          <div class="row">
-                            <div class="col-sm-3">                                
+                      <div class="row-fluid">
+                        <div class="span2"><label>Thể Loại</label></div>
+                        <div class="span10">
+                          <div class="row-fluid">
+                            <div class="span3">                                
                                 <div class="checkbox">
                                   <label>
                                     <input type="checkbox" id="optionscheckboxs1" value="2">
@@ -215,10 +166,10 @@
                                       <abbr title="Truyện không có cao trào, nút thắt, chỉ xoay quanh cuộc sống hằng ngày của nhân vật, bình thản, chầm chậm">Điền văn</abbr>
                                   </label>
                                 </div>                                
-                            </div><!--col-sm-3-->
+                            </div><!--span3-->
 
 
-                            <div class="col-sm-3">                                
+                            <div class="span3">                                
                                 <div class="checkbox">
                                   <label>
                                     <input type="checkbox" id="optionscheckboxs1" value="1">
@@ -273,10 +224,10 @@
                                       <abbr title="Người với Thú">Nhân thú</abbr>
                                   </label>
                                 </div>                                
-                            </div><!--col-sm-3-->
+                            </div><!--span3-->
 
 
-                            <div class="col-sm-3">                                
+                            <div class="span3">                                
                                 <div class="checkbox">
                                   <label>
                                     <input type="checkbox" id="optionscheckboxs1" value="3">
@@ -331,10 +282,10 @@
                                       <abbr title="Cuộc sống sinh viên">Học đường</abbr>
                                   </label>
                                 </div>
-                            </div><!--col-sm-3-->
+                            </div><!--span3-->
 
 
-                            <div class="col-sm-3">                             
+                            <div class="span3">                             
                                 <div class="checkbox">
                                   <label>
                                     <input type="checkbox" id="optionscheckboxs1" value="3">
@@ -377,45 +328,24 @@
                                       <abbr title="Kết mở">OE</abbr>
                                   </label>
                                 </div>                                
-                            </div><!--col-sm-3-->
+                            </div><!--span3-->
                           </div><!--span10-->                       
-                        </div><!--row--> 
+                        </div><!--row-fluid--> 
                         </div> 
 
                         <br>
 
-                        <div class="row">
-                          <div class="col-sm-2"><label>Đánh Giá </label></div>
-                          <div class="col-sm-8 form-inline">
-                            <select class="form-control cachnhaura">
-                              <option>bằng</option>
-                              <option>ít hơn</option>
-                              <option>nhiều hơn</option>                      
-                            </select>
-                            <select class="form-control cachnhaura">
-                              <option>sao cũng được</option>
-                              <option>1 sao</option>
-                              <option>2 sao</option> 
-                              <option>3 sao</option> 
-                              <option>4 sao</option> 
-                              <option>5 sao</option>                      
-                            </select>                          
-                          </div> 
-                        </div>   
-
-                        <br>
-
-                        <div class="row">
-                          <div class="col-sm-2"><label>Tình Trạng</label></div>
-                          <div class="col-sm-8 form-inline">
+                        <div class="row-fluid">
+                          <div class="span2"><label>Tình Trạng</label></div>
+                          <div class="span8 form-inline">
                               <div class="checkbox cachnhaura">
-                                  <label><input type="checkbox" id="optionscheckboxs1" value="1"> Hoàn Thành</label>
+                                  <label><input type="checkbox" name ="val1" value="1"> Hoàn Thành</label>
                               </div>
                               <div class="checkbox cachnhaura">
-                                  <label><input type="checkbox" id="optionscheckboxs1" value="1"> Chưa Hoàn</label>
+                                  <label><input type="checkbox" name ="val2" value="1"> Chưa Hoàn</label>
                               </div>
                               <div class="checkbox cachnhaura">
-                                  <label><input type="checkbox" id="optionscheckboxs1" value="1"> Cả Hai</label>
+                                  <label><input type="checkbox" name ="val3" value="1"> Cả Hai</label>
                               </div>
                           </div> 
                         </div> 
@@ -424,53 +354,71 @@
                         <br>
 
                         <div class="form-inline text-center">
-                          <button href="#" type="button" class="btn btn-success">Tìm nâng cao</button>
+                          <button type="button" class="btn btn-success">Tìm nâng cao</button>
                           <button href="#" type="button" class="btn btn-default">Làm Lại</button>
-                        </div>                    
-
-            
-
-                
-          </div><!-- col-sm-9 -->
-        </div><!-- row body -->
-      </div><!--startofbody-->
-    </div><!--container-->  
+                        </div>
+                  </form>                    
 
 
-    <div class="footer">  
-          <div class="row">    
-            <ul class="footer-menu">
-              <a href="trangngontinh.com"><li>Trang chủ</li></a>
-              <li>|</li>
-              <a href="trangngontinh.com/codaihoan"><li>Danh Sách Truyện</li></a>
-              <li>|</li>
-              <a href="trangngontinh.com/codaihoan"><li>Thể Loại</li></a>
-              <li>|</li>
-              <a href="trangngontinh.com/hiendaihoan"><li>English Site</li></a>
-              <li>|</li>
-              <a href="trangngontinh.com/timkiemnangcao"><li>Tìm kiếm nâng cao</li></a>
-            </ul>
-          </div>
-          <div>
-            <p>© 2014 TrangNgonTinh, CA. All Rights Reserved.<br>
-            Designed by <a href="http://catindisguise.com/">Cat In Disguise</a></p>
-          </div>
-    </div><!--footer-->
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   <script src="bootstrap/js/bootstrap.min.js"></script>
-   <script>
+                </div><!--row-fluid-->   
+                <br>
+                <br> 
 
-      $(document).ready(function(){
-          $("#timnangcao").addClass("active");
-          $("tr:odd").addClass("warning");
-          $(".list-group-item:even").addClass("list-group-item-warning");
-          $(".list-group-item:odd").addClass("list-group-item-success");
-      });
-      
-  </script>
+            </div><!--whiteBgr-->  
+              
+          <br>
+          <br>            
+          
+ 
+
+
+      </div><!--Span9-269-->
+    
+    
+  </div><!--Row fluid-137-->
+</div><!--Container fluid-->
+
+</div><!--le-->
+
+%include {"util/footer.html"}
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <<!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   <!-- <script src="bootstrap.js"></script> 
+    <script src="bootstrap-example/js/bootstrap-transition.js"></script>
+    <script src="bootstrap-example/js/bootstrap-alert.js"></script>
+    <script src="bootstrap-example/js/bootstrap-modal.js"></script>
+    <script src="bootstrap-example/js/bootstrap-dropdown.js"></script>
+    <script src="bootstrap-example/js/bootstrap-scrollspy.js"></script>
+    <script src="bootstrap-example/js/bootstrap-tab.js"></script>
+    <script src="bootstrap-example/js/bootstrap-tooltip.js"></script>
+    <script src="bootstrap-example/js/bootstrap-popover.js"></script>
+    <script src="bootstrap-example/js/bootstrap-button.js"></script>-->
+    <script src="%(l/paths :bootcollapsejs)"></script>
+   <!--<script src="bootstrap-example/js/bootstrap-carousel.js"></script>
+    <script src="bootstrap-example/js/bootstrap-typeahead.js"></script>  -->
+
+<script>
+  
+  $("#xemThem").click(function(){
+    $("#hiddenBlock").slideToggle();    
+  });
+
+  $("#hiendangnhap").click(function(){
+        $("#dangnhapblock").slideToggle();    
+  });
+
+  $(document).ready(function(){
+    $(".list-group-item:even").addClass("list-group-item-warning");
+    $(".list-group-item:odd").addClass("list-group-item-success");
+  });
+
+</script>
+
   </body>
 </html>
-
-
-

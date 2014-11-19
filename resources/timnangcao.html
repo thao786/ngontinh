@@ -1,3 +1,9 @@
+%{(require '[ngontinh.libpath :as l]
+           '[sodahead.render :as r]
+           '[ngontinh.util.truyen :as truyen]
+           '[clojure.java.io :as io]
+)}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,14 +11,19 @@
     <meta charset="utf-8">
     <title>Chương 1 - Hoa Tư Dẫn </title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="icon" href="%(l/paths :icon)" type="image/gif" sizes="16x16">
-    <link href="%(l/paths :stylesheet1)" rel="stylesheet">
-    <link href="%(l/paths :stylesheet2)" rel="stylesheet">
-    <link href="%(l/paths :bootstrap)" rel="stylesheet">
+    <link rel="icon" href="image/icon.png" type="image/gif" sizes="16x16">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="csssheet.css" rel="stylesheet">
+    <link href="advanced-css.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Patrick+Hand&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
     <style>
-    
+      body{        
+          background-image: url('%(l/getFileLink "image/bokeh.png")');
+      }
+      .jumbotron{
+          background-image: url('%(l/getFileLink "image/zenbg-1.png")'), url('%(l/getFileLink "image/zenbg-2.png")');
+      }
     </style>
 </head>
 
@@ -23,31 +34,7 @@
       <div class="startofbody">
 
 
-        <div class="head">
-          <a href="#"><img src="image/logo3.png" width="250" height="100"></a>
-          <span style="float:right; margin:50px 0 0 0;">
-          <form class="navbar-form searchbox" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search..." style="margin-bottom">
-              </div>
-              <button type="submit" class="btn btn-warning btn-sm">Go</button>
-          </form>
-          <a href=""><img src="image/email.png" width="45px"></a>
-          <a href=""><img src="image/facebook.png" width="45px"></a>
-          <a href=""><img src="image/twitter.png" width="45px"></a>
-          <a href=""><img src="image/rss.png" width="45px"></a></span>
-        </div>
-
-
-        <div>
-          <ul class="navmenu">  
-            <li><a href="/" id="trangchu"><span class="glyphicon glyphicon-home"></span> Trang Chủ</a></li>
-            <li><a href="/about/" id="danhsachtruyen">Danh Sách Truyện</a></li>
-            <li><a href="/portfolio/" id="theloai">Thể Loại</a></li>
-            <li><a href="/archives/" id="englishsite">English Site</a></li>
-            <li><a href="/resources/" id="timnangcao">Tìm Nâng Cao</a></li>
-          </ul>
-        </div>
+        %include {"util/header.html"}
         
 
         <div class="jumbotron">
@@ -58,54 +45,7 @@
 
         <div class="row body">
           <div class="col-sm-3">
-
-              <div class="panel panel-success">
-                <div class="panel-heading">
-                  <h3 class="panel-title"><b>Truyện ngẫu nhiên</b></h3>
-                </div>
-                <div class="panel-body">
-                  <div class="list-group">
-                    <a href="#" class="list-group-item">
-                      <img src="image/on.png" class="img-responsive floatLeft" width="90" height="120">
-                      <h4 class="list-group-item-heading">Hoa Tu Dan</h4>               
-                      <p class="small">Tác Giả: Chu Ngoc<br>
-                                       Thể Loại: Xuyen Khong</p>                               
-                    </a>
-                    <a href="#" class="list-group-item">
-                      <img src="image/on.png" class="img-responsive floatLeft" width="90" height="120">
-                      <h4 class="list-group-item-heading">Hoa Tu Dan</h4>               
-                      <p class="small">Tác Giả: Chu Ngoc<br>
-                                       Thể Loại: Xuyen Khong</p>                               
-                    </a>
-                    <a href="#" class="list-group-item">
-                      <img src="image/on.png" class="img-responsive floatLeft" width="90" height="120">
-                      <h4 class="list-group-item-heading">Hoa Tu Dan</h4>               
-                      <p class="small">Tác Giả: Chu Ngoc<br>
-                                       Thể Loại: Xuyen Khong</p>                               
-                    </a>
-                    <a href="#" class="list-group-item">
-                      <img src="image/on.png" class="img-responsive floatLeft" width="90" height="120">
-                      <h4 class="list-group-item-heading">Hoa Tu Dan</h4>               
-                      <p class="small">Tác Giả: Chu Ngoc<br>
-                                       Thể Loại: Xuyen Khong</p>                               
-                    </a>
-                    <a href="#" class="list-group-item">
-                      <img src="image/on.png" class="img-responsive floatLeft" width="90" height="120">
-                      <h4 class="list-group-item-heading">Hoa Tu Dan</h4>               
-                      <p class="small">Tác Giả: Chu Ngoc<br>
-                                       Thể Loại: Xuyen Khong</p>                               
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="panel panel-success">
-                <div class="panel-body">
-                  <p>Trang Ngôn Tình là trang web đọc truyện miễn phí. Truyện được sưu tầm và đăng tải từ các nguồn trên mạng.</p>
-                  <p>Để quảng cáo, xin vui lòng liên hệ qua địa chỉ: abdc@gmail.com, hoặc 0123456789</p>
-                </div>
-              </div>
+              %include {"util/truyenngaunhien.html"}
           </div><!--col-sm-3-->
 
           
@@ -437,28 +377,10 @@
     </div><!--container-->  
 
 
-    <div class="footer">  
-          <div class="row">    
-            <ul class="footer-menu">
-              <a href="trangngontinh.com"><li>Trang chủ</li></a>
-              <li>|</li>
-              <a href="trangngontinh.com/codaihoan"><li>Danh Sách Truyện</li></a>
-              <li>|</li>
-              <a href="trangngontinh.com/codaihoan"><li>Thể Loại</li></a>
-              <li>|</li>
-              <a href="trangngontinh.com/hiendaihoan"><li>English Site</li></a>
-              <li>|</li>
-              <a href="trangngontinh.com/timkiemnangcao"><li>Tìm kiếm nâng cao</li></a>
-            </ul>
-          </div>
-          <div>
-            <p>© 2014 TrangNgonTinh, CA. All Rights Reserved.<br>
-            Designed by <a href="http://catindisguise.com/">Cat In Disguise</a></p>
-          </div>
-    </div><!--footer-->
+    %include {"util/footer.html"}
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   <script src="bootstrap/js/bootstrap.min.js"></script>
+   <script src="%(l/getFileLink "bootstrap/css/bootstrap.min.js")"></script>
    <script>
 
       $(document).ready(function(){

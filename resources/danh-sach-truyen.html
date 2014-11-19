@@ -1,0 +1,188 @@
+%{(require '[ngontinh.libpath :as l]
+           '[sodahead.render :as r]
+           '[ngontinh.util.truyen :as truyen]
+           '[clojure.java.io :as io]
+)}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <meta charset="utf-8">
+    <title>Danh Sách Truyện</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" href="%(l/getFileLink "image/favicon.png")" type="image/gif" sizes="16x16">
+    <link href="%(l/getFileLink "bootstrap/css/bootstrap.css")" rel="stylesheet">
+    <link href="%(l/getFileLink "css/csssheet.css")" rel="stylesheet">
+    <link href="%(l/getFileLink "css/advanced-css.css")" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Patrick+Hand&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <style>
+      body{        
+          background-image: url('%(l/getFileLink "image/bokeh.png")');
+      }
+      .jumbotron{
+          background-image: url('%(l/getFileLink "image/zenbg-1.png")'), url('%(l/getFileLink "image/zenbg-2.png")');
+      }   
+    </style>
+</head>
+
+<!--================================================== -->
+  <body>
+
+ <div class="container">
+      <div class="startofbody">
+
+
+        %include {"util/header.html"}
+        
+
+        <div class="jumbotron">
+          <p></p>
+        </div>
+
+
+
+        <div class="row body">
+          <div class="col-sm-3">
+              %include {"util/truyenngaunhien.html"}
+          </div><!--col-sm-3-->
+
+          
+          <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="%{l/hostPath}">Home</a></li>
+                <li class="active">Danh Sach Truyen</li>
+            </ol>
+
+
+            <div class="row">
+              <div class="col-sm-3 chuThich">
+                  <img src="%(l/getFileLink "image/cungdau.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <a href="#"><h4><span class="label label-warning">Cung Đấu</span></h4></a>
+                  <span class="text-muted">Tranh đoạt chốn cung đình, thường là giữa các phi tử.</span>
+              </div>
+              <div class="col-sm-3">
+                  <img src="%(l/getFileLink "image/dammy.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <a href="#"><h4><span class="label label-primary">Đam mỹ</h4></a>
+                  <span class="text-muted">Nam x Nam.</span>
+              </div>
+              <div class="col-sm-3 chuThich">
+                  <img src="%(l/getFileLink "image/huyenhuyen.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <a href="#"><h4><span class="label label-warning">Huyền Huyễn</h4></a>
+                  <span class="text-muted">Truyện mang yếu tố kỳ ảo, có thần linh và các dị tương.</span>
+              </div>
+              <div class="col-sm-3">
+                  <img src="%(l/getFileLink "image/nguoc.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <a href="#"><h4><span class="label label-primary">Ngược</h4></a>
+                  <span class="text-muted">Nhân vật bị hành hạ về thể xác (Ngược thân) hoặc tinh thần (Ngược tâm).</span>
+              </div>
+            </div><!--Row-->
+            <br>
+            <div class="row" style="padding-right:10px;">
+              <div class="col-sm-3">
+                  <img src="%(l/getFileLink "image/vongdu.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <a href="#"><h4><span class="label label-primary">Võng du</h4></a>
+                  <span class="text-muted">Truyện miêu tả song song giữa cuộc sống ảo trên mạng và ngoài đời thực của nhân vật.</span>
+              </div>
+               <div class="col-sm-3 chuThich">
+                  <img src="%(l/getFileLink "image/trongsinh.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <a href="#"><h4><span class="label label-warning">Trọng Sinh</h4></a>
+                  <span class="text-muted">Nhân vật được hồi sinh: Sống lại hoặc nhập vào cơ thể khác.</span>
+              </div>
+              <div class="col-sm-3">
+                  <img src="%(l/getFileLink "image/sac.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <a href="#"><h4><span class="label label-primary">Sắc</h4></a>
+                  <span class="text-muted">Cảnh 18+.</span>
+              </div>  
+              <div class="col-sm-3 chuThich">
+                  <img src="%(l/getFileLink "image/xuyenkhong.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <a href="#"><h4><span class="label label-warning">Xuyên Không</h4></a>
+                  <span class="text-muted">Nhân vật vượt qua thời gian trở về quá khứ hoặc đến tương lai.</span>
+              </div>                      
+            </div>
+
+            <br>
+            <a href="#"><h4 class="green">&raquo Xem thêm các thể loại truyện khác tại <span class="label label-success">Đây</span></h4></a>
+
+            <br>
+            <br>
+
+            <h1 class="header">Danh Sách <span class="text-success"><strong>Truyện Ngôn Tình</strong></span></h1>          
+          <br>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Giới Thiệu</th>  
+                  <th><a>Tên Truyện</a></th>
+                  <th><a>Tác giả</a></th>
+                  <th><a>Thể loại</a></th>
+                  <th><a>Tình Trạng</a></th>
+                </tr>
+              </thead>
+              <tbody>
+                %{   
+                (defn listtruyen [linktruyen linkanh title author genre shortoverview view state]
+                 (str "<tr>
+                        <td><span class='dropdown hidden-xs'>
+                                <button class='dropdown-toggle btn btn-default btn-sm' data-toggle='dropdown'>Giới Thiệu <b class='caret'></b></button>
+                                <div class='dropdown-menu overview'>
+                                  <div class='row'>
+                                    <div class='col-sm-3'>
+                                      <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail img-responsive imgFloat' width='140' height='190'></a>
+                                    </div>
+                                    <div class='col-sm-9'> 
+                                        <a href='" linktruyen "'><h3 class='green'><b>" title"</b></h3></a>
+                                        <hr>
+                                        <p>" shortoverview "</p>        
+                                    </div>
+                                  </div>            
+                                </div>
+                            </span>
+                        </td>
+                        <td><a href='" linktruyen "'>" title "</a></td>
+                        <td>" author "</td>
+                        <td>" genre "</td>
+                        <td>" state "</td>
+                      </tr>"))
+
+                  (def truyenall (truyen/getTruyen "SELECT * FROM truyen")) 
+                  (def truyenall2 (for [x truyenall] (assoc x :newstate (if (= (compare (x :state) 1) 0) "Full" "Còn Tiếp"))))
+                                              
+                  (apply str (for [x truyenall]    
+                      (listtruyen (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :shortoverview) (x :view) (x :state))))
+                  }                   
+            
+                </tbody>
+              </table>
+          </div><!--Table responsive-->
+        </div>             
+      </div>
+    </div>
+
+  </div><!--startofbody-->
+</div><!--container-->  
+
+
+    %include {"util/footer.html"}
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script src="%(l/getFileLink "bootstrap/js/bootstrap.min.js")"></script>
+   <script>
+
+      $(document).ready(function(){
+          $("tr:odd").addClass("info");
+          $("#danhsachtruyen").addClass("active");
+          $(".list-group-item:even").addClass("list-group-item-warning");
+          $(".list-group-item:odd").addClass("list-group-item-success");
+          $(".btn-sm:even").addClass("btn-default");
+          $(".btn-sm:odd").addClass("btn-danger");
+      });
+      
+  </script>
+  </body>
+</html>
+
+
+

@@ -16,8 +16,8 @@
  
         (GET "/" [] (r/render "index.html"))
 
-        (GET "/listtruyen" [] 
-            (r/render "listtruyen.html"))
+        (GET "/liststory" [] 
+            (r/render "danh-sach-truyen.html"))
 
         (GET "/gridtruyen/pgnumber/:index" [index] 
             (r/render "gridtruyen.html" {:index index}))
@@ -32,7 +32,7 @@
             (r/render "Chuong.html" {:path path :num num}))
 
         (GET "/advancedsearch" [] 
-            (r/render "Tim_nang_cao.html"))
+            (r/render "old-timnangcao.html"))
 
         (GET "/englishnovel/pgnumber/:index" [index] 
             (r/render "EnglishNovel.html" {:index index}))

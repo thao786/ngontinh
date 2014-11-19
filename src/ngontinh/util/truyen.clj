@@ -4,14 +4,13 @@
 
 (import 'java.sql.DriverManager)
 
-(def connection-str "jdbc:postgresql://23.239.1.206:5432/ngontinh")
+(Class/forName "org.sqlite.JDBC")
+(def connection-str "jdbc:sqlite:ngontinh.db")
 (def username "postgres")
 (def password "fall2010")
 
 (defn getTruyen [query]
-	(vec (let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
-															"postgres" 
-															"fall2010")
+	(vec (let 	[connection (DriverManager/getConnection connection-str)
 				mostRead 	(let [	stmt 	(.createStatement connection)
 								 	rs 		(.executeQuery stmt query)]
 								(vec (resultset-seq rs)))

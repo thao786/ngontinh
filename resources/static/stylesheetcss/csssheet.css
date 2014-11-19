@@ -1,9 +1,6 @@
-%{(require '[ngontinh.libpath :as l]
-)}
-
-
 body{
   background-color: #f7f7f7;
+  background-image: url('image/bokeh.png');
   background-size: cover;
   background-attachment: fixed;
 }
@@ -19,7 +16,8 @@ a:hover{
   background-color: #fff;
   box-shadow: 5px 0 15px -4px rgba(150, 148, 144, 0.6), -7px 0 8px -4px rgba(150, 148, 144, 0.6);
 }
-.head{  
+.head{
+  background-image: url('image/header.png');
   background-position: center bottom;
   background-size: contain;
   background-repeat: no-repeat;
@@ -32,6 +30,7 @@ a:hover{
   text-align: center;
   padding:10px 0 10px 0;
   background: #f673c1;
+  background-image: url("image/zenbg-1.png"), url("image/zenbg-2.png");
   background-repeat: repeat-y, repeat;      
 }
 .jumbotron h1{
@@ -102,6 +101,7 @@ div{
   margin-bottom: 0;
   width: 100%;
   color:#1634cc;
+  background-image:url('image/footer.png');
   background-size: cover;
   background-repeat: repeat-x;
   background-position: center;
@@ -136,9 +136,8 @@ h2{
 }
 .overview{
   width:600px;
-  height:250px;
+  height:500px;
   overflow: visible;
-  padding:15px;
 }
 .doctruyen{
   padding-top: 5px;
