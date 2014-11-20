@@ -19,7 +19,7 @@
 										overview 		(try (slurp (str lib/local-file-path "Truyen/" name "/Overview.txt"))
 															(catch Exception e (prn name)))
 										linkanh 		(lib/getImageCover name)
-										linktruyen 		(str lib/hostPath "gridtruyen/" name) 
+										linktruyen 		(str lib/hostPath "vn/gridtruyen/read/" name) 
 										shortoverview 	(clojure.string/replace 
 															(clojure.string/trim 
 																(subs overview 12 (min 300 (count overview)))) #"\n" "<br>")]
@@ -46,9 +46,7 @@
 
 
 (defn getChap [query]
-	(vec (let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
-															"postgres" 
-															"fall2010")
+	(vec (let 	[connection (DriverManager/getConnection connection-str)
 				mostRead 	(let [	stmt 	(.createStatement connection)
 								 	rs 		(.executeQuery stmt query)]
 								(vec (resultset-seq rs)))
@@ -64,9 +62,7 @@
 
 
 (defn getChap2 [query]
-	(vec (let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
-															"postgres" 
-															"fall2010")
+	(vec (let 	[connection (DriverManager/getConnection connection-str)
 				mostRead 	(let [	stmt 	(.createStatement connection)
 								 	rs 		(.executeQuery stmt query)]
 								(vec (resultset-seq rs)))

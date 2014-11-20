@@ -7,22 +7,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  %{ (def path (params :path))
+   (def doctruyen (peek (truyen/getTruyen (str "SELECT * FROM truyen where path ='" path "'"))))
+   (def doctruyen-raw (assoc doctruyen-raw :newstate (if (= (compare (doctruyen-raw :state) 1) 0) "Full" "Còn Tiếp")))
+   nil}
+
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>Đế Đô Phú </title>  
+    <title>%(doctruyen :title) - %(doctruyen :newstate) - %(doctruyen :author) </title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="icon" href="image/icon.png" type="image/gif" sizes="16x16">
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="csssheet.css" rel="stylesheet">
-    <link href="advanced-css.css" rel="stylesheet">
+    <link rel="icon" href="%(l/getFileLink "image/favicon.png")" type="image/gif" sizes="16x16">
+    <link href="%(l/getFileLink "bootstrap/css/bootstrap.css")" rel="stylesheet">
+    <link href="%(l/getFileLink "css/csssheet.css")" rel="stylesheet">
+    <link href="%(l/getFileLink "css/advanced-css.css")" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Patrick+Hand&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <style>
       body{        
           background-image: url('%(l/getFileLink "image/bokeh.png")');
       }
       .jumbotron{
-          background-image: url('%(l/getFileLink "image/zenbg-1.png")'), url('%(l/getFileLink "image/zenbg-2.png")');
+          background: #216bc9;
+          background-image: url('%(l/getFileLink "image/zenbg-3.png")'), url('%(l/getFileLink "image/zenbg-4.png")');
       }
     </style>
 </head>
@@ -34,7 +41,7 @@
       <div class="startofbody">
 
 
-        %include {"util/header.html"}
+        %include {"util/vn-header.html"}
         
 
         <div class="jumbotron">
@@ -45,33 +52,33 @@
 
         <div class="row body">
           <div class="col-sm-3">
-              %include {"util/truyenngaunhien.html"}
+              %include {"util/vn-truyenngaunhien.html"}
           </div><!--col-sm-3-->
 
           
           <div class="col-sm-9">
             <ol class="breadcrumb">
-                <li><a href="%{l/host}">Home</a></li>
-                <li><a href="%{l/host}">Danh Sach Truyen</a></li>
-                <li class="active">Đế Đô Phú</li>
+                <li><a href="%l/hostPath">Home</a></li>
+                <li><a href="%{l/hostPath}vn/gridtruyen/pgnumber/1">Thể Loại</a></li>
+                <li class="active">%(doctruyen :title)</li>
             </ol>
 
 
             <div class="row">    
               <div class="col-sm-4">
-                <img src="image/7.jpg" class="thumbnail img-responsive" width="300" height="425">
+                <img src="%(doctruyen :linkanh)" class="thumbnail img-responsive" width="300" height="425">
               </div>
               <div class="col-sm-6">
-                <a href="#"><h2 class="text-success"><b>Thiên hạ hoan ca</b></h2></a>
+                <a href="%(doctruyen :linktruyen)"><h2 class="text-success"><b>%(doctruyen :title)</b></h2></a>
                 <br>
-                <p><i>Tên Khác</i>:  Thần Tiên Cũng Ngắm Mưa Sao Băng</p>
-                <p><i>Tác Giả</i>:  <a href="">Kiều Gia Tiểu Kiều</a></p>
-                <p><i>Thể Loại</i>:  <a href="">Cổ Đại, Huyền Huyễn, HE</a></p>
-                <p><i>Tình Trạng</i>:  <a href="">Hoàn Thành</a></p>
-                <div class="text-muted">Nguồn: vdgrd.wordpress.com<br>
-                                        Editor/Translator: teg<br>
-                                        Lượt Xem: 53788<br>
-                                        Ngày Cập Nhập: 01/05/2014</div>
+                <p><i>Tên Khác</i>:  %(doctruyen :alternate)</p>
+                <p><i>Tác Giả</i>:  <a href="">%(doctruyen :author)</a></p>
+                <p><i>Thể Loại</i>:  <a href="">%(doctruyen :genre)</a></p>
+                <p><i>Tình Trạng</i>:  <a href="">%(doctruyen :newstate)</a></p>
+                <div class="text-muted">Nguồn: %(doctruyen :source)<br>
+                                        Editor/Translator: %(doctruyen :person)<br>
+                                        Lượt Xem: %(doctruyen :view)<br>
+                                        Ngày Cập Nhập: %(doctruyen :date_added)</div>
               </div>
             </div>       
 
@@ -81,11 +88,13 @@
                 <h4 class="text-primary"><b>Chương Mới Nhất </b></h4>
                 <div class="panel panel-success">       
                   <div class="panel-body">
-                      <a href="">1. Alalalaljg ihfeih iheuq3 hfw</a><br>
-                      <a href="">2. Alaug ihfeih iheuq3 hfw</a><br>
-                      <a href="">3. Alhdlaljg ihfeih iheuq3 hfw</a><br>
-                      <a href="">4. Aldzaljg ihfeih iheuq3 hfw</a><br>
-                      <a href="">5. Aldjg ihfeih iheuq3 hfw</a>  
+                    %{(defn chuongmoi [linkchap num title]
+                        (str "<a href='" linkchap "'>Chương " num ": " title "</a><br>"))
+
+                        (def chapmoi (truyen/getChap (str "select * from chap where truyen = '" (doctruyen :path) "'order by num desc limit 5")))
+
+                        (apply str (for [x chapmoi] (chuongmoi (x :linkchap) (x :num) (x :title))))
+                    } 
                   </div>
                 </div>  
               </div>          
@@ -93,9 +102,13 @@
 
             <br>
 
+            %{ (def overview (slurp (str l/local-file-path "Truyen/" (doctruyen :path) "/Overview.txt")))               
+               nil
+             }
+
             <h4 class="text-warning"><b>Giới Thiệu </b></h4>
             <div class="well">
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover ma</p>                  
+              <p>%overview</p>                  
             </div>    
             
 
@@ -112,21 +125,19 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>ipsum</td>
-                    <td>dolor</td>                       
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>consectetur</td>
-                    <td>adipiscing</td>                        
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>nec</td>
-                    <td>odio</td>                      
-                  </tr>    
+
+                  %{(defn mucluc [num linkchap title date_added]
+                    (str "<tr class=''>                  
+                              <td><a href='" linkchap "'>" num "</a></td>
+                              <td><a href='" linkchap "'><b>" title "</b></a></td>
+                              <td>" date_added "</td>
+                          </tr>"))
+
+                    (def chapter (truyen/getChap (str "select * from chap where truyen = '" (doctruyen :path) "' order by num asc")))
+
+                    (apply str (for [x chapter] (mucluc (x :num) (x :linkchap) (x :title) (x :date_added))))
+                  }       
+
                 </tbody>
               </table>
             </div>          
@@ -138,15 +149,14 @@
     </div><!--container-->  
 
 
-    %include {"util/footer.html"}
-    
+    %include {"util/vn-footer.html"}
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   <script src="%(l/getFileLink "bootstrap/css/bootstrap.min.js")"></script>
+   <script src="%(l/getFileLink "bootstrap/js/bootstrap.min.js")"></script>
    <script>
 
       $(document).ready(function(){
-          $("#danhsachtruyen").addClass("active");
+          $("#theloai").addClass("active");
           $("tr:odd").addClass("warning");
           $(".list-group-item:even").addClass("list-group-item-warning");
           $(".list-group-item:odd").addClass("list-group-item-success");

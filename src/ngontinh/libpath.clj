@@ -40,7 +40,9 @@
 				"xuyenkhong" "Xuyên không" 
 				"he" "HE" 
 				"se" "SE" 
-				"oe" "OE"})
+				"oe" "OE"
+				"classical" "Classical"
+				"fairytale" "Fairy Tales"})
 
 (def genres2 {	"chientruong" "chiến trường" 
 				"codai" "cổ đại" 
@@ -75,7 +77,9 @@
 				"xuyenkhong" "xuyên không" 
 				"he" "he" 
 				"se" "se" 
-				"oe" "oe"})
+				"oe" "oe"
+				"classical" "classical"
+				"fairytale" "fairy tales"})
 
 (def paths {   :bootstrap (str staticPath "bootstrap/bootstrap.css")
 			   :stylesheet1 (str staticPath "stylesheetcss/csssheet.css")

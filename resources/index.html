@@ -10,13 +10,15 @@
 <head>
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>Trang Ngôn Tình | Nơi Đọc Truyện Lý Tưởng Của Bạn</title>  
+    <title>Trangngontinh | Your ideal reading online site</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/getFileLink "image/favicon.png")" type="image/gif" sizes="16x16">
     <link href="%(l/getFileLink "bootstrap/css/bootstrap.css")" rel="stylesheet">
     <link href="%(l/getFileLink "css/csssheet.css")" rel="stylesheet">
     <link href="%(l/getFileLink "css/advanced-css.css")" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    
     <style>
       body{        
           background-image: url('%(l/getFileLink "image/bokeh.png")');
@@ -38,7 +40,7 @@
         
         <div class="jumbotron">
           <p class="text-center"><h1>Trangngontinh</h1></p>
-          <p>Your ideal online reading website. With complete table of content and searching system, you will be able too find your title effortlessly.</p>
+          <p>Your ideal online reading website. With complete table of content and searching system, you will be able to find your favorite title effortlessly.</p>
         </div>
 
         <div class="row body">
@@ -49,19 +51,19 @@
             
             <div class="col-sm-9">
               <div class="red panel panel-danger">
-                <a href=""><h2>List of Stories</h2></a>
-                <p>Completed table of contents and advanced searching system, you will be able to find you title effortlessly.</p>
+                <a href="%{l/hostPath}liststory"><h2>List of Stories</h2></a>
+                <p>Completed table of contents and advanced searching system, you will be able to find your favorite title effortlessly.</p>
                     <div class="row">
                         %{
-                          (defn vn-row [linktruyen linkanh title] 
+                          (defn eng-row [linktruyen linkanh title] 
                             (str "<div class='col-sm-2'> 
                                     <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail img-responsive' width='120' height='160'></a>
                                     <a href='" linktruyen "'><h5>" title "</h5></a>          
                                   </div>"
                           ))              
-                          (def truyenrandom (truyen/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() LIMIT 6"))
+                          (def truyenrandom (truyen/getTruyen2 "SELECT * FROM story ORDER BY RANDOM() LIMIT 6"))
 
-                          (apply str (for [x truyenrandom] (vn-row (x :linktruyen) (x :linkanh) (x :title))))           
+                          (apply str (for [x truyenrandom] (eng-row (x :linktruyen) (x :linkanh) (x :title))))           
                         }
                     </div><!--row-fluid-->
               </div>
@@ -70,7 +72,7 @@
               <br>
 
               <div class="blue panel panel-info">
-                <a href=""><h2>Genres </h2></a>
+                <a href="%{l/hostPath}gridtruyen/pgnumber/1"><h2>Genres </h2></a>
                 <p>Your ideal reading online site. Most popular title, classic pieces, etc. All is within your reach.</p>
                 <div class="two-column">
                     <ul>
@@ -90,7 +92,7 @@
               <br>
 
               <div class="yellow panel panel-warning">
-                <a href=""><h2>Vietnamese Site</h2></a>
+                <a href="%{l/hostPath}vn"><h2>Vietnamese Site</h2></a>
                 <p>Truyen Ngon Tinh truyen duoc nhieu doc gia quan tam, truyen co dai, truyen hien dai...</p>
                     <div class="row">
                         %{
@@ -117,7 +119,7 @@
 
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   <script src="%(l/getFileLink "bootstrap/css/bootstrap.min.js")"></script>
+   <script src="%(l/getFileLink "bootstrap/js/bootstrap.min.js")"></script>
    <script>
 
       $(document).ready(function(){

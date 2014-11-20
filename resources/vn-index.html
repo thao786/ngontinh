@@ -4,6 +4,7 @@
            '[clojure.java.io :as io]
 )}
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +12,22 @@
     <meta charset="utf-8">
     <title>Trang Ngôn Tình | Nơi Đọc Truyện Lý Tưởng Của Bạn</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="csssheet.css" rel="stylesheet">
-    <link href="advanced-css.css" rel="stylesheet">
+    <link rel="icon" href="%(l/getFileLink "image/favicon.png")" type="image/gif" sizes="16x16">
+    <link href="%(l/getFileLink "bootstrap/css/bootstrap.css")" rel="stylesheet">
+    <link href="%(l/getFileLink "css/csssheet.css")" rel="stylesheet">
+    <link href="%(l/getFileLink "css/advanced-css.css")" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <style>
       body{        
           background-image: url('%(l/getFileLink "image/bokeh.png")');
       }
       .jumbotron{
-          background-image: url('%(l/getFileLink "image/zenbg-1.png")'), url('%(l/getFileLink "image/zenbg-2.png")');
+          background: #216bc9;
+          background-image: url('%(l/getFileLink "image/zenbg-3.png")'), url('%(l/getFileLink "image/zenbg-4.png")');
+      }    
+      .jumbotron h1{
+        color: #51916f;
       }
     </style>
 </head>
@@ -31,9 +38,7 @@
  <div class="container">
       <div class="startofbody">
 
-
-        %include {"util/header.html"}
-
+        %include {"util/vn-header.html"}
         
         
         <div class="jumbotron">
@@ -41,41 +46,28 @@
           <p>Nơi đọc truyện trực tuyến lý tưởng, danh sách truyện đầy đủ và hệ thống tìm kiếm giúp bạn đến với những trang sách dễ dàng hơn. Chúc bạn có những giây phút thoải mái và thư giãn.</p>
         </div>
 
-          <div class="row body">
-            <div class="col-sm-3">
-              %include {"util/truyenngaunhien.html"}
-          </div><!--col-sm-3-->
+        <div class="row body">
+            <div class="col-sm-3">              
+                %include {"util/vn-truyenngaunhien.html"}
+            </div><!--col-sm-3-->
 
             
             <div class="col-sm-9">
               <div class="red panel panel-danger">
-                <a href=""><h2>Danh Sách Truyện</h2></a>
+                <a href="%{l/hostPath}vn/liststory"><h2>Danh Sách Truyện</h2></a>
                 <p>Danh Sách Truyện với đầy đủ các thông tin về truyện, giúp bạn chọn lựa truyện một cách dễ dàng và hợp lý nhất.</p>
-                    <div class="row-fluid">
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Ao The</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Quay Ve Doi Duong Lam Luu Manh</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
+                    <div class="row">
+                        %{
+                          (defn vn-row [linktruyen linkanh title] 
+                            (str "<div class='col-sm-2'> 
+                                    <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail img-responsive' width='120' height='160'></a>
+                                    <a href='" linktruyen "'><h5>" title "</h5></a>          
+                                  </div>"
+                          ))              
+                          (def truyenrandom (truyen/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() LIMIT 6"))
+
+                          (apply str (for [x truyenrandom] (vn-row (x :linktruyen) (x :linkanh) (x :title))))           
+                        }
                     </div><!--row-fluid-->
               </div>
 
@@ -83,7 +75,7 @@
               <br>
 
               <div class="blue panel panel-info">
-                <a href=""><h2>Thể Loại Truyện </h2></a>
+                <a href="%{l/hostPath}vn/gridtruyen/pgnumber/1"><h2>Thể Loại Truyện </h2></a>
                 <p>Nơi đọc truyện trực tuyến lý tưởng. Truyện được nhiều độc giả quan tâm, danh sách truyện đầy đủ và hệ thống tìm kiếm giúp bạn đến với những trang sách dễ dàng hơn.</p>
                 <div class="two-column">
                     <ul>
@@ -103,33 +95,20 @@
               <br>
 
               <div class="yellow panel panel-warning">
-                <a href=""><h2>English Site</h2></a>
+               <a href="%{l/hostPath}"><h2>English Site</h2></a>
                 <p>Home to classicals, Grimm Brothers and fairy tales. Ideal to improve your english skill.</p>
-                    <div class="row-fluid">
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Ao The</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Quay Ve Doi Duong Lam Luu Manh</h5></a>          
-                      </div>  
-                      <div class="col-sm-2"> 
-                        <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive" width="120" height="160"></a>
-                        <a href="#"><h5>Hoa Tu Dan</h5></a>          
-                      </div>  
+                    <div class="row">
+                        %{
+                          (defn eng-row [linktruyen linkanh title] 
+                            (str "<div class='col-sm-2'> 
+                                    <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail img-responsive' width='120' height='160'></a>
+                                    <a href='" linktruyen "'><h5>" title "</h5></a>          
+                                  </div>"
+                          ))              
+                          (def truyenrandom (truyen/getTruyen2 "SELECT * FROM story ORDER BY RANDOM() LIMIT 6"))
+
+                          (apply str (for [x truyenrandom] (eng-row (x :linktruyen) (x :linkanh) (x :title))))           
+                        }
                     </div><!--row-fluid-->
               </div>      
                      
@@ -138,11 +117,12 @@
       </div><!--startofbody-->
     </div><!--container-->  
 
+      
+    %include {"util/vn-footer.html"}
 
-    %include {"util/footer.html"}
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   <script src="%(l/getFileLink "bootstrap/css/bootstrap.min.js")"></script>
+   <script src="%(l/getFileLink "bootstrap/js/bootstrap.min.js")"></script>
    <script>
 
       $(document).ready(function(){

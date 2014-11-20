@@ -4,7 +4,7 @@
 
               <div class="panel panel-success">
                   <div class="panel-heading">
-                    <h3 class="panel-title"><b>Random Series</b></h3>
+                    <h3 class="panel-title"><b>Truyện Ngẫu Nhiên</b></h3>
                 </div>
                 <div class="panel-body">
                   <div class="list-group">
@@ -13,11 +13,11 @@
                           (str "<a href='" linktruyen "' class='list-group-item'>
                                   <img src='" linkanh"' class='img-responsive floatLeft' width='90' height='120'>
                                   <h4 class='list-group-item-heading'>" title "</h4>               
-                                  <p class='small'>Author: " author "<br>
-                                                   Genre: " genre "</p>                               
+                                  <p class='small'>Tác Giả: " author "<br>
+                                                   Thể Loại: " genre "</p>                               
                                 </a>"))
 
-                      (def truyenrandom (truyen/getTruyen2 "SELECT * FROM story ORDER BY RANDOM() LIMIT 5"))
+                      (def truyenrandom (truyen/getTruyen "SELECT * FROM truyen ORDER BY RANDOM() LIMIT 5"))
 
                       (apply str (for [x truyenrandom] 
                                   (sidebar (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre))))
@@ -28,7 +28,7 @@
 
                 <div class="panel panel-success">
                   <div class="panel-body">
-                    <p>Trangngontinh is a free online reading website. Stories are collected and uploaded from freelance source.</p>
-                    <p>To advertise, please contact roseskindergarten@gmail.com, or (1) 416 819 1995.</p>
+                    <p>Trang Ngôn Tình là trang web đọc truyện miễn phí. Truyện được sưu tầm và đăng tải từ các nguồn trên mạng.</p>
+                    <p>Để quảng cáo, xin vui lòng liên hệ qua địa chỉ: roseskindergarten@gmail.com, hoặc (1) 416 819 1995</p>
                   </div>
                 </div>
