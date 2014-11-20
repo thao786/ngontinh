@@ -52,11 +52,6 @@
 
 
 
-
-
-
-
-
 (doseq [folder (.listFiles (File. "/home/thao/projects/ngontinh/resources/static/Stories"))]
 	(let [file (str (.getPath folder) "/Info.txt")
 		mapinfo 	(load-string (slurp file))
@@ -76,6 +71,31 @@
 					(.setInt 10 (+ 2000 (rand-int 9000)))
 					(.setString 11 (.getName folder)))]
 		(.execute stmt)))
+
+
+
+
+(import 'java.io.File)
+(import 'java.sql.DriverManager)
+
+create table chuong(path varchar(50), title varchar(50), chap int)
+
+(doseq [truyen (.listFiles (File. "/home/thao/projects/ngontinh/resources/static/Truyen"))]
+	(doseq [chuong (.listFiles truyen)]
+		(if (.matches (.getName chuong) "[0-9]*.txt")
+			(let [chap 	(re-find #"\d+" (.getName chuong))
+					content 	(slurp chuong)
+					title 	(re-find #"[^\n\r]*" content)
+					query 	"INSERT INTO chuong (path, title, chap) VALUES (?,?,?)"
+					stmt 	(.prepareStatement c query)
+					stmt 	(doto stmt 
+								(.setString 1 (.getName truyen))
+								(.setString 2 title)
+								(.setInt 3 (Integer/parseInt chap)))]
+				(prn  stmt)))))
+
+
+
 
 
 
