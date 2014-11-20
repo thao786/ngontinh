@@ -46,9 +46,7 @@
 
 
 (defn getChap [query]
-	(vec (let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
-															"postgres" 
-															"fall2010")
+	(vec (let 	[connection (DriverManager/getConnection connection-str)
 				mostRead 	(let [	stmt 	(.createStatement connection)
 								 	rs 		(.executeQuery stmt query)]
 								(vec (resultset-seq rs)))
@@ -64,9 +62,7 @@
 
 
 (defn getChap2 [query]
-	(vec (let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh" 
-															"postgres" 
-															"fall2010")
+	(vec (let 	[connection (DriverManager/getConnection connection-str)
 				mostRead 	(let [	stmt 	(.createStatement connection)
 								 	rs 		(.executeQuery stmt query)]
 								(vec (resultset-seq rs)))
@@ -82,9 +78,7 @@
 
 
 (defn getGenreCount [genre]
-    (let [resVec (let [		connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh"
-                                                                    "postgres"
-                                                                    "fall2010")
+    (let [resVec (let [		connection (DriverManager/getConnection connection-str)
                             query (str "select count(*) from (select lower(genre) from truyen) as theloai2 where lower like '%" genre "%'")
                          	res (let [ stmt (.createStatement connection)
                                                 rs (.executeQuery stmt query)]
@@ -96,9 +90,7 @@
 
 
 (defn truyenCount [database]
-    (let [resVec (let 	[connection (DriverManager/getConnection "jdbc:postgresql://23.239.1.206:5432/ngontinh"
-                                                                    "postgres"
-                                                                    "fall2010")
+    (let [resVec (let 	[connection (DriverManager/getConnection connection-str)
                          query (str "select count(*) from " database "")
                          res (let [ stmt (.createStatement connection)
                                                 rs (.executeQuery stmt query)]
