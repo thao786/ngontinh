@@ -16,32 +16,52 @@
  
         (GET "/" [] (r/render "index.html"))
 
+        (GET "/vn" [] (r/render "vn-index.html"))
+
+        ;===============
+
         (GET "/liststory" [] 
             (r/render "danh-sach-truyen.html"))
 
+        (GET "/vn/liststory" [] 
+            (r/render "vn-danh-sach-truyen.html"))
+
+        ;===============
+
         (GET "/gridtruyen/pgnumber/:index" [index] 
-            (r/render "gridtruyen.html" {:index index}))
+            (r/render "the-loai.html" {:index index}))
 
-        (GET "/listtruyen/:genre/:index" [genre index] 
-            (r/render "theloai.html" {:genre genre :index index}))
+        (GET "/vn/gridtruyen/pgnumber/:index" [index] 
+            (r/render "vn-the-loai.html" {:index index}))
 
-        (GET "/gridtruyen/:path" [path] 
-            (r/render "doctruyen.html" {:path path}))
+        ;===============
 
-        (GET "/gridtruyen/:path/:num" [path num] 
-            (r/render "Chuong.html" {:path path :num num}))
+        (GET "/gridtruyen/theloai/:genre/:index" [genre index] 
+            (r/render "the-loai-specific.html" {:genre genre :index index}))
+
+        (GET "/vn/gridtruyen/theloai/:genre/:index" [genre index] 
+            (r/render "vn-the-loai-specific.html" {:genre genre :index index}))
+
+        ;===============
+
+        (GET "/gridtruyen/read/:path" [path] 
+            (r/render "truyen-overview.html" {:path path}))
+
+        (GET "/vn/gridtruyen/read/:path" [path] 
+            (r/render "vn-truyen-overview.html" {:path path}))
+
+        ;===============
+
+        (GET "/gridtruyen/read/:path/:num" [path num] 
+            (r/render "chuong.html" {:path path :num num}))
+
+        (GET "/vn/gridtruyen/read/:path/:num" [path num] 
+            (r/render "vn-chuong.html" {:path path :num num}))
+
+        ;===============
 
         (GET "/advancedsearch" [] 
-            (r/render "old-timnangcao.html"))
-
-        (GET "/englishnovel/pgnumber/:index" [index] 
-            (r/render "EnglishNovel.html" {:index index}))
-
-        (GET "/englishnovel/:path" [path] 
-            (r/render "readstory.html" {:path path}))
-
-        (GET "/englishnovel/:path/:num" [path num] 
-            (r/render "Chapter.html" {:path path :num num}))
+            (r/render "timnangcao.html"))
 
         (GET "/search" request 
             (r/render "KetQuaTimKiem.html" 

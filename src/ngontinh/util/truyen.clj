@@ -19,7 +19,7 @@
 										overview 		(try (slurp (str lib/local-file-path "Truyen/" name "/Overview.txt"))
 															(catch Exception e (prn name)))
 										linkanh 		(lib/getImageCover name)
-										linktruyen 		(str lib/hostPath "gridtruyen/" name) 
+										linktruyen 		(str lib/hostPath "vn/gridtruyen/read/" name) 
 										shortoverview 	(clojure.string/replace 
 															(clojure.string/trim 
 																(subs overview 12 (min 300 (count overview)))) #"\n" "<br>")]
@@ -38,7 +38,7 @@
 								(let 	[name 			(truyen :path)									
 										overview 		(slurp (str lib/local-file-path "Stories/" name "/Overview.txt"))
 										linkanh 		(lib/getImageCover name "a")
-										linktruyen 		(str lib/hostPath "englishnovel/" name) 
+										linktruyen 		(str lib/hostPath "gridtruyen/read/" name) 
 										shortoverview 	(clojure.string/replace (clojure.string/trim (subs overview 12 (min 300 (count overview)))) #"\n" "<br>")	]
 									(assoc truyen :shortoverview shortoverview :overview overview :linkanh linkanh :linktruyen linktruyen)))
 				ddd 		(.close connection)]
@@ -51,11 +51,11 @@
 								 	rs 		(.executeQuery stmt query)]
 								(vec (resultset-seq rs)))
 				addLink		(for [chap mostRead]
-								(let 	[truyen 	(chap :truyen)
+								(let 	[truyen 	(chap :pathchuong)
 										title       (chap :title)
-										chap-num    (chap :num)
-										linktruyen  (str lib/hostPath "gridtruyen/" truyen)
-										linkchap 	(str lib/hostPath "gridtruyen/" truyen "/" chap-num)] 
+										chap-num    (chap :chap)
+										linktruyen  (str lib/hostPath "vn/gridtruyen/read/" truyen)
+										linkchap 	(str lib/hostPath "vn/gridtruyen/read/" truyen "/" chap-num)] 
 									(assoc chap :linkchap linkchap :linktruyen linktruyen)))
 				ddd 		(.close connection)]
 			addLink)))
@@ -70,8 +70,8 @@
 								(let 	[truyen 	(chap :truyen)
 										title       (chap :title)
 										chap-num    (chap :num)
-										linktruyen  (str lib/hostPath "englishnovel/" truyen)
-										linkchap 	(str lib/hostPath "englishnovel/" truyen "/" chap-num)] 
+										linktruyen  (str lib/hostPath "gridtruyen/read/" truyen)
+										linkchap 	(str lib/hostPath "gridtruyen/read/" truyen "/" chap-num)] 
 									(assoc chap :linkchap linkchap :linktruyen linktruyen)))
 				ddd 		(.close connection)]
 			addLink)))

@@ -11,18 +11,20 @@
     <meta charset="utf-8">
     <title>Danh Sách Truyện</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="csssheet.css" rel="stylesheet">
-    <link href="advanced-css.css" rel="stylesheet">
+    <link rel="icon" href="%(l/getFileLink "image/favicon.png")" type="image/gif" sizes="16x16">
+    <link href="%(l/getFileLink "bootstrap/css/bootstrap.css")" rel="stylesheet">
+    <link href="%(l/getFileLink "css/csssheet.css")" rel="stylesheet">
+    <link href="%(l/getFileLink "css/advanced-css.css")" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Patrick+Hand&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <style>
       body{        
           background-image: url('%(l/getFileLink "image/bokeh.png")');
       }
       .jumbotron{
-          background-image: url('%(l/getFileLink "image/zenbg-1.png")'), url('%(l/getFileLink "image/zenbg-2.png")');
-      }
+          background: #216bc9;
+          background-image: url('%(l/getFileLink "image/zenbg-3.png")'), url('%(l/getFileLink "image/zenbg-4.png")');
+      }   
     </style>
 </head>
 
@@ -50,52 +52,52 @@
           
           <div class="col-sm-9">
             <ol class="breadcrumb">
-                <li><a href="%{l/host}">Home</a></li>
+                <li><a href="%{l/hostPath}">Home</a></li>
                 <li class="active">Danh Sach Truyen</li>
             </ol>
 
 
             <div class="row">
               <div class="col-sm-3 chuThich">
-                  <img src="image/cungdau.jpg" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <img src="%(l/getFileLink "image/cungdau.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
                   <a href="#"><h4><span class="label label-warning">Cung Đấu</span></h4></a>
                   <span class="text-muted">Tranh đoạt chốn cung đình, thường là giữa các phi tử.</span>
               </div>
               <div class="col-sm-3">
-                  <img src="image/dammy.jpg" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <img src="%(l/getFileLink "image/dammy.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
                   <a href="#"><h4><span class="label label-primary">Đam mỹ</h4></a>
                   <span class="text-muted">Nam x Nam.</span>
               </div>
               <div class="col-sm-3 chuThich">
-                  <img src="image/huyenhuyen.jpg" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <img src="%(l/getFileLink "image/huyenhuyen.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
                   <a href="#"><h4><span class="label label-warning">Huyền Huyễn</h4></a>
                   <span class="text-muted">Truyện mang yếu tố kỳ ảo, có thần linh và các dị tương.</span>
               </div>
               <div class="col-sm-3">
-                  <img src="image/nguoc.jpg" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <img src="%(l/getFileLink "image/nguoc.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
                   <a href="#"><h4><span class="label label-primary">Ngược</h4></a>
                   <span class="text-muted">Nhân vật bị hành hạ về thể xác (Ngược thân) hoặc tinh thần (Ngược tâm).</span>
               </div>
             </div><!--Row-->
             <br>
-            <div class="row">
+            <div class="row" style="padding-right:10px;">
               <div class="col-sm-3">
-                  <img src="image/vongdu.jpg" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <img src="%(l/getFileLink "image/vongdu.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
                   <a href="#"><h4><span class="label label-primary">Võng du</h4></a>
                   <span class="text-muted">Truyện miêu tả song song giữa cuộc sống ảo trên mạng và ngoài đời thực của nhân vật.</span>
               </div>
                <div class="col-sm-3 chuThich">
-                  <img src="image/trongsinh.jpg" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <img src="%(l/getFileLink "image/trongsinh.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
                   <a href="#"><h4><span class="label label-warning">Trọng Sinh</h4></a>
                   <span class="text-muted">Nhân vật được hồi sinh: Sống lại hoặc nhập vào cơ thể khác.</span>
               </div>
               <div class="col-sm-3">
-                  <img src="image/sac.jpg" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <img src="%(l/getFileLink "image/sac.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
                   <a href="#"><h4><span class="label label-primary">Sắc</h4></a>
                   <span class="text-muted">Cảnh 18+.</span>
               </div>  
               <div class="col-sm-3 chuThich">
-                  <img src="image/xuyenkhong.jpg" class="img-thumbnail img-responsive img-circle" width="130" height="130">
+                  <img src="%(l/getFileLink "image/xuyenkhong.jpg")" class="img-thumbnail img-responsive img-circle" width="130" height="130">
                   <a href="#"><h4><span class="label label-warning">Xuyên Không</h4></a>
                   <span class="text-muted">Nhân vật vượt qua thời gian trở về quá khứ hoặc đến tương lai.</span>
               </div>                      
@@ -116,78 +118,58 @@
                   <th>Giới Thiệu</th>  
                   <th><a>Tên Truyện</a></th>
                   <th><a>Tác giả</a></th>
-                  <th><a>Số chương</a></th>
                   <th><a>Thể loại</a></th>
                   <th><a>Tình Trạng</a></th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td><span class="dropdown hidden-xs">
-                          <button class="dropdown-toggle btn btn-default btn-sm" data-toggle="dropdown">Giới Thiệu <b class="caret"></b></button>
-                              <div class="dropdown-menu overview">
-                                <div class="row">
-                                  <div class="col-sm-3">
-                                     <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive imgFloat" width="140" height="190"></a>
-                                  </div>
-                                  <div class="col-sm-9"> 
-                                        <a href="#"><h3 class="green"><b>Đế Đô Phú</b></h3></a>
+                %{   
+                (defn listtruyen [linktruyen linkanh title author genre shortoverview view state]
+                 (str "<tr>
+                        <td><span class='dropdown hidden-xs'>
+                                <button class='dropdown-toggle btn btn-default btn-sm' data-toggle='dropdown'>Giới Thiệu <b class='caret'></b></button>
+                                <div class='dropdown-menu overview'>
+                                  <div class='row'>
+                                    <div class='col-sm-3'>
+                                      <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail img-responsive imgFloat' width='140' height='190'></a>
+                                    </div>
+                                    <div class='col-sm-9'> 
+                                        <a href='" linktruyen "'><h3 class='green'><b>" title"</b></h3></a>
                                         <hr>
-                                        <p>Chúng thần thời viễn cổ hôi phi yên diệt gần hết, hiện nay chỉ còn có Long Tộc, Phượng Tộc và bộ tộc Cửu Vỹ Bạch Hồ Ly là còn lại chút hậu nhân. Bạch Đế Hồ Quân dưới gối chỉ có bốn người con trai và một nữ nhân. Nữ nhân duy nhất này xinh đẹp vô cùng, nhưng rốt cuộc cũng chỉ là một trò đùa của sinh mệnh, sống tới mười bốn vạn tuổi bất quá cũng chỉ gặp được năm đóa hoa đào.</p>        
-                                  </div>
-                                </div>            
-                              </div>
-                      </span>
-                  </td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                  <td>Praesent</td>
-                </tr>
-                <tr>
-                  <td><span class="dropdown hidden-xs">
-                          <button class="dropdown-toggle btn btn-info btn-sm" data-toggle="dropdown">Giới Thiệu <b class="caret"></b></button>
-                              <div class="dropdown-menu VanAnDropdown">
-                                <div class="row">
-                                  <div class="col-sm-3">
-                                     <a href="#"><img src="image/7.jpg" class="thumbnail img-responsive imgFloat" width="140" height="190"></a>
-                                  </div>
-                                  <div class="col-sm-9"> 
-                                        <a href="#"><h3 class="green"><b>Đế Đô Phú</b></h3></a>
-                                        <p>Tác Giả:</p>
-                                        <p>Thể Loại:</p>
-                                        <p>Lượt Xem:</p>
-                                        <hr>
-                                        <p>Chúng thần thời viễn cổ hôi phi yên diệt gần hết, hiện nay chỉ còn có Long Tộc, Phượng Tộc và bộ tộc Cửu Vỹ Bạch Hồ Ly là còn lại chút hậu nhân. Bạch Đế Hồ Quân dưới gối chỉ có bốn người con trai và một nữ nhân. Nữ nhân duy nhất này xinh đẹp vô cùng, nhưng rốt cuộc cũng chỉ là một trò đùa của sinh mệnh, sống tới mười bốn vạn tuổi bất quá cũng chỉ gặp được năm đóa hoa đào.</p>        
-                                  </div>
-                                </div>            
-                              </div>
-                      </span>
-                  </td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                  <td>Praesent</td>
-                </tr>
-     
-            
-              </tbody>
-            </table>
-          </div><!--Table responsive-->
-            </div>             
-          </div>
-        </div>
+                                        <p>" shortoverview "</p>        
+                                    </div>
+                                  </div>            
+                                </div>
+                            </span>
+                        </td>
+                        <td><a href='" linktruyen "'>" title "</a></td>
+                        <td>" author "</td>
+                        <td>" genre "</td>
+                        <td>" state "</td>
+                      </tr>"))
 
-      </div><!--startofbody-->
-    </div><!--container-->  
+                  (def truyenall (truyen/getTruyen "SELECT * FROM truyen")) 
+                  (def truyenall2 (for [x truyenall] (assoc x :newstate (if (= (compare (x :state) 1) 0) "Full" "Còn Tiếp"))))
+                                              
+                  (apply str (for [x truyenall]    
+                      (listtruyen (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :shortoverview) (x :view) (x :state))))
+                  }                   
+            
+                </tbody>
+              </table>
+          </div><!--Table responsive-->
+        </div>             
+      </div>
+    </div>
+
+  </div><!--startofbody-->
+</div><!--container-->  
 
 
     %include {"util/footer.html"}
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   <script src="%(l/getFileLink "bootstrap/css/bootstrap.min.js")"></script>
+   <script src="%(l/getFileLink "bootstrap/js/bootstrap.min.js")"></script>
    <script>
 
       $(document).ready(function(){
@@ -195,6 +177,8 @@
           $("#danhsachtruyen").addClass("active");
           $(".list-group-item:even").addClass("list-group-item-warning");
           $(".list-group-item:odd").addClass("list-group-item-success");
+          $(".btn-sm:even").addClass("btn-default");
+          $(".btn-sm:odd").addClass("btn-danger");
       });
       
   </script>

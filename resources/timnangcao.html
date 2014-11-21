@@ -9,14 +9,14 @@
 <head>
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>Chương 1 - Hoa Tư Dẫn </title>  
+    <title>Advanced Search </title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="image/icon.png" type="image/gif" sizes="16x16">
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="csssheet.css" rel="stylesheet">
     <link href="advanced-css.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Patrick+Hand&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <style>
       body{        
           background-image: url('%(l/getFileLink "image/bokeh.png")');
@@ -51,30 +51,30 @@
           
           <div class="col-sm-9">
             <ol class="breadcrumb">
-                <li><a href="%{l/host}">Home</a></li>
-                <li class="active">Tìm kiếm nâng cao</li>
+                <li><a href="%{l/hostPath}">Home</a></li>
+                <li class="active">Advanced Search</li>
             </ol>
 
             <div class="form-inline well well-sm">
-                        <label class="cachnhaura">Tên Truyện</label>
+                        <label class="cachnhaura">Title</label>
                         <select class="form-control cachnhaura">
-                          <option>chứa từ</option>
-                          <option>bắt đầu bằng</option>
-                          <option>kết thúc bằng</option>                      
+                          <option>contains</option>
+                          <option>starts with</option>
+                          <option>ends with</option>                      
                         </select>
                         <input type="text" class="form-control cachnhaura">
-                        <button type="submit" class="btn btn-default cachnhaura">Tìm</button>  
+                        <button type="submit" class="btn btn-default cachnhaura">Search</button>  
                       </div>                       
 
                       <br>
 
                       <div class="row">
-                        <div class="col-sm-2"><label>Tác Giả</label></div>
+                        <div class="col-sm-2"><label>Author</label></div>
                         <div class="col-sm-8 form-inline">
                             <select class="form-control cachnhaura">
-                              <option>chứa từ</option>
-                              <option>bắt đầu bằng</option>
-                              <option>kết thúc bằng</option>                      
+                              <option>contains</option>
+                              <option>starts with</option>
+                              <option>ends with</option>                       
                             </select>
                           <input type="text" class="form-control cachnhaura">                          
                         </div> 
@@ -83,12 +83,12 @@
                       <br>
 
                       <div class="row">
-                        <div class="col-sm-2"><label>Dịch giả/ Editor</label></div>
+                        <div class="col-sm-2"><label>Translator / Editor</label></div>
                         <div class="col-sm-8 form-inline">
                             <select class="form-control cachnhaura">
-                              <option>chứa từ</option>
-                              <option>bắt đầu bằng</option>
-                              <option>kết thúc bằng</option>                      
+                              <option>contains</option>
+                              <option>starts with</option>
+                              <option>ends with</option>                      
                             </select>
                           <input type="text" class="form-control cachnhaura">                          
                         </div> 
@@ -97,7 +97,7 @@
                       <br>
 
                       <div class="row">
-                        <div class="col-sm-2"><label>Thể Loại</label></div>
+                        <div class="col-sm-2"><label>Genres</label></div>
                         <div class="col-sm-10">
                           <div class="row">
                             <div class="col-sm-3">                                
@@ -346,16 +346,16 @@
                         <br>
 
                         <div class="row">
-                          <div class="col-sm-2"><label>Tình Trạng</label></div>
+                          <div class="col-sm-2"><label>State</label></div>
                           <div class="col-sm-8 form-inline">
                               <div class="checkbox cachnhaura">
-                                  <label><input type="checkbox" id="optionscheckboxs1" value="1"> Hoàn Thành</label>
+                                  <label><input type="checkbox" id="optionscheckboxs1" value="1"> Full</label>
                               </div>
                               <div class="checkbox cachnhaura">
-                                  <label><input type="checkbox" id="optionscheckboxs1" value="1"> Chưa Hoàn</label>
+                                  <label><input type="checkbox" id="optionscheckboxs1" value="1"> On-going</label>
                               </div>
                               <div class="checkbox cachnhaura">
-                                  <label><input type="checkbox" id="optionscheckboxs1" value="1"> Cả Hai</label>
+                                  <label><input type="checkbox" id="optionscheckboxs1" value="1"> Both</label>
                               </div>
                           </div> 
                         </div> 
@@ -364,8 +364,8 @@
                         <br>
 
                         <div class="form-inline text-center">
-                          <button href="#" type="button" class="btn btn-success">Tìm nâng cao</button>
-                          <button href="#" type="button" class="btn btn-default">Làm Lại</button>
+                          <button href="#" type="button" class="btn btn-success">Search</button>
+                          <button href="#" type="button" class="btn btn-default">Blank page</button>
                         </div>                    
 
             
@@ -380,7 +380,7 @@
     %include {"util/footer.html"}
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   <script src="%(l/getFileLink "bootstrap/css/bootstrap.min.js")"></script>
+   <script src="%(l/getFileLink "bootstrap/js/bootstrap.min.js")"></script>
    <script>
 
       $(document).ready(function(){

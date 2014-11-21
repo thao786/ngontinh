@@ -1,3 +1,15 @@
+%{(require '[ngontinh.libpath :as l]
+           '[sodahead.render :as r]
+           '[ngontinh.util.truyen :as truyen]
+           '[clojure.java.io :as io]
+)}
+
+%{(def pgIndex (Integer/parseInt (params :index)))
+  (def truyendisplay (truyen/getTruyen2 (str "SELECT * FROM story order by 'path' limit 20 offset " (- (* 20 pgIndex) 20) "")))
+  (def truyenquantity (count truyendisplay))
+  nil
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +17,12 @@
     <meta charset="utf-8">
     <title>Genres </title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="icon" href="image/icon.png" type="image/gif" sizes="16x16">
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="csssheet.css" rel="stylesheet">
-    <link href="advanced-css.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Patrick+Hand&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="%(l/getFileLink "image/favicon.png")" type="image/gif" sizes="16x16">
+    <link href="%(l/getFileLink "bootstrap/css/bootstrap.css")" rel="stylesheet">
+    <link href="%(l/getFileLink "css/csssheet.css")" rel="stylesheet">
+    <link href="%(l/getFileLink "css/advanced-css.css")" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900' rel='stylesheet' type='text/css'>    
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <style>
       body{        
           background-image: url('%(l/getFileLink "image/bokeh.png")');
@@ -39,91 +51,68 @@
 
         <div class="row body">
           <div class="col-sm-3">
+
+              <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><b>Genres</b></h3>
+                </div>
+                <div class="panel-body">
+                  <div class="list-group">
+                    <a href="%{l/hostPath}gridtruyen/theloai/classical/1" class="list-group-item">&raquo Classical</a>
+                    <a href="%{l/hostPath}gridtruyen/theloai/fairytale/1" class="list-group-item">&raquo Fairy Tales</a>
+                    <a href="%{l/hostPath}advancedsearch" class="list-group-item">&raquo Advanced Search</a>
+                  </div><!--list group-->
+                </div>
+              </div>
+
               %include {"util/truyenngaunhien.html"}
           </div><!--col-sm-3-->
 
           
           <div class="col-sm-9">
             <ol class="breadcrumb">
-                <li><a href="%{l/host}">Home</a></li>
+                <li><a href="%{l/hostPath}">Home</a></li>
                 <li class="active">Genres</li>
             </ol>
 
 
-                <div class="row"> 
-                    <div class="col-sm-3 doctruyen">
-                        <a href="#"><img src="image/7.jpg" class="thumbnail" width="140" height="190"></a>
-                        <a href="#"><h4><b>Hoa Tu Dan</b></h4></a>
-                        <p class="text-muted"><span class="small">Author:</span> Đường Thất Công Tử<br>
-                                              <span class="small">Genre:</span> Huyền Huyễn<br>
-                                              <span class="small">State:</span> Full
-                    </div>
-                    <div class="col-sm-3 doctruyen">
-                        <a href="#"><img src="image/7.jpg" class="thumbnail" width="140" height="190"></a>
-                        <a href="#"><h4><b>Hoa Tu Dan</b></h4></a>
-                        <p class="text-muted"><span class="small">Author:</span> Đường Thất Công Tử<br>
-                                              <span class="small">Genre:</span> Huyền Huyễn<br>
-                                              <span class="small">State:</span> Full<br>   
-                    </div>
-                    <div class="col-sm-3 doctruyen">
-                        <a href="#"><img src="image/7.jpg" class="thumbnail" width="140" height="190"></a>
-                        <a href="#"><h4><b>Hoa Tu Dan</b></h4></a>
-                        <p class="text-muted"><span class="small">Author:</span> Đường Thất Công Tử<br>
-                                              <span class="small">Genre:</span> Huyền Huyễn<br>
-                                              <span class="small">State:</span> Full<br>    
-                    </div>
-                    <div class="col-sm-3 doctruyen">
-                        <a href="#"><img src="image/7.jpg" class="thumbnail" width="140" height="190"></a>
-                        <a href="#"><h4><b>Hoa Tu Dan</b></h4></a>
-                        <p class="text-muted"><span class="small">Author:</span> Đường Thất Công Tử<br>
-                                              <span class="small">Genre:</span> Huyền Huyễn<br>
-                                              <span class="small">State:</span> Full<br>    
-                    </div>
-                </div><!--a Row-->
+            %{(defn truyen-atom [linktruyen linkanh title author genre state view]
+                     (str "<div class='col-sm-3 doctruyen'>
+                        <a href='" linktruyen "'><img src='" linkanh "' class='thumbnail' width='140' height='190'></a>
+                        <a href='" linktruyen "'><h4><b>" title "</b></h4></a>
+                        <p class='text-muted'><span class='small'>Author:</span> " author "<br>
+                                              <span class='small'>Genre:</span> " genre "<br>   
+                                              <span class='small'>View:</span> " view "</p>
+                           </div> "))
 
-                <br>
-                <br>  
+              (defn rowtruyen [a] (str "<div class='row'>"
+                        (apply str (for [x (subvec truyendisplay (* 4 a) (min (+ 4 (* 4 a)) truyenquantity))] 
+                                  (truyen-atom (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :state) (x :view)))) "</div><br>"))
 
-                <div class="row"> 
-                    <div class="col-sm-3 doctruyen">
-                        <a href="#"><img src="image/7.jpg" class="thumbnail" width="140" height="190"></a>
-                        <a href="#"><h4><b>Hoa Tu Dan</b></h4></a>
-                        <p class="text-muted"><span class="small">Author:</span> Đường Thất Công Tử<br>
-                                              <span class="small">Genre:</span> Huyền Huyễn<br>
-                                              <span class="small">State:</span> Full<br>     
-                    </div>
-                    <div class="col-sm-3 doctruyen">
-                        <a href="#"><img src="image/7.jpg" class="thumbnail" width="140" height="190"></a>
-                        <a href="#"><h4><b>Hoa Tu Dan</b></h4></a>
-                        <p class="text-muted"><span class="small">Author:</span> Đường Thất Công Tử<br>
-                                              <span class="small">Genre:</span> Huyền Huyễn<br>
-                                              <span class="small">State:</span> Full<br>    
-                    </div>
-                    <div class="col-sm-3 doctruyen">
-                        <a href="#"><img src="image/7.jpg" class="thumbnail" width="140" height="190"></a>
-                        <a href="#"><h4><b>Hoa Tu Dan</b></h4></a>
-                        <p class="text-muted"><span class="small">Author:</span> Đường Thất Công Tử<br>
-                                              <span class="small">Genre:</span> Huyền Huyễn<br>
-                                              <span class="small">State:</span> Full<br>    
-                    </div>
-                    <div class="col-sm-3 doctruyen">
-                        <a href="#"><img src="image/7.jpg" class="thumbnail" width="140" height="190"></a>
-                        <a href="#"><h4><b>Hoa Tu Dan</b></h4></a>
-                        <p class="text-muted"><span class="small">Author:</span> Đường Thất Công Tử<br>
-                                              <span class="small">Genre:</span> Huyền Huyễn<br>
-                                              <span class="small">State:</span> Full<br>    
-                    </div>
-                </div><!--a Row-->  
+            
+            (def num-row (if (= (rem truyenquantity 4) 0) (quot truyenquantity 4) (+ (quot truyenquantity 4) 1)))
+
+            (apply str (for [a (range num-row)] (rowtruyen a)))             
+        }
+
+
+
+
+        %{(def numberoftruyeninDB (truyen/truyenCount "truyen"))
+          (def pagequantity  (if (= (rem numberoftruyeninDB 20) 0) (quot numberoftruyeninDB 20) (+ (quot numberoftruyeninDB 20) 1)))
+          nil
+        }
 
                 <div class="text-center">                    
                     <ul class="pagination">
-                      <li class="disabled"><a href="#">&laquo;</a></li>
-                      <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                      <li><a href="#">2</a></li>
-                      <li><a href="#">3</a></li>
-                      <li><a href="#">4</a></li>
-                      <li><a href="#">5</a></li>
-                      <li><a href="#">&raquo;</a></li>
+                      <li><a href="%(str l/hostPath "gridtruyen/pgnumber/" 1)">&laquo;</a></li>
+                     %{(defn pagination [x]
+                        (str "<li><a href='" l/hostPath "gridtruyen/pgnumber/"  x "'>" x "</a></li>")) 
+
+                        (apply str (for [x (range (max 1 (- pgIndex 4)) (min (+ 1 pagequantity) (+ 5 pgIndex)))] 
+                                                   (pagination x)))
+                }
+                      <li><a href="%(str l/hostPath "gridtruyen/pgnumber/" pagequantity)">&raquo;</a></li>
                     </ul>
                 </div>    
 
@@ -137,14 +126,14 @@
     %include {"util/footer.html"}
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   <script src="%(l/getFileLink "bootstrap/css/bootstrap.min.js")"></script>
+   <script src="%(l/getFileLink "bootstrap/js/bootstrap.min.js")"></script>
    <script>
 
       $(document).ready(function(){
-          $("tr:odd").addClass("info");
-          $("#danhsachtruyen").addClass("theloai");
+          $("#theloai").addClass("active");
           $(".list-group-item:even").addClass("list-group-item-warning");
           $(".list-group-item:odd").addClass("list-group-item-success");
+          %(str "$('#" pgIndex "').addClass('active');")
       });
       
   </script>
