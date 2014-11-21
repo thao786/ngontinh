@@ -88,12 +88,12 @@
                 <h4 class="text-primary"><b>Chương Mới Nhất </b></h4>
                 <div class="panel panel-success">       
                   <div class="panel-body">
-                    %{(defn chuongmoi [linkchap num title]
-                        (str "<a href='" linkchap "'>Chương " num ": " title "</a><br>"))
+                    %{(defn chuongmoi [linkchap chap title]
+                        (str "<a href='" linkchap "'>Chương " chap ": " title "</a><br>"))
 
-                        (def chapmoi (truyen/getChap (str "select * from chap where truyen = '" (doctruyen :path) "'order by num desc limit 5")))
+                        (def chapmoi (truyen/getChap (str "select * from chuong where path = '" (doctruyen :path) "'order by chap desc limit 5")))
 
-                        (apply str (for [x chapmoi] (chuongmoi (x :linkchap) (x :num) (x :title))))
+                        (apply str (for [x chapmoi] (chuongmoi (x :linkchap) (x :chap) (x :title))))
                     } 
                   </div>
                 </div>  
@@ -126,16 +126,16 @@
                 </thead>
                 <tbody>
 
-                  %{(defn mucluc [num linkchap title date_added]
+                  %{(defn mucluc [chap linkchap title]
                     (str "<tr class=''>                  
-                              <td><a href='" linkchap "'>" num "</a></td>
+                              <td><a href='" linkchap "'>" chap "</a></td>
                               <td><a href='" linkchap "'><b>" title "</b></a></td>
-                              <td>" date_added "</td>
+                              <td>" (doctruyen :date_added) "</td>
                           </tr>"))
 
-                    (def chapter (truyen/getChap (str "select * from chap where truyen = '" (doctruyen :path) "' order by num asc")))
+                    (def chapter (truyen/getChap (str "select * from chuong where path = '" (doctruyen :path) "' order by chap asc")))
 
-                    (apply str (for [x chapter] (mucluc (x :num) (x :linkchap) (x :title) (x :date_added))))
+                    (apply str (for [x chapter] (mucluc (x :chap) (x :linkchap) (x :title))))
                   }       
 
                 </tbody>

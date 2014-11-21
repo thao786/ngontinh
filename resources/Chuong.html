@@ -5,16 +5,23 @@
 )}
 
 <!DOCTYPE html>
+
+  %{(def path (params :path))
+    (def num (params :num))
+    (def docchuong (peek (truyen/getChap2 (str "SELECT chuong.pathchuong, chuong.title, chuong.chap, truyen.chapters as sochuong, truyen.title as titletruyen FROM chuong INNER JOIN truyen ON chuong.pathchuong=truyen.path where pathchuong ='" path "' and chap ='" num "'"))))
+    nil
+  }
+
 <html lang="en">
 <head>
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>Chapter 1 - Hoa Tư Dẫn </title>  
+    <title>%(docchuong :titletruyen) - Chương %(docchuong :num): %(docchuong :title) </title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="icon" href="image/icon.png" type="image/gif" sizes="16x16">
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="csssheet.css" rel="stylesheet">
-    <link href="advanced-css.css" rel="stylesheet">
+    <link rel="icon" href="%(l/getFileLink "image/favicon.png")" type="image/gif" sizes="16x16">
+    <link href="%(l/getFileLink "bootstrap/css/bootstrap.css")" rel="stylesheet">
+    <link href="%(l/getFileLink "css/csssheet.css")" rel="stylesheet">
+    <link href="%(l/getFileLink "css/advanced-css.css")" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <style>
@@ -22,7 +29,8 @@
           background-image: url('%(l/getFileLink "image/bokeh.png")');
       }
       .jumbotron{
-          background-image: url('%(l/getFileLink "image/zenbg-1.png")'), url('%(l/getFileLink "image/zenbg-2.png")');
+          background: #216bc9;
+          background-image: url('%(l/getFileLink "image/zenbg-3.png")'), url('%(l/getFileLink "image/zenbg-4.png")');
       }
     </style>
 </head>
@@ -34,7 +42,7 @@
       <div class="startofbody">
 
 
-        %include {"util/header.html"}
+        %include {"util/vn-header.html"}
         
 
         <div class="jumbotron">
@@ -52,72 +60,65 @@
                 </div>
                 <div class="panel-body">
                   <div class="list-group">
-                    <a href="#" class="list-group-item">Chuong 1: Tron Doi Binh An</a>
-                    <a href="#" class="list-group-item">Chuong 1: Tron Doi Binh An</a>
-                    <a href="#" class="list-group-item">Chuong 1: Tron Doi Binh An</a>
-                    <a href="#" class="list-group-item">Chuong 1: Tron Doi Binh An</a>
-                    <a href="#" class="list-group-item">Chuong 1: Tron Doi Binh An</a>
-                    <a href="#" class="list-group-item">Chuong 1: Tron Doi Binh An</a>
-                    <a href="#" class="list-group-item">Chuong 1: Tron Doi Binh An</a>
-                    <a href="#" class="list-group-item">Chuong 1: Tron Doi Binh An</a>
-                    <a href="#" class="list-group-item">Chuong 1: Tron Doi Binh An</a>
-                    <a href="#" class="list-group-item">Chuong 1: Tron Doi Binh An</a>                 
+                    %{
+                      (defn mucluc [linkchap chap title]
+                      (str "<a href='" linkchap "' class='list-group-item list-group-item-warning'>Chương " chap ": " title "</a>"))
+
+                      (def index (truyen/getChap (str "select * from chuong where pathchuong = '" (params :path) "' order by chap asc")))
+
+                      (apply str (for [x index] (mucluc (x :linkchap) (x :chap) (x :title))))
+              }                
                   </div><!--list group-->
                 </div>
               </div>
 
-
               %include {"util/truyenngaunhien.html"}
-
+              
           </div><!--col-sm-3-->
 
           
           <div class="col-sm-9">
             <ol class="breadcrumb">
-                <li><a href="%{l/host}">Home</a></li>
-                <li><a href="%{l/host}">Danh Sach Truyen</a></li>
-                <li class="active">Đế Đô Phú</li>
-                <li class="active">Chuong 1</li>
+                <li><a href="%{l/hostPath}vn">Home</a></li>
+                <li><a href="%{l/hostPath}vn/gridtruyen/pgnumber/1">Đọc Truyện</a></li>
+                <li><a href="%(docchuong :linktruyen)">%(docchuong :titletruyen)</a></li>
+                <li class="active">Chương %(docchuong :chap)</li>
             </ol>
 
 
             <div class="bodytruyen">
 
+              %{(def disable (if (= (compare (docchuong :chap) 1) 0) "disabled" ""))
+                (def disable2 (if (= (compare (docchuong :chap) (docchuong :sochuong)) 0) "disabled" ""))
+                (def trangtruoc (str (docchuong :linktruyen) "/" (- (docchuong :chap) 1)))
+                (def trangsau (str (docchuong :linktruyen) "/" (+ (docchuong :chap) 1)))
+                 nil
+               }
+
               <ul class="pager" float:right;>
-                <li><button type="submit" class="btn btn-success btn-sm"><a href="#" style="color:white;">&larr; Trước</a></button></li>
+                <li><button type="submit" class="btn btn-success btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Trước</a></button></li>
                 <li><button type="submit" class="btn btn-warning btn-sm">Đến</button>
                     <input type="text" style="width:80px; height:30px;" id="denchuongmoi" placeholder="Chương:"></li>
-                <li><button type="submit" class="btn btn-success btn-sm"><a href="#" style="color:white;"> Tiếp &rarr;</a></button></li>
+                <li><button type="submit" class="btn btn-success btn-sm %disable2"><a href="%trangsau" style="color:white;"> Tiếp &rarr;</a></button></li>
               </ul>    
 
-              <a href=""><h2 class="text-danger text-center"><strong>Hoa tư dẫn</strong></h2></a>
-              <h3 class="text-primary text-center">Chương 1: Tận kiếp phù du</h3>
+              <a href=""><h2 class="text-danger text-center"><strong>%(docchuong :titletruyen)</strong></h2></a>
+              <h3 class="text-primary text-center">Chương %(docchuong :chap): %(docchuong :title)</h3>
 
               <hr class="style-two">
 
-              <p>Tháng tư, sắc xuân ngập tràn núi rừng, Quân sư phụ cuối cùng đã trở về sau sáu tháng biệt tăm. Có nghĩa là những vết khâu trên cơ thể tôi không lâu nữa có thể cắt chỉ.<br><br>
-
-              Sáu tháng nay, toàn thân tôi bị băng bó kín. Ban đầu, tôi còn có hứng thú nhảy ra ngoài dọa đồng môn. Nhưng không lâu sau, tôi phát hiện chẳng môn sinh nào sợ hãi khi họ đã bị dọa một lần. Mà tôi lại không thể nhận ra những ai đã từng bị dọa, những ai chưa. Vậy là tôi mất hứng đi trêu mọi người.<br><br>
-
-              Hai tháng trôi qua, tôi đã thấy hơi khó chịu.<br><br>
-
-              Nhiều đồng môn tưởng tôi không chịu đựng nổi hàng ngày mang cơ thể quấn đầy băng, đi ngâm bốn canh giờ trong bể thuốc. Thực ra, ngâm thuốc như vậy dưỡng thương rất tốt. Chỉ có điều, sau khi ngâm, phải giữ nguyên những lớp băng ướt sũng như vậy ngồi chờ cho đến lúc khô, điều này khiến tôi vô cùng khó chịu. Sự khó chịu càng tăng khi thời tiết lạnh dần.<br><br>
-
-              Về sau, tôi nghĩ phàm những anh hùng cái thế, đều phải chấp nhận những thử thách rèn luyện đặc biệt hà khắc của sư phụ. Quân sư phụ ắt là muốn giúp tôi rèn luyện bản lĩnh, nghị lực. Vì vậy, dẫu trong những ngày tháng chạp buốt giá căm căm, tôi cũng cắn răng chịu đựng, quyết không bỏ cuộc, cho dù có thể bị nhiễm thương hàn.<br><br>
-
-              Kiên trì được nửa năm, qua mấy lần cảm thương hàn, quả nhiên khả năng kháng hàn của tôi tăng lên rõ rệt. Tôi nói chuyện đó với Quân sư phụ, sư phụ trầm tư giây lát, rồi hóm hỉnh trả lời: “À… ta quên không bảo con, cạnh nhà tắm có một cái lò có thể giúp vải băng trên người khô nhanh, ha ha…”.<br><br>
-
-              Quân sư phụ chính là tông chủ Quân Vu giáo. Quân Vu giáo lập nghiệp trên núi Quân Vu, thuộc địa phận nước Trần. Nghe nói, ông tổ khai sơn lập giáo không phải họ Quân mà là họ Vương, xuất thân nghèo khó, cha mẹ đặt tên là Vương Tiểu Nhị.<br><br>
-
-              Về sau, Vương Tiểu Nhị được một bậc cao nhân truyền võ, sau khi thành tài, lập ra giáo phái trên núi Quân Vu. Nhưng không chiêu mộ được đệ tử tốt, hỏi ra mới biết, khi nghe danh giáo chủ Quân Vu là Vương Tiểu Nhị, mọi người đều cho rằng đó là lớp dạy nghề phụ việc, đệ tử học xong sẽ phục vụ trong các quán ăn trên khắp nước.<br><br>
+              <p>%{ (def raw-content (slurp (str l/local-file-path "Truyen/" path "/" num ".txt")))
+                    (def content (clojure.string/replace (clojure.string/trim (subs raw-content (.indexOf raw-content "\n"))) #"\n" "<br>"))
+                    content
+                  }
               </p>
 
               <ul class="pager" float:right;>
-                <li><button type="submit" class="btn btn-success btn-sm"><a href="#" style="color:white;">&larr; Trước</a></button></li>
+                <li><button type="submit" class="btn btn-success btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Trước</a></button></li>
                 <li><button type="submit" class="btn btn-warning btn-sm">Đến</button>
                     <input type="text" style="width:80px; height:30px;" id="denchuongmoi" placeholder="Chương:"></li>
-                <li><button type="submit" class="btn btn-success btn-sm"><a href="#" style="color:white;"> Tiếp &rarr;</a></button></li>
-              </ul>    
+                <li><button type="submit" class="btn btn-success btn-sm %disable2"><a href="%trangsau" style="color:white;"> Tiếp &rarr;</a></button></li>
+              </ul>      
 
             </div>
 
@@ -129,7 +130,6 @@
 
 
     %include {"util/footer.html"}
-    
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
    <script src="%(l/getFileLink "bootstrap/css/bootstrap.min.js")"></script>
