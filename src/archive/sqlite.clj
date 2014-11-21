@@ -97,7 +97,7 @@ create table chuong(path varchar(50), title varchar(50), chap int)
 
 
 
-create table chap(path varchar(50), title varchar(50), chap int)
+create table chap(pathchuong varchar(50), title varchar(50), chap int);
 
 (doseq [truyen (.listFiles (File. "/home/thao/projects/ngontinh/resources/static/Stories"))]
 	(doseq [chuong (.listFiles truyen)]
@@ -105,7 +105,7 @@ create table chap(path varchar(50), title varchar(50), chap int)
 			(let [chap 	(re-find #"\d+" (.getName chuong))
 					content 	(slurp chuong)
 					title 	(re-find #"[^\n\r]*" content)
-					query 	"INSERT INTO chap (path, title, chap) VALUES (?,?,?)"
+					query 	"INSERT INTO chap (pathchuong, title, chap) VALUES (?,?,?)"
 					stmt 	(.prepareStatement c query)
 					stmt 	(doto stmt 
 								(.setString 1 (.getName truyen))
