@@ -91,7 +91,7 @@
 
 (defn truyenCount [database]
     (let [resVec (let 	[connection (DriverManager/getConnection connection-str)
-                         query (str "select count(*) from " database "")
+                         query (str "select count(*) as count from " database "")
                          res (let [ stmt (.createStatement connection)
                                                 rs (.executeQuery stmt query)]
                                                         (vec (resultset-seq rs)))
