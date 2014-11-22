@@ -90,7 +90,7 @@
                     %{(defn chuongmoi [linkchap chap title]
                         (str "<a href='" linkchap "'>Chapter " chap ": " title "</a><br>"))
 
-                        (def chapmoi (truyen/getChap (str "select * from chuong where path = '" (doctruyen :path) "'order by chap desc limit 5")))
+                        (def chapmoi (truyen/getChap2 (str "select * from chap where pathchuong = '" (doctruyen :path) "'order by chap desc limit 5")))
 
                         (apply str (for [x chapmoi] (chuongmoi (x :linkchap) (x :chap) (x :title))))
                     } 
@@ -132,7 +132,7 @@
                               <td>" (doctruyen :date_added) "</td>
                           </tr>"))
 
-                    (def chapter (truyen/getChap (str "select * from chuong where path = '" (doctruyen :path) "' order by chap asc")))
+                    (def chapter (truyen/getChap2 (str "select * from chap where pathchuong = '" (doctruyen :path) "' order by chap asc")))
 
                     (apply str (for [x chapter] (mucluc (x :chap) (x :linkchap) (x :title))))
                   }    

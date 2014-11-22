@@ -8,7 +8,7 @@
 
   %{(def path (params :path))
     (def num (params :num))
-    (def docchuong (peek (truyen/getChap2 (str "SELECT chuong.pathchuong, chuong.title, chuong.chap, truyen.chapters as sochuong, truyen.title as titletruyen FROM chuong INNER JOIN truyen ON chuong.pathchuong=truyen.path where pathchuong ='" path "' and chap ='" num "'"))))
+    (def docchuong (peek (truyen/getChap2 (str "SELECT chap.pathchuong, chap.title, chap.chap, story.chapters as sochuong, story.title as titletruyen FROM chap INNER JOIN story ON chap.pathchuong=story.path where pathchuong ='" path "' and chap ='" num "'"))))
     nil
   }
 
@@ -16,7 +16,7 @@
 <head>
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>%(docchuong :titletruyen) - Chương %(docchuong :num): %(docchuong :title) </title>  
+    <title>%(docchuong :titletruyen) - Chapter %(docchuong :num): %(docchuong :title) </title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" href="%(l/getFileLink "image/favicon.png")" type="image/gif" sizes="16x16">
     <link href="%(l/getFileLink "bootstrap/css/bootstrap.css")" rel="stylesheet">
@@ -64,7 +64,7 @@
                       (defn mucluc [linkchap chap title]
                       (str "<a href='" linkchap "' class='list-group-item list-group-item-warning'>Chương " chap ": " title "</a>"))
 
-                      (def index (truyen/getChap (str "select * from chuong where pathchuong = '" (params :path) "' order by chap asc")))
+                      (def index (truyen/getChap2 (str "select * from chap where pathchuong = '" (params :path) "' order by chap asc")))
 
                       (apply str (for [x index] (mucluc (x :linkchap) (x :chap) (x :title))))
               }                
@@ -82,7 +82,7 @@
                 <li><a href="%{l/hostPath}vn">Home</a></li>
                 <li><a href="%{l/hostPath}vn/gridtruyen/pgnumber/1">Đọc Truyện</a></li>
                 <li><a href="%(docchuong :linktruyen)">%(docchuong :titletruyen)</a></li>
-                <li class="active">Chương %(docchuong :chap)</li>
+                <li class="active">Chapter %(docchuong :chap)</li>
             </ol>
 
 
@@ -96,28 +96,28 @@
                }
 
               <ul class="pager" float:right;>
-                <li><button type="submit" class="btn btn-success btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Trước</a></button></li>
-                <li><button type="submit" class="btn btn-warning btn-sm">Đến</button>
+                <li><button type="submit" class="btn btn-success btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Back</a></button></li>
+                <li><button type="submit" class="btn btn-warning btn-sm">Go</button>
                     <input type="text" style="width:80px; height:30px;" id="denchuongmoi" placeholder="Chương:"></li>
-                <li><button type="submit" class="btn btn-success btn-sm %disable2"><a href="%trangsau" style="color:white;"> Tiếp &rarr;</a></button></li>
+                <li><button type="submit" class="btn btn-success btn-sm %disable2"><a href="%trangsau" style="color:white;"> Next &rarr;</a></button></li>
               </ul>    
 
               <a href=""><h2 class="text-danger text-center"><strong>%(docchuong :titletruyen)</strong></h2></a>
-              <h3 class="text-primary text-center">Chương %(docchuong :chap): %(docchuong :title)</h3>
+              <h3 class="text-primary text-center">Chapter %(docchuong :chap): %(docchuong :title)</h3>
 
               <hr class="style-two">
 
-              <p>%{ (def raw-content (slurp (str l/local-file-path "Truyen/" path "/" num ".txt")))
+              <p>%{ (def raw-content (slurp (str l/local-file-path "Stories/" path "/" num ".txt")))
                     (def content (clojure.string/replace (clojure.string/trim (subs raw-content (.indexOf raw-content "\n"))) #"\n" "<br>"))
                     content
                   }
               </p>
 
               <ul class="pager" float:right;>
-                <li><button type="submit" class="btn btn-success btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Trước</a></button></li>
-                <li><button type="submit" class="btn btn-warning btn-sm">Đến</button>
+                <li><button type="submit" class="btn btn-success btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Back</a></button></li>
+                <li><button type="submit" class="btn btn-warning btn-sm">Go</button>
                     <input type="text" style="width:80px; height:30px;" id="denchuongmoi" placeholder="Chương:"></li>
-                <li><button type="submit" class="btn btn-success btn-sm %disable2"><a href="%trangsau" style="color:white;"> Tiếp &rarr;</a></button></li>
+                <li><button type="submit" class="btn btn-success btn-sm %disable2"><a href="%trangsau" style="color:white;"> Next &rarr;</a></button></li>
               </ul>      
 
             </div>

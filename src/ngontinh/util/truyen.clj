@@ -67,9 +67,9 @@
 								 	rs 		(.executeQuery stmt query)]
 								(vec (resultset-seq rs)))
 				addLink		(for [chap mostRead]
-								(let 	[truyen 	(chap :truyen)
+								(let 	[truyen 	(chap :pathchuong)
 										title       (chap :title)
-										chap-num    (chap :num)
+										chap-num    (chap :chap)
 										linktruyen  (str lib/hostPath "gridtruyen/read/" truyen)
 										linkchap 	(str lib/hostPath "gridtruyen/read/" truyen "/" chap-num)] 
 									(assoc chap :linkchap linkchap :linktruyen linktruyen)))
