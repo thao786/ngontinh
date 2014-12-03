@@ -10,6 +10,8 @@
 ;lein ring uberwar
 ;username="tomcat" password="s3cret"
 ;nohup java -jar start.jar jetty.port=80 &
+; ssh thao@50.116.53.36
+
 
 (defroutes app-routes
         (HEAD "/" [] "")
