@@ -9,17 +9,18 @@
 %{ (def genre (l/genres (params :genre)))
      (def genre2 (l/genres2 (params :genre)))
      (def pgIndex (Integer/parseInt (params :index)))
-     (def truyendisplay (truyen/getTruyen (str "SELECT * FROM truyen where lower(genre) like '%" genre2 "%' order by 'path' limit 20 offset " (- (* 20 pgIndex) 20) "")))
+     (def truyendisplay (truyen/getTruyen (str "SELECT * FROM truyen order by 'path' limit 20 offset " (- (* 20 pgIndex) 20) "")))
      (def truyenquantity (count truyendisplay))
       nil}
 
-SELECT * FROM truyen where lower(genre) like 'co_dai' order by "path"  limit 20 offset 20;
 <html lang="en">
 <head>
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>Truyện %genre </title>  
+    <title>Truyện %genre - Trang %PgIndex</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="keywords" content="classical novel, read online, ngon tinh, doc truyen, trang ngon tinh, truyen ngon tinh, huyen huyen, co dai, hien dai">
+    <meta name="description" content="Free classical reading online, doc truyen ngon tinh">
     <link rel="icon" href="%(l/getFileLink "image/favicon.png")" type="image/gif" sizes="16x16">
     <link href="%(l/getFileLink "bootstrap/css/bootstrap.css")" rel="stylesheet">
     <link href="%(l/getFileLink "css/csssheet.css")" rel="stylesheet">
@@ -111,7 +112,7 @@ SELECT * FROM truyen where lower(genre) like 'co_dai' order by "path"  limit 20 
 
 
 
-      %{(def numberoftruyeninDB (truyen/getGenreCount genre2))
+      %{(def numberoftruyeninDB (truyen/truyenCount "truyen"))
         (def pagequantity (if (= (rem numberoftruyeninDB 20) 0) (quot numberoftruyeninDB 20) (+ (quot numberoftruyeninDB 20) 1)))
         nil
       }
@@ -121,16 +122,17 @@ SELECT * FROM truyen where lower(genre) like 'co_dai' order by "path"  limit 20 
                 
                 <div class="text-center">                    
                     <ul class="pagination">
-                      <li class="disabled"><a href="%(str l/hostPath "gridtruyen/theloai/" (params :genre) "/" pagequantity)">&laquo;</a></li>
+                      <li class="disabled"><a href="%(str l/hostPath "vn/gridtruyen/theloai/" genre2 "/" pagequantity)">&laquo;</a></li>
 
                       %{(defn pagination [x]
-                            (str "<li class='" (let [active (if (= x pgIndex) "active" "")] active) "'><a href='" l/hostPath "gridtruyen/pgnumber/"  x "'>" x "</a></li>")) 
+                            (str "<li class='" (let [active (if (= x pgIndex) "active" "")] active) "'><a href='" l/hostPath "vn/gridtruyen/" genre2 "/"  x "'>" x "</a></li>")) 
 
-                            (apply str (for [x (range (max 1 (- pgIndex 4)) (min (+ 1 pagequantity) (+ 5 pgIndex)))] 
-                                                           (pagination x)))
+                            (def sotrang (range (max 1 (- pgIndex 4)) (min (+ 1 pagequantity) (+ 5 pgIndex))))
+
+                            (apply str (for [x sotrang] (pagination x)))
                         }
 
-                      <li><a href="%(str l/hostPath "gridtruyen/theloai/" (params :genre) "/" pagequantity)">&raquo;</a></li>
+                      <li><a href="%(str l/hostPath "vn/gridtruyen/theloai/" genre2 "/" pagequantity)">&raquo;</a></li>
                     </ul>
                 </div>    
 

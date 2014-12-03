@@ -67,9 +67,9 @@
 								 	rs 		(.executeQuery stmt query)]
 								(vec (resultset-seq rs)))
 				addLink		(for [chap mostRead]
-								(let 	[truyen 	(chap :truyen)
+								(let 	[truyen 	(chap :pathchuong)
 										title       (chap :title)
-										chap-num    (chap :num)
+										chap-num    (chap :chap)
 										linktruyen  (str lib/hostPath "gridtruyen/read/" truyen)
 										linkchap 	(str lib/hostPath "gridtruyen/read/" truyen "/" chap-num)] 
 									(assoc chap :linkchap linkchap :linktruyen linktruyen)))
@@ -79,7 +79,7 @@
 
 (defn getGenreCount [genre]
     (let [resVec (let [		connection (DriverManager/getConnection connection-str)
-                            query (str "select count(*) from (select lower(genre) from truyen) as theloai2 where lower like '%" genre "%'")
+                            query (str "select count(*) as count from (select lower(genre) from truyen) as theloai2 where lower like '%" genre "%'")
                          	res (let [ stmt (.createStatement connection)
                                                 rs (.executeQuery stmt query)]
                                                         (vec (resultset-seq rs)))
