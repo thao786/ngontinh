@@ -1,7 +1,10 @@
 (ns ngontinh.libpath
 	(:require 	[clojure.java.io :as io]))
 
+(def nginx-path "http://li679-206.members.linode.com:8000/")
+(def staticPath (str nginx-path "files/"))
 (def hostPath "http://localhost:3000/")
+(def local-file-path "C:/Users/Thuy/Desktop/git/Statics/")
 
 
 (def genres {	"chientruong" "Chiến Trường" 
@@ -77,6 +80,7 @@
 				"oe" "oe"
 				"classical" "classical"
 				"fairytale" "fairy tales"})
+
 
 (defn getImageCover
 	([ten-truyen lang]
