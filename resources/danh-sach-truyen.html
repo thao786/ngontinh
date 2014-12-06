@@ -25,7 +25,7 @@
       }
       .jumbotron{
           background-image: url('%(l/getFileLink "image/zenbg-1.png")'), url('%(l/getFileLink "image/zenbg-2.png")');
-      }   
+      }
     </style>
 </head>
 
@@ -128,7 +128,8 @@
                       </tr>"))
 
                   (def truyenall (truyen/getTruyen2 "SELECT * FROM story")) 
-                  (def truyenall2 (for [x truyenall] (assoc x :newstate (if (= (compare (x :state) 1) 0) "Full" "Còn Tiếp"))))
+                  (def truyenall2 (for [x truyenall] 
+                                      (assoc x :newstate (if (= (compare (x :state) 1) 0) "Full" "Còn Tiếp"))))
                                               
                   (apply str (for [x truyenall]    
                       (listtruyen (x :linktruyen) (x :linkanh) (x :title) (x :author) (x :genre) (x :shortoverview) (x :view) (x :state))))
