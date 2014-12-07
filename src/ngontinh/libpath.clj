@@ -1,7 +1,7 @@
 (ns ngontinh.libpath
 	(:require 	[clojure.java.io :as io]))
 
-(def hostPath "http://localhost:3000/")
+(def hostPath "http://localhost:8080/")
 ;(def local-file-path "C:/Users/Thuy/Desktop/git/Statics/")
 (def local-file-path "/home/thao/projects/ngontinh/resources/static/")
 

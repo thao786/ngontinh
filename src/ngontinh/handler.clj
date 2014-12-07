@@ -8,9 +8,8 @@
                   [clojure.java.io :as io]))
 
 ;lein ring uberwar
-;username="tomcat" password="s3cret"
-;nohup java -jar start.jar jetty.port=80 &
 ; ssh thao@50.116.53.36
+; lein ring server 8080
 
 
 (defroutes app-routes
