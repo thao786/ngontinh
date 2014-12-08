@@ -30,10 +30,7 @@
       body{        
           background-image: url('%(l/getFileLink "image/bokeh.png")');
       }
-      .jumbotron{
-          background: #216bc9;
-          background-image: url('%(l/getFileLink "image/zenbg-3.png")'), url('%(l/getFileLink "image/zenbg-4.png")');
-      }
+      
     </style>
 </head>
 
@@ -47,35 +44,10 @@
         %include {"util/header.html"}
         
 
-        <div class="jumbotron hidden-xs">
-          <p></p>
-        </div>
-
 
 
         <div class="row body">
-          <div class="col-sm-3 hidden-xs">
-              <div class="panel panel-info">
-                <div class="panel-heading">
-                  <h3 class="panel-title"><b>Table of Content</b></h3>
-                </div>
-                <div class="panel-body">
-                  <div class="list-group">
-                    %{
-                      (defn mucluc [linkchap chap title]
-                      (str "<a href='" linkchap "' class='list-group-item list-group-item-warning'>Chapter " chap ": " title "</a>"))
-
-                      (def index (truyen/getChap2 (str "select * from chap where pathchuong = '" (params :path) "' order by chap asc")))
-
-                      (apply str (for [x index] (mucluc (x :linkchap) (x :chap) (x :title))))
-              }                
-                  </div><!--list group-->
-                </div>
-              </div>
-
-              %include {"util/truyenngaunhien.html"}
-              
-          </div><!--col-sm-3-->
+          
 
           
           <div class="col-sm-9">
@@ -97,7 +69,9 @@
                }
 
               <ul class="pager" float:right;>
-                <li><button type="submit" class="btn btn-warning btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Back</a></button></li>
+                <li><button type="submit" class="btn btn-success btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Back</a></button></li>
+                <li><button type="submit" class="btn btn-warning btn-sm">Go</button>
+                    <input type="text" style="width:80px; height:30px;" id="denchuongmoi" placeholder="Chương:"></li>
                 <li><button type="submit" class="btn btn-success btn-sm %disable2"><a href="%trangsau" style="color:white;"> Next &rarr;</a></button></li>
               </ul>    
 
@@ -113,7 +87,9 @@
               </p>
 
               <ul class="pager" float:right;>
-                <li><button type="submit" class="btn btn-warning btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Back</a></button></li>                
+                <li><button type="submit" class="btn btn-success btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Back</a></button></li>
+                <li><button type="submit" class="btn btn-warning btn-sm">Go</button>
+                    <input type="text" style="width:80px; height:30px;" id="denchuongmoi" placeholder="Chương:"></li>
                 <li><button type="submit" class="btn btn-success btn-sm %disable2"><a href="%trangsau" style="color:white;"> Next &rarr;</a></button></li>
               </ul>      
 
@@ -161,6 +137,10 @@
           $(".list-group-item:even").addClass("list-group-item-info");
           $(".list-group-item:odd").addClass("list-group-item-danger");
       });
+
+      if (screen.width <= 768) {
+            document.location = "chuong-mobile.html";
+      }
       
   </script>
   </body>

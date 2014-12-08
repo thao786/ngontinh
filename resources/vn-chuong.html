@@ -16,10 +16,10 @@
 <head>
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>%(docchuong :titletruyen) - Chương %(docchuong :num): %(docchuong :title) </title>  
+    <title>%(docchuong :titletruyen) - Chương %(docchuong :chap): %(docchuong :title) </title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <meta name="keywords" content="%(docchuong :titletruyen), %(docchuong :title), %(docchuong :num)">
-    <meta name="description" content="%(docchuong :titletruyen) Chương %(docchuong :num): %(docchuong :title)">
+    <meta name="keywords" content="%(docchuong :titletruyen), %(docchuong :title), %(docchuong :chap)">
+    <meta name="description" content="%(docchuong :titletruyen) Chương %(docchuong :chap): %(docchuong :title)">
     <link rel="icon" href="%(l/getFileLink "image/favicon.png")" type="image/gif" sizes="16x16">
     <link href="%(l/getFileLink "bootstrap/css/bootstrap.css")" rel="stylesheet">
     <link href="%(l/getFileLink "css/csssheet.css")" rel="stylesheet">
@@ -47,14 +47,14 @@
         %include {"util/vn-header.html"}
         
 
-        <div class="jumbotron">
+        <div class="jumbotron hidden-xs">
           <p></p>
         </div>
 
 
 
         <div class="row body">
-          <div class="col-sm-3">
+          <div class="col-sm-3 hidden-xs">
 
               <div class="panel panel-info">
                 <div class="panel-heading">
@@ -98,9 +98,7 @@
                }
 
               <ul class="pager" float:right;>
-                <li><button type="submit" class="btn btn-success btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Trước</a></button></li>
-                <li><button type="submit" class="btn btn-warning btn-sm">Đến</button>
-                    <input type="text" style="width:80px; height:30px;" id="denchuongmoi" placeholder="Chương:"></li>
+                <li><button type="submit" class="btn btn-warning btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Trước</a></button></li>
                 <li><button type="submit" class="btn btn-success btn-sm %disable2"><a href="%trangsau" style="color:white;"> Tiếp &rarr;</a></button></li>
               </ul>    
 
@@ -116,9 +114,7 @@
               </p>
 
               <ul class="pager" float:right;>
-                <li><button type="submit" class="btn btn-success btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Trước</a></button></li>
-                <li><button type="submit" class="btn btn-warning btn-sm">Đến</button>
-                    <input type="text" style="width:80px; height:30px;" id="denchuongmoi" placeholder="Chương:"></li>
+                <li><button type="submit" class="btn btn-warning btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Trước</a></button></li>
                 <li><button type="submit" class="btn btn-success btn-sm %disable2"><a href="%trangsau" style="color:white;"> Tiếp &rarr;</a></button></li>
               </ul>      
 
@@ -126,6 +122,31 @@
 
                 
           </div><!-- col-sm-9 -->
+
+          <div class="col-sm-3 visible-xs">
+
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><b>Mục lục</b></h3>
+                </div>
+                <div class="panel-body">
+                  <div class="list-group">
+                    %{
+                      (defn mucluc [linkchap chap title]
+                      (str "<a href='" linkchap "' class='list-group-item list-group-item-warning'>Chương " chap ": " title "</a>"))
+
+                      (def index (truyen/getChap (str "select * from chuong where pathchuong = '" (params :path) "' order by chap asc")))
+
+                      (apply str (for [x index] (mucluc (x :linkchap) (x :chap) (x :title))))
+              }                
+                  </div><!--list group-->
+                </div>
+              </div>
+
+              %include {"util/vn-truyenngaunhien.html"}
+              
+          </div><!--col-sm-3-->
+
         </div><!-- row body -->
       </div><!--startofbody-->
     </div><!--container-->  
@@ -143,6 +164,10 @@
           $(".list-group-item:even").addClass("list-group-item-info");
           $(".list-group-item:odd").addClass("list-group-item-danger");
       });
+
+      // if (screen.width <= 768) {
+      //       document.location = "vn-chuong-mobile.html";
+      // }
       
   </script>
   </body>
