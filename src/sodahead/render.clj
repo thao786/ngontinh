@@ -133,7 +133,7 @@
 			(let [new-ns (cache file-path (slurp (io/resource file-path)))]
 				(load-string (str "(" new-ns "/render " params ")"))))))
 
-(def render render-file)
+(def render render-file-cache)
 
 (defmacro ig 
 	"comment macro"
