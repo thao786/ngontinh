@@ -44,7 +44,7 @@
       <div class="startofbody">
 
 
-        %include {"util/vn-header.html"}
+        %include {"util/header.html"}
         
 
         <div class="jumbotron">
@@ -58,13 +58,13 @@
 
               <div class="panel panel-info">
                 <div class="panel-heading">
-                  <h3 class="panel-title"><b>Mục lục</b></h3>
+                  <h3 class="panel-title"><b>Table of Content</b></h3>
                 </div>
                 <div class="panel-body">
                   <div class="list-group">
                     %{
                       (defn mucluc [linkchap chap title]
-                      (str "<a href='" linkchap "' class='list-group-item list-group-item-warning'>Chương " chap ": " title "</a>"))
+                      (str "<a href='" linkchap "' class='list-group-item list-group-item-warning'>Chapter " chap ": " title "</a>"))
 
                       (def index (truyen/getChap2 (str "select * from chap where pathchuong = '" (params :path) "' order by chap asc")))
 
@@ -81,8 +81,8 @@
           
           <div class="col-sm-9">
             <ol class="breadcrumb">
-                <li><a href="%{l/hostPath}vn">Home</a></li>
-                <li><a href="%{l/hostPath}vn/gridtruyen/pgnumber/1">Đọc Truyện</a></li>
+                <li><a href="%{l/hostPath}">Home</a></li>
+                <li><a href="%{l/hostPath}gridtruyen/pgnumber/1">Genres</a></li>
                 <li><a href="%(docchuong :linktruyen)">%(docchuong :titletruyen)</a></li>
                 <li class="active">Chapter %(docchuong :chap)</li>
             </ol>
