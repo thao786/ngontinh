@@ -16,10 +16,10 @@
 <head>
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>%(docchuong :titletruyen) - Chapter %(docchuong :num): %(docchuong :title) </title>  
+    <title>%(docchuong :titletruyen) - Chapter %(docchuong :chap): %(docchuong :title) </title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <meta name="keywords" content="%(docchuong :titletruyen), %(docchuong :title), %(docchuong :num)">
-    <meta name="description" content="%(docchuong :titletruyen) Chapter %(docchuong :num): %(docchuong :title)">
+    <meta name="keywords" content="%(docchuong :titletruyen), %(docchuong :title), %(docchuong :chap)">
+    <meta name="description" content="%(docchuong :titletruyen) Chapter %(docchuong :chap): %(docchuong :title)">
     <link rel="icon" href="%(l/getFileLink "image/favicon.png")" type="image/gif" sizes="16x16">
     <link href="%(l/getFileLink "bootstrap/css/bootstrap.css")" rel="stylesheet">
     <link href="%(l/getFileLink "css/csssheet.css")" rel="stylesheet">
@@ -44,27 +44,26 @@
       <div class="startofbody">
 
 
-        %include {"util/vn-header.html"}
+        %include {"util/header.html"}
         
 
-        <div class="jumbotron">
+        <div class="jumbotron hidden-xs">
           <p></p>
         </div>
 
 
 
         <div class="row body">
-          <div class="col-sm-3">
-
+          <div class="col-sm-3 hidden-xs">
               <div class="panel panel-info">
                 <div class="panel-heading">
-                  <h3 class="panel-title"><b>Mục lục</b></h3>
+                  <h3 class="panel-title"><b>Table of Content</b></h3>
                 </div>
                 <div class="panel-body">
                   <div class="list-group">
                     %{
                       (defn mucluc [linkchap chap title]
-                      (str "<a href='" linkchap "' class='list-group-item list-group-item-warning'>Chương " chap ": " title "</a>"))
+                      (str "<a href='" linkchap "' class='list-group-item list-group-item-warning'>Chapter " chap ": " title "</a>"))
 
                       (def index (truyen/getChap2 (str "select * from chap where pathchuong = '" (params :path) "' order by chap asc")))
 
@@ -81,8 +80,8 @@
           
           <div class="col-sm-9">
             <ol class="breadcrumb">
-                <li><a href="%{l/hostPath}vn">Home</a></li>
-                <li><a href="%{l/hostPath}vn/gridtruyen/pgnumber/1">Đọc Truyện</a></li>
+                <li><a href="%{l/hostPath}">Home</a></li>
+                <li><a href="%{l/hostPath}gridtruyen/pgnumber/1">Genres</a></li>
                 <li><a href="%(docchuong :linktruyen)">%(docchuong :titletruyen)</a></li>
                 <li class="active">Chapter %(docchuong :chap)</li>
             </ol>
@@ -98,9 +97,7 @@
                }
 
               <ul class="pager" float:right;>
-                <li><button type="submit" class="btn btn-success btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Back</a></button></li>
-                <li><button type="submit" class="btn btn-warning btn-sm">Go</button>
-                    <input type="text" style="width:80px; height:30px;" id="denchuongmoi" placeholder="Chương:"></li>
+                <li><button type="submit" class="btn btn-warning btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Back</a></button></li>
                 <li><button type="submit" class="btn btn-success btn-sm %disable2"><a href="%trangsau" style="color:white;"> Next &rarr;</a></button></li>
               </ul>    
 
@@ -116,9 +113,7 @@
               </p>
 
               <ul class="pager" float:right;>
-                <li><button type="submit" class="btn btn-success btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Back</a></button></li>
-                <li><button type="submit" class="btn btn-warning btn-sm">Go</button>
-                    <input type="text" style="width:80px; height:30px;" id="denchuongmoi" placeholder="Chương:"></li>
+                <li><button type="submit" class="btn btn-warning btn-sm %disable"><a href="%trangtruoc" style="color:white;">&larr; Back</a></button></li>                
                 <li><button type="submit" class="btn btn-success btn-sm %disable2"><a href="%trangsau" style="color:white;"> Next &rarr;</a></button></li>
               </ul>      
 
@@ -126,6 +121,29 @@
 
                 
           </div><!-- col-sm-9 -->
+
+          <div class="col-sm-3 visible-xs">
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><b>Table of Content</b></h3>
+                </div>
+                <div class="panel-body">
+                  <div class="list-group">
+                    %{
+                      (defn mucluc [linkchap chap title]
+                      (str "<a href='" linkchap "' class='list-group-item list-group-item-warning'>Chapter " chap ": " title "</a>"))
+
+                      (def index (truyen/getChap2 (str "select * from chap where pathchuong = '" (params :path) "' order by chap asc")))
+
+                      (apply str (for [x index] (mucluc (x :linkchap) (x :chap) (x :title))))
+              }                
+                  </div><!--list group-->
+                </div>
+              </div>
+
+              %include {"util/truyenngaunhien.html"}
+              
+          </div><!--col-sm-3-->
         </div><!-- row body -->
       </div><!--startofbody-->
     </div><!--container-->  
