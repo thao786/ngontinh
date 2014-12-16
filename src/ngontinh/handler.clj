@@ -53,8 +53,9 @@
 
         ;===============
 
-        (GET "/gridtruyen/read/:path/:num" [path num] 
+        (GET "/gridtruyen/read/:path/:num" [path num]
             (r/render "chuong.html" {:path path :num num}))
+
 
         (GET "/vn/gridtruyen/read/:path/:num" [path num] 
             (r/render "vn-chuong.html" {:path path :num num}))
