@@ -1,0 +1,920 @@
+2014-12-09 04:13:20.354:INFO:oejs.Server:jetty-7.6.8.v20121106
+2014-12-09 04:13:20.390:INFO:oejs.AbstractConnector:Started SelectChannelConnector@0.0.0.0:8080
+Started server on port 8080
+Exception in thread "main" java.awt.HeadlessException: 
+No X11 DISPLAY variable was set, but this program performed an operation which requires it., compiling:(/tmp/form-init6504690403357514319.clj:1:72)
+	at clojure.lang.Compiler.load(Compiler.java:7142)
+	at clojure.lang.Compiler.loadFile(Compiler.java:7086)
+	at clojure.main$load_script.invoke(main.clj:274)
+	at clojure.main$init_opt.invoke(main.clj:279)
+	at clojure.main$initialize.invoke(main.clj:307)
+	at clojure.main$null_opt.invoke(main.clj:342)
+	at clojure.main$main.doInvoke(main.clj:420)
+	at clojure.lang.RestFn.invoke(RestFn.java:421)
+	at clojure.lang.Var.invoke(Var.java:383)
+	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+	at clojure.lang.Var.applyTo(Var.java:700)
+	at clojure.main.main(main.java:37)
+Caused by: java.awt.HeadlessException: 
+No X11 DISPLAY variable was set, but this program performed an operation which requires it.
+	at java.awt.GraphicsEnvironment.checkHeadless(GraphicsEnvironment.java:207)
+	at java.awt.Window.<init>(Window.java:536)
+	at java.awt.Frame.<init>(Frame.java:420)
+	at java.awt.Frame.<init>(Frame.java:385)
+	at javax.swing.JFrame.<init>(JFrame.java:181)
+	at clojure.java.browse_ui$open_url_in_swing.invoke(browse_ui.clj:20)
+	at clojure.lang.Var.invoke(Var.java:379)
+	at clojure.java.browse$open_url_in_swing.invoke(browse.clj:64)
+	at clojure.java.browse$browse_url.invoke(browse.clj:76)
+	at ring.server.standalone$open_browser_to.invoke(standalone.clj:39)
+	at ring.server.standalone$serve$fn__1846.invoke(standalone.clj:104)
+	at ring.server.standalone$try_port.invoke(standalone.clj:15)
+	at ring.server.standalone$serve.doInvoke(standalone.clj:97)
+	at clojure.lang.RestFn.invoke(RestFn.java:423)
+	at ring.server.leiningen$serve.invoke(leiningen.clj:20)
+	at user$eval2855.invoke(form-init6504690403357514319.clj:1)
+	at clojure.lang.Compiler.eval(Compiler.java:6703)
+	at clojure.lang.Compiler.eval(Compiler.java:6693)
+	at clojure.lang.Compiler.load(Compiler.java:7130)
+	... 11 more
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7726, being replaced by: #'sodahead7726/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead7712, being replaced by: #'sodahead7712/num
+java.lang.StringIndexOutOfBoundsException: String index out of range: -4
+                       String.java:1954 java.lang.String.substring
+                          core.clj:4591 clojure.core/subs
+                          render.clj:32 sodahead.render/get-exception-code
+                          render.clj:53 sodahead.render/check[fn]
+                          render.clj:47 sodahead.render/check
+                          render.clj:78 sodahead.render/gen-ns-file
+                          render.clj:91 sodahead.render/cache
+                         render.clj:133 sodahead.render/render-file-cache
+                         handler.clj:36 ngontinh.handler/fn
+                            core.clj:94 compojure.core/make-route[fn]
+                            core.clj:40 compojure.core/if-route[fn]
+                            core.clj:25 compojure.core/if-method[fn]
+                           core.clj:107 compojure.core/routing[fn]
+                          core.clj:2515 clojure.core/some
+                           core.clj:107 compojure.core/routing
+                        RestFn.java:139 clojure.lang.RestFn.applyTo
+                           core.clj:626 clojure.core/apply
+                           core.clj:112 compojure.core/routes[fn]
+                  keyword_params.clj:32 ring.middleware.keyword-params/wrap-keyword-params[fn]
+                   nested_params.clj:75 ring.middleware.nested-params/wrap-nested-params[fn]
+                          params.clj:58 ring.middleware.params/wrap-params[fn]
+               multipart_params.clj:107 ring.middleware.multipart-params/wrap-multipart-params[fn]
+                           flash.clj:31 ring.middleware.flash/wrap-flash[fn]
+                         session.clj:85 ring.middleware.session/wrap-session[fn]
+                        cookies.clj:142 ring.middleware.cookies/wrap-cookies[fn]
+                           Var.java:379 clojure.lang.Var.invoke
+                          reload.clj:18 ring.middleware.reload/wrap-reload[fn]
+                      stacktrace.clj:17 ring.middleware.stacktrace/wrap-stacktrace-log[fn]
+                      stacktrace.clj:80 ring.middleware.stacktrace/wrap-stacktrace-web[fn]
+                           jetty.clj:18 ring.adapter.jetty/proxy-handler[fn]
+                       (Unknown Source) ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle
+                HandlerWrapper.java:116 org.eclipse.jetty.server.handler.HandlerWrapper.handle
+                        Server.java:363 org.eclipse.jetty.server.Server.handle
+        AbstractHttpConnection.java:483 org.eclipse.jetty.server.AbstractHttpConnection.handleRequest
+        AbstractHttpConnection.java:920 org.eclipse.jetty.server.AbstractHttpConnection.headerComplete
+        AbstractHttpConnection.java:982 org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete
+                    HttpParser.java:635 org.eclipse.jetty.http.HttpParser.parseNext
+                    HttpParser.java:235 org.eclipse.jetty.http.HttpParser.parseAvailable
+            AsyncHttpConnection.java:82 org.eclipse.jetty.server.AsyncHttpConnection.handle
+         SelectChannelEndPoint.java:628 org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle
+          SelectChannelEndPoint.java:52 org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run
+              QueuedThreadPool.java:608 org.eclipse.jetty.util.thread.QueuedThreadPool.runJob
+              QueuedThreadPool.java:543 org.eclipse.jetty.util.thread.QueuedThreadPool$3.run
+                        Thread.java:745 java.lang.Thread.run
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65221, being replaced by: #'sodahead65221/num
+WARNING: num already refers to: #'clojure.core/num in namespace: sodahead65207, being replaced by: #'sodahead65207/num
+java.lang.StringIndexOutOfBoundsException: String index out of range: -4
+                       String.java:1954 java.lang.String.substring
+                          core.clj:4591 clojure.core/subs
+                          render.clj:32 sodahead.render/get-exception-code
+                          render.clj:53 sodahead.render/check[fn]
+                          render.clj:47 sodahead.render/check
+                          render.clj:78 sodahead.render/gen-ns-file
+                          render.clj:91 sodahead.render/cache
+                         render.clj:133 sodahead.render/render-file-cache
+                         handler.clj:36 ngontinh.handler/fn
+                            core.clj:94 compojure.core/make-route[fn]
+                            core.clj:40 compojure.core/if-route[fn]
+                            core.clj:25 compojure.core/if-method[fn]
+                           core.clj:107 compojure.core/routing[fn]
+                          core.clj:2515 clojure.core/some
+                           core.clj:107 compojure.core/routing
+                        RestFn.java:139 clojure.lang.RestFn.applyTo
+                           core.clj:626 clojure.core/apply
+                           core.clj:112 compojure.core/routes[fn]
+                  keyword_params.clj:32 ring.middleware.keyword-params/wrap-keyword-params[fn]
+                   nested_params.clj:75 ring.middleware.nested-params/wrap-nested-params[fn]
+                          params.clj:58 ring.middleware.params/wrap-params[fn]
+               multipart_params.clj:107 ring.middleware.multipart-params/wrap-multipart-params[fn]
+                           flash.clj:31 ring.middleware.flash/wrap-flash[fn]
+                         session.clj:85 ring.middleware.session/wrap-session[fn]
+                        cookies.clj:142 ring.middleware.cookies/wrap-cookies[fn]
+                           Var.java:379 clojure.lang.Var.invoke
+                          reload.clj:18 ring.middleware.reload/wrap-reload[fn]
+                      stacktrace.clj:17 ring.middleware.stacktrace/wrap-stacktrace-log[fn]
+                      stacktrace.clj:80 ring.middleware.stacktrace/wrap-stacktrace-web[fn]
+                           jetty.clj:18 ring.adapter.jetty/proxy-handler[fn]
+                       (Unknown Source) ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle
+                HandlerWrapper.java:116 org.eclipse.jetty.server.handler.HandlerWrapper.handle
+                        Server.java:363 org.eclipse.jetty.server.Server.handle
+        AbstractHttpConnection.java:483 org.eclipse.jetty.server.AbstractHttpConnection.handleRequest
+        AbstractHttpConnection.java:920 org.eclipse.jetty.server.AbstractHttpConnection.headerComplete
+        AbstractHttpConnection.java:982 org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete
+                    HttpParser.java:635 org.eclipse.jetty.http.HttpParser.parseNext
+                    HttpParser.java:235 org.eclipse.jetty.http.HttpParser.parseAvailable
+            AsyncHttpConnection.java:82 org.eclipse.jetty.server.AsyncHttpConnection.handle
+         SelectChannelEndPoint.java:628 org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle
+          SelectChannelEndPoint.java:52 org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run
+              QueuedThreadPool.java:608 org.eclipse.jetty.util.thread.QueuedThreadPool.runJob
+              QueuedThreadPool.java:543 org.eclipse.jetty.util.thread.QueuedThreadPool$3.run
+                        Thread.java:745 java.lang.Thread.run
+java.lang.StringIndexOutOfBoundsException: String index out of range: -4
+                       String.java:1954 java.lang.String.substring
+                          core.clj:4591 clojure.core/subs
+                          render.clj:32 sodahead.render/get-exception-code
+                          render.clj:53 sodahead.render/check[fn]
+                          render.clj:47 sodahead.render/check
+                          render.clj:78 sodahead.render/gen-ns-file
+                          render.clj:91 sodahead.render/cache
+                         render.clj:133 sodahead.render/render-file-cache
+                         handler.clj:36 ngontinh.handler/fn
+                            core.clj:94 compojure.core/make-route[fn]
+                            core.clj:40 compojure.core/if-route[fn]
+                            core.clj:25 compojure.core/if-method[fn]
+                           core.clj:107 compojure.core/routing[fn]
+                          core.clj:2515 clojure.core/some
+                           core.clj:107 compojure.core/routing
+                        RestFn.java:139 clojure.lang.RestFn.applyTo
+                           core.clj:626 clojure.core/apply
+                           core.clj:112 compojure.core/routes[fn]
+                  keyword_params.clj:32 ring.middleware.keyword-params/wrap-keyword-params[fn]
+                   nested_params.clj:75 ring.middleware.nested-params/wrap-nested-params[fn]
+                          params.clj:58 ring.middleware.params/wrap-params[fn]
+               multipart_params.clj:107 ring.middleware.multipart-params/wrap-multipart-params[fn]
+                           flash.clj:31 ring.middleware.flash/wrap-flash[fn]
+                         session.clj:85 ring.middleware.session/wrap-session[fn]
+                        cookies.clj:142 ring.middleware.cookies/wrap-cookies[fn]
+                           Var.java:379 clojure.lang.Var.invoke
+                          reload.clj:18 ring.middleware.reload/wrap-reload[fn]
+                      stacktrace.clj:17 ring.middleware.stacktrace/wrap-stacktrace-log[fn]
+                      stacktrace.clj:80 ring.middleware.stacktrace/wrap-stacktrace-web[fn]
+                           jetty.clj:18 ring.adapter.jetty/proxy-handler[fn]
+                       (Unknown Source) ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle
+                HandlerWrapper.java:116 org.eclipse.jetty.server.handler.HandlerWrapper.handle
+                        Server.java:363 org.eclipse.jetty.server.Server.handle
+        AbstractHttpConnection.java:483 org.eclipse.jetty.server.AbstractHttpConnection.handleRequest
+        AbstractHttpConnection.java:920 org.eclipse.jetty.server.AbstractHttpConnection.headerComplete
+        AbstractHttpConnection.java:982 org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete
+                    HttpParser.java:635 org.eclipse.jetty.http.HttpParser.parseNext
+                    HttpParser.java:235 org.eclipse.jetty.http.HttpParser.parseAvailable
+            AsyncHttpConnection.java:82 org.eclipse.jetty.server.AsyncHttpConnection.handle
+         SelectChannelEndPoint.java:628 org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle
+          SelectChannelEndPoint.java:52 org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run
+              QueuedThreadPool.java:608 org.eclipse.jetty.util.thread.QueuedThreadPool.runJob
+              QueuedThreadPool.java:543 org.eclipse.jetty.util.thread.QueuedThreadPool$3.run
+                        Thread.java:745 java.lang.Thread.run
+java.lang.StringIndexOutOfBoundsException: String index out of range: -4
+                       String.java:1954 java.lang.String.substring
+                          core.clj:4591 clojure.core/subs
+                          render.clj:32 sodahead.render/get-exception-code
+                          render.clj:53 sodahead.render/check[fn]
+                          render.clj:47 sodahead.render/check
+                          render.clj:78 sodahead.render/gen-ns-file
+                          render.clj:91 sodahead.render/cache
+                         render.clj:133 sodahead.render/render-file-cache
+                         handler.clj:36 ngontinh.handler/fn
+                            core.clj:94 compojure.core/make-route[fn]
+                            core.clj:40 compojure.core/if-route[fn]
+                            core.clj:25 compojure.core/if-method[fn]
+                           core.clj:107 compojure.core/routing[fn]
+                          core.clj:2515 clojure.core/some
+                           core.clj:107 compojure.core/routing
+                        RestFn.java:139 clojure.lang.RestFn.applyTo
+                           core.clj:626 clojure.core/apply
+                           core.clj:112 compojure.core/routes[fn]
+                  keyword_params.clj:32 ring.middleware.keyword-params/wrap-keyword-params[fn]
+                   nested_params.clj:75 ring.middleware.nested-params/wrap-nested-params[fn]
+                          params.clj:58 ring.middleware.params/wrap-params[fn]
+               multipart_params.clj:107 ring.middleware.multipart-params/wrap-multipart-params[fn]
+                           flash.clj:31 ring.middleware.flash/wrap-flash[fn]
+                         session.clj:85 ring.middleware.session/wrap-session[fn]
+                        cookies.clj:142 ring.middleware.cookies/wrap-cookies[fn]
+                           Var.java:379 clojure.lang.Var.invoke
+                          reload.clj:18 ring.middleware.reload/wrap-reload[fn]
+                      stacktrace.clj:17 ring.middleware.stacktrace/wrap-stacktrace-log[fn]
+                      stacktrace.clj:80 ring.middleware.stacktrace/wrap-stacktrace-web[fn]
+                           jetty.clj:18 ring.adapter.jetty/proxy-handler[fn]
+                       (Unknown Source) ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle
+                HandlerWrapper.java:116 org.eclipse.jetty.server.handler.HandlerWrapper.handle
+                        Server.java:363 org.eclipse.jetty.server.Server.handle
+        AbstractHttpConnection.java:483 org.eclipse.jetty.server.AbstractHttpConnection.handleRequest
+        AbstractHttpConnection.java:920 org.eclipse.jetty.server.AbstractHttpConnection.headerComplete
+        AbstractHttpConnection.java:982 org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete
+                    HttpParser.java:635 org.eclipse.jetty.http.HttpParser.parseNext
+                    HttpParser.java:235 org.eclipse.jetty.http.HttpParser.parseAvailable
+            AsyncHttpConnection.java:82 org.eclipse.jetty.server.AsyncHttpConnection.handle
+         SelectChannelEndPoint.java:628 org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle
+          SelectChannelEndPoint.java:52 org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run
+              QueuedThreadPool.java:608 org.eclipse.jetty.util.thread.QueuedThreadPool.runJob
+              QueuedThreadPool.java:543 org.eclipse.jetty.util.thread.QueuedThreadPool$3.run
+                        Thread.java:745 java.lang.Thread.run
+java.lang.StringIndexOutOfBoundsException: String index out of range: -4
+                       String.java:1954 java.lang.String.substring
+                          core.clj:4591 clojure.core/subs
+                          render.clj:32 sodahead.render/get-exception-code
+                          render.clj:53 sodahead.render/check[fn]
+                          render.clj:47 sodahead.render/check
+                          render.clj:78 sodahead.render/gen-ns-file
+                          render.clj:91 sodahead.render/cache
+                         render.clj:133 sodahead.render/render-file-cache
+                         handler.clj:36 ngontinh.handler/fn
+                            core.clj:94 compojure.core/make-route[fn]
+                            core.clj:40 compojure.core/if-route[fn]
+                            core.clj:25 compojure.core/if-method[fn]
+                           core.clj:107 compojure.core/routing[fn]
+                          core.clj:2515 clojure.core/some
+                           core.clj:107 compojure.core/routing
+                        RestFn.java:139 clojure.lang.RestFn.applyTo
+                           core.clj:626 clojure.core/apply
+                           core.clj:112 compojure.core/routes[fn]
+                  keyword_params.clj:32 ring.middleware.keyword-params/wrap-keyword-params[fn]
+                   nested_params.clj:75 ring.middleware.nested-params/wrap-nested-params[fn]
+                          params.clj:58 ring.middleware.params/wrap-params[fn]
+               multipart_params.clj:107 ring.middleware.multipart-params/wrap-multipart-params[fn]
+                           flash.clj:31 ring.middleware.flash/wrap-flash[fn]
+                         session.clj:85 ring.middleware.session/wrap-session[fn]
+                        cookies.clj:142 ring.middleware.cookies/wrap-cookies[fn]
+                           Var.java:379 clojure.lang.Var.invoke
+                          reload.clj:18 ring.middleware.reload/wrap-reload[fn]
+                      stacktrace.clj:17 ring.middleware.stacktrace/wrap-stacktrace-log[fn]
+                      stacktrace.clj:80 ring.middleware.stacktrace/wrap-stacktrace-web[fn]
+                           jetty.clj:18 ring.adapter.jetty/proxy-handler[fn]
+                       (Unknown Source) ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle
+                HandlerWrapper.java:116 org.eclipse.jetty.server.handler.HandlerWrapper.handle
+                        Server.java:363 org.eclipse.jetty.server.Server.handle
+        AbstractHttpConnection.java:483 org.eclipse.jetty.server.AbstractHttpConnection.handleRequest
+        AbstractHttpConnection.java:920 org.eclipse.jetty.server.AbstractHttpConnection.headerComplete
+        AbstractHttpConnection.java:982 org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete
+                    HttpParser.java:635 org.eclipse.jetty.http.HttpParser.parseNext
+                    HttpParser.java:235 org.eclipse.jetty.http.HttpParser.parseAvailable
+            AsyncHttpConnection.java:82 org.eclipse.jetty.server.AsyncHttpConnection.handle
+         SelectChannelEndPoint.java:628 org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle
+          SelectChannelEndPoint.java:52 org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run
+              QueuedThreadPool.java:608 org.eclipse.jetty.util.thread.QueuedThreadPool.runJob
+              QueuedThreadPool.java:543 org.eclipse.jetty.util.thread.QueuedThreadPool$3.run
+                        Thread.java:745 java.lang.Thread.run
+2014-12-11 08:11:51.111:WARN:oejh.HttpParser:HttpParser Full for SCEP@22e83bd5{l(/222.186.21.61:1268)<->r(/50.116.53.36:8080),d=true,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@2bd39ef9,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-1,l=5827,c=0},r=0} 
+java.lang.StringIndexOutOfBoundsException: String index out of range: -4
+                       String.java:1954 java.lang.String.substring
+                          core.clj:4591 clojure.core/subs
+                          render.clj:32 sodahead.render/get-exception-code
+                          render.clj:53 sodahead.render/check[fn]
+                          render.clj:47 sodahead.render/check
+                          render.clj:78 sodahead.render/gen-ns-file
+                          render.clj:91 sodahead.render/cache
+                         render.clj:133 sodahead.render/render-file-cache
+                         handler.clj:36 ngontinh.handler/fn
+                            core.clj:94 compojure.core/make-route[fn]
+                            core.clj:40 compojure.core/if-route[fn]
+                            core.clj:25 compojure.core/if-method[fn]
+                           core.clj:107 compojure.core/routing[fn]
+                          core.clj:2515 clojure.core/some
+                           core.clj:107 compojure.core/routing
+                        RestFn.java:139 clojure.lang.RestFn.applyTo
+                           core.clj:626 clojure.core/apply
+                           core.clj:112 compojure.core/routes[fn]
+                  keyword_params.clj:32 ring.middleware.keyword-params/wrap-keyword-params[fn]
+                   nested_params.clj:75 ring.middleware.nested-params/wrap-nested-params[fn]
+                          params.clj:58 ring.middleware.params/wrap-params[fn]
+               multipart_params.clj:107 ring.middleware.multipart-params/wrap-multipart-params[fn]
+                           flash.clj:31 ring.middleware.flash/wrap-flash[fn]
+                         session.clj:85 ring.middleware.session/wrap-session[fn]
+                        cookies.clj:142 ring.middleware.cookies/wrap-cookies[fn]
+                           Var.java:379 clojure.lang.Var.invoke
+                          reload.clj:18 ring.middleware.reload/wrap-reload[fn]
+                      stacktrace.clj:17 ring.middleware.stacktrace/wrap-stacktrace-log[fn]
+                      stacktrace.clj:80 ring.middleware.stacktrace/wrap-stacktrace-web[fn]
+                           jetty.clj:18 ring.adapter.jetty/proxy-handler[fn]
+                       (Unknown Source) ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle
+                HandlerWrapper.java:116 org.eclipse.jetty.server.handler.HandlerWrapper.handle
+                        Server.java:363 org.eclipse.jetty.server.Server.handle
+        AbstractHttpConnection.java:483 org.eclipse.jetty.server.AbstractHttpConnection.handleRequest
+        AbstractHttpConnection.java:920 org.eclipse.jetty.server.AbstractHttpConnection.headerComplete
+        AbstractHttpConnection.java:982 org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete
+                    HttpParser.java:635 org.eclipse.jetty.http.HttpParser.parseNext
+                    HttpParser.java:235 org.eclipse.jetty.http.HttpParser.parseAvailable
+            AsyncHttpConnection.java:82 org.eclipse.jetty.server.AsyncHttpConnection.handle
+         SelectChannelEndPoint.java:628 org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle
+          SelectChannelEndPoint.java:52 org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run
+              QueuedThreadPool.java:608 org.eclipse.jetty.util.thread.QueuedThreadPool.runJob
+              QueuedThreadPool.java:543 org.eclipse.jetty.util.thread.QueuedThreadPool$3.run
+                        Thread.java:745 java.lang.Thread.run
+java.lang.StringIndexOutOfBoundsException: String index out of range: -4
+                       String.java:1954 java.lang.String.substring
+                          core.clj:4591 clojure.core/subs
+                          render.clj:32 sodahead.render/get-exception-code
+                          render.clj:53 sodahead.render/check[fn]
+                          render.clj:47 sodahead.render/check
+                          render.clj:78 sodahead.render/gen-ns-file
+                          render.clj:91 sodahead.render/cache
+                         render.clj:133 sodahead.render/render-file-cache
+                         handler.clj:36 ngontinh.handler/fn
+                            core.clj:94 compojure.core/make-route[fn]
+                            core.clj:40 compojure.core/if-route[fn]
+                            core.clj:25 compojure.core/if-method[fn]
+                           core.clj:107 compojure.core/routing[fn]
+                          core.clj:2515 clojure.core/some
+                           core.clj:107 compojure.core/routing
+                        RestFn.java:139 clojure.lang.RestFn.applyTo
+                           core.clj:626 clojure.core/apply
+                           core.clj:112 compojure.core/routes[fn]
+                  keyword_params.clj:32 ring.middleware.keyword-params/wrap-keyword-params[fn]
+                   nested_params.clj:75 ring.middleware.nested-params/wrap-nested-params[fn]
+                          params.clj:58 ring.middleware.params/wrap-params[fn]
+               multipart_params.clj:107 ring.middleware.multipart-params/wrap-multipart-params[fn]
+                           flash.clj:31 ring.middleware.flash/wrap-flash[fn]
+                         session.clj:85 ring.middleware.session/wrap-session[fn]
+                        cookies.clj:142 ring.middleware.cookies/wrap-cookies[fn]
+                           Var.java:379 clojure.lang.Var.invoke
+                          reload.clj:18 ring.middleware.reload/wrap-reload[fn]
+                      stacktrace.clj:17 ring.middleware.stacktrace/wrap-stacktrace-log[fn]
+                      stacktrace.clj:80 ring.middleware.stacktrace/wrap-stacktrace-web[fn]
+                           jetty.clj:18 ring.adapter.jetty/proxy-handler[fn]
+                       (Unknown Source) ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle
+                HandlerWrapper.java:116 org.eclipse.jetty.server.handler.HandlerWrapper.handle
+                        Server.java:363 org.eclipse.jetty.server.Server.handle
+        AbstractHttpConnection.java:483 org.eclipse.jetty.server.AbstractHttpConnection.handleRequest
+        AbstractHttpConnection.java:920 org.eclipse.jetty.server.AbstractHttpConnection.headerComplete
+        AbstractHttpConnection.java:982 org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete
+                    HttpParser.java:635 org.eclipse.jetty.http.HttpParser.parseNext
+                    HttpParser.java:235 org.eclipse.jetty.http.HttpParser.parseAvailable
+            AsyncHttpConnection.java:82 org.eclipse.jetty.server.AsyncHttpConnection.handle
+         SelectChannelEndPoint.java:628 org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle
+          SelectChannelEndPoint.java:52 org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run
+              QueuedThreadPool.java:608 org.eclipse.jetty.util.thread.QueuedThreadPool.runJob
+              QueuedThreadPool.java:543 org.eclipse.jetty.util.thread.QueuedThreadPool$3.run
+                        Thread.java:745 java.lang.Thread.run
+java.lang.StringIndexOutOfBoundsException: String index out of range: -4
+                       String.java:1954 java.lang.String.substring
+                          core.clj:4591 clojure.core/subs
+                          render.clj:32 sodahead.render/get-exception-code
+                          render.clj:53 sodahead.render/check[fn]
+                          render.clj:47 sodahead.render/check
+                          render.clj:78 sodahead.render/gen-ns-file
+                          render.clj:91 sodahead.render/cache
+                         render.clj:133 sodahead.render/render-file-cache
+                         handler.clj:36 ngontinh.handler/fn
+                            core.clj:94 compojure.core/make-route[fn]
+                            core.clj:40 compojure.core/if-route[fn]
+                            core.clj:25 compojure.core/if-method[fn]
+                           core.clj:107 compojure.core/routing[fn]
+                          core.clj:2515 clojure.core/some
+                           core.clj:107 compojure.core/routing
+                        RestFn.java:139 clojure.lang.RestFn.applyTo
+                           core.clj:626 clojure.core/apply
+                           core.clj:112 compojure.core/routes[fn]
+                  keyword_params.clj:32 ring.middleware.keyword-params/wrap-keyword-params[fn]
+                   nested_params.clj:75 ring.middleware.nested-params/wrap-nested-params[fn]
+                          params.clj:58 ring.middleware.params/wrap-params[fn]
+               multipart_params.clj:107 ring.middleware.multipart-params/wrap-multipart-params[fn]
+                           flash.clj:31 ring.middleware.flash/wrap-flash[fn]
+                         session.clj:85 ring.middleware.session/wrap-session[fn]
+                        cookies.clj:142 ring.middleware.cookies/wrap-cookies[fn]
+                           Var.java:379 clojure.lang.Var.invoke
+                          reload.clj:18 ring.middleware.reload/wrap-reload[fn]
+                      stacktrace.clj:17 ring.middleware.stacktrace/wrap-stacktrace-log[fn]
+                      stacktrace.clj:80 ring.middleware.stacktrace/wrap-stacktrace-web[fn]
+                           jetty.clj:18 ring.adapter.jetty/proxy-handler[fn]
+                       (Unknown Source) ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle
+                HandlerWrapper.java:116 org.eclipse.jetty.server.handler.HandlerWrapper.handle
+                        Server.java:363 org.eclipse.jetty.server.Server.handle
+        AbstractHttpConnection.java:483 org.eclipse.jetty.server.AbstractHttpConnection.handleRequest
+        AbstractHttpConnection.java:920 org.eclipse.jetty.server.AbstractHttpConnection.headerComplete
+        AbstractHttpConnection.java:982 org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete
+                    HttpParser.java:635 org.eclipse.jetty.http.HttpParser.parseNext
+                    HttpParser.java:235 org.eclipse.jetty.http.HttpParser.parseAvailable
+            AsyncHttpConnection.java:82 org.eclipse.jetty.server.AsyncHttpConnection.handle
+         SelectChannelEndPoint.java:628 org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle
+          SelectChannelEndPoint.java:52 org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run
+              QueuedThreadPool.java:608 org.eclipse.jetty.util.thread.QueuedThreadPool.runJob
+              QueuedThreadPool.java:543 org.eclipse.jetty.util.thread.QueuedThreadPool$3.run
+                        Thread.java:745 java.lang.Thread.run
+java.lang.StringIndexOutOfBoundsException: String index out of range: -4
+                       String.java:1954 java.lang.String.substring
+                          core.clj:4591 clojure.core/subs
+                          render.clj:32 sodahead.render/get-exception-code
+                          render.clj:53 sodahead.render/check[fn]
+                          render.clj:47 sodahead.render/check
+                          render.clj:78 sodahead.render/gen-ns-file
+                          render.clj:91 sodahead.render/cache
+                         render.clj:133 sodahead.render/render-file-cache
+                         handler.clj:36 ngontinh.handler/fn
+                            core.clj:94 compojure.core/make-route[fn]
+                            core.clj:40 compojure.core/if-route[fn]
+                            core.clj:25 compojure.core/if-method[fn]
+                           core.clj:107 compojure.core/routing[fn]
+                          core.clj:2515 clojure.core/some
+                           core.clj:107 compojure.core/routing
+                        RestFn.java:139 clojure.lang.RestFn.applyTo
+                           core.clj:626 clojure.core/apply
+                           core.clj:112 compojure.core/routes[fn]
+                  keyword_params.clj:32 ring.middleware.keyword-params/wrap-keyword-params[fn]
+                   nested_params.clj:75 ring.middleware.nested-params/wrap-nested-params[fn]
+                          params.clj:58 ring.middleware.params/wrap-params[fn]
+               multipart_params.clj:107 ring.middleware.multipart-params/wrap-multipart-params[fn]
+                           flash.clj:31 ring.middleware.flash/wrap-flash[fn]
+                         session.clj:85 ring.middleware.session/wrap-session[fn]
+                        cookies.clj:142 ring.middleware.cookies/wrap-cookies[fn]
+                           Var.java:379 clojure.lang.Var.invoke
+                          reload.clj:18 ring.middleware.reload/wrap-reload[fn]
+                      stacktrace.clj:17 ring.middleware.stacktrace/wrap-stacktrace-log[fn]
+                      stacktrace.clj:80 ring.middleware.stacktrace/wrap-stacktrace-web[fn]
+                           jetty.clj:18 ring.adapter.jetty/proxy-handler[fn]
+                       (Unknown Source) ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle
+                HandlerWrapper.java:116 org.eclipse.jetty.server.handler.HandlerWrapper.handle
+                        Server.java:363 org.eclipse.jetty.server.Server.handle
+        AbstractHttpConnection.java:483 org.eclipse.jetty.server.AbstractHttpConnection.handleRequest
+        AbstractHttpConnection.java:920 org.eclipse.jetty.server.AbstractHttpConnection.headerComplete
+        AbstractHttpConnection.java:982 org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete
+                    HttpParser.java:635 org.eclipse.jetty.http.HttpParser.parseNext
+                    HttpParser.java:235 org.eclipse.jetty.http.HttpParser.parseAvailable
+            AsyncHttpConnection.java:82 org.eclipse.jetty.server.AsyncHttpConnection.handle
+         SelectChannelEndPoint.java:628 org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle
+          SelectChannelEndPoint.java:52 org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run
+              QueuedThreadPool.java:608 org.eclipse.jetty.util.thread.QueuedThreadPool.runJob
+              QueuedThreadPool.java:543 org.eclipse.jetty.util.thread.QueuedThreadPool$3.run
+                        Thread.java:745 java.lang.Thread.run
+java.lang.StringIndexOutOfBoundsException: String index out of range: -4
+                       String.java:1954 java.lang.String.substring
+                          core.clj:4591 clojure.core/subs
+                          render.clj:32 sodahead.render/get-exception-code
+                          render.clj:53 sodahead.render/check[fn]
+                          render.clj:47 sodahead.render/check
+                          render.clj:78 sodahead.render/gen-ns-file
+                          render.clj:91 sodahead.render/cache
+                         render.clj:133 sodahead.render/render-file-cache
+                         handler.clj:36 ngontinh.handler/fn
+                            core.clj:94 compojure.core/make-route[fn]
+                            core.clj:40 compojure.core/if-route[fn]
+                            core.clj:25 compojure.core/if-method[fn]
+                           core.clj:107 compojure.core/routing[fn]
+                          core.clj:2515 clojure.core/some
+                           core.clj:107 compojure.core/routing
+                        RestFn.java:139 clojure.lang.RestFn.applyTo
+                           core.clj:626 clojure.core/apply
+                           core.clj:112 compojure.core/routes[fn]
+                  keyword_params.clj:32 ring.middleware.keyword-params/wrap-keyword-params[fn]
+                   nested_params.clj:75 ring.middleware.nested-params/wrap-nested-params[fn]
+                          params.clj:58 ring.middleware.params/wrap-params[fn]
+               multipart_params.clj:107 ring.middleware.multipart-params/wrap-multipart-params[fn]
+                           flash.clj:31 ring.middleware.flash/wrap-flash[fn]
+                         session.clj:85 ring.middleware.session/wrap-session[fn]
+                        cookies.clj:142 ring.middleware.cookies/wrap-cookies[fn]
+                           Var.java:379 clojure.lang.Var.invoke
+                          reload.clj:18 ring.middleware.reload/wrap-reload[fn]
+                      stacktrace.clj:17 ring.middleware.stacktrace/wrap-stacktrace-log[fn]
+                      stacktrace.clj:80 ring.middleware.stacktrace/wrap-stacktrace-web[fn]
+                           jetty.clj:18 ring.adapter.jetty/proxy-handler[fn]
+                       (Unknown Source) ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle
+                HandlerWrapper.java:116 org.eclipse.jetty.server.handler.HandlerWrapper.handle
+                        Server.java:363 org.eclipse.jetty.server.Server.handle
+        AbstractHttpConnection.java:483 org.eclipse.jetty.server.AbstractHttpConnection.handleRequest
+        AbstractHttpConnection.java:920 org.eclipse.jetty.server.AbstractHttpConnection.headerComplete
+        AbstractHttpConnection.java:982 org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete
+                    HttpParser.java:635 org.eclipse.jetty.http.HttpParser.parseNext
+                    HttpParser.java:235 org.eclipse.jetty.http.HttpParser.parseAvailable
+            AsyncHttpConnection.java:82 org.eclipse.jetty.server.AsyncHttpConnection.handle
+         SelectChannelEndPoint.java:628 org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle
+          SelectChannelEndPoint.java:52 org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run
+              QueuedThreadPool.java:608 org.eclipse.jetty.util.thread.QueuedThreadPool.runJob
+              QueuedThreadPool.java:543 org.eclipse.jetty.util.thread.QueuedThreadPool$3.run
+                        Thread.java:745 java.lang.Thread.run
+java.lang.StringIndexOutOfBoundsException: String index out of range: -4
+                       String.java:1954 java.lang.String.substring
+                          core.clj:4591 clojure.core/subs
+                          render.clj:32 sodahead.render/get-exception-code
+                          render.clj:53 sodahead.render/check[fn]
+                          render.clj:47 sodahead.render/check
+                          render.clj:78 sodahead.render/gen-ns-file
+                          render.clj:91 sodahead.render/cache
+                         render.clj:133 sodahead.render/render-file-cache
+                         handler.clj:36 ngontinh.handler/fn
+                            core.clj:94 compojure.core/make-route[fn]
+                            core.clj:40 compojure.core/if-route[fn]
+                            core.clj:25 compojure.core/if-method[fn]
+                           core.clj:107 compojure.core/routing[fn]
+                          core.clj:2515 clojure.core/some
+                           core.clj:107 compojure.core/routing
+                        RestFn.java:139 clojure.lang.RestFn.applyTo
+                           core.clj:626 clojure.core/apply
+                           core.clj:112 compojure.core/routes[fn]
+                  keyword_params.clj:32 ring.middleware.keyword-params/wrap-keyword-params[fn]
+                   nested_params.clj:75 ring.middleware.nested-params/wrap-nested-params[fn]
+                          params.clj:58 ring.middleware.params/wrap-params[fn]
+               multipart_params.clj:107 ring.middleware.multipart-params/wrap-multipart-params[fn]
+                           flash.clj:31 ring.middleware.flash/wrap-flash[fn]
+                         session.clj:85 ring.middleware.session/wrap-session[fn]
+                        cookies.clj:142 ring.middleware.cookies/wrap-cookies[fn]
+                           Var.java:379 clojure.lang.Var.invoke
+                          reload.clj:18 ring.middleware.reload/wrap-reload[fn]
+                      stacktrace.clj:17 ring.middleware.stacktrace/wrap-stacktrace-log[fn]
+                      stacktrace.clj:80 ring.middleware.stacktrace/wrap-stacktrace-web[fn]
+                           jetty.clj:18 ring.adapter.jetty/proxy-handler[fn]
+                       (Unknown Source) ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle
+                HandlerWrapper.java:116 org.eclipse.jetty.server.handler.HandlerWrapper.handle
+                        Server.java:363 org.eclipse.jetty.server.Server.handle
+        AbstractHttpConnection.java:483 org.eclipse.jetty.server.AbstractHttpConnection.handleRequest
+        AbstractHttpConnection.java:920 org.eclipse.jetty.server.AbstractHttpConnection.headerComplete
+        AbstractHttpConnection.java:982 org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete
+                    HttpParser.java:635 org.eclipse.jetty.http.HttpParser.parseNext
+                    HttpParser.java:235 org.eclipse.jetty.http.HttpParser.parseAvailable
+            AsyncHttpConnection.java:82 org.eclipse.jetty.server.AsyncHttpConnection.handle
+         SelectChannelEndPoint.java:628 org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle
+          SelectChannelEndPoint.java:52 org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run
+              QueuedThreadPool.java:608 org.eclipse.jetty.util.thread.QueuedThreadPool.runJob
+              QueuedThreadPool.java:543 org.eclipse.jetty.util.thread.QueuedThreadPool$3.run
+                        Thread.java:745 java.lang.Thread.run
+java.lang.StringIndexOutOfBoundsException: String index out of range: -4
+                       String.java:1954 java.lang.String.substring
+                          core.clj:4591 clojure.core/subs
+                          render.clj:32 sodahead.render/get-exception-code
+                          render.clj:53 sodahead.render/check[fn]
+                          render.clj:47 sodahead.render/check
+                          render.clj:78 sodahead.render/gen-ns-file
+                          render.clj:91 sodahead.render/cache
+                         render.clj:133 sodahead.render/render-file-cache
+                         handler.clj:36 ngontinh.handler/fn
+                            core.clj:94 compojure.core/make-route[fn]
+                            core.clj:40 compojure.core/if-route[fn]
+                            core.clj:25 compojure.core/if-method[fn]
+                           core.clj:107 compojure.core/routing[fn]
+                          core.clj:2515 clojure.core/some
+                           core.clj:107 compojure.core/routing
+                        RestFn.java:139 clojure.lang.RestFn.applyTo
+                           core.clj:626 clojure.core/apply
+                           core.clj:112 compojure.core/routes[fn]
+                  keyword_params.clj:32 ring.middleware.keyword-params/wrap-keyword-params[fn]
+                   nested_params.clj:75 ring.middleware.nested-params/wrap-nested-params[fn]
+                          params.clj:58 ring.middleware.params/wrap-params[fn]
+               multipart_params.clj:107 ring.middleware.multipart-params/wrap-multipart-params[fn]
+                           flash.clj:31 ring.middleware.flash/wrap-flash[fn]
+                         session.clj:85 ring.middleware.session/wrap-session[fn]
+                        cookies.clj:142 ring.middleware.cookies/wrap-cookies[fn]
+                           Var.java:379 clojure.lang.Var.invoke
+                          reload.clj:18 ring.middleware.reload/wrap-reload[fn]
+                      stacktrace.clj:17 ring.middleware.stacktrace/wrap-stacktrace-log[fn]
+                      stacktrace.clj:80 ring.middleware.stacktrace/wrap-stacktrace-web[fn]
+                           jetty.clj:18 ring.adapter.jetty/proxy-handler[fn]
+                       (Unknown Source) ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle
+                HandlerWrapper.java:116 org.eclipse.jetty.server.handler.HandlerWrapper.handle
+                        Server.java:363 org.eclipse.jetty.server.Server.handle
+        AbstractHttpConnection.java:483 org.eclipse.jetty.server.AbstractHttpConnection.handleRequest
+        AbstractHttpConnection.java:920 org.eclipse.jetty.server.AbstractHttpConnection.headerComplete
+        AbstractHttpConnection.java:982 org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete
+                    HttpParser.java:635 org.eclipse.jetty.http.HttpParser.parseNext
+                    HttpParser.java:235 org.eclipse.jetty.http.HttpParser.parseAvailable
+            AsyncHttpConnection.java:82 org.eclipse.jetty.server.AsyncHttpConnection.handle
+         SelectChannelEndPoint.java:628 org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle
+          SelectChannelEndPoint.java:52 org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run
+              QueuedThreadPool.java:608 org.eclipse.jetty.util.thread.QueuedThreadPool.runJob
+              QueuedThreadPool.java:543 org.eclipse.jetty.util.thread.QueuedThreadPool$3.run
+                        Thread.java:745 java.lang.Thread.run
+java.lang.StringIndexOutOfBoundsException: String index out of range: -4
+                       String.java:1954 java.lang.String.substring
+                          core.clj:4591 clojure.core/subs
+                          render.clj:32 sodahead.render/get-exception-code
+                          render.clj:53 sodahead.render/check[fn]
+                          render.clj:47 sodahead.render/check
+                          render.clj:78 sodahead.render/gen-ns-file
+                          render.clj:91 sodahead.render/cache
+                         render.clj:133 sodahead.render/render-file-cache
+                         handler.clj:36 ngontinh.handler/fn
+                            core.clj:94 compojure.core/make-route[fn]
+                            core.clj:40 compojure.core/if-route[fn]
+                            core.clj:25 compojure.core/if-method[fn]
+                           core.clj:107 compojure.core/routing[fn]
+                          core.clj:2515 clojure.core/some
+                           core.clj:107 compojure.core/routing
+                        RestFn.java:139 clojure.lang.RestFn.applyTo
+                           core.clj:626 clojure.core/apply
+                           core.clj:112 compojure.core/routes[fn]
+                  keyword_params.clj:32 ring.middleware.keyword-params/wrap-keyword-params[fn]
+                   nested_params.clj:75 ring.middleware.nested-params/wrap-nested-params[fn]
+                          params.clj:58 ring.middleware.params/wrap-params[fn]
+               multipart_params.clj:107 ring.middleware.multipart-params/wrap-multipart-params[fn]
+                           flash.clj:31 ring.middleware.flash/wrap-flash[fn]
+                         session.clj:85 ring.middleware.session/wrap-session[fn]
+                        cookies.clj:142 ring.middleware.cookies/wrap-cookies[fn]
+                           Var.java:379 clojure.lang.Var.invoke
+                          reload.clj:18 ring.middleware.reload/wrap-reload[fn]
+                      stacktrace.clj:17 ring.middleware.stacktrace/wrap-stacktrace-log[fn]
+                      stacktrace.clj:80 ring.middleware.stacktrace/wrap-stacktrace-web[fn]
+                           jetty.clj:18 ring.adapter.jetty/proxy-handler[fn]
+                       (Unknown Source) ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle
+                HandlerWrapper.java:116 org.eclipse.jetty.server.handler.HandlerWrapper.handle
+                        Server.java:363 org.eclipse.jetty.server.Server.handle
+        AbstractHttpConnection.java:483 org.eclipse.jetty.server.AbstractHttpConnection.handleRequest
+        AbstractHttpConnection.java:920 org.eclipse.jetty.server.AbstractHttpConnection.headerComplete
+        AbstractHttpConnection.java:982 org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete
+                    HttpParser.java:635 org.eclipse.jetty.http.HttpParser.parseNext
+                    HttpParser.java:235 org.eclipse.jetty.http.HttpParser.parseAvailable
+            AsyncHttpConnection.java:82 org.eclipse.jetty.server.AsyncHttpConnection.handle
+         SelectChannelEndPoint.java:628 org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle
+          SelectChannelEndPoint.java:52 org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run
+              QueuedThreadPool.java:608 org.eclipse.jetty.util.thread.QueuedThreadPool.runJob
+              QueuedThreadPool.java:543 org.eclipse.jetty.util.thread.QueuedThreadPool$3.run
+                        Thread.java:745 java.lang.Thread.run
+java.lang.StringIndexOutOfBoundsException: String index out of range: -4
+                       String.java:1954 java.lang.String.substring
+                          core.clj:4591 clojure.core/subs
+                          render.clj:32 sodahead.render/get-exception-code
+                          render.clj:53 sodahead.render/check[fn]
+                          render.clj:47 sodahead.render/check
+                          render.clj:78 sodahead.render/gen-ns-file
+                          render.clj:91 sodahead.render/cache
+                         render.clj:133 sodahead.render/render-file-cache
+                         handler.clj:36 ngontinh.handler/fn
+                            core.clj:94 compojure.core/make-route[fn]
+                            core.clj:40 compojure.core/if-route[fn]
+                            core.clj:25 compojure.core/if-method[fn]
+                           core.clj:107 compojure.core/routing[fn]
+                          core.clj:2515 clojure.core/some
+                           core.clj:107 compojure.core/routing
+                        RestFn.java:139 clojure.lang.RestFn.applyTo
+                           core.clj:626 clojure.core/apply
+                           core.clj:112 compojure.core/routes[fn]
+                  keyword_params.clj:32 ring.middleware.keyword-params/wrap-keyword-params[fn]
+                   nested_params.clj:75 ring.middleware.nested-params/wrap-nested-params[fn]
+                          params.clj:58 ring.middleware.params/wrap-params[fn]
+               multipart_params.clj:107 ring.middleware.multipart-params/wrap-multipart-params[fn]
+                           flash.clj:31 ring.middleware.flash/wrap-flash[fn]
+                         session.clj:85 ring.middleware.session/wrap-session[fn]
+                        cookies.clj:142 ring.middleware.cookies/wrap-cookies[fn]
+                           Var.java:379 clojure.lang.Var.invoke
+                          reload.clj:18 ring.middleware.reload/wrap-reload[fn]
+                      stacktrace.clj:17 ring.middleware.stacktrace/wrap-stacktrace-log[fn]
+                      stacktrace.clj:80 ring.middleware.stacktrace/wrap-stacktrace-web[fn]
+                           jetty.clj:18 ring.adapter.jetty/proxy-handler[fn]
+                       (Unknown Source) ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle
+                HandlerWrapper.java:116 org.eclipse.jetty.server.handler.HandlerWrapper.handle
+                        Server.java:363 org.eclipse.jetty.server.Server.handle
+        AbstractHttpConnection.java:483 org.eclipse.jetty.server.AbstractHttpConnection.handleRequest
+        AbstractHttpConnection.java:920 org.eclipse.jetty.server.AbstractHttpConnection.headerComplete
+        AbstractHttpConnection.java:982 org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete
+                    HttpParser.java:635 org.eclipse.jetty.http.HttpParser.parseNext
+                    HttpParser.java:235 org.eclipse.jetty.http.HttpParser.parseAvailable
+            AsyncHttpConnection.java:82 org.eclipse.jetty.server.AsyncHttpConnection.handle
+         SelectChannelEndPoint.java:628 org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle
+          SelectChannelEndPoint.java:52 org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run
+              QueuedThreadPool.java:608 org.eclipse.jetty.util.thread.QueuedThreadPool.runJob
+              QueuedThreadPool.java:543 org.eclipse.jetty.util.thread.QueuedThreadPool$3.run
+                        Thread.java:745 java.lang.Thread.run
