@@ -11,13 +11,14 @@
      (def pgIndex (Integer/parseInt (params :index)))
      (def truyendisplay (truyen/getTruyen2 (str "SELECT * FROM story where lower(genre) like '%" genre2 "%' order by 'path' limit 20 offset " (- (* 20 pgIndex) 20) "")))
      (def truyenquantity (count truyendisplay))
+     (def numberoftruyeninDB (count (truyen/getTruyen (str "SELECT * FROM story where lower(genre) like '%" genre2 "%'))))
       nil}
 
 <html lang="en">
 <head>
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>Genre: %genre </title>  
+    <title>Genre: %genre | Trang Ngon Tinh </title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <meta name="keywords" content="classical novel, read online, ngon tinh, doc truyen, trang ngon tinh, truyen ngon tinh, huyen huyen, co dai, hien dai">
     <meta name="description" content="Free classical reading online, doc truyen ngon tinh">
@@ -106,7 +107,7 @@
 
 
 
-      %{(def numberoftruyeninDB (truyen/getGenreCount genre2))
+      %{
         (def pagequantity (if (= (rem numberoftruyeninDB 20) 0) (quot numberoftruyeninDB 20) (+ (quot numberoftruyeninDB 20) 1)))
         nil
       }

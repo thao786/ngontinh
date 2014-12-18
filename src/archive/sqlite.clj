@@ -29,7 +29,7 @@
 {"title" "Anh yêu em rất nhiều", "alternate" "", "author" "Cố Tô Lan", "state" 1, "genre" "Hiện Đại, HE", "source" "meoluoi247.wordpress.com", "editor" "mèo Kat, Zun, Trái Táo, Tiểu Kê, Yuki", "translator" ""}
 /home/thao/projects/ngontinh/resources/Truyen
 
-(doseq [folder (.listFiles (File. "/home/thao/projects/ngontinh/resources/static/Truyen"))]
+(doseq [folder (.listFiles (File. "C:\\Users\\Thuy\\Desktop\\truyen-update"))]
 	(let [file (str (.getPath folder) "/Info.txt")
 		mapinfo 	(load-string (slurp file))
 		chapters 	(- (count (.listFiles folder)) 3)
