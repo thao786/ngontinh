@@ -16,7 +16,7 @@
 				"dongnhan" "Đồng nhân" 
 				"dienvan" "Điền văn" 
 				"giangho" "Giang Hồ" 
-				"hai" "Hài" 
+				"hai" "h├ái" 
 				"hacbang" "Hắc bang" 
 				"hiendai" "Hiện Đại" 
 				"hoanthan" "Hoán Thân" 
