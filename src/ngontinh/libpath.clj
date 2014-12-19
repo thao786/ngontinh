@@ -1,11 +1,11 @@
 (ns ngontinh.libpath
 	(:require 	[clojure.java.io :as io]))
 
-; ;(def hostPath "http://50.116.53.36:8080/")
-; (def hostPath "http://trangngontinh.com/")
-; (def local-file-path "/home/thao/ngontinh/resources/static/")
-(def hostPath "http://localhost:3000/")
-(def local-file-path "C:/Users/Thuy/Desktop/git/ngontinh/resources/static/")
+;(def hostPath "http://50.116.53.36:8080/")
+(def hostPath "http://trangngontinh.com/")
+(def local-file-path "/home/thao/ngontinh/resources/static/")
+; (def hostPath "http://localhost:3000/")
+; (def local-file-path "C:/Users/Thuy/Desktop/git/ngontinh/resources/static/")
 
 (def genres {	"chientruong" "Chiến Trường" 
 				"codai" "Cổ Đại" 
@@ -56,18 +56,18 @@
 				"giangho" "giang" 
 				"hai" "h├ái" 
 				"hacbang" "hắc bang" 
-				"hiendai" "hiß╗çn" 
+				"hiendai" "hi" 
 				"hoanthan" "hoán thân" 
 				"huyenhuyen" "huy" 
 				"kiemhiep" "kiếm hiệp"
-				"nguoc" "ngã░ß╗úc" 
+				"nguoc" "ng" 
 				"nhanthu" "nhân thú" 
 				"nuton" "nữ tôn" 
 				"nuphannamtrang" "nữ phẫn nam trang" 
 				"np" "np" 
 				"phuchacnam" "phúc hắc nam" 
 				"quannhan" "quân nhân" 
-				"sac" "sß║»c" 
+				"sac" "s" 
 				"sung" "sủng" 
 				"sudoluyen" "sư đồ luyến"
 				"hocduong" "học đường" 

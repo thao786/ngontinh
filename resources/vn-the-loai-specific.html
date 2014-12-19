@@ -11,8 +11,7 @@
      (def pgIndex (Integer/parseInt (params :index)))
      (def truyendisplay (truyen/getTruyen (str "SELECT * FROM truyen where lower(genre) like '%" genre2 "%' order by 'path' limit 20 offset " (- (* 20 pgIndex) 20) "")))
      (def truyenquantity (count truyendisplay))
-     (def truyentheogenre (truyen/getTruyen (str "SELECT * FROM truyen where lower(genre) like '%" genre2 "%'")))
-     (def numberoftruyeninDB (count truyentheogenre))
+     (def numberoftruyeninDB (truyen/getGenreCount genre2))
       nil}
 
 <html lang="en">
@@ -129,10 +128,10 @@
                 
                 <div class="text-center">                    
                     <ul class="pagination">
-                      <li class="disabled"><a href="%(str l/hostPath "vn/gridtruyen/theloai/" (params :genre) "/" pagequantity)">&laquo;</a></li>
+                      <li class="disabled"><a href="%(str l/hostPath "vn/gridtruyen/theloai/" (params :genre) "/1")">&laquo;</a></li>
 
                       %{(defn pagination [x]
-                            (str "<li class='" (let [active (if (= x pgIndex) "active" "")] active) "'><a href='" l/hostPath "vn/gridtruyen/" genre2 "/"  x "'>" x "</a></li>")) 
+                            (str "<li class='" (let [active (if (= x pgIndex) "active" "")] active) "'><a href='" l/hostPath "vn/gridtruyen/theloai" (params :genre) "/"  x "'>" x "</a></li>")) 
 
                             (def sotrang (range (max 1 (- pgIndex 4)) (min (+ 1 pagequantity) (+ 5 pgIndex))))
 

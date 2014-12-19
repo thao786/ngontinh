@@ -124,7 +124,7 @@
                 
                 <div class="text-center">                    
                     <ul class="pagination">
-                      <li class="disabled"><a href="%(str l/hostPath "vn/gridtruyen/theloai/" (params :genre) "/" pagequantity)">&laquo;</a></li>
+                      <li class="disabled"><a href="%(str l/hostPath "vn/gridtruyen/pgnumber/1")">&laquo;</a></li>
 
                       %{(defn pagination [x]
                             (str "<li class='" (let [active (if (= x pgIndex) "active" "")] active) "'><a href='" l/hostPath "vn/gridtruyen/pgnumber/"  x "'>" x "</a></li>")) 
@@ -134,7 +134,7 @@
                         (apply str (for [x sotrang] (pagination x)))
                         }
 
-                      <li><a href="%(str l/hostPath "vn/gridtruyen/theloai/" (params :genre) "/" pagequantity)">&raquo;</a></li>
+                      <li><a href="%(str l/hostPath "vn/gridtruyen/pgnumber/" pagequantity)">&raquo;</a></li>
                     </ul>
                 </div>    
 

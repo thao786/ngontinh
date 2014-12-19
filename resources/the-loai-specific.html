@@ -11,7 +11,7 @@
      (def pgIndex (Integer/parseInt (params :index)))
      (def truyendisplay (truyen/getTruyen2 (str "SELECT * FROM story where lower(genre) like '%" genre2 "%' order by 'path' limit 20 offset " (- (* 20 pgIndex) 20) "")))
      (def truyenquantity (count truyendisplay))
-     (def numberoftruyeninDB (count (truyen/getTruyen (str "SELECT * FROM story where lower(genre) like '%" genre2 "%'))))
+     (def numberoftruyeninDB (count (truyen/getTruyen2 (str "SELECT * FROM story where lower(genre) like '%" genre2 "%'"))))
       nil}
 
 <html lang="en">
@@ -117,10 +117,10 @@
                 
                 <div class="text-center">                    
                     <ul class="pagination">
-                      <li class="disabled"><a href="%(str l/hostPath "gridtruyen/theloai/" (params :genre) "/" pagequantity)">&laquo;</a></li>
+                      <li class="disabled"><a href="%(str l/hostPath "gridtruyen/theloai/" (params :genre) "/1")">&laquo;</a></li>
 
                       %{(defn pagination [x]
-                            (str "<li class='" (let [active (if (= x pgIndex) "active" "")] active) "'><a href='" l/hostPath "gridtruyen/pgnumber/"  x "'>" x "</a></li>")) 
+                            (str "<li class='" (let [active (if (= x pgIndex) "active" "")] active) "'><a href='" l/hostPath "gridtruyen/theloai/" (params :genre) "/"  x "'>" x "</a></li>")) 
 
                             (apply str (for [x (range (max 1 (- pgIndex 4)) (min (+ 1 pagequantity) (+ 5 pgIndex)))] 
                                                            (pagination x)))
