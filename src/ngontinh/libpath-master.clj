@@ -1,10 +1,12 @@
 (ns ngontinh.libpath
 	(:require 	[clojure.java.io :as io]))
 
-(def hostPath "http://localhost:8080/")
-;(def local-file-path "C:/Users/Thuy/Desktop/git/Statics/")
-(def local-file-path "/home/thao/projects/ngontinh/resources/static/")
+; (def hostPath "http://localhost:8080/")
+; ;(def local-file-path "C:/Users/Thuy/Desktop/git/Statics/")
+; (def local-file-path "/home/thao/projects/ngontinh/resources/static/")
 
+(def hostPath "http://localhost:3000/")
+(def local-file-path "C:/Users/Thuy/Desktop/git/ngontinh/resources/static/")
 
 (def genres {	"chientruong" "Chiến Trường" 
 				"codai" "Cổ Đại" 

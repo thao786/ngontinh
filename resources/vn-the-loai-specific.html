@@ -11,14 +11,15 @@
      (def pgIndex (Integer/parseInt (params :index)))
      (def truyendisplay (truyen/getTruyen (str "SELECT * FROM truyen where lower(genre) like '%" genre2 "%' order by 'path' limit 20 offset " (- (* 20 pgIndex) 20) "")))
      (def truyenquantity (count truyendisplay))
-     (def numberoftruyeninDB (count (truyen/getTruyen (str "SELECT * FROM truyen where lower(genre) like '%" genre2 "%'))))
+     (def truyentheogenre (truyen/getTruyen (str "SELECT * FROM truyen where lower(genre) like '%" genre2 "%'")))
+     (def numberoftruyeninDB (count truyentheogenre))
       nil}
 
 <html lang="en">
 <head>
 <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>Truyện Ngôn Tình %genre - Trang %pgIndex | Trang Ngon Tinh</title>  
+    <title>Truyện Ngôn Tình %(l/genres (params :genre)) - Trang %pgIndex | Trang Ngon Tinh</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta name="keywords" content="classical novel, read online, ngon tinh, doc truyen, trang ngon tinh, truyen ngon tinh, huyen huyen, co dai, hien dai">
     <meta name="description" content="Free classical reading online, doc truyen ngon tinh">
@@ -128,7 +129,7 @@
                 
                 <div class="text-center">                    
                     <ul class="pagination">
-                      <li class="disabled"><a href="%(str l/hostPath "vn/gridtruyen/theloai/" genre2 "/" pagequantity)">&laquo;</a></li>
+                      <li class="disabled"><a href="%(str l/hostPath "vn/gridtruyen/theloai/" (params :genre) "/" pagequantity)">&laquo;</a></li>
 
                       %{(defn pagination [x]
                             (str "<li class='" (let [active (if (= x pgIndex) "active" "")] active) "'><a href='" l/hostPath "vn/gridtruyen/" genre2 "/"  x "'>" x "</a></li>")) 
@@ -138,7 +139,7 @@
                             (apply str (for [x sotrang] (pagination x)))
                         }
 
-                      <li><a href="%(str l/hostPath "vn/gridtruyen/theloai/" genre2 "/" pagequantity)">&raquo;</a></li>
+                      <li><a href="%(str l/hostPath "vn/gridtruyen/theloai/" (params :genre) "/" pagequantity)">&raquo;</a></li>
                     </ul>
                 </div>    
 

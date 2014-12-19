@@ -1,10 +1,11 @@
 (ns ngontinh.libpath
 	(:require 	[clojure.java.io :as io]))
 
-;(def hostPath "http://50.116.53.36:8080/")
-(def hostPath "http://trangngontinh.com/")
-(def local-file-path "/home/thao/ngontinh/resources/static/")
-
+; ;(def hostPath "http://50.116.53.36:8080/")
+; (def hostPath "http://trangngontinh.com/")
+; (def local-file-path "/home/thao/ngontinh/resources/static/")
+(def hostPath "http://localhost:3000/")
+(def local-file-path "C:/Users/Thuy/Desktop/git/ngontinh/resources/static/")
 
 (def genres {	"chientruong" "Chiến Trường" 
 				"codai" "Cổ Đại" 
@@ -16,7 +17,7 @@
 				"dongnhan" "Đồng nhân" 
 				"dienvan" "Điền văn" 
 				"giangho" "Giang Hồ" 
-				"hai" "h├ái" 
+				"hai" "Hài" 
 				"hacbang" "Hắc bang" 
 				"hiendai" "Hiện Đại" 
 				"hoanthan" "Hoán Thân" 
@@ -44,7 +45,7 @@
 				"fairytale" "Fairy Tales"})
 
 (def genres2 {	"chientruong" "chiến trường" 
-				"codai" "cß╗ò" 
+				"codai" "c" 
 				"congso" "công sở" 
 				"cungdau" "cung" 
 				"cungdinh" "cung đình" 
@@ -73,7 +74,7 @@
 				"tienhiep" "tiên hiệp" 
 				"trongsinh" "sinh" 
 				"vongdu" "du" 
-				"xuyenkhong" "xuy├¬n kh├┤ng" 
+				"xuyenkhong" "xuy" 
 				"he" "he" 
 				"se" "se" 
 				"oe" "oe"
