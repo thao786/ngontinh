@@ -79,7 +79,7 @@
 
 (defn getGenreCount [genre]
     (let [resVec (let [		connection (DriverManager/getConnection connection-str)
-                            query (str "select count(*) as count from (select * from truyen where lower(genre) like '%%') as theloai2;")
+                            query (str "select count(*) as count from (select * from truyen where lower(genre) like '%" "%') as theloai2;")
                          	res (let [ stmt (.createStatement connection)
                                                 rs (.executeQuery stmt query)]
                                                         (vec (resultset-seq rs)))
@@ -87,7 +87,6 @@
                              res)
             row (nth resVec 0)]
         (row :count)))
-select count(*) as count from (select * from truyen where lower(genre) like '%─Éam mß╗╣%') as theloai2;
 
 (defn truyenCount [database]
     (let [resVec (let 	[connection (DriverManager/getConnection connection-str)
