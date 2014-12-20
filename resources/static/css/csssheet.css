@@ -154,18 +154,18 @@ h2{
 }
 .bodytruyen{
   padding: 0 30px 0 30px;
-  font-size: 16px;
+  font-size: 18px;
   text-align: justify;
   margin: 20px 70px 20px 30px;
 }
 @media (max-width: 768px) {
   .bodytruyen{
       padding: 0 0 0 0;
-      font-size: 15px;
+      font-size: 16px;
       margin: 0 0 0 0;
   }
   .bodytruyen h2,h3{
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 .cachnhaura{

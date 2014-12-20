@@ -1,7 +1,7 @@
 (ns ngontinh.libpath
 	(:require 	[clojure.java.io :as io]))
 
-;(def hostPath "http://50.116.53.36:8080/")
+; (def hostPath "http://50.116.53.36:8080/")
 (def hostPath "http://trangngontinh.com/")
 (def local-file-path "/home/thao/ngontinh/resources/static/")
 ; (def hostPath "http://localhost:3000/")
@@ -49,7 +49,7 @@
 				"congso" "công sở" 
 				"cungdau" "cung" 
 				"cungdinh" "cung đình" 
-				"dammy" "─Éam mß╗╣" 
+				"dammy" "m m" 
 				"doanvan" "đoản văn" 
 				"dongnhan" "đồng nhân" 
 				"dienvan" "điền văn" 

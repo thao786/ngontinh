@@ -134,6 +134,7 @@
 				(load-string (str "(" new-ns "/render " params ")"))))))
 
 (def render render-file-cache)
+; (def render render-file)
 
 (defmacro ig 
 	"comment macro"
