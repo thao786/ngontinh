@@ -1,7 +1,1 @@
-{
-"title" "Wuthering Heights" 
-"author" "Emily Bronte" 
-"genre" "Classical" 
-"state" 1 
-"source" "literature.org" 
-}
+{"author" "Emily Bronte", "genre" "Classical", "title" "Wuthering Heights", "source" "literature.org", "state" 1}

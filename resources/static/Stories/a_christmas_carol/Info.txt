@@ -1,7 +1,1 @@
-{
-"title" "A Christmas Carol" 
-"author" "Charles Dickens" 
-"genre" "Classical" 
-"state" 1 
-"source" "literature.org" 
-}
+{"author" "Charles Dickens", "genre" "Classical", "title" "A Christmas Carol", "source" "literature.org", "state" 1}

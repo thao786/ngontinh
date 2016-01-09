@@ -1,7 +1,1 @@
-{
-"title" "Villette" 
-"author" "Charlotte Bronte" 
-"genre" "Classical" 
-"state" 1 
-"source" "literature.org" 
-}
+{"author" "Charlotte Bronte", "genre" "Classical", "title" "Villette", "source" "literature.org", "state" 1}

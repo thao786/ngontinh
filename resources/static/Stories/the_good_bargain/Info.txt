@@ -1,6 +1,1 @@
-{
-"title" "The good bargain" 
-"author" "Brothers Grimm" 
-"genre" "Fairy Tales" 
-"state" 1 
-}
+{"author" "Brothers Grimm", "genre" "Fairy Tales", "title" "The good bargain", "state" 1}

@@ -1,6 +1,1 @@
-{
-"title" "The three snake-leaves" 
-"author" "Brothers Grimm" 
-"genre" "Fairy Tales" 
-"state" 1 
-}
+{"author" "Brothers Grimm", "genre" "Fairy Tales", "title" "The three snake-leaves", "state" 1}

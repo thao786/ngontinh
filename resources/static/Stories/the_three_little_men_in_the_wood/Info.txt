@@ -1,6 +1,1 @@
-{
-"title" "The three little men in the wood" 
-"author" "Brothers Grimm" 
-"genre" "Fairy Tales" 
-"state" 1 
-}
+{"author" "Brothers Grimm", "genre" "Fairy Tales", "title" "The three little men in the wood", "state" 1}

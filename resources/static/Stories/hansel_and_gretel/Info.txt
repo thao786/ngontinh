@@ -1,6 +1,1 @@
-{
-"title" "Hansel and Gretel" 
-"author" "Brothers Grimm" 
-"genre" "Fairy Tales" 
-"state" 1 
-}
+{"author" "Brothers Grimm", "genre" "Fairy Tales", "title" "Hansel and Gretel", "state" 1}

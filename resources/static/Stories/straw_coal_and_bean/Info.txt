@@ -1,6 +1,1 @@
-{
-"title" "Straw  coal  and bean" 
-"author" "Brothers Grimm" 
-"genre" "Fairy Tales" 
-"state" 1 
-}
+{"author" "Brothers Grimm", "genre" "Fairy Tales", "title" "Straw  coal  and bean", "state" 1}

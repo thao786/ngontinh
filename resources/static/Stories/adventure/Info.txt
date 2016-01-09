@@ -1,7 +1,1 @@
-{
-"title" "Adventure" 
-"author" "Jack London" 
-"genre" "Classical" 
-"state" 1 
-"source" "literature.org" 
-}
+{"author" "Jack London", "genre" "Classical", "title" "Adventure", "source" "literature.org", "state" 1}
