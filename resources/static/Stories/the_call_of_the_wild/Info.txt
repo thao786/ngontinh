@@ -1,7 +1,1 @@
-{
-"title" "The Call Of The Wild" 
-"author" "Jack London" 
-"genre" "Classical" 
-"state" 1 
-"source" "literature.org" 
-}
+{"author" "Jack London", "genre" "Classical", "title" "The Call Of The Wild", "source" "literature.org", "state" 1}
